@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://theautonomousstudent.netlify.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'The Autonomous Student'
 theme = 'ananke'
 
 [menu]
