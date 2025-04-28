@@ -11,5 +11,20 @@ theme = 'ananke'
 
    [[menu.main]]
     name = "About Me"
-    url = "categories/aboutme"
-    weight = 1
+    url = "/categories/aboutme"
+    weight = 5
+
+  [[menu.main]]
+   name = "Studying in Denmark"
+   url = "/categories/studyingindenmark"
+   weight = 2
+
+  [[menu.main]]
+   name = "Advanced Technologies"
+   url = "/categories/advancedtechnologies"
+   weight = 3
+
+  [[menu.main]]
+   name = "On The Go"
+   url = "/categories/onthego"
+   weight = 4
