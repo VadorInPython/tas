@@ -6,4 +6,4 @@ categories = ["Studies in Denmark"]
 tags = ["Denmark", "Studies"]
 +++
 
-This is just the draft, but hopefully will get helpful for the others considering similar options in their lifes.
+This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
