@@ -1,5 +1,5 @@
 ---
-title: "Studia w Danii" # Ten tytuł pojawi się na górze strony kategorii
+title: "Studies in Denmark" # Ten tytuł pojawi się na górze strony kategorii
 # Możesz dodać inne pola front matter, ale w Ananke ten layout używa głównie 'title' i 'Content'
 # description: "Krótki, zwięzły opis dla SEO, ale pamiętaj, że {{ .Content }} to główna treść."
 ---
