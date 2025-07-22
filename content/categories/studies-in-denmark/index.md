@@ -1,5 +1,6 @@
 +++
 title = "Studies in Denmark"
+image = "static/images/images1.jpg"
 +++
 
-Here you will find everything that may be useful for yoy when it comes to studying in Denmark, from the admission process to the course reviews.
+Here you will find everything I found useful about studying in Denmark, from the admission process to the course reviews.
