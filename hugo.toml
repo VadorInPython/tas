@@ -15,8 +15,8 @@ theme = 'ananke'
     weight = 6
 
   [[menu.main]]
-   name = "Studying in Denmark"
-   url = "/categories/studyingindenmark"
+   name = "Studies in Denmark"
+   url = "/categories/studies-in-denmark"
    weight = 2
 
   [[menu.main]]
