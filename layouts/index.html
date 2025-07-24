@@ -1,31 +1,6 @@
 {{ define "main" }}
-  <article class="cf ph3 ph5-l pv3 pv4-l mw9 center">
-    <header class="fn fl-ns w-50-ns pr4-ns">
-      <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2 athelas">
-        {{ .Title }}
-      </h1>
-      {{ with .Params.description }}
-        <h2 class="f4 mt0 mb4 lh-title measure">
-          {{ . }}
-        </h2>
-      {{ end }}
-    </header>
-    <div class="fn fl-ns w-50-ns">
-      {{ with .Params.featured_image }}
-        <img src="{{ . | relURL }}" class="w-100 mb3" alt="" />
-      {{ end }}
-      {{ with .Content }}
-        <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
-          {{ . }}
-        </div>
-      {{ end }}
-    </div>
-  </article>
-
   <!-- Posts listing with white cards -->
   <div class="pa3 pa4-ns w-100 mw8 center">
-    <h2 class="f3 fw1 athelas mt0 mb4">{{ i18n "recentTitle" | default "Recent Posts" }}</h2>
-    
     {{ range first 10 .Site.RegularPages }}
       <div class="relative w-100 mb4 bg-white br3 shadow-4 pa3">
         {{ if .Params.featured_image }}
@@ -44,7 +19,7 @@
               <p class="f5 f4-l lh-copy measure mt0-ns">
                 {{ .Summary }}
               </p>
-              <a href="{{ .Permalink }}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ i18n "readMore" | default "read more" }}</a>
+              <a href="{{ .Permalink }}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
             </div>
           </div>
         </article>
