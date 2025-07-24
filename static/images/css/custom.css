@@ -1,6 +1,6 @@
 /* Stała wysokość nagłówka */
 .cover {
-    height: 600px !important;
+    height: 400px !important;
     overflow: hidden;
 }
 
