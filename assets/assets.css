@@ -1,0 +1,16 @@
+.site-header {
+    min-height: 200px; /* Adjust this value */
+    height: 200px; /* Set fixed height */
+}
+
+/* If the header has a different class name, use: */
+header {
+    min-height: 200px;
+    height: 200px;
+}
+
+/* For the header container specifically */
+.header-container {
+    min-height: 200px;
+    height: 200px;
+}
