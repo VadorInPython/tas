@@ -13,7 +13,21 @@
       <link>http://localhost:1313/categories/studies-in-denmark/</link>
       <pubDate>Sun, 27 Apr 2025 21:29:26 +0200</pubDate>
       <guid>http://localhost:1313/categories/studies-in-denmark/</guid>
-      <description></description>
+      <description>&lt;p&gt;Discover everything you need to know about studying in Denmark - from university applications to student life and cultural adaptation. Get insider tips on Danish universities, student housing, cultural differences, and making the most of your educational journey in one of Europe&amp;rsquo;s most progressive countries.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Music</title>
+      <link>http://localhost:1313/categories/music/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/music/</guid>
+      <description>&lt;p&gt;Dive into my musical world where passion meets creativity. Here you&amp;rsquo;ll find my personal remakes of favorite tracks, exclusive recordings from the festivals that moved me most, and deep dives into the sounds that shape our experiences. From underground gems to festival anthems, join me on a sonic journey through the beats that define our generation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Photography</title>
+      <link>http://localhost:1313/categories/photography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/photography/</guid>
+      <description>&lt;p&gt;This is the place where you&amp;rsquo;ll find a collection of my photos — from aviation shots to nature scenes and moments captured on the road. Just like with music, there’s always more to come.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
