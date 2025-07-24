@@ -1,0 +1,28 @@
+.fixed-header-height {
+    height: 350px; /* Ustaw pożądaną stałą wysokość nagłówka */
+    overflow: hidden; /* Ważne, aby zawartość nie wychodziła poza zdefiniowany obszar */
+    background-size: cover; /* Sprawia, że obrazek pokrywa cały obszar, przycinając go w razie potrzeby */
+    background-position: center center; /* Centruje obrazek w tle */
+    display: flex; /* Używamy flexboxa do centrowania zawartości */
+    align-items: center; /* Centruje zawartość wertykalnie */
+    justify-content: center; /* Centruje zawartość horyzontalnie */
+}
+
+/* Dostosuj padding dla tekstu wewnątrz nagłówka, jeśli potrzebujesz */
+.custom-text-padding {
+    padding-top: 2rem; /* Przykładowy padding, dostosuj wg potrzeb */
+    padding-bottom: 2rem; /* Przykładowy padding, dostosuj wg potrzeb */
+}
+
+/* Media Queries dla responsywności (opcjonalnie, ale zalecane) */
+@media (max-width: 768px) { /* Dla mniejszych ekranów */
+    .fixed-header-height {
+        height: 250px; /* Mniejsza wysokość na mobilnych */
+    }
+}
+
+@media (max-width: 480px) { /* Dla bardzo małych ekranów */
+    .fixed-header-height {
+        height: 200px;
+    }
+}
