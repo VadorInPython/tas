@@ -1,15 +1,12 @@
 {{ define "main" }}
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wider lh-copy mid-gray">
-      <!-- Use content from _index.md if it exists, otherwise show title -->
-      {{ if .Content }}
+    {{ if .Content }}
+      <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wider lh-copy mid-gray">
         <div class="nested-copy-line-height nested-links nested-img mid-gray f4">
           {{ .Content }}
         </div>
-      {{ else }}
-        <h1 class="fw1 f1">{{ .Title }}</h1>
-      {{ end }}
-    </section>
+      </section>
+    {{ end }}
 
     <!-- Posts listing - matching home page style -->
     <section class="w-100 mw8 ph4-l ph3 center">
@@ -21,7 +18,7 @@
               <img src="{{ $featured_image | relURL }}" class="w-100 db br2" alt="{{ .Title }}" />
             </div>
           {{ end }}
-          
+                  
           <article class="pb2">
             <div class="flex flex-column flex-row-ns">
               <div class="w-100">
@@ -31,11 +28,7 @@
                 <p class="f5 f4-l lh-copy measure mt0-ns">
                   {{ .Summary }}
                 </p>
-                {{ if .Params.show_reading_time | default true }}
-                  <p class="f6 lh-copy mv0">{{ i18n "readMore" }}</p>
-                {{ else }}
-                  <a href="{{ .Permalink }}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ i18n "readMore" | default "read more" }}</a>
-                {{ end }}
+                <a href="{{ .Permalink }}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
               </div>
             </div>
           </article>
