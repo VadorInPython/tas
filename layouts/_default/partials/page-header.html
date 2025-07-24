@@ -3,16 +3,34 @@
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image_class := .Params.featured_image_class | default "cover bg-center" }}
   {{ $cover_dimming_class := .Params.cover_dimming_class | default "bg-black-60" }}
-  <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}'); height: 350px !important; min-height: 350px !important; display: flex; align-items: center; justify-content: center;">
-    <div class="{{ $cover_dimming_class }}" style="height: 100%; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 !important;">
+  
+  <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');">
+    <div class="{{ $cover_dimming_class }}" style="
+        height: 350px !important; /* Wymuś stałą wysokość dla kontenera tła */
+        min-height: 350px !important; /* Upewnij się, że minimalna wysokość też jest stała */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centruj zawartość pionowo */
+        align-items: center; /* Centruj zawartość poziomo */
+        text-align: center;
+        padding-top: 0 !important;   /* Usuń wszelki padding z góry */
+        padding-bottom: 0 !important; /* Usuń wszelki padding z dołu */
+        box-sizing: border-box; /* Upewnij się, że padding nie zwiększa wysokości */
+    ">
       {{ partial "site-navigation.html" . }}
-      <div class="tc-l ph3 ph4-ns" style="padding: 0 !important; margin: 0 !important;">
+      <div class="tc-l ph3 ph4-ns" style="
+          padding: 1rem 0 !important; /* Dodaj trochę własnego paddingu dla tekstu */
+          margin: 0 !important;
+          width: 100%; /* Upewnij się, że tekst rozciąga się na całą szerokość */
+          max-width: 960px; /* Ogranicz szerokość, jeśli to konieczne */
+      ">
         {{ if not .Params.omit_header_text }}
-          <div class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Title | default .Site.Title }}</div>
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Title | default .Site.Title }}</h1>
           {{ with .Params.description  }}
-            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
               {{ . }}
-            </div>
+            </h2>
           {{ end }}
         {{ end }}
       </div>
