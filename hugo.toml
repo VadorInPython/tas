@@ -30,6 +30,6 @@ theme = 'ananke'
    weight = 4
 
   [[menu.main]]
-   name = "On The Go"
+   #name = "On The Go"
    url = "/categories/on-the-go"
    weight = 5
