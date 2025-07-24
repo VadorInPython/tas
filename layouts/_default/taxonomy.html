@@ -1,16 +1,20 @@
 {{ define "main" }}
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wider lh-copy mid-gray">
+      <!-- Use content from _index.md if it exists, otherwise show title -->
       {{ if .Content }}
         <div class="nested-copy-line-height nested-links nested-img mid-gray f4">
           {{ .Content }}
         </div>
+      {{ else }}
+        <h1 class="fw1 f1">{{ .Title }}</h1>
       {{ end }}
     </section>
 
-    <section class="flex-ns flex-wrap justify-around mt5">
+    <!-- Posts listing - matching home page style -->
+    <section class="w-100 mw8 ph4-l ph3 center">
       {{ range .Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
+        <div class="relative w-100 mb4">
           {{ if .Params.featured_image }}
             {{ $featured_image := .Params.featured_image }}
             <div class="relative w-100 mb3">
@@ -18,19 +22,23 @@
             </div>
           {{ end }}
           
-          <div class="pa3">
-            <h2 class="f5 f4-l fw7 black-90 mb2">
-              <a href="{{ .Permalink }}" class="link black-90 dim">{{ .Title }}</a>
-            </h2>
-            
-            <p class="f6 lh-copy black-60">
-              {{ .Summary }}
-            </p>
-            
-            <div class="f6 gray mt3">
-              <time>{{ .Date.Format "January 2, 2006" }}</time>
+          <article class="bb b--black-10 pb4">
+            <div class="flex flex-column flex-row-ns">
+              <div class="w-100">
+                <h1 class="f3 fw1 athelas mt0 mb1">
+                  <a href="{{ .Permalink }}" class="color-inherit dim link">{{ .Title }}</a>
+                </h1>
+                <p class="f5 f4-l lh-copy measure mt0-ns">
+                  {{ .Summary }}
+                </p>
+                {{ if .Params.show_reading_time | default true }}
+                  <p class="f6 lh-copy mv0">{{ i18n "readMore" }}</p>
+                {{ else }}
+                  <a href="{{ .Permalink }}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ i18n "readMore" | default "read more" }}</a>
+                {{ end }}
+              </div>
             </div>
-          </div>
+          </article>
         </div>
       {{ end }}
     </section>
