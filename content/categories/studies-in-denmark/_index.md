@@ -1,6 +1,6 @@
 ---
 title: "Studies in Denmark"
-description: "Complete guide to studying in Denmark"
+#description: "Complete guide to studying in Denmark"
 featured_image: "/images/image1.jpg"
 ---
 
