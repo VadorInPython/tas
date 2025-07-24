@@ -1,6 +1,6 @@
 baseURL = 'https://theautonomousstudent.netlify.app/'
 languageCode = 'en-us'
-title = 'The Autonomous Student -> Explorer'
+title = 'The Autonomous Creator -> Explorer'
 theme = 'ananke'
 
 [menu]
