@@ -3,9 +3,6 @@ languageCode = 'en-us'
 title = 'The Autonomous Student'
 theme = 'ananke'
 
-[params]
-  custom_css = ["css/custom.css"]
-  
 [menu]
   [[menu.main]]
     name = "Home"
