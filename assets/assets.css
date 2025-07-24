@@ -1,16 +1,18 @@
-.site-header {
-    min-height: 200px; /* Adjust this value */
-    height: 200px; /* Set fixed height */
+/* Stała wysokość nagłówka niezależnie od tekstu */
+.cover {
+    height: 400px !important; /* ustaw swoją preferowaną wysokość */
+    overflow: hidden; /* ukrywa nadmiar tekstu */
 }
 
-/* If the header has a different class name, use: */
-header {
-    min-height: 200px;
-    height: 200px;
+/* Alternatywnie, jeśli chcesz zachować cały tekst ale ograniczyć nagłówek */
+.cover {
+    min-height: 400px;
+    max-height: 400px !important;
 }
 
-/* For the header container specifically */
-.header-container {
-    min-height: 200px;
-    height: 200px;
+.cover .pa3, .cover .pa4 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* wycentruje tekst w pionie */
 }
