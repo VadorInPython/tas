@@ -1,0 +1,27 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+{{ if $featured_image }}
+  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+  {{ $featured_image_class := .Params.featured_image_class | default "cover bg-center" }}
+  {{ $cover_dimming_class := .Params.cover_dimming_class | default "bg-black-60" }}
+  <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}'); height: 350px !important; min-height: 350px !important; display: flex; align-items: center; justify-content: center;">
+    <div class="{{ $cover_dimming_class }}" style="height: 100%; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 !important;">
+      {{ partial "site-navigation.html" . }}
+      <div class="tc-l ph3 ph4-ns" style="padding: 0 !important; margin: 0 !important;">
+        {{ if not .Params.omit_header_text }}
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Title | default .Site.Title }}</div>
+          {{ with .Params.description  }}
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              {{ . }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </header>
+{{ else }}
+  <header>
+    <div class="{{ .Site.Params.background_color_class | default "bg-black" }}">
+      {{ partial "site-navigation.html" . }}
+    </div>
+  </header>
+{{ end }}
