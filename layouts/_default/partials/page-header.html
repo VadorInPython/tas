@@ -6,29 +6,38 @@
   
   <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');">
     <div class="{{ $cover_dimming_class }}" style="
-        height: 350px !important; /* Wymuś stałą wysokość dla kontenera tła */
-        min-height: 350px !important; /* Upewnij się, że minimalna wysokość też jest stała */
+        /* Wymuszamy stałą wysokość na tym wewnętrznym divie, który zawiera obrazek tła i tekst */
+        height: 350px !important;
+        min-height: 350px !important;
         width: 100%;
+        box-sizing: border-box; /* Ważne, aby padding nie zwiększał wysokości */
+        
+        /* Resetujemy wszelkie paddingi i marginesy, które motyw mógłby tu dodać */
+        padding: 0 !important; 
+        margin: 0 !important;
+
+        /* Konfigurujemy Flexbox do centrowania zawartości */
         display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centruj zawartość pionowo */
-        align-items: center; /* Centruj zawartość poziomo */
-        text-align: center;
-        padding-top: 0 !important;   /* Usuń wszelki padding z góry */
-        padding-bottom: 0 !important; /* Usuń wszelki padding z dołu */
-        box-sizing: border-box; /* Upewnij się, że padding nie zwiększa wysokości */
+        flex-direction: column; /* Elementy układają się w kolumnie (nawigacja, tekst) */
+        justify-content: center; /* Centruj zawartość pionowo wewnątrz tego div'a */
+        align-items: center;   /* Centruj zawartość poziomo wewnątrz tego div'a */
+        text-align: center;    /* Centruj tekst */
     ">
       {{ partial "site-navigation.html" . }}
       <div class="tc-l ph3 ph4-ns" style="
-          padding: 1rem 0 !important; /* Dodaj trochę własnego paddingu dla tekstu */
+          /* Resetujemy wszelkie paddingi i marginesy dla kontenera tekstowego */
+          padding: 0 !important; 
           margin: 0 !important;
-          width: 100%; /* Upewnij się, że tekst rozciąga się na całą szerokość */
-          max-width: 960px; /* Ogranicz szerokość, jeśli to konieczne */
+          width: 100%; /* Rozciągamy na pełną szerokość */
+          
+          /* Opcjonalnie: dodajemy trochę własnego, kontrolowanego paddingu do tekstu */
+          padding-top: 1rem !important; 
+          padding-bottom: 1rem !important;
       ">
         {{ if not .Params.omit_header_text }}
-          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Title | default .Site.Title }}</h1>
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title" style="margin: 0 !important;">{{ .Title | default .Site.Title }}</h1>
           {{ with .Params.description  }}
-            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4" style="margin: 0 !important;">
               {{ . }}
             </h2>
           {{ end }}
