@@ -1,12 +1,11 @@
 {{ define "main" }}
-  {{ if eq .Title "aboutme" }}
+  {{ if eq (lower .Title) "aboutme" }}
     <style>
       body {
         background-color: #fff0f0;
         color: #111;
         font-family: sans-serif;
       }
-
       .custom-aboutme-header {
         background-color: darkred;
         color: white;
@@ -15,7 +14,6 @@
         font-size: 2em;
         font-weight: bold;
       }
-
       .custom-aboutme-article {
         margin: 2em;
         padding: 1em;
@@ -27,11 +25,15 @@
 
     <div class="custom-aboutme-header">About Me</div>
 
-    {{ range .Pages }}
-      <div class="custom-aboutme-article">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ .Summary }}
-      </div>
+    {{ if gt (len .Pages) 0 }}
+      {{ range .Pages }}
+        <div class="custom-aboutme-article">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ .Summary }}
+        </div>
+      {{ end }}
+    {{ else }}
+      <p>No articles found.</p>
     {{ end }}
   {{ else }}
     {{ partial "main.html" . }}
