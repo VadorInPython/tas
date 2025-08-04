@@ -1,4 +1,6 @@
-body {
-  background-color: hotpink !important;
+/* Custom Header Styling */
+.header-section {
+  /* This reduces the top and bottom padding to make the header smaller */
+  padding: 2rem 0 !important;
 }
 
