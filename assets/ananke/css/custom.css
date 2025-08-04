@@ -2,22 +2,8 @@ div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
-/* Dopasuj wysokość nagłówka do stopki */
+/* Skopiuj dokładnie style ze stopki */
 header, .site-header {
-    height: auto !important;
-    min-height: auto !important;
-    padding: 1rem 0 !important; /* Dostosuj padding do stopki */
-}
-
-/* Jeśli potrzebujesz bardziej precyzyjnie */
-.header-container {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-}
-
-/* Upewnij się, że nawigacja jest wyśrodkowana */
-nav {
-    display: flex;
-    align-items: center;
-    height: 100%;
+    padding: var(--footer-padding, 1rem 0) !important;
+    height: var(--footer-height, auto) !important;
 }
