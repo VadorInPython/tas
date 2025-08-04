@@ -1,9 +1,13 @@
-/* Test - ukryj napis "The Autonomous Creator" */
-h1.f2.f-subheadline-l.fw2.light-silver.mb0.lh-title {
-    display: none !important;
+/* Zmień czarne tło na czerwone i zmniejsz padding tylko na stronie aboutme */
+body.taxonomy.categories.term-aboutme .bg-black,
+body[class*="aboutme"] .bg-black {
+    background-color: red !important;
+    padding-bottom: 1rem !important; /* zamiast pb3-m pb6-l */
+    padding-top: 1rem !important;
 }
 
-/* Lub bardziej ogólnie - ukryj wszystkie h1 z klasą light-silver */
-h1.light-silver {
+/* Ukryj napis "The Autonomous Creator" tylko na aboutme */
+body.taxonomy.categories.term-aboutme h1.light-silver,
+body[class*="aboutme"] h1.light-silver {
     display: none !important;
 }
