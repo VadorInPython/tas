@@ -26,7 +26,11 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/aboutme/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/music/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/on-the-go/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/photography/</loc>
   </url>

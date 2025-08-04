@@ -1,15 +1,4 @@
 {{ define "main" }}
-  <link rel="stylesheet" href="{{ "css/aboutme.css" | relURL }}">
-
-  <div class="custom-aboutme">
-    <h1>About Me</h1>
-    <p>This is a custom layout just for this page.</p>
-
-    {{ range .Pages }}
-      <article>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p>{{ .Summary }}</p>
-      </article>
-    {{ end }}
-  </div>
+  <h1 style="color: red;">TEST DZIAŁA?</h1>
 {{ end }}
+

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on The Autonomous Student</title>
+    <title>Categories on The Autonomous Creator</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on The Autonomous Student</description>
+    <description>Recent content in Categories on The Autonomous Creator</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Apr 2025 21:29:26 +0200</lastBuildDate>
@@ -16,11 +16,25 @@
       <description>&lt;p&gt;Discover everything you need to know about studying in Denmark - from university applications to student life and cultural adaptation. Get insider tips on Danish universities, student housing, cultural differences, and making the most of your educational journey in one of Europe&amp;rsquo;s most progressive countries.&lt;/p&gt;</description>
     </item>
     <item>
+      <title></title>
+      <link>http://localhost:1313/categories/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/aboutme/</guid>
+      <description>&lt;p&gt;How I am trying to navigate life and get the most out of the opportunity, even after the hardest turbulences that happened straight at the start of my studies.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Music</title>
       <link>http://localhost:1313/categories/music/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/music/</guid>
       <description>&lt;p&gt;Dive into my musical world where passion meets creativity. Here you&amp;rsquo;ll find my personal remakes of favorite tracks, exclusive recordings from the festivals that moved me most, and deep dives into the sounds that shape our experiences. From underground gems to festival anthems, join me on a sonic journey through the beats that define our generation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On The Go</title>
+      <link>http://localhost:1313/categories/on-the-go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/on-the-go/</guid>
+      <description></description>
     </item>
     <item>
       <title>Photography</title>
