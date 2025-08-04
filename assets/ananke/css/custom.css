@@ -1,11 +1,11 @@
-div.tc-l.pv3.ph3.ph4-ns,
-div.tc-l.pv4.pv6-l.ph3.ph4-ns {
+div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
 /* Nagłówek z niebieskim gradientem */
 header .bg-black {
     padding: 0.5rem 1rem !important;
+    padding-bottom: 3rem !important; /* Dodaj więcej paddingu na dole żeby wyrównać */
     /* Niebieski gradient - mróz, powietrze, ciemność koncertów */
     background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
     /* Dodaj subtelny cień dla głębi */
