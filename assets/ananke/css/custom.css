@@ -23,3 +23,25 @@ header .bg-black a:hover {
     color: #f0f0f0 !important;
     transition: color 0.3s ease !important;
 }
+
+/* Napraw pozycjonowanie stopki - zawsze na dole */
+html, body {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+main, .main-content {
+    flex: 1 !important;
+}
+
+footer, .bg-black.bottom-0 {
+    margin-top: auto !important;
+    position: relative !important;
+}
