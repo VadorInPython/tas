@@ -1,0 +1,39 @@
+{{ define "main" }}
+  {{ if eq .Title "aboutme" }}
+    <style>
+      body {
+        background-color: #fff0f0;
+        color: #111;
+        font-family: sans-serif;
+      }
+
+      .custom-aboutme-header {
+        background-color: darkred;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .custom-aboutme-article {
+        margin: 2em;
+        padding: 1em;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+    </style>
+
+    <div class="custom-aboutme-header">About Me</div>
+
+    {{ range .Pages }}
+      <div class="custom-aboutme-article">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ .Summary }}
+      </div>
+    {{ end }}
+  {{ else }}
+    {{ partial "main.html" . }}
+  {{ end }}
+{{ end }}
