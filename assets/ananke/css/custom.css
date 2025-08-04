@@ -1,11 +1,9 @@
 div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
 }
 
-/* Lub jeśli chcesz bardziej precyzyjnie: */
-header {
-    min-height: 60px !important;
-    height: 60px !important;
+/* Zmniejsz padding nagłówka */
+.site-header, header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
