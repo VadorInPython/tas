@@ -1,9 +1,18 @@
-/* Test - ukryj napis "The Autonomous Creator" */
-h1.f2.f-subheadline-l.fw2.light-silver.mb0.lh-title {
-    display: none !important;
-}
-
-/* Lub bardziej ogólnie - ukryj wszystkie h1 z klasą light-silver */
+/* Ukryj nagłówek „The Autonomous Creator” */
 h1.light-silver {
     display: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Kontener nagłówka */
+.header {
+    background-color: black;   /* czarne tło */
+    height: auto !important;   /* wysokość dopasowana do zawartości */
+    min-height: 0 !important;
+    padding: 10px 20px;        /* dostosuj wg potrzeb */
+    box-sizing: border-box;    /* uwzględnij padding w wysokości */
+    color: white;              /* jeśli tekst jest w headerze, by był widoczny */
+    display: flex;             /* lub block, jeśli wolisz */
+    flex-direction: column;    /* układ pionowy */
 }
