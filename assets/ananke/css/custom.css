@@ -2,10 +2,10 @@ div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
-/* Nagłówek dopasowany do stopki z duńską czerwienią */
+/* Nagłówek z niebieskim gradientem */
 header .bg-black {
-    padding: 0.75rem 1rem !important;
-    /* Duńska czerwień - elegancka dla kreatywnej strony */
+    padding: 0.5rem 1rem !important;
+    /* Niebieski gradient - mróz, powietrze, ciemność koncertów */
     background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
     /* Dodaj subtelny cień dla głębi */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
@@ -20,7 +20,7 @@ header .bg-black .site-title {
 
 /* Hover effect dla linków nawigacji */
 header .bg-black a:hover {
-    color: #f0f0f0 !important;
+    color: #93c5fd !important;
     transition: color 0.3s ease !important;
 }
 
