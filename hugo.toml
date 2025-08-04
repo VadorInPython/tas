@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'The Autonomous Creator'
 theme = 'ananke'
 
+[params]
+  customCSS = ["css/aboutme.css"] 
+
 [menu]
   [[menu.main]]
     name = "Home"
@@ -33,3 +36,4 @@ theme = 'ananke'
    name = "On The Go"
    url = "/categories/on-the-go"
    weight = 5
+

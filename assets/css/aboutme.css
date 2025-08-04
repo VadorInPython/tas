@@ -1,0 +1,17 @@
+body {
+  background: #fff0f0;
+  color: #222;
+}
+
+nav.nav {
+  background-color: crimson;
+}
+
+.site-title {
+  display: none;
+}
+
+.custom-aboutme h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
