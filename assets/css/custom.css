@@ -1,0 +1,18 @@
+/* Ukrycie nagłówka kategorii */
+.taxonomy-title,
+.term-description,
+.page-header {
+    display: none !important;
+}
+
+/* Usunięcie tła */
+.taxonomy-listing,
+.category-page,
+body.taxonomy {
+    background: transparent !important;
+}
+
+/* Zachowanie tylko górnego paska nawigacji */
+.site-header {
+    display: block !important;
+}
