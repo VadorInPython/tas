@@ -5,21 +5,10 @@ div.tc-l.pv3.ph3.ph4-ns {
 /* Nagłówek z niebieskim gradientem */
 header .bg-black {
     padding: 0.5rem 1rem !important;
-    min-height: 60px !important; /* Dostosuj do wysokości headerów ze zdjęciami */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
     /* Niebieski gradient - mróz, powietrze, ciemność koncertów */
     background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
     /* Dodaj subtelny cień dla głębi */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-}
-
-/* Upewnij się, że nawigacja jest właściwie rozmieszczona */
-header .bg-black nav {
-    display: flex !important;
-    align-items: center !important;
-    gap: 1rem !important;
 }
 
 /* Upewnij się, że tekst nawigacji jest czytelny */
