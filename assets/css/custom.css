@@ -5,19 +5,27 @@ body.ma0.avenir.bg-near-white.production {
     /* background: white !important; */
 }
 
-/* Zmniejszenie wysokości nagłówka o połowę */
-.tc-l.pv3.ph3.ph4-ns {
-    padding-top: 1.5rem !important;  /* zmniejszone z pv3 */
-    padding-bottom: 1.5rem !important;
+/* BARDZO MOCNE selektory - zmniejszenie nagłówka */
+body.ma0.avenir.bg-near-white.production div.tc-l.pv3.ph3.ph4-ns {
+    padding: 0.5rem 1rem !important;  /* bardzo małe paddingi */
+    min-height: auto !important;
+    height: auto !important;
 }
 
-/* Zmniejszenie czcionki nagłówka */
-.tc-l.pv3.ph3.ph4-ns h1.f2.f-subheadline-l.fw2.light-silver.mb0.lh-title,
-.tc-l.pv3.ph3.ph4-ns h1 {
-    font-size: 1.5rem !important;  /* znacznie mniejsze niż f2 */
-    line-height: 1.2 !important;
-    margin-bottom: 0.5rem !important;
+/* Bardzo mocny selektor dla h1 */
+body div.tc-l.pv3.ph3.ph4-ns h1 {
+    font-size: 1rem !important;  /* mała czcionka */
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    padding: 0.2rem 0 !important;
 }
+
+/* Jeśli powyższe nie działa, to po prostu ukryj */
+/*
+body div.tc-l.pv3.ph3.ph4-ns {
+    display: none !important;
+}
+*/
 
 /* Alternatywnie - zachowanie tylko górnego paska */
 .pb3-m.pb6-l.bg-black {
