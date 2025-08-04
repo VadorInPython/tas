@@ -1,6 +1,19 @@
-/* Custom Header Styling */
-.header-section {
-  /* This reduces the top and bottom padding to make the header smaller */
-  padding: 2rem 0 !important;
+/*
+==============================================
+Custom Header Styling for Ananke Theme
+==============================================
+*/
+
+/* 
+  Używamy tego bardzo specyficznego selektora, 
+  aby mieć pewność, że nadpiszemy domyślne style motywu Ananke.
+*/
+.bg-black.ph3.ph5-ns.pv4.pv5-ns {
+  /* Zmniejsza górny i dolny odstęp, aby nagłówek był niższy */
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+
+  /* Ukrywa tekst tytułu (np. "The Autonomous Creator") przez ustawienie go na czarno */
+  color: #000 !important;
 }
 
