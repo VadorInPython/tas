@@ -1,3 +1,5 @@
-body.categories-aboutme header {
+/* Ukryj duży tytuł tylko na stronie aboutme */
+body.page-categories-aboutme h1.f2.tc {
   display: none !important;
 }
+
