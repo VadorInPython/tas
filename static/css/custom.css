@@ -1,13 +1,9 @@
-/* Test - ukryj wszystkie tagline na wszystkich stronach */
-.site-tagline,
-[class*="tagline"],
-*[class*="tagline"] {
+/* Test - ukryj napis "The Autonomous Creator" */
+h1.f2.f-subheadline-l.fw2.light-silver.mb0.lh-title {
     display: none !important;
 }
 
-/* Test - ukryj wszystkie obrazy nagłówkowe */
-.header-image,
-.site-header-image,
-[class*="header-image"] {
+/* Lub bardziej ogólnie - ukryj wszystkie h1 z klasą light-silver */
+h1.light-silver {
     display: none !important;
 }
