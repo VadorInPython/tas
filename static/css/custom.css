@@ -1,0 +1,13 @@
+/* Test - ukryj wszystkie tagline na wszystkich stronach */
+.site-tagline,
+[class*="tagline"],
+*[class*="tagline"] {
+    display: none !important;
+}
+
+/* Test - ukryj wszystkie obrazy nagłówkowe */
+.header-image,
+.site-header-image,
+[class*="header-image"] {
+    display: none !important;
+}
