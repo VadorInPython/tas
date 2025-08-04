@@ -1,21 +1,60 @@
-{{ define "main" }}
-<header style="background-color: darkred; padding: 10px 20px; color: white; font-weight: bold; font-size: 1.2rem;">
-  The Autonomous Creator
-  <nav style="float: right;">
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}" style="color: white; margin-left: 15px; text-decoration: none;">{{ .Name }}</a>
-    {{ end }}
-  </nav>
-  <div style="clear: both;"></div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Autonomous Creator - About Me</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff0f0;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: darkred;
+      color: white;
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    main {
+      margin: 20px;
+    }
+    article {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    The Autonomous Creator
+    <nav style="float:right;">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <div style="clear:both;"></div>
+  </header>
 
-<main style="margin: 20px;">
-  {{ range .Pages }}
-    <article style="margin-bottom: 2em;">
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{ .Summary }}
-    </article>
-  {{ end }}
-</main>
-{{ end }}
+  <main>
+    {{ range .Pages }}
+      <article>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ .Summary }}
+      </article>
+    {{ end }}
+  </main>
+</body>
+</html>
+
 
