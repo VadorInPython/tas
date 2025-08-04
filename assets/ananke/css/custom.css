@@ -2,8 +2,23 @@ div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
-/* Skopiuj dokładnie style ze stopki */
-header, .site-header {
-    padding: var(--footer-padding, 1rem 0) !important;
-    height: var(--footer-height, auto) !important;
+/* Dopasuj nagłówek do stopki */
+header .bg-black {
+    padding: 0.75rem 1rem !important; /* pa3 to około 0.75rem */
+}
+
+/* Lub bardziej precyzyjnie, targetując dokładnie te same klasy */
+.bg-black.bottom-0.w-100.pa3 {
+    /* To jest stopka */
+}
+
+header .bg-black,
+.bg-black:not(.bottom-0) {
+    padding: 0.75rem 1rem !important; /* Takie same jak stopka */
+    min-height: auto !important;
+}
+
+/* Upewnij się, że nawigacja jest dobrze wyśrodkowana */
+nav.pv3.ph3.ph4-ns {
+    padding: 0.5rem 1rem !important;
 }
