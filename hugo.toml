@@ -4,7 +4,7 @@ title = 'The Autonomous Creator'
 theme = 'ananke'
 
 [params]
-  custom_css = ["custom.css"]
+  custom_css = ["css/custom.css"]
 
 [menu]
   [[menu.main]]

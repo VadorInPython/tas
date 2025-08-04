@@ -1,18 +1,33 @@
-/* Ukrycie nagłówka kategorii */
-.taxonomy-title,
-.term-description,
-.page-header {
+/* Usunięcie białego tła ze strony kategorii */
+body.ma0.avenir.bg-near-white.production {
+    background: transparent !important;
+    /* lub jeśli chcesz całkowicie białe tło: */
+    /* background: white !important; */
+}
+
+/* Ukrycie dużego nagłówka kategorii */
+.tc-l.pv3.ph3.ph4-ns h1.f2.f-subheadline-l.fw2.light-silver.mb0.lh-title,
+.tc-l.pv3.ph3.ph4-ns h1 {
     display: none !important;
 }
 
-/* Usunięcie tła */
-.taxonomy-listing,
-.category-page,
-body.taxonomy {
-    background: transparent !important;
+/* Ukrycie całego div-a z nagłówkiem */
+.tc-l.pv3.ph3.ph4-ns {
+    display: none !important;
 }
 
-/* Zachowanie tylko górnego paska nawigacji */
-.site-header {
+/* Alternatywnie - zachowanie tylko górnego paska */
+.pb3-m.pb6-l.bg-black {
     display: block !important;
+}
+
+/* Upewnienie się, że main content jest widoczny */
+main.pb7[role="main"] {
+    display: block !important;
+    padding-top: 0 !important;
+}
+
+/* Ukrycie footera jeśli też chcesz */
+footer.bg-black.bottom-0.w-100.pa3 {
+    display: none !important;
 }
