@@ -2,11 +2,16 @@ div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
-/* Zastąp padding nagłówka tym samym co stopka */
+/* Dopasuj wysokość do stopki */
 header .bg-black {
-    padding: 0.75rem 1rem !important; /* pa3 */
+    padding: 0.75rem 1rem !important;
+    /* Zmień kolor na gradient czerwony */
+    background: linear-gradient(135deg, #ff4444, #cc0000) !important;
 }
 
-nav {
-    padding: 0.5rem 1rem !important;
+/* Lub inne warianty gradientu: */
+
+/* Opcja 1: Ciepły czerwony gradient */
+header .bg-black {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
 }
