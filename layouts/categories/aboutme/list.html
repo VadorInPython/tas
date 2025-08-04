@@ -1,12 +1,23 @@
-{{ define "main" }}
-<main class="content">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+  <main class="content">
+    <h1>About Me</h1>
+    {{ .Content }}
 
-  <ul>
-    {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ if .Pages }}
+    <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
     {{ end }}
-  </ul>
-</main>
-{{ end }}
+  </main>
+</body>
+</html>
+
