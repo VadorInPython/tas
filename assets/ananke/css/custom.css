@@ -2,16 +2,24 @@ div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
-/* Dopasuj wysokość do stopki */
+/* Nagłówek dopasowany do stopki z duńską czerwienią */
 header .bg-black {
     padding: 0.75rem 1rem !important;
-    /* Zmień kolor na gradient czerwony */
-    background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+    /* Duńska czerwień - elegancka dla kreatywnej strony */
+    background: linear-gradient(135deg, #c8102e, #a00d26) !important;
+    /* Dodaj subtelny cień dla głębi */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 
-/* Lub inne warianty gradientu: */
+/* Upewnij się, że tekst nawigacji jest czytelny */
+header .bg-black a, 
+header .bg-black .site-title {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
 
-/* Opcja 1: Ciepły czerwony gradient */
-header .bg-black {
-    background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+/* Hover effect dla linków nawigacji */
+header .bg-black a:hover {
+    color: #f0f0f0 !important;
+    transition: color 0.3s ease !important;
 }
