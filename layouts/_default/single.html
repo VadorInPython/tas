@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body class="{{ .Site.Params.body_classes | default "avenir bg-near-white" }}">
+
+<!-- Custom header only for About Me -->
+{{ if eq .Title "About Me" }}
+  <header class="site-header-aboutme">
+      <nav class="header-nav">
+          <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
+          
+          <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+          
+          <ul class="nav-menu" id="navMenu">
+              <li><a href="/">Home</a></li>
+              <li><a href="/categories/studies-in-denmark/">Studies in Denmark</a></li>
+              <li><a href="/categories/photography/">Photography</a></li>
+              <li><a href="/categories/music/">Music</a></li>
+              <li><a href="/categories/on-the-go/">On The Go</a></li>
+              <li><a href="/categories/aboutme/" class="active">About Me</a></li>
+          </ul>
+      </nav>
+  </header>
+{{ else }}
+  {{ partial "site-header.html" . }}
+{{ end }}
+
+<main class="pb7" role="main">
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <h1 class="f1">
+          {{ .Title }}
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</main>
+{{ partial "footer.html" . }}
+</body>
+</html>
