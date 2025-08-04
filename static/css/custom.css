@@ -1,17 +1,27 @@
-/* Ukryj nagłówek h1 z klasą light-silver */
+/* Ukrycie nagłówka */
 h1.light-silver {
     display: none !important;
+    margin: 0;
+    padding: 0;
 }
 
 /* Kontener nagłówka */
 header {
-    background-color: black;   /* czarne tło */
-    padding: 10px 20px;        /* dostosuj padding wg potrzeb */
-    color: white;              /* biały tekst */
-    display: flex;             /* układ flex */
-    flex-direction: column;    /* układ pionowy */
-    justify-content: center;   /* wyśrodkowanie zawartości */
-    align-items: flex-start;   /* wyrównanie do lewej */
-    height: auto;              /* wysokość dopasowana do zawartości */
-    min-height: 0;             /* brak minimalnej wysokości */
+    background-color: black;
+    padding: 10px 20px;
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    color: white;
 }
+
+/* Kategorie */
+.categories {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
