@@ -1,5 +1,4 @@
-div.tc-l.pv3.ph3.ph4-ns,
-div.tc-l.pv4.pv6-l.ph3.ph4-ns {
+div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
@@ -40,6 +39,25 @@ body {
 
 main, .main-content {
     flex: 1 !important;
+}
+
+/* Wymuszenie konsystentnego layoutu na wszystkich stronach */
+.content, .post-content, main > div, .page-content {
+    min-height: calc(100vh - 120px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+/* Stabilizacja wysokości dla wszystkich głównych kontenerów */
+main {
+    min-height: calc(100vh - 120px) !important;
+    box-sizing: border-box !important;
+}
+
+/* Zapewnienie, że wszystkie strony mają podobną strukturę */
+.page, .post, .home {
+    min-height: calc(100vh - 120px) !important;
 }
 
 /* Stopka z gradientem niebieskim - identyczna wielkość jak header */
