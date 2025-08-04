@@ -2,23 +2,11 @@ div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
-/* Dopasuj nagłówek do stopki */
+/* Zastąp padding nagłówka tym samym co stopka */
 header .bg-black {
-    padding: 0.75rem 1rem !important; /* pa3 to około 0.75rem */
+    padding: 0.75rem 1rem !important; /* pa3 */
 }
 
-/* Lub bardziej precyzyjnie, targetując dokładnie te same klasy */
-.bg-black.bottom-0.w-100.pa3 {
-    /* To jest stopka */
-}
-
-header .bg-black,
-.bg-black:not(.bottom-0) {
-    padding: 0.75rem 1rem !important; /* Takie same jak stopka */
-    min-height: auto !important;
-}
-
-/* Upewnij się, że nawigacja jest dobrze wyśrodkowana */
-nav.pv3.ph3.ph4-ns {
+nav {
     padding: 0.5rem 1rem !important;
 }
