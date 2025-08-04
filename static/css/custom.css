@@ -1,0 +1,11 @@
+/* Ukryj tagline i zdjęcie nagłówkowe tylko na stronie kategorii aboutme */
+body.taxonomy-categories.term-aboutme .site-tagline,
+body.taxonomy-categories.term-aboutme .header-image,
+body.taxonomy-categories.term-aboutme .site-header-image {
+    display: none !important;
+}
+
+/* Zmniejsz padding nagłówka */
+body.taxonomy-categories.term-aboutme .site-header {
+    padding: 1rem 0 !important;
+}
