@@ -1,8 +1,5 @@
-/* Ukryj tylko te elementy, które NIE są w headerze */
-main div.tc-l.pv3.ph3.ph4-ns,
-main div.tc-l.pv4.pv6-l.ph3.ph4-ns,
-body > div.tc-l.pv3.ph3.ph4-ns,
-body > div.tc-l.pv4.pv6-l.ph3.ph4-ns {
+div.tc-l.pv3.ph3.ph4-ns,
+div.tc-l.pv4.pv6-l.ph3.ph4-ns {
     display: none !important;
 }
 
@@ -45,25 +42,6 @@ main, .main-content {
     flex: 1 !important;
 }
 
-/* Wymuszenie konsystentnego layoutu na wszystkich stronach */
-.content, .post-content, main > div, .page-content {
-    min-height: calc(100vh - 120px) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-}
-
-/* Stabilizacja wysokości dla wszystkich głównych kontenerów */
-main {
-    min-height: calc(100vh - 120px) !important;
-    box-sizing: border-box !important;
-}
-
-/* Zapewnienie, że wszystkie strony mają podobną strukturę */
-.page, .post, .home {
-    min-height: calc(100vh - 120px) !important;
-}
-
 /* Stopka z gradientem niebieskim - identyczna wielkość jak header */
 footer, .bg-black.bottom-0 {
     margin-top: auto !important;
@@ -76,4 +54,14 @@ footer, .bg-black.bottom-0 {
 
 /* Upewnij się, że tekst w stopce jest czytelny */
 footer a, footer .site-title, footer p, footer span,
-.bg-black.bottom-0 a, .bg-black
+.bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, 
+.bg-black.bottom-0 p, .bg-black.bottom-0 span {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+/* Hover effect dla linków w stopce */
+footer a:hover, .bg-black.bottom-0 a:hover {
+    color: #93c5fd !important;
+    transition: color 0.3s ease !important;
+}
