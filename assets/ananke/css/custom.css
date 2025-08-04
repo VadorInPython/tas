@@ -1,36 +1,37 @@
 div.tc-l.pv3.ph3.ph4-ns {          
     display: none !important;  
-}    
+}
+
+/* DODAJ TAKŻE UKRYCIE NAV Z PV3 w About Me */
+nav.pv3.ph3.ph4-ns {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
 
 /* Nagłówek z niebieskim gradientem */  
 header .bg-black {          
     padding: 0.5rem 1rem !important;          
-    /* Niebieski gradient - mróz, powietrze, ciemność koncertów */          
     background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;          
-    /* Dodaj subtelny cień dla głębi */          
     box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;  
 }    
 
-/* TYLKO TA JEDNA LINIJKA DODANA - napraw About Me */ 
 header .bg-black.pb3-m, 
 header .bg-black.pb6-l {     
     padding-bottom: 0.5rem !important; 
 }  
 
-/* Upewnij się, że tekst nawigacji jest czytelny */  
+/* Reszta Twojego CSS bez zmian... */
 header .bg-black a,   
 header .bg-black .site-title {          
     color: white !important;          
     text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;  
 }    
 
-/* Hover effect dla linków nawigacji */  
 header .bg-black a:hover {          
     color: #93c5fd !important;          
     transition: color 0.3s ease !important;  
 }    
 
-/* Napraw pozycjonowanie stopki - zawsze na dole */  
 html, body {          
     height: 100% !important;          
     margin: 0 !important;          
@@ -47,36 +48,30 @@ main, .main-content {
     flex: 1 !important;  
 }    
 
-/* Stopka z gradientem niebieskim - identyczna wielkość jak header */  
 footer, .bg-black.bottom-0 {          
     margin-top: auto !important;          
     position: relative !important;          
     padding: 0.5rem 1rem !important;          
-    /* Gradient od ciemnego niebieskiego do prawie czarnego */          
     background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;          
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1) !important;  
 }    
 
-/* Upewnij się, że tekst w stopce jest czytelny */  
 footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title,   
 .bg-black.bottom-0 p, .bg-black.bottom-0 span {          
     color: white !important;          
     text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;  
 }    
 
-/* Hover effect dla linków w stopce */  
 footer a:hover, .bg-black.bottom-0 a:hover {          
     color: #93c5fd !important;          
     transition: color 0.3s ease !important;  
 }    
 
-/* Ujednolicenie wysokości headera i rozmieszczenia tytułu i menu */  
 header .flex-l {        
     align-items: center !important;        
     min-height: 64px !important;  
 }    
 
-/* Zapewnienie spójnej wysokości i wyrównania tekstu */  
 header .site-title, nav#site-nav {        
     margin-top: 0 !important;        
     margin-bottom: 0 !important;        
@@ -84,21 +79,6 @@ header .site-title, nav#site-nav {
     align-items: center;  
 }    
 
-/* Spójność marginesów w nav */  
 nav#site-nav a {        
     margin-top: 0 !important;        
-    margin-bottom: 0 !important;        
-    padding-top: 0.25rem;        
-    padding-bottom: 0.25rem;  
-}
-
-/* Napraw About Me - usuń dodatkowy padding z nav */
-header .bg-black nav.pv3 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* Wyrównaj nav w About Me do innych stron */
-header .bg-black nav {
-    margin: 0 !important;
-}
+    margin-bottom: 0 !importa
