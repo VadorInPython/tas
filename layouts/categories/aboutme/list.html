@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Me</title>
-  <link rel="stylesheet" href="/css/custom.css">
-</head>
-<body>
-  <main class="content">
-    <h1>About Me</h1>
+{{ define "main" }}
+  {{ if not (and (eq .Kind "taxonomy") (eq .Title "Aboutme")) }}
+    {{ partial "header.html" . }}
+  {{ end }}
+
+  <main>
+    {{ if .Title }}
+      <h1 class="section-title">{{ .Title }}</h1>
+    {{ end }}
+
     {{ .Content }}
 
     {{ if .Pages }}
-    <ul>
-      {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
+      <section class="article-list">
+        {{ range .Pages }}
+          {{ .Render "summary" }}
+        {{ end }}
+      </section>
     {{ end }}
   </main>
-</body>
-</html>
+
+  {{ partial "footer.html" . }}
+{{ end }}
+
 
