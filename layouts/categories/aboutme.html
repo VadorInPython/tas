@@ -1,16 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>TEST About Me</title>
+{{ define "main" }}
   <style>
-    body { background: hotpink; color: white; font-family: monospace; }
-    h1 { text-align: center; margin-top: 50px; }
+    /* Przykładowy czerwony pasek na górze tylko dla About Me */
+    .custom-header {
+      background-color: darkred;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: #fff0f0;
+      color: #111;
+    }
   </style>
-</head>
-<body>
-  <h1>To jest TWÓJ własny SZABLON dla About Me!</h1>
-  <p style="text-align: center;">Jeśli tego nie widzisz, Hugo nie używa tego pliku.</p>
-</body>
-</html>
+
+  <div class="custom-header">
+    The Autonomous Creator
+    <nav>
+      <a href="/" style="color:white; margin-right: 15px;">Home</a>
+      <a href="/categories/aboutme" style="color:white; margin-right: 15px; text-decoration: underline;">About Me</a>
+      <a href="/categories/studies-in-denmark" style="color:white; margin-right: 15px;">Studies in Denmark</a>
+      <a href="/categories/photography" style="color:white; margin-right: 15px;">Photography</a>
+      <a href="/categories/music" style="color:white; margin-right: 15px;">Music</a>
+      <a href="/categories/on-the-go" style="color:white;">On The Go</a>
+    </nav>
+  </div>
+
+  <div class="pa3 pa4-ns w-100 mw8 center">
+    {{ range .Pages }}
+      <article class="mb4 bg-white br3 shadow-4 pa3">
+        <h2><a href="{{ .Permalink }}" style="color: darkred; text-decoration: none;">{{ .Title }}</a></h2>
+        <p>{{ .Summary }}</p>
+      </article>
+    {{ end }}
+  </div>
+{{ end }}
+
 
