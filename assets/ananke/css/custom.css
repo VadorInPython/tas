@@ -11,38 +11,21 @@ header .bg-black {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important; 
 }  
 
-/* Napraw About Me - usuń dodatkowy padding */
+/* TYLKO TA JEDNA LINIJKA DODANA - napraw About Me */
 header .bg-black.pb3-m,
 header .bg-black.pb6-l {
     padding-bottom: 0.5rem !important;
 }
 
-/* Wymuszenie jednolitego stylu dla wszystkich headerów */
-header.cover,
-header .bg-black {
-    background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
-    padding: 0.5rem 1rem !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-    min-height: 64px !important;
-}
-
-/* Usuń background-image z headerów cover */
-header.cover {
-    background-image: none !important;
-}
-
 /* Upewnij się, że tekst nawigacji jest czytelny */ 
 header .bg-black a,  
-header .bg-black .site-title,
-header.cover a,
-header.cover .site-title {     
+header .bg-black .site-title {     
     color: white !important;     
     text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important; 
 }  
 
 /* Hover effect dla linków nawigacji */ 
-header .bg-black a:hover,
-header.cover a:hover {     
+header .bg-black a:hover {     
     color: #93c5fd !important;     
     transition: color 0.3s ease !important; 
 }  
