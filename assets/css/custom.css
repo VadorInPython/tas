@@ -5,27 +5,23 @@ body.ma0.avenir.bg-near-white.production {
     /* background: white !important; */
 }
 
-/* BARDZO MOCNE selektory - zmniejszenie nagłówka */
+/* UKRYWAMY NAGŁÓWEK CAŁKOWICIE - wszystkie możliwe selektory */
+.tc-l.pv3.ph3.ph4-ns,
+div.tc-l.pv3.ph3.ph4-ns,
+body div.tc-l.pv3.ph3.ph4-ns,
 body.ma0.avenir.bg-near-white.production div.tc-l.pv3.ph3.ph4-ns {
-    padding: 0.5rem 1rem !important;  /* bardzo małe paddingi */
-    min-height: auto !important;
-    height: auto !important;
-}
-
-/* Bardzo mocny selektor dla h1 */
-body div.tc-l.pv3.ph3.ph4-ns h1 {
-    font-size: 1rem !important;  /* mała czcionka */
-    line-height: 1.1 !important;
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
     margin: 0 !important;
-    padding: 0.2rem 0 !important;
 }
 
-/* Jeśli powyższe nie działa, to po prostu ukryj */
-/*
-body div.tc-l.pv3.ph3.ph4-ns {
+/* I nagłówek h1 na wszelki wypadek */
+.tc-l.pv3.ph3.ph4-ns h1,
+div.tc-l.pv3.ph3.ph4-ns h1 {
     display: none !important;
 }
-*/
 
 /* Alternatywnie - zachowanie tylko górnego paska */
 .pb3-m.pb6-l.bg-black {
