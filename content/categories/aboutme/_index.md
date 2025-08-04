@@ -1,5 +1,5 @@
 ---
-#title: "About Me"
+title: "About Me"
 omit_header_text: true
 featured_image: ""
 ---

@@ -1,0 +1,34 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="/css/custom.css">
+  </head>
+  <body>
+    <!-- Własny header tylko dla aboutme -->
+    <header class="bg-black text-white">
+      <nav class="flex-header">
+        <div class="logo">My Custom Logo</div>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/categories/aboutme/">About Me</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Treść strony -->
+    <main>
+      <h1>About Me</h1>
+      {{ .Content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+      <p style="text-align: center;">© 2025 My Site</p>
+    </footer>
+  </body>
+</html>
+{{ end }}

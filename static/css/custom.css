@@ -1,19 +1,23 @@
-/*
-==============================================
-Custom Header Styling for Ananke Theme
-==============================================
-*/
-
-/* 
-  Używamy tego bardzo specyficznego selektora, 
-  aby mieć pewność, że nadpiszemy domyślne style motywu Ananke.
-*/
-.bg-black.ph3.ph5-ns.pv4.pv5-ns {
-  /* Zmniejsza górny i dolny odstęp, aby nagłówek był niższy */
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
-
-  /* Ukrywa tekst tytułu (np. "The Autonomous Creator") przez ustawienie go na czarno */
-  color: #c30a0a !important;
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
 
