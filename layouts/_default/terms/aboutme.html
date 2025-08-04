@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="ma0 avenir bg-near-white">
+    <header class="bg-white bb b--black-10">
+      <div class="mw8 center pa4 pt5-ns pb5-ns">
+        <nav class="db dt-l w-100 border-box">
+          <div class="db dtc-l v-mid w-100 w-25-l tc tl-l">
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+          </div>
+          <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            {{ range .Site.Menus.main }}
+              <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    {{ if not (in .RelPermalink "aboutme") }}
+      <main class="mw8 center ph3 pv4">
+        <h1 class="f2 tc">{{ .Site.Title }}</h1>
+        {{ block "main" . }}{{ end }}
+      </main>
+    {{ else }}
+      <main class="mw8 center ph3 pv4">
+        {{ block "main" . }}{{ end }}
+      </main>
+    {{ end }}
+
+    <footer class="bg-light-gray pa4 mt5">
+      <div class="tc f6 gray">
+        © {{ now.Year }} {{ .Site.Title }}
+      </div>
+    </footer>
+  </body>
+</html>
