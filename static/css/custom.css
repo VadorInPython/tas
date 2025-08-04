@@ -1,12 +1,4 @@
-/* Zmniejszenie hero tylko na stronie categories/aboutme */
-body.page-categories-aboutme .hero {
-  min-height: 150px !important;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
-/* Opcjonalnie: ukrycie tekstu w hero */
-body.page-categories-aboutme .hero-text {
-  display: none !important;
+body {
+  background-color: hotpink !important;
 }
 
