@@ -1,87 +1,100 @@
-div.tc-l.pv3.ph3.ph4-ns {          
-    display: none !important;  
-}
-
-/* DODAJ TAKŻE UKRYCIE NAV Z PV3 w About Me */
-nav.pv3.ph3.ph4-ns {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* Nagłówek z niebieskim gradientem */  
-header .bg-black {          
-    padding: 0.5rem 1rem !important;          
-    background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;          
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;  
-}    
-
-header .bg-black.pb3-m, 
-header .bg-black.pb6-l {     
-    padding-bottom: 0.5rem !important; 
+div.tc-l.pv3.ph3.ph4-ns {               
+    display: none !important;   
 }  
 
-/* Reszta Twojego CSS bez zmian... */
-header .bg-black a,   
-header .bg-black .site-title {          
-    color: white !important;          
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;  
-}    
+/* DODAJ TAKŻE UKRYCIE NAV Z PV3 w About Me */ 
+nav.pv3.ph3.ph4-ns {     
+    padding-top: 0 !important;     
+    padding-bottom: 0 !important; 
+}  
 
-header .bg-black a:hover {          
-    color: #93c5fd !important;          
-    transition: color 0.3s ease !important;  
-}    
+/* Nagłówek z niebieskim gradientem */   
+header .bg-black {               
+    padding: 0.5rem 1rem !important;               
+    background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;               
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;   
+}      
 
-html, body {          
-    height: 100% !important;          
-    margin: 0 !important;          
-    padding: 0 !important;  
-}    
+header .bg-black.pb3-m,  
+header .bg-black.pb6-l {          
+    padding-bottom: 0.5rem !important;  
+}     
 
-body {          
-    display: flex !important;          
-    flex-direction: column !important;          
-    min-height: 100vh !important;  
-}    
+/* Reszta Twojego CSS bez zmian... */ 
+header .bg-black a,    
+header .bg-black .site-title {               
+    color: white !important;               
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;   
+}      
 
-main, .main-content {          
-    flex: 1 !important;  
-}    
+header .bg-black a:hover {               
+    color: #93c5fd !important;               
+    transition: color 0.3s ease !important;   
+}      
 
-footer, .bg-black.bottom-0 {          
-    margin-top: auto !important;          
-    position: relative !important;          
-    padding: 0.5rem 1rem !important;          
-    background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;          
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1) !important;  
-}    
+html, body {               
+    height: 100% !important;               
+    margin: 0 !important;               
+    padding: 0 !important;   
+}      
 
-footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title,   
-.bg-black.bottom-0 p, .bg-black.bottom-0 span {          
-    color: white !important;          
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;  
-}    
+body {               
+    display: flex !important;               
+    flex-direction: column !important;               
+    min-height: 100vh !important;   
+}      
 
-footer a:hover, .bg-black.bottom-0 a:hover {          
-    color: #93c5fd !important;          
-    transition: color 0.3s ease !important;  
-}    
+main, .main-content {               
+    flex: 1 !important;   
+}      
 
-header .flex-l {        
-    align-items: center !important;        
-    min-height: 64px !important;  
-}    
+footer, .bg-black.bottom-0 {               
+    margin-top: auto !important;               
+    position: relative !important;               
+    padding: 0.5rem 1rem !important;               
+    background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;               
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1) !important;   
+}      
 
-header .site-title, nav#site-nav {        
-    margin-top: 0 !important;        
-    margin-bottom: 0 !important;        
-    display: flex;        
-    align-items: center;  
-}    
+footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title,    
+.bg-black.bottom-0 p, .bg-black.bottom-0 span {               
+    color: white !important;               
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;   
+}      
 
-nav#site-nav a {        
-    margin-top: 0 !important;        
-    margin-bottom: 0 !important;        
-    padding-top: 0.25rem;        
-    padding-bottom: 0.25rem;  
+footer a:hover, .bg-black.bottom-0 a:hover {               
+    color: #93c5fd !important;               
+    transition: color 0.3s ease !important;   
+}      
+
+header .flex-l {             
+    align-items: center !important;             
+    min-height: 64px !important;   
+}      
+
+header .site-title, nav#site-nav {             
+    margin-top: 0 !important;             
+    margin-bottom: 0 !important;             
+    display: flex;             
+    align-items: center;   
+}      
+
+nav#site-nav a {             
+    margin-top: 0 !important;             
+    margin-bottom: 0 !important;             
+    padding-top: 0.25rem;             
+    padding-bottom: 0.25rem;   
+}
+
+/* MEGA BRUTAL FIX - ostatnia szansa! */
+header .bg-black nav {
+    transform: translateY(0px) !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+header .bg-black .flex-l {
+    transform: translateY(0px) !important;
+    position: relative !important;
+    top: 0 !important;
 }
