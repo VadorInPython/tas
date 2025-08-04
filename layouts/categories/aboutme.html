@@ -2,59 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>The Autonomous Creator - About Me</title>
+  <title>TEST About Me</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #fff0f0;
-      color: #111;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: darkred;
-      color: white;
-      padding: 20px;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    nav a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-    }
-    main {
-      margin: 20px;
-    }
-    article {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 1em;
-      margin-bottom: 1em;
-    }
+    body { background: hotpink; color: white; font-family: monospace; }
+    h1 { text-align: center; margin-top: 50px; }
   </style>
 </head>
 <body>
-  <header>
-    The Autonomous Creator
-    <nav style="float:right;">
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
-    <div style="clear:both;"></div>
-  </header>
-
-  <main>
-    {{ range .Pages }}
-      <article>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ .Summary }}
-      </article>
-    {{ end }}
-  </main>
+  <h1>To jest TWÓJ własny SZABLON dla About Me!</h1>
+  <p style="text-align: center;">Jeśli tego nie widzisz, Hugo nie używa tego pliku.</p>
 </body>
 </html>
-
-
