@@ -1,5 +1,17 @@
-
-/* Albo jeszcze bardziej agresywnie - ukryj cały header div */
 div.tc-l.pv3.ph3.ph4-ns {
     display: none !important;
+}
+
+/* Zmniejsz wysokość kontenera nagłówka */
+.header-container, .site-header {
+    max-height: 80px !important;
+    overflow: hidden;
+}
+
+/* Wyśrodkuj elementy nawigacji */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
 }
