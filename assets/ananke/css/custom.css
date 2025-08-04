@@ -64,3 +64,26 @@ footer a:hover, .bg-black.bottom-0 a:hover {
     color: #93c5fd !important;
     transition: color 0.3s ease !important;
 }
+
+/* Ujednolicenie wysokości headera i rozmieszczenia tytułu i menu */
+header .flex-l {
+  align-items: center !important;
+  min-height: 64px !important;
+}
+
+/* Zapewnienie spójnej wysokości i wyrównania tekstu */
+header .site-title,
+nav#site-nav {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Spójność marginesów w nav */
+nav#site-nav a {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
