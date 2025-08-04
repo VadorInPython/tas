@@ -1,4 +1,6 @@
-div.tc-l.pv3.ph3.ph4-ns {
+div.tc-l.pv3.ph3.ph4-ns,
+div.tc-l.pv4.pv6-l.ph3.ph4-ns,
+div.flex-l.center.items-center.justify-between {
     display: none !important;
 }
 
