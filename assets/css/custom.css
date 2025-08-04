@@ -5,15 +5,18 @@ body.ma0.avenir.bg-near-white.production {
     /* background: white !important; */
 }
 
-/* Ukrycie dużego nagłówka kategorii */
-.tc-l.pv3.ph3.ph4-ns h1.f2.f-subheadline-l.fw2.light-silver.mb0.lh-title,
-.tc-l.pv3.ph3.ph4-ns h1 {
-    display: none !important;
+/* Zmniejszenie wysokości nagłówka o połowę */
+.tc-l.pv3.ph3.ph4-ns {
+    padding-top: 1.5rem !important;  /* zmniejszone z pv3 */
+    padding-bottom: 1.5rem !important;
 }
 
-/* Ukrycie całego div-a z nagłówkiem */
-.tc-l.pv3.ph3.ph4-ns {
-    display: none !important;
+/* Zmniejszenie czcionki nagłówka */
+.tc-l.pv3.ph3.ph4-ns h1.f2.f-subheadline-l.fw2.light-silver.mb0.lh-title,
+.tc-l.pv3.ph3.ph4-ns h1 {
+    font-size: 1.5rem !important;  /* znacznie mniejsze niż f2 */
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem !important;
 }
 
 /* Alternatywnie - zachowanie tylko górnego paska */
