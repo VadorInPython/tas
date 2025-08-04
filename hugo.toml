@@ -3,9 +3,6 @@ languageCode = 'en-us'
 title = 'The Autonomous Creator'
 theme = 'ananke'
 
-[params]
-custom_css = ["custom-header.css"]
-
 [menu]
   [[menu.main]]
     name = "Home"
