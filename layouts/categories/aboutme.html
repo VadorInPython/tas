@@ -1,51 +1,43 @@
 {{ define "main" }}
-  <style>
-    body {
-      background-color: #fff0f0;
-      font-family: sans-serif;
-      color: #111;
-    }
-    .aboutme-header {
-      background-color: darkred;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-    }
-    .aboutme-article {
-      background: white;
-      padding: 15px 20px;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .aboutme-article h2 a {
-      color: darkred;
-      text-decoration: none;
-    }
-    .aboutme-article h2 a:hover {
-      text-decoration: underline;
-    }
-    .aboutme-article p {
-      margin-top: 0.5rem;
-      color: #555;
-    }
-  </style>
 
-  <div class="aboutme-header">About Me</div>
+<style>
+  body {
+    background-color: #fff; /* jasne tło całej strony */
+    color: #111;
+    font-family: sans-serif;
+  }
 
-  <div class="mw7 center">
-    {{ range .Pages }}
-      <article class="aboutme-article">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p>{{ .Summary }}</p>
-      </article>
-    {{ end }}
-  </div>
+  /* Pasek nagłówka u góry */
+  header.site-header {
+    background-color: #b22222; /* ciemnoczerwony */
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  /* Kontener na bio */
+  .aboutme-content {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #fff; /* białe tło pod bio */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+</style>
+
+<header class="site-header">
+  The Autonomous Creator
+</header>
+
+<div class="aboutme-content">
+  {{ .Content }}
+</div>
+
 {{ end }}
+
 
 
 
