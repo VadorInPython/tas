@@ -1,6 +1,0 @@
-/* Tylko dla strony aboutme – zmniejszenie wysokości hero */
-body.page-categories-aboutme .hero {
-  min-height: 200px !important; /* Zamiast domyślnych 75vh */
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
