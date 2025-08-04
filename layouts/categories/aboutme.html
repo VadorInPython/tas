@@ -1,42 +1,51 @@
 {{ define "main" }}
   <style>
-    /* Przykładowy czerwony pasek na górze tylko dla About Me */
-    .custom-header {
+    body {
+      background-color: #fff0f0;
+      font-family: sans-serif;
+      color: #111;
+    }
+    .aboutme-header {
       background-color: darkred;
       color: white;
-      padding: 10px 20px;
-      font-weight: bold;
-      font-size: 1.5em;
+      padding: 20px;
       text-align: center;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
     }
-    body {
-      font-family: sans-serif;
-      background-color: #fff0f0;
-      color: #111;
+    .aboutme-article {
+      background: white;
+      padding: 15px 20px;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .aboutme-article h2 a {
+      color: darkred;
+      text-decoration: none;
+    }
+    .aboutme-article h2 a:hover {
+      text-decoration: underline;
+    }
+    .aboutme-article p {
+      margin-top: 0.5rem;
+      color: #555;
     }
   </style>
 
-  <div class="custom-header">
-    The Autonomous Creator
-    <nav>
-      <a href="/" style="color:white; margin-right: 15px;">Home</a>
-      <a href="/categories/aboutme" style="color:white; margin-right: 15px; text-decoration: underline;">About Me</a>
-      <a href="/categories/studies-in-denmark" style="color:white; margin-right: 15px;">Studies in Denmark</a>
-      <a href="/categories/photography" style="color:white; margin-right: 15px;">Photography</a>
-      <a href="/categories/music" style="color:white; margin-right: 15px;">Music</a>
-      <a href="/categories/on-the-go" style="color:white;">On The Go</a>
-    </nav>
-  </div>
+  <div class="aboutme-header">About Me</div>
 
-  <div class="pa3 pa4-ns w-100 mw8 center">
+  <div class="mw7 center">
     {{ range .Pages }}
-      <article class="mb4 bg-white br3 shadow-4 pa3">
-        <h2><a href="{{ .Permalink }}" style="color: darkred; text-decoration: none;">{{ .Title }}</a></h2>
+      <article class="aboutme-article">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ .Summary }}</p>
       </article>
     {{ end }}
   </div>
 {{ end }}
+
 
 

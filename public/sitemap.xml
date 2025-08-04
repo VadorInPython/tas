@@ -2,36 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://theautonomouscreator.netlify.app/categories/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/denmark/</loc>
+    <loc>https://theautonomouscreator.netlify.app/tags/denmark/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>https://theautonomouscreator.netlify.app/posts/my-first-post/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://theautonomouscreator.netlify.app/posts/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/studies/</loc>
+    <loc>https://theautonomouscreator.netlify.app/tags/studies/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/studies-in-denmark/</loc>
+    <loc>https://theautonomouscreator.netlify.app/categories/studies-in-denmark/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://theautonomouscreator.netlify.app/tags/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://theautonomouscreator.netlify.app/</loc>
     <lastmod>2025-04-27T21:29:26+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/aboutme/</loc>
+    <loc>https://theautonomouscreator.netlify.app/categories/aboutme/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/music/</loc>
+    <loc>https://theautonomouscreator.netlify.app/categories/music/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/on-the-go/</loc>
+    <loc>https://theautonomouscreator.netlify.app/categories/on-the-go/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/photography/</loc>
+    <loc>https://theautonomouscreator.netlify.app/categories/photography/</loc>
   </url>
 </urlset>
