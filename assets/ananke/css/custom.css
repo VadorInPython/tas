@@ -113,9 +113,11 @@ body.section-aboutme .ph5-l {
 }
 
 /* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
+/* Te reguły są teraz usunięte/zakomentowane, aby nagłówek był spójny z innymi stronami */
+/*
 body.section-aboutme header .flex-l {
   display: flex !important;
-  justify-content: space-between !important; /* Rozsuwa logo i menu */
+  justify-content: space-between !important;
   width: 100% !important;
 }
-
+*/
