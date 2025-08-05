@@ -1,42 +1,79 @@
 /* ================================================== */
-/* === OGÓLNE STYLE DLA CAŁEJ STRONY === */
+/* === OGÓLNE STYLE DLA CAŁEJ STRONY (MOTYW ANANKE) === */
 /* ================================================== */
 
-/* Ukrywa domyślny tytuł "hero" na stronach z obrazkiem */
-div.tc-l.pv3.ph3.ph4-ns {
-  display: none !important;
-}
-
-/* Zeruje padding na nawigacji */
-nav.pv3.ph3.ph4-ns {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
-header .bg-black {
+/* 1. Globalne style dla GÓRNEGO PASKA NAGŁÓWKA (<header>) w Ananke.
+   Ten selektor nadpisuje domyślne style Ananke dla elementu <header>.
+   Sprawia, że każdy <header> ma Twój gradient, biały tekst i jest wyrównany flexboxem. */
+header.bg-navy.avenir.bt.bw4.b--white-10, /* Domyślne klasy nagłówka <header> w Ananke */
+header /* Dodajemy ogólny selektor header, aby objąć również inne scenariusze, jeśli są */
+{
   padding: 0.5rem 1rem !important;
-  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important; /* Twój gradient! */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border-top: none !important; /* Usuwa białą linię na górze z Ananke */
+  border-bottom: none !important; /* Usuwa białą linię na dole, jeśli jest */
+
+  /* Wyrównanie dla elementów wewnątrz nagłówka (tytuł, nawigacja) */
+  display: flex !important; /* Uruchamia Flexbox na samym headerze */
+  align-items: center !important; /* Wyrównuje elementy pionowo do środka */
+  justify-content: space-between !important; /* Rozrzuca elementy na końce (tytuł L, menu P) */
+  min-height: 64px !important; /* Minimalna wysokość nagłówka */
+  width: 100% !important; /* Pełna szerokość */
 }
 
-header .bg-black.pb3-m,
-header .bg-black.pb6-l {
-  padding-bottom: 0.5rem !important;
-}
-
-header .bg-black a,
-header .bg-black .site-title {
+/* Kolory tekstu i linków w GÓRNYM PASKU NAGŁÓWKA. */
+header a,
+header .site-title,
+header .f3.fw6.db.white, /* Klasa tytułu strony w nagłówku Ananke */
+header .white-70.hover-white.no-underline /* Klasy linków nawigacyjnych w Ananke */
+{
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-header .bg-black a:hover {
+header a:hover,
+header .white-70.hover-white.no-underline:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
 
-/* Style dla "przyklejonej" stopki */
+/* Zerowanie marginesów i paddingów dla elementów nawigacji w GÓRNYM PASKU. */
+nav.pv3.ph3.ph4-ns, /* Twój pierwotny selektor, jeśli nadal go używasz */
+nav.flex-ns.flex-m.fw6.ml4.mt4.mt0-ns /* Selektor dla nawigacji w Ananke */
+{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  /* display: flex i align-items są już na nadrzędnym headerze */
+}
+
+nav.flex-ns.flex-m.fw6.ml4.mt4.mt0-ns a {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* 2. Ukrywanie DOMYŚLNEGO "HERO TITLE" (dużego tekstu w MAIN).
+   To jest TEN duży napis (np. "The Autonomous Creator" lub tytuł postu/strony),
+   który pojawia się w głównym bloku treści (`<main>`), NIE w <header>.
+   Jeśli chcesz, aby nagłówek na każdej KATEGORII (lista postów) był tylko PASKIEM,
+   a ten "hero title" zniknął tam, gdzie się pojawia, to ta reguła jest potrzebna.
+   Jednak na stronie `About Me` (lub innych, gdzie chcesz mieć obraz + tytuł),
+   MOŻE CHCESZ ZACHOWAĆ TEN BLOK, ale ukryć w nim domyślny tekst.
+   Poniższa reguła ukryje go globalnie. Jeśli potrzebujesz go widzieć na About Me,
+   będziemy musieli ją zmienić, ale najpierw zobaczmy, czy to działa.
+*/
+.mw7.center.tc-l.pv4.pv5-ns.ph3.ph4-ns, /* Standardowy selektor dla hero div w Ananke */
+div.tc-l.pv3.ph3.ph4-ns /* Twój pierwotny selektor, jeśli masz inne klasy */
+{
+  display: none !important;
+}
+
+
+/* 3. Globalne style dla "przyklejonej" stopki - bez zmian, są poprawne. */
 html,
 body {
   height: 100% !important;
@@ -80,42 +117,5 @@ footer a:hover,
 .bg-black.bottom-0 a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
-}
-
-/* Ogólne wyrównanie w nagłówku */
-header .flex-l {
-  align-items: center !important;
-  min-height: 64px !important;
-}
-
-header .site-title,
-nav#site-nav {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  display: flex;
-  align-items: center;
-}
-
-nav#site-nav a {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-/* ================================================== */
-/* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
-/* ================================================== */
-
-/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
-body.section-aboutme .ph5-l {
-  display: none !important;
-}
-
-/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
-body.section-aboutme header .flex-l {
-  display: flex !important;
-  justify-content: space-between !important; /* Rozsuwa logo i menu */
-  width: 100% !important;
 }
 
