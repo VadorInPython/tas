@@ -1,56 +1,121 @@
 /* ================================================== */
-/* === ABOUT ME: TYLKO GRADIENTOWY PASEK + FLEX L–R === */
+/* === OGÓLNE STYLE DLA CAŁEJ STRONY === */
 /* ================================================== */
 
-/* 1) Całkowicie wycinamy sekcję hero (zdjęcie + duży tytuł) */
-body.section-aboutme .page-header,
-body.section-aboutme div.tc-l.pv3.ph3.ph4-ns {
+/* Ukrywa domyślny tytuł "hero" na stronach z obrazkiem */
+div.tc-l.pv3.ph3.ph4-ns {
   display: none !important;
 }
 
-/* 2) Gradientowy pasek – padding ~ wysokość tekstu */
-body.section-aboutme header .bg-black {
-  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+/* Zeruje padding na nawigacji */
+nav.pv3.ph3.ph4-ns {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
+header .bg-black {
   padding: 0.5rem 1rem !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* 3) Flex: logo po lewej, menu po prawej, jedna linia */
-body.section-aboutme header .bg-black > .flex-l,
-body.section-aboutme header nav.pv3.ph3.ph4-ns > .flex-l {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  white-space: nowrap !important; /* bez zawijania */
+header .bg-black.pb3-m,
+header .bg-black.pb6-l {
+  padding-bottom: 0.5rem !important;
 }
 
-/* 4) Logo po lewej */
-body.section-aboutme header .site-title {
-  margin: 0 !important;
-  padding: 0 !important;
+header .bg-black a,
+header .bg-black .site-title {
   color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* 5) Menu po prawej – wszystko w jednej linii */
-body.section-aboutme nav#site-nav {
-  display: flex !important;
-  gap: 1rem !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-body.section-aboutme nav#site-nav a {
-  padding: 0 !important;
-  line-height: 1 !important;
-  color: white !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
-  white-space: nowrap !important;
-}
-
-body.section-aboutme nav#site-nav a:hover {
+header .bg-black a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
+}
+
+/* Style dla "przyklejonej" stopki */
+html,
+body {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+main,
+.main-content {
+  flex: 1 !important;
+}
+
+footer,
+.bg-black.bottom-0 {
+  margin-top: auto !important;
+  position: relative !important;
+  padding: 0.5rem 1rem !important;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+footer a,
+footer .site-title,
+footer p,
+footer span,
+.bg-black.bottom-0 a,
+.bg-black.bottom-0 .site-title,
+.bg-black.bottom-0 p,
+.bg-black.bottom-0 span {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+footer a:hover,
+.bg-black.bottom-0 a:hover {
+  color: #93c5fd !important;
+  transition: color 0.3s ease !important;
+}
+
+/* Ogólne wyrównanie w nagłówku */
+header .flex-l {
+  align-items: center !important;
+  min-height: 64px !important;
+}
+
+header .site-title,
+nav#site-nav {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+nav#site-nav a {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* ================================================== */
+/* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
+/* ================================================== */
+
+/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
+body.section-aboutme .ph5-l {
+  display: none !important;
+}
+
+/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
+body.section-aboutme header .flex-l {
+  display: flex !important;
+  justify-content: space-between !important; /* Rozsuwa logo i menu */
+  width: 100% !important;
 }
 
