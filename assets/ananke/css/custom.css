@@ -103,15 +103,21 @@ nav#site-nav a {
   padding-bottom: 0.25rem;
 }
 
-/* ================================================== */
-/* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
-/* ================================================== */
-
-/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
-body.section-aboutme .ph5-l {
+/* Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
+/* Ta reguła została przeniesiona z sekcji "ABOUT ME" i jest teraz globalna */
+.ph5-l {
   display: none !important;
 }
 
+/* ================================================== */
+/* === STYLE TYLKO DLA STRONY "ABOUT ME" - (TERAZ PUSTE) === */
+/* ================================================== */
+/*
+1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero"
+body.section-aboutme .ph5-l {
+  display: none !important;
+}
+*/
 /* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
 /* Te reguły są teraz usunięte/zakomentowane, aby nagłówek był spójny z innymi stronami */
 /*
