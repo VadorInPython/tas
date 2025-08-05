@@ -1,8 +1,19 @@
-div.tc-l.pv3.ph3.ph4-ns {
+/* 🚫 PROBLEM: Ten selektor ukrywa tytuły! */
+/* div.tc-l.pv3.ph3.ph4-ns {
+    display: none !important;
+} */
+
+/* ✅ ROZWIĄZANIE: Ukryj tylko nawigację, nie tytuły */
+nav.pv3.ph3.ph4-ns {
+    display: none !important; /* Ukryj tylko nav */
+}
+
+/* Lub bardziej precyzyjnie - ukryj tylko nav w headerze */
+header nav.pv3.ph3.ph4-ns {
     display: none !important;
 }
 
-/* DODAJ TAKŻE UKRYCIE NAV Z PV3 w About Me */
+/* DODAJ TAKŻE UKRYCIE NAV Z PV3 w About Me - bez zmian */
 nav.pv3.ph3.ph4-ns {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -125,40 +136,39 @@ body.section-aboutme header.bg-black {
 /* 🆕 UJEDNOLICENIE SPACINGU TEKSTU W NAGŁÓWKACH */
 /* =============================================== */
 
-/* Główne tytuły we WSZYSTKICH headerach - oba typy */
-header h1, 
-header .site-title,
-.f2.f-subheadline-l.fw2,
-.f2.f1-l.fw2,
-/* About Me z featured image */
-header.cover .tc-l.pv4.pv6-l h1,
-header.cover .tc-l.pv4.pv6-l .f2,
-/* Kategorie bez featured image */
-header .tc-l.pv3.ph3.ph4-ns h1,
-header .tc-l.pv3.ph3.ph4-ns .f2,
-/* Ogólne dopasowanie */
-.tc-l h1,
-.tc-l .f2 {
+/* ✅ POKAZUJ tytuły z ujednoliconym spacingiem */
+div.tc-l.pv3.ph3.ph4-ns {
+    display: block !important; /* Pokaż tytuły! */
     letter-spacing: 0.025em !important;
     word-spacing: 0.1em !important;
     line-height: 1.25 !important;
 }
 
-/* Opisy/podtytuły - oba typy headerów */
+/* Wszystkie tytuły w headerach */
+header h1, 
+header .site-title,
+.f2.f-subheadline-l.fw2,
+.f2.f1-l.fw2,
+.tc-l h1,
+.tc-l .f2,
+.tc-l div {
+    letter-spacing: 0.025em !important;
+    word-spacing: 0.1em !important;
+    line-height: 1.25 !important;
+    display: block !important; /* Upewnij się, że są widoczne */
+}
+
+/* Opisy/podtytuły */
 header h2,
 .fw1.f5.f3-l,
-/* About Me z featured image */
-header.cover .tc-l.pv4.pv6-l h2,
-header.cover .tc-l.pv4.pv6-l .fw1,
-/* Kategorie bez featured image */
-header .tc-l.pv3.ph3.ph4-ns h2,
-header .tc-l.pv3.ph3.ph4-ns .fw1 {
+.tc-l h2,
+.tc-l .fw1 {
     letter-spacing: 0.02em !important;
     word-spacing: 0.08em !important;
     line-height: 1.5 !important;
 }
 
-/* Tachyons line-height override dla konsystencji */
+/* Tachyons override */
 .lh-title {
     line-height: 1.25 !important;
     letter-spacing: 0.025em !important;
@@ -169,72 +179,30 @@ header .tc-l.pv3.ph3.ph4-ns .fw1 {
     letter-spacing: 0.02em !important;
 }
 
-/* Nawigacja - ujednolicony spacing */
+/* Nawigacja */
 nav#site-nav a,
-header nav a,
-.site-navigation a {
+header nav a:not(.pv3) {
     letter-spacing: 0.025em !important;
     word-spacing: 0.05em !important;
 }
 
-/* Dla stron kategorii/taxonomii - dopasowanie do About Me */
+/* Kategorie i taxonomie */
 .taxonomy-list,
 .category-list,
 .category-link,
-.terms-list {
-    letter-spacing: 0.025em !important;
-    word-spacing: 0.1em !important;
-    line-height: 1.25 !important;
-}
-
-/* Breadcrumbs w kategoriach */
+.terms-list,
 .breadcrumb,
-.breadcrumb-item,
-.category-breadcrumb {
-    letter-spacing: 0.025em !important;
-    word-spacing: 0.08em !important;
-}
-
-/* Tytuły stron (page-header) */
-header .tc-l.ph3.ph4-ns .f2.f1-l.fw2,
-header .tc-l.ph3.ph4-ns .f2.f-subheadline-l.fw2,
-header .tc-l div {
+.breadcrumb-item {
     letter-spacing: 0.025em !important;
     word-spacing: 0.1em !important;
     line-height: 1.25 !important;
 }
 
-/* Responsive - zachowanie na różnych ekranach */
-@media screen and (min-width: 30em) {
-    .f3-l, .f1-l, .f-subheadline-l {
-        letter-spacing: 0.025em !important;
-    }
-    
-    /* Większy spacing na dużych ekranach */
-    header h1, header .site-title {
-        letter-spacing: 0.03em !important;
-    }
-}
-
-/* Specjalnie dla About Me - WSZYSTKIE możliwe selektory */
+/* Specjalnie dla About Me */
 body.section-aboutme header .site-title,
 body.section-aboutme header h1,
-body.section-aboutme header .f2,
-body.section-aboutme header.cover h1,
-body.section-aboutme header.cover .f2,
-body.section-aboutme .tc-l h1,
-body.section-aboutme .tc-l .f2 {
+body.section-aboutme .tc-l * {
     letter-spacing: 0.025em !important;
     word-spacing: 0.1em !important;
     line-height: 1.25 !important;
-}
-
-body.section-aboutme nav#site-nav a {
-    letter-spacing: 0.025em !important;
-    word-spacing: 0.05em !important;
-}
-
-/* 🔥 NAJSILNIEJSZY SELEKTOR - gdy nic nie działa */
-header * {
-    letter-spacing: 0.025em !important;
 }
