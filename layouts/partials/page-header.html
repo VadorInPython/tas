@@ -1,0 +1,6 @@
+{{ if .Params.featured_image }}
+  {{ partial "page-header-with-image.html" . }}
+{{ else }}
+  <!-- Just include the site header, no hero text -->
+  {{ partial "site-header.html" . }}
+{{ end }}
