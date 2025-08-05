@@ -1,33 +1,41 @@
 /* ================================================== */
-/* === UNIWERSALNY NAGŁÓWEK NA WSZYSTKICH STRONACH === */
+/* === UNIWERSALNY PASEK NAGŁÓWKA (gradient + flex) === */
 /* ================================================== */
 
-/* 1) Ukrywamy tylko duży tekst z hero (h1, .f1, .f2) */
-header .hero-body h1,
-header .hero-body .f1,
-header .hero-body .f2 {
+/* 1) Wyłączamy całą sekcję „hero” (duży tekst i tło/obraz) */
+.page-header,
+div.tc-l.pv3.ph3.ph4-ns {
   display: none !important;
 }
 
-/* 2) Usuwamy stare reguły o About Me (jeśli je masz) */
-body.section-aboutme .ph5-l,
-body.section-aboutme header .flex-l {
-  /* all: unset;  opcjonalnie możesz całkowicie wyczyścić te reguły */
+/* 2) Stylujemy główny nagłówek (site-header) */
+header .bg-black {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  padding: 0.5rem 1rem !important;       /* wysokość paska ~ tekst */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* 3) Wyrównujemy i centrujemy zawartość nagłówka */
-header nav.pv3.ph3.ph4-ns > .flex-l {
+/* 3) Wymuszamy flex na kontenerze logo+menu */
+header nav.pv3.ph3.ph4-ns,
+header .flex-l {
   display: flex !important;
   justify-content: space-between !important; /* logo po lewej, menu po prawej */
   align-items: center !important;
-  width: 100% !important;
-  max-width: 60rem !important;      /* dopasuj do szerokości Twojego contentu */
-  margin: 0 auto !important;        /* wycentrowanie w poziomie */
-  padding: 0.5rem 1rem !important;  /* wewnętrzne marginesy */
+  max-width: 60rem !important; /* dopasuj do szerokości contentu */
+  margin: 0 auto !important;   /* wyśrodkowanie paska */
+  padding: 0 !important;       /* usuń dodatkowe paddingi */
 }
 
-/* 4) Zerujemy domyły padding na samej nawigacji (jeżeli potrzebne) */
-header nav.pv3.ph3.ph4-ns {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+/* 4) Drobne wyzerowanie marginesów i kolor tekstu */
+header .site-title,
+nav#site-nav,
+nav#site-nav a {
+  margin: 0 !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+nav#site-nav a:hover {
+  color: #93c5fd !important;
+  transition: color 0.3s ease !important;
 }
