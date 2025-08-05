@@ -1,80 +1,121 @@
-/* --- Gradientowy niebieski pasek na header --- */
-.bg-gradient-blue {
-  background: linear-gradient(135deg, #1e3a8a, #0f172a);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 1rem;
+/* ================================================== */
+/* === OGÓLNE STYLE DLA CAŁEJ STRONY === */
+/* ================================================== */
+
+/* Ukrywa domyślny tytuł "hero" na stronach z obrazkiem */
+div.tc-l.pv3.ph3.ph4-ns {
+  display: none !important;
 }
 
-/* Kontener nav i flexbox */
-.bg-gradient-blue nav {
-  max-width: 1280px; /* dostosuj do szerokości contentu */
-  margin: 0 auto;
+/* Zeruje padding na nawigacji */
+nav.pv3.ph3.ph4-ns {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-/* Flex kontener: logo i menu */
-.bg-gradient-blue nav > div.flex-l {
+/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
+header .bg-black {
+  padding: 0.5rem 1rem !important;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+header .bg-black.pb3-m,
+header .bg-black.pb6-l {
+  padding-bottom: 0.5rem !important;
+}
+
+header .bg-black a,
+header .bg-black .site-title {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+header .bg-black a:hover {
+  color: #93c5fd !important;
+  transition: color 0.3s ease !important;
+}
+
+/* Style dla "przyklejonej" stopki */
+html,
+body {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+main,
+.main-content {
+  flex: 1 !important;
+}
+
+footer,
+.bg-black.bottom-0 {
+  margin-top: auto !important;
+  position: relative !important;
+  padding: 0.5rem 1rem !important;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+footer a,
+footer .site-title,
+footer p,
+footer span,
+.bg-black.bottom-0 a,
+.bg-black.bottom-0 .site-title,
+.bg-black.bottom-0 p,
+.bg-black.bottom-0 span {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+footer a:hover,
+.bg-black.bottom-0 a:hover {
+  color: #93c5fd !important;
+  transition: color 0.3s ease !important;
+}
+
+/* Ogólne wyrównanie w nagłówku */
+header .flex-l {
+  align-items: center !important;
+  min-height: px !important;
+}
+
+header .site-title,
+nav#site-nav {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* pozwala zawijać na mniejsze ekrany */
 }
 
-/* Link tytułu strony */
-.bg-gradient-blue .site-title {
-  color: white !important;
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-  text-decoration: none;
-  white-space: nowrap;
+nav#site-nav a {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
-/* Menu list */
-.bg-gradient-blue ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap; /* ważne, by zawijać na małych ekranach */
+/* ================================================== */
+/* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
+/* ================================================== */
+
+/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
+body.section-aboutme .ph5-l {
+  display: none !important;
 }
 
-/* Elementy menu */
-.bg-gradient-blue ul li {
-  margin-right: 1.5rem;
+/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
+body.section-aboutme header .flex-l {
+  display: flex !important;
+  justify-content: space-between !important; /* Rozsuwa logo i menu */
+  width: 100% !important;
 }
-
-/* Linki menu */
-.bg-gradient-blue ul li a {
-  color: white !important;
-  font-weight: 400;
-  font-size: 1rem;
-  text-decoration: none;
-  white-space: nowrap;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-  transition: color 0.3s ease;
-}
-
-/* Hover na linkach menu */
-.bg-gradient-blue ul li a:hover {
-  color: #93c5fd !important;
-}
-
-/* Responsywność: na bardzo małych ekranach menu może zawijać się pod logo */
-@media (max-width: 600px) {
-  .bg-gradient-blue nav > div.flex-l {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .bg-gradient-blue ul {
-    margin-top: 0.5rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .bg-gradient-blue ul li {
-    margin-right: 1rem;
-  }
-}
-
-
 
