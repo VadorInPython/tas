@@ -2,9 +2,16 @@
 /* === OGÓLNE STYLE DLA CAŁEJ STRONY === */
 /* ================================================== */
 
-/* Ukrywa domyślny tytuł "hero" na stronach z obrazkiem */
-div.tc-l.pv3.ph3.ph4-ns {
+/* Ukrywa tylko wielki tekst "hero", ale zachowuje obrazki w nagłówku */
+div.tc-l.pv3.ph3.ph4-ns h1,
+div.tc-l.pv3.ph3.ph4-ns .f1,
+div.tc-l.pv3.ph3.ph4-ns .f2 {
   display: none !important;
+}
+
+/* Zachowuje kontener nagłówka dla obrazków, ale usuwa padding */
+div.tc-l.pv3.ph3.ph4-ns {
+  padding: 0 !important;
 }
 
 /* Zeruje padding na nawigacji */
@@ -118,4 +125,3 @@ body.section-aboutme header .flex-l {
   justify-content: space-between !important; /* Rozsuwa logo i menu */
   width: 100% !important;
 }
-
