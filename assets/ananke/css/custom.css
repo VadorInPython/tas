@@ -1,40 +1,49 @@
 /* ================================================== */
-/* === UNIWERSALNY PASEK NAGŁÓWKA (gradient + flex) === */
+/* === JEDNOLITY PASEK NAGŁÓWKA (logo L, menu R) === */
 /* ================================================== */
 
-/* 1) Wyłączamy całą sekcję „hero” (duży tekst i tło/obraz) */
+/* 1) Wycinamy hero (duży tytuł + obraz) */
 .page-header,
 div.tc-l.pv3.ph3.ph4-ns {
   display: none !important;
 }
 
-/* 2) Stylujemy główny nagłówek (site-header) */
+/* 2) Stylujemy nagłówek jako wąski pasek z gradientem */
 header .bg-black {
   background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
-  padding: 0.5rem 1rem !important;       /* wysokość paska ~ tekst */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  padding: 0 !important; /* usuwamy dotychczasowe pady */
 }
 
-/* 3) Wymuszamy flex na kontenerze logo+menu */
-header nav.pv3.ph3.ph4-ns,
-header .flex-l {
+/* 3) Wymuszamy jeden flex-container dla logo + nav */
+header .bg-black > .flex-l,
+header nav.pv3.ph3.ph4-ns > .flex-l {
   display: flex !important;
-  justify-content: space-between !important; /* logo po lewej, menu po prawej */
+  justify-content: space-between !important; /* L <—> R */
   align-items: center !important;
-  max-width: 60rem !important; /* dopasuj do szerokości contentu */
-  margin: 0 auto !important;   /* wyśrodkowanie paska */
-  padding: 0 !important;       /* usuń dodatkowe paddingi */
+  max-width: 60rem !important;   /* szerokość treści */
+  margin: 0 auto !important;     /* wycentrowanie w poziomie */
+  padding: 0.5rem 1rem !important;/* wysokość paska ~ tekst */
 }
 
-/* 4) Drobne wyzerowanie marginesów i kolor tekstu */
-header .site-title,
-nav#site-nav,
-nav#site-nav a {
+/* 4) Logo (site-title) na lewo, menu na prawo */
+header .site-title {
   margin: 0 !important;
+  /* możesz dodać: font-size, font-weight itp. */
+}
+nav#site-nav {
+  margin: 0 !important;
+  display: flex !important;
+  gap: 1rem; /* odstępy między linkami */
+}
+
+/* 5) Linki */
+nav#site-nav a {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+  padding: 0 !important;
+  line-height: 1 !important;
 }
-
 nav#site-nav a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
