@@ -1,57 +1,37 @@
-/* 🔷 Styl tylko dla strony About Me (section-aboutme) - POPRAWIONY, aby układ był taki sam jak w innych sekcjach */
+/* 🔷 Styl tylko dla strony About Me (section-aboutme) - Wersja finalna */
 
-/* Ten blok jest w porządku, ale jego 'justify-content' nie działa, bo jest nadpisywany przez bardziej szczegółową regułę poniżej. */
-body.section-aboutme header {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    min-height: 64px !important; /* taka sama wysokość jak na innych stronach */
+/* 1. Ukrywamy wielki tytuł "The Autonomous Creator", który pojawia się na środku */
+body.section-aboutme .tc-l {
+  display: none !important;
 }
 
-/* === TUTAJ SĄ KLUCZOWE ZMIANY === */
+/* 2. Przywracamy gradient i cień bezpośrednio do nagłówka na tej stronie */
+body.section-aboutme header.site-header {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  padding: 0.5rem 1rem !important;
+  min-height: 64px; /* Utrzymujemy stałą wysokość */
+  display: flex;
+  align-items: center;
+}
+
+/* 3. Ustawiamy poprawne rozłożenie dla kontenera z logo i menu */
 body.section-aboutme header .flex-l {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    /* ZMIANA: To jest najważniejsza poprawka. 'space-between' rozsuwa elementy na boki. Było 'flex-start', które wszystko pchało na lewo. */
-    justify-content: space-between !important; 
-    /* USUNIĘTE: 'gap' przeszkadza w działaniu 'space-between', więc go usuwamy z tego kontenera. */
-    /* gap: 1rem !important; */
-    margin: 0 auto !important; /* ZMIANA: 'auto' dla marginesów lewo/prawo wycentruje kontener wewnątrz nagłówka */
-    padding: 0 !important;
-    min-height: auto !important;
-    width: 100%; /* DODANE: Zapewnia, że kontener ma pełną szerokość do wykorzystania */
+  display: flex !important;
+  justify-content: space-between !important; /* KLUCZ: Rozsuwa logo i menu */
+  align-items: center !important; /* Wyrównuje w pionie */
+  width: 100% !important; /* Zapewnia pełną szerokość do rozsunięcia */
 }
 
-/* Ten blok jest OK, resetuje styl tytułu */
-body.section-aboutme header .site-title {
-    font-size: inherit !important;
-    text-align: left !important;
-    margin: 0 !important;
-    line-height: normal !important;
-    padding: 0 !important;
-}
-
-/* Ten blok jest OK, styluje wewnętrzne linki w nawigacji */
+/* 4. Resetujemy niepotrzebne marginesy na logo i menu, żeby nie psuły wyrównania */
+body.section-aboutme header .site-title,
 body.section-aboutme nav#site-nav {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    gap: 1rem !important; /* Ten 'gap' jest dobry, bo tworzy odstępy MIĘDZY linkami w menu */
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: none !important;
-    row-gap: 0 !important;
+  margin: 0 !important;
 }
 
-/* Ten blok jest OK */
-body.section-aboutme nav#site-nav a {
-    margin: 0 !important;
-    padding: 0.25rem 0 !important;
-    line-height: normal !important;
+/* 5. Zapewniamy, że linki w menu mają między sobą odstęp */
+body.section-aboutme nav#site-nav {
+  display: flex !important;
+  gap: 1rem !important;
 }
 
