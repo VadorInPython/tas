@@ -2,8 +2,7 @@
 /* === OGÓLNE STYLE DLA CAŁEJ STRONY === */
 /* ================================================== */
 
-/* Ukrywa domyślny tytuł "hero" (np. "The Autonomous Creator") na stronach z obrazkiem,
-   jeśli chcesz, aby go nie było na ŻADNEJ stronie. */
+/* Ukrywa domyślny tytuł "hero" na stronach z obrazkiem */
 div.tc-l.pv3.ph3.ph4-ns {
   display: none !important;
 }
@@ -14,7 +13,7 @@ nav.pv3.ph3.ph4-ns {
   padding-bottom: 0 !important;
 }
 
-/* Ogólny styl dla nagłówków z tłem */
+/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
 header .bg-black {
   padding: 0.5rem 1rem !important;
   background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
@@ -83,14 +82,10 @@ footer a:hover,
   transition: color 0.3s ease !important;
 }
 
-/* Ogólne wyrównanie w nagłówku - zastosowane do WSZYSTKICH stron */
+/* Ogólne wyrównanie w nagłówku */
 header .flex-l {
   align-items: center !important;
   min-height: 64px !important;
-  /* Dodane/odkomentowane dla globalnego zastosowania */
-  display: flex !important;
-  justify-content: space-between !important;
-  width: 100% !important;
 }
 
 header .site-title,
@@ -108,17 +103,19 @@ nav#site-nav a {
   padding-bottom: 0.25rem;
 }
 
-/* Jeśli "The Autonomous Creator" (czyli .ph5-l) jest zawsze DOMYŚLNYM tytułem "hero" i chcesz go zawsze ukryć.
-   Jeśli to jest inny element niż div.tc-l.pv3.ph3.ph4-ns, upewnij się, że jego selektor jest prawidłowy.
-   W Twoim oryginalnym kodzie, to div.tc-l.pv3.ph3.ph4-ns jest ukrywane.
-   Jeśli .ph5-l to JEDYNIE część 'About Me' i nie chcesz, żeby istniało w ogóle,
-   to to też może zostać globalnie:
-*/
-/* .ph5-l {
-  display: none !important;
-} */
+/* ================================================== */
+/* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
+/* ================================================== */
 
-/* ================================================== */
-/* === STYLE TYLKO DLA STRONY "ABOUT ME" (TERAZ PUSTE) === */
-/* ================================================== */
-/* Sekcja pozostaje pusta, bo wszystko zostało przeniesione do stylów ogólnych. */
+/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
+body.section-aboutme .ph5-l {
+  display: none !important;
+}
+
+/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
+body.section-aboutme header .flex-l {
+  display: flex !important;
+  justify-content: space-between !important; /* Rozsuwa logo i menu */
+  width: 100% !important;
+}
+
