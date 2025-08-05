@@ -1,3 +1,4 @@
+
 div.tc-l.pv3.ph3.ph4-ns {          
     display: none !important;  
 }
@@ -19,7 +20,6 @@ header .bg-black.pb3-m,
 header .bg-black.pb6-l {     
     padding-bottom: 0.5rem !important; 
 }  
-
 
 /* Reszta Twojego CSS bez zmian... */
 header .bg-black a,   
@@ -85,4 +85,29 @@ nav#site-nav a {
     margin-bottom: 0 !important;        
     padding-top: 0.25rem;        
     padding-bottom: 0.25rem;  
+}
+
+/* 🔷 Styl tylko dla strony About Me (section-aboutme) */
+body.section-aboutme header .flex-l {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body.section-aboutme header .site-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+body.section-aboutme nav#site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90vw;
+    gap: 1rem;
+    row-gap: 0.25rem;
 }
