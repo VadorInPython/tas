@@ -125,19 +125,34 @@ body.section-aboutme header.bg-black {
 /* 🆕 UJEDNOLICENIE SPACINGU TEKSTU W NAGŁÓWKACH */
 /* =============================================== */
 
-/* Główne tytuły we wszystkich headerach */
+/* Główne tytuły we WSZYSTKICH headerach - oba typy */
 header h1, 
 header .site-title,
 .f2.f-subheadline-l.fw2,
-.f2.f1-l.fw2 {
+.f2.f1-l.fw2,
+/* About Me z featured image */
+header.cover .tc-l.pv4.pv6-l h1,
+header.cover .tc-l.pv4.pv6-l .f2,
+/* Kategorie bez featured image */
+header .tc-l.pv3.ph3.ph4-ns h1,
+header .tc-l.pv3.ph3.ph4-ns .f2,
+/* Ogólne dopasowanie */
+.tc-l h1,
+.tc-l .f2 {
     letter-spacing: 0.025em !important;
     word-spacing: 0.1em !important;
     line-height: 1.25 !important;
 }
 
-/* Opisy/podtytuły */
+/* Opisy/podtytuły - oba typy headerów */
 header h2,
-.fw1.f5.f3-l {
+.fw1.f5.f3-l,
+/* About Me z featured image */
+header.cover .tc-l.pv4.pv6-l h2,
+header.cover .tc-l.pv4.pv6-l .fw1,
+/* Kategorie bez featured image */
+header .tc-l.pv3.ph3.ph4-ns h2,
+header .tc-l.pv3.ph3.ph4-ns .fw1 {
     letter-spacing: 0.02em !important;
     word-spacing: 0.08em !important;
     line-height: 1.5 !important;
@@ -201,8 +216,14 @@ header .tc-l div {
     }
 }
 
-/* Specjalnie dla About Me - zachowanie obecnego stylu ale z ujednoliconym spacingiem */
-body.section-aboutme header .site-title {
+/* Specjalnie dla About Me - WSZYSTKIE możliwe selektory */
+body.section-aboutme header .site-title,
+body.section-aboutme header h1,
+body.section-aboutme header .f2,
+body.section-aboutme header.cover h1,
+body.section-aboutme header.cover .f2,
+body.section-aboutme .tc-l h1,
+body.section-aboutme .tc-l .f2 {
     letter-spacing: 0.025em !important;
     word-spacing: 0.1em !important;
     line-height: 1.25 !important;
@@ -211,4 +232,9 @@ body.section-aboutme header .site-title {
 body.section-aboutme nav#site-nav a {
     letter-spacing: 0.025em !important;
     word-spacing: 0.05em !important;
+}
+
+/* 🔥 NAJSILNIEJSZY SELEKTOR - gdy nic nie działa */
+header * {
+    letter-spacing: 0.025em !important;
 }
