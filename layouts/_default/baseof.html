@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }} | The Autonomous Creator</title>
+  <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}" />
+</head>
+<body class="ma0 avenir bg-near-white production">
+
+  <!-- HEADER - niebieski gradientowy pasek -->
+  <header class="bg-gradient-blue">
+    <nav role="navigation">
+      <div class="flex-l center items-center justify-between">
+        <a href="/" class="site-title">
+          The Autonomous Creator
+        </a>
+        <ul>
+          <li><a href="/" title="Home page">Home</a></li>
+          <li><a href="/categories/studies-in-denmark" title="Studies in Denmark page">Studies in Denmark</a></li>
+          <li><a href="/categories/photography" title="Photography page">Photography</a></li>
+          <li><a href="/categories/music" title="Music page">Music</a></li>
+          <li><a href="/categories/on-the-go" title="On The Go page">On The Go</a></li>
+          <li><a href="/categories/aboutme" title="About Me page">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="pb7" role="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+    <div class="flex justify-between">
+      <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="/">
+        © The Autonomous Creator 2025
+      </a>
+      <div><div class="ananke-socials"></div></div>
+    </div>
+  </footer>
+
+</body>
+</html>
