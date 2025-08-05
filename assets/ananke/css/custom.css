@@ -1,42 +1,83 @@
 /* ================================================== */
-/* === OGÓLNE STYLE DLA CAŁEJ STRONY === */
+/* === OSTATECZNE OGÓLNE STYLE DLA CAŁEJ STRONY (MOTYW ANANKE) === */
 /* ================================================== */
 
-/* Ukrywa domyślny tytuł "hero" na stronach z obrazkiem */
-div.tc-l.pv3.ph3.ph4-ns {
+/* 1. Ukrywamy domyślny NAGŁÓWEK KATEGORII/LISTY z Ananke (ten z tekstem "Categories", "Posts").
+   To jest TEN DIV, który pojawił się pod Twoim nagłówkiem na stronie kategorii i wyświetla "Categories".
+   W Twojej witrynie ma klasy: `pv6 ph3 ph4-ns`. To właśnie on generuje ten podwójny nagłówek. */
+.pv6.ph3.ph4-ns {
   display: none !important;
 }
 
-/* Zeruje padding na nawigacji */
-nav.pv3.ph3.ph4-ns {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+/* 2. Ukrywamy oryginalny `<header>` Ananke.
+   Na demo Ananke, nagłówek ma klasy `bg-navy avenir bt bw4 b--white-10`.
+   Jeśli masz ten element w swoim kodzie, a chcesz używać SWOJEGO, to ukryjemy go.
+   Na Twojej stronie `on-the-go` go nie widać, ale jeśli jest na innych stronach, ta reguła zadziała.
+*/
+header.bg-navy.avenir.bt.bw4.b--white-10 {
+  display: none !important;
 }
 
-/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
-header .bg-black {
-  padding: 0.5rem 1rem !important;
+/* 3. Style dla TWOJEGO niestandardowego gradientowego nagłówka.
+   To jest element, który już masz w HTML i chcesz go stylizować.
+   Z Twojego opisu i wcześniejszych kodów wynika, że ma on klasy:
+   `div.tc-l.pv3.ph3.ph4-ns` (ten, który działał na About Me).
+   Teraz go uogólnimy i przypiszemy mu Twoje style nagłówka.
+   WAŻNE: Upewnij się, że w Twoim szablonie HTML, to jest JEDYNY DIV na samej górze z tymi klasami,
+   który ma służyć jako nagłówek.
+*/
+div.tc-l.pv3.ph3.ph4-ns { /* To jest TWÓJ ELEMENT nagłówka */
+  /* Nadpisanie tła i cienia */
   background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  padding: 0.5rem 1rem !important; /* Mniejsze paddingi dla paska */
+
+  /* Wyrównanie elementów wewnętrznych (tytuł strony i nawigacja) */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  min-height: 64px !important;
+  width: 100% !important;
+
+  /* Upewnij się, że jest na samej górze i rozciąga się */
+  position: sticky; /* lub fixed, jeśli ma być zawsze widoczny */
+  top: 0;
+  z-index: 1000; /* Upewnia się, że jest na wierzchu */
 }
 
-header .bg-black.pb3-m,
-header .bg-black.pb6-l {
-  padding-bottom: 0.5rem !important;
-}
-
-header .bg-black a,
-header .bg-black .site-title {
+/* 4. Style dla tekstu i linków w TWOIM gradientowym nagłówku. */
+div.tc-l.pv3.ph3.ph4-ns a,
+div.tc-l.pv3.ph3.ph4-ns .site-title,
+div.tc-l.pv3.ph3.ph4-ns .f3.fw6.db.white, /* Tytuł witryny Ananke, jeśli jest w tym divie */
+div.tc-l.pv3.ph3.ph4-ns .white-70.hover-white.no-underline /* Linki menu Ananke, jeśli są w tym divie */
+{
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-header .bg-black a:hover {
+div.tc-l.pv3.ph3.ph4-ns a:hover,
+div.tc-l.pv3.ph3.ph4-ns .white-70.hover-white.no-underline:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
 
-/* Style dla "przyklejonej" stopki */
+/* 5. Zerowanie paddingu na nawigacji, jeśli jest w tym divie. */
+div.tc-l.pv3.ph3.ph4-ns nav.pv3.ph3.ph4-ns, /* Twój pierwotny selektor */
+div.tc-l.pv3.ph3.ph4-ns nav.flex-ns.flex-m.fw6.ml4.mt4.mt0-ns /* Nawigacja Ananke */
+{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+div.tc-l.pv3.ph3.ph4-ns nav a {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+
+/* 6. Style dla "przyklejonej" stopki - te są poprawne i niezależne od nagłówka. */
 html,
 body {
   height: 100% !important;
@@ -82,40 +123,20 @@ footer a:hover,
   transition: color 0.3s ease !important;
 }
 
-/* Ogólne wyrównanie w nagłówku */
-header .flex-l {
-  align-items: center !important;
-  min-height: px !important;
-}
-
-header .site-title,
-nav#site-nav {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  display: flex;
-  align-items: center;
-}
-
-nav#site-nav a {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
 /* ================================================== */
 /* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
 /* ================================================== */
 
-/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
-body.section-aboutme .ph5-l {
+/* Jeśli na stronie "About Me" nadal masz jakiś hero z obrazem,
+   a jednocześnie nie chcesz, żeby domyślny tytuł Ananke w nim się pojawiał,
+   to tutaj możesz ukryć ten TYTUŁ wewnątrz tego HERO DLA ABOUT ME.
+   Musisz sprawdzić, jakie klasy ma TEN TYTUŁ w tym hero.
+   Na przykład, jeśli to jest H1 w tym hero, możesz dodać: */
+/*
+body.section-aboutme .mw7.center.tc-l h1 {
   display: none !important;
 }
-
-/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
-body.section-aboutme header .flex-l {
-  display: flex !important;
-  justify-content: space-between !important; /* Rozsuwa logo i menu */
-  width: 100% !important;
-}
+*/
+/* Albo jeśli Twój hero div ma inną klasę tylko na About Me,
+   możesz użyć bardziej specyficznego selektora. */
 
