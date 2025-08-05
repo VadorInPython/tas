@@ -1,38 +1,80 @@
-/* ===== Niebieski gradientowy nagłówek ===== */
+/* --- Gradientowy niebieski pasek na header --- */
 .bg-gradient-blue {
-  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 1rem;
 }
 
-/* Linki w menu */
-.bg-gradient-blue a {
-  color: white !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+/* Kontener nav i flexbox */
+.bg-gradient-blue nav {
+  max-width: 1280px; /* dostosuj do szerokości contentu */
+  margin: 0 auto;
 }
 
-.bg-gradient-blue a:hover {
-  color: #93c5fd !important;
+/* Flex kontener: logo i menu */
+.bg-gradient-blue nav > div.flex-l {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* pozwala zawijać na mniejsze ekrany */
+}
+
+/* Link tytułu strony */
+.bg-gradient-blue .site-title {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Menu list */
+.bg-gradient-blue ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* ważne, by zawijać na małych ekranach */
+}
+
+/* Elementy menu */
+.bg-gradient-blue ul li {
+  margin-right: 1.5rem;
+}
+
+/* Linki menu */
+.bg-gradient-blue ul li a {
+  color: white !important;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
   transition: color 0.3s ease;
 }
 
-/* Zawartość nagłówka ograniczona do szerokości treści */
-.bg-gradient-blue nav {
-  max-width: 64rem; /* odpowiada .mw8 */
-  margin-left: auto;
-  margin-right: auto;
+/* Hover na linkach menu */
+.bg-gradient-blue ul li a:hover {
+  color: #93c5fd !important;
 }
 
-/* Na telefonie: menu w jednej kolumnie, a nie 3 linijki */
-@media (max-width: 768px) {
-  .bg-gradient-blue .menu ul {
+/* Responsywność: na bardzo małych ekranach menu może zawijać się pod logo */
+@media (max-width: 600px) {
+  .bg-gradient-blue nav > div.flex-l {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
   }
-
-  .bg-gradient-blue .menu ul li {
-    margin-bottom: 0.25rem;
+  .bg-gradient-blue ul {
+    margin-top: 0.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .bg-gradient-blue ul li {
+    margin-right: 1rem;
   }
 }
+
 
 
