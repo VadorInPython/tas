@@ -53,7 +53,7 @@ footer, .bg-black.bottom-0 {
     position: relative !important;          
     padding: 0.5rem 1rem !important;          
     background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;          
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1) !important;  
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1) !important;          
 }    
 
 footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title,   
@@ -86,63 +86,37 @@ nav#site-nav a {
     padding-bottom: 0.25rem;  
 }
 
-/* 🔷 Styl tylko dla strony About Me (section-aboutme) */
+/* 🔷 Styl tylko dla strony About Me (section-aboutme) - ZMIENIONE, aby układ był taki sam jak w innych sekcjach */
 body.section-aboutme header .flex-l {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
 
 body.section-aboutme header .site-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 0.25rem;
+    font-size: inherit !important;
+    text-align: left !important;
+    margin-bottom: 0 !important;
 }
 
 body.section-aboutme nav#site-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 90vw;
-    gap: 1rem;
-    row-gap: 0.25rem;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    max-width: none !important;
+    gap: 0.5rem !important;
+    row-gap: 0 !important;
 }
 
-
-/* 🛠️ Wyrównanie układu i wysokości nagłówka tylko na stronie About Me */
-body.section-aboutme header .flex-l {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-body.section-aboutme header .site-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 0.25rem;
-}
-
-body.section-aboutme nav#site-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 90vw;
-    gap: 1rem;
-    row-gap: 0.25rem;
-}
-
-/* 🔧 Ustawienie minimalnej wysokości nagłówka About Me, by nie „skakał” layout */
+/* Usunięto dużą minimalną wysokość i kolumnowe flex w About Me */
 body.section-aboutme header.bg-black {
-    min-height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
