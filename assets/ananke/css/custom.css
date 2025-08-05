@@ -20,7 +20,6 @@ header .bg-black.pb6-l {
     padding-bottom: 0.5rem !important; 
 }  
 
-/* Reszta Twojego CSS bez zmian... */
 header .bg-black a,   
 header .bg-black .site-title {          
     color: white !important;          
@@ -87,36 +86,51 @@ nav#site-nav a {
 }
 
 /* 🔷 Styl tylko dla strony About Me (section-aboutme) - ZMIENIONE, aby układ był taki sam jak w innych sekcjach */
+
+body.section-aboutme header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    min-height: 64px !important; /* taka sama wysokość jak na innych stronach */
+}
+
 body.section-aboutme header .flex-l {
+    display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
     gap: 1rem !important;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
 }
 
 body.section-aboutme header .site-title {
     font-size: inherit !important;
     text-align: left !important;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
+    line-height: normal !important;
+    padding: 0 !important;
 }
 
 body.section-aboutme nav#site-nav {
     display: flex !important;
     flex-wrap: nowrap !important;
     justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
     max-width: none !important;
-    gap: 0.5rem !important;
     row-gap: 0 !important;
 }
 
-/* Usunięto dużą minimalną wysokość i kolumnowe flex w About Me */
-body.section-aboutme header.bg-black {
-    min-height: auto !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+body.section-aboutme nav#site-nav a {
+    margin: 0 !important;
+    padding: 0.25rem 0 !important;
+    line-height: normal !important;
 }
+
