@@ -112,8 +112,8 @@ body.section-aboutme .ph5-l {
   display: none !important;
 }
 
-/* 2. Poprawiamy układ wewnątrz nagłówka na wszystkich stronach kategorii */
-body[class*="category"] header .flex-l {
+/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
+body.section-aboutme header .flex-l {
   display: flex !important;
   justify-content: space-between !important; /* Rozsuwa logo i menu */
   width: 100% !important;
