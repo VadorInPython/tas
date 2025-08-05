@@ -2,9 +2,16 @@
 /* === OGÓLNE STYLE DLA CAŁEJ STRONY === */
 /* ================================================== */
 
-/* Ukrywa domyślny tytuł "hero" na wszystkich stronach */
-div.tc-l.pv3.ph3.ph4-ns {
+/* Ukrywa tylko wielki tekst "hero", ale zachowuje obrazki w nagłówku */
+div.tc-l.pv3.ph3.ph4-ns h1,
+div.tc-l.pv3.ph3.ph4-ns .f1,
+div.tc-l.pv3.ph3.ph4-ns .f2 {
   display: none !important;
+}
+
+/* Zachowuje kontener nagłówka dla obrazków, ale usuwa padding */
+div.tc-l.pv3.ph3.ph4-ns {
+  padding: 0 !important;
 }
 
 /* Zeruje padding na nawigacji */
@@ -13,7 +20,7 @@ nav.pv3.ph3.ph4-ns {
   padding-bottom: 0 !important;
 }
 
-/* Ogólny styl dla nagłówków z tłem - TERAZ NA WSZYSTKICH STRONACH */
+/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
 header .bg-black {
   padding: 0.5rem 1rem !important;
   background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
@@ -82,12 +89,9 @@ footer a:hover,
   transition: color 0.3s ease !important;
 }
 
-/* NOWY: Układ nagłówka dla WSZYSTKICH stron - jak na About Me */
+/* Ogólne wyrównanie w nagłówku */
 header .flex-l {
-  display: flex !important;
-  justify-content: space-between !important;
   align-items: center !important;
-  width: 100% !important;
   min-height: 64px !important;
 }
 
@@ -107,8 +111,17 @@ nav#site-nav a {
 }
 
 /* ================================================== */
-/* === USUNIĘTE - NIE POTRZEBNE JUŻ === */
+/* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
 /* ================================================== */
 
-/* Usuwamy sekcję "STYLE TYLKO DLA STRONY ABOUT ME" */
-/* bo teraz wszystkie strony używają tego samego układu */
+/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
+body.section-aboutme .ph5-l {
+  display: none !important;
+}
+
+/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
+body.section-aboutme header .flex-l {
+  display: flex !important;
+  justify-content: space-between !important; /* Rozsuwa logo i menu */
+  width: 100% !important;
+}
