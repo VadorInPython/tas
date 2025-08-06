@@ -39,12 +39,16 @@ html, body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  overflow-x: hidden !important; /* Ukrywa poziomy suwak jeśli niepotrzebny */
+  overflow-y: auto !important; /* Zapewnia pionowy suwak gdy potrzebny */
 }
 
 body {
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
 }
 
 main, .main-content {
