@@ -15,13 +15,13 @@ nav.pv3.ph3.ph4-ns {
 
 /* Ogólny styl dla nagłówków z tłem (np. na About Me) */
 header .bg-black {
-  padding-bottom: 0.5rem !important;
+  padding: 0.5rem 1rem !important; /* Jednakowy padding jak footer */
   background: linear-gradient(135deg, #5b7db1, #142850) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 header .bg-black.pb3-m, header .bg-black.pb6-l {
-  padding-bottom: 0.5rem !important;
+  padding: 0.5rem 1rem !important; /* Nadpisuje responsive paddingi */
 }
 
 header .bg-black a, header .bg-black .site-title {
@@ -76,7 +76,7 @@ footer a:hover, .bg-black.bottom-0 a:hover {
 /* Ogólne wyrównanie w nagłówku */
 header .flex-l {
   align-items: center !important;
-  min-height: 50px !important;
+  min-height: auto !important; /* Usuń sztywną wysokość, niech padding decyduje */
 }
 
 header .site-title, nav#site-nav {
@@ -95,7 +95,7 @@ nav#site-nav {
   padding: 0 !important;
 }
 
-nav#site-nav ul, 
+nav#site-nav ul,
 nav#site-nav li {
   margin: 0 !important;
   padding: 0 !important;
@@ -127,5 +127,5 @@ body.section-aboutme header .flex-l {
   justify-content: space-between !important; /* Rozsuwa logo i menu */
   align-items: center !important; /* Upewnij się, że elementy są wyśrodkowane pionowo */
   width: 100% !important;
-  min-height: 50px !important; /* Ustaw minimalną wysokość nagłówka */
+  min-height: auto !important; /* Usuń sztywną wysokość, niech padding decyduje */
 }
