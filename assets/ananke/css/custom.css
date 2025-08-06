@@ -15,18 +15,16 @@ nav.pv3.ph3.ph4-ns {
 
 /* Ogólny styl dla nagłówków z tłem (np. na About Me) */
 header .bg-black {
-  padding-bottom: 0.5rem  !important;
+  padding-bottom: 0.5rem !important;
   background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-header .bg-black.pb3-m,
-header .bg-black.pb6-l {
+header .bg-black.pb3-m, header .bg-black.pb6-l {
   padding-bottom: 0.5rem !important;
 }
 
-header .bg-black a,
-header .bg-black .site-title {
+header .bg-black a, header .bg-black .site-title {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -37,8 +35,7 @@ header .bg-black a:hover {
 }
 
 /* Style dla "przyklejonej" stopki */
-html,
-body {
+html, body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -50,13 +47,11 @@ body {
   min-height: 100vh !important;
 }
 
-main,
-.main-content {
+main, .main-content {
   flex: 1 !important;
 }
 
-footer,
-.bg-black.bottom-0 {
+footer, .bg-black.bottom-0 {
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -64,20 +59,12 @@ footer,
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a,
-footer .site-title,
-footer p,
-footer span,
-.bg-black.bottom-0 a,
-.bg-black.bottom-0 .site-title,
-.bg-black.bottom-0 p,
-.bg-black.bottom-0 span {
+footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, .bg-black.bottom-0 p, .bg-black.bottom-0 span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-footer a:hover,
-.bg-black.bottom-0 a:hover {
+footer a:hover, .bg-black.bottom-0 a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
@@ -85,15 +72,29 @@ footer a:hover,
 /* Ogólne wyrównanie w nagłówku */
 header .flex-l {
   align-items: center !important;
-  min-height: px !important;
+  min-height: 50px !important;
 }
 
-header .site-title,
-nav#site-nav {
+header .site-title, nav#site-nav {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   display: flex;
   align-items: center;
+}
+
+/* Poprawki dla menu nawigacji */
+nav#site-nav {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav#site-nav ul, 
+nav#site-nav li {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 nav#site-nav a {
@@ -101,6 +102,10 @@ nav#site-nav a {
   margin-bottom: 0 !important;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  display: flex !important;
+  align-items: center !important;
+  height: auto !important;
+  line-height: normal !important;
 }
 
 /* ================================================== */
@@ -116,6 +121,7 @@ body.section-aboutme .ph5-l {
 body.section-aboutme header .flex-l {
   display: flex !important;
   justify-content: space-between !important; /* Rozsuwa logo i menu */
+  align-items: center !important; /* Upewnij się, że elementy są wyśrodkowane pionowo */
   width: 100% !important;
+  min-height: 50px !important; /* Ustaw minimalną wysokość nagłówka */
 }
-
