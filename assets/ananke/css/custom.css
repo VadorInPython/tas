@@ -79,10 +79,16 @@ footer a:hover, .bg-black.bottom-0 a:hover {
   transition: color 0.3s ease !important;
 }
 
-/* Ogólne wyrównanie w nagłówku */
+/* Ogólne wyrównanie w nagłówku - NIE dla About Me */
 header .flex-l {
   align-items: center !important;
   min-height: 50px !important;
+}
+
+/* Wyłącz problematyczne style dla About Me */
+body.section-aboutme header .flex-l {
+  align-items: initial !important;
+  min-height: initial !important;
 }
 
 header .site-title, nav#site-nav {
