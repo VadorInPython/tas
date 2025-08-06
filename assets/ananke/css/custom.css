@@ -82,7 +82,7 @@ footer a:hover, .bg-black.bottom-0 a:hover {
 /* Ogólne wyrównanie w nagłówku */
 header .flex-l {
   align-items: center !important;
-  min-height: 50px !important;
+  min-height: 50px !important; /* NAPRAWIONE: dodana wartość 50px */
 }
 
 header .site-title, nav#site-nav {
@@ -103,68 +103,14 @@ nav#site-nav a {
 /* === STYLE TYLKO DLA STRONY "ABOUT ME" === */
 /* ================================================== */
 
-/* 1. Bardziej agresywne ukrywanie tytułu sekcji na About Me */
-body.section-aboutme .ph5-l,
-body.section-aboutme .f2,
-body.section-aboutme .f1,
-body.section-aboutme h1.f2,
-body.section-aboutme h1.f1 {
+/* 1. Ukrywamy wielki napis "The Autonomous Creator", który jest tytułem "hero" */
+body.section-aboutme .ph5-l {
   display: none !important;
 }
 
-/* Alternatywnie - ukryj każdy element zawierający "The Autonomous Creator" jako tekst */
-body.section-aboutme h1:contains("The Autonomous Creator"),
-body.section-aboutme .f2:contains("The Autonomous Creator"),
-body.section-aboutme .f1:contains("The Autonomous Creator") {
-  display: none !important;
-}
-
-/* 2. Napraw układ nagłówka na About Me - upewnij się że jest taki sam jak na innych stronach */
-body.section-aboutme header {
-  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
-}
-
+/* 2. Poprawiamy układ wewnątrz nagłówka na stronie "About Me" */
 body.section-aboutme header .flex-l {
   display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
+  justify-content: space-between !important; /* Rozsuwa logo i menu */
   width: 100% !important;
-  padding: 0.5rem 1rem !important;
-}
-
-/* 3. Upewnij się że tytuł strony w nagłówku ma odpowiednie style */
-body.section-aboutme header .site-title {
-  color: white !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
-  font-size: 1.25rem !important;
-  font-weight: bold !important;
-}
-
-/* 4. Menu nawigacyjne na About Me */
-body.section-aboutme nav#site-nav a {
-  color: white !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
-  margin-left: 1rem !important;
-}
-
-body.section-aboutme nav#site-nav a:hover {
-  color: #93c5fd !important;
-  transition: color 0.3s ease !important;
-}
-
-/* 5. Dodatkowe selektory - jeśli powyższe nie działają */
-body.section-aboutme .w-100.mw-none.ph5-l.mt5-l.db {
-  display: none !important;
-}
-
-body.section-aboutme .relative.w-100.bg-white {
-  padding-top: 0 !important;
-}
-
-/* 6. Ukryj wszystkie duże nagłówki na początku strony About Me */
-body.section-aboutme main > div:first-child h1,
-body.section-aboutme main > section:first-child h1,
-body.section-aboutme .hero h1,
-body.section-aboutme .page-header h1 {
-  display: none !important;
 }
