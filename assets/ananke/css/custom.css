@@ -16,7 +16,7 @@ nav.pv3.ph3.ph4-ns {
 /* Ogólny styl dla nagłówków z tłem (np. na About Me) */
 header .bg-black {
   padding-bottom: 0.5rem !important;
-  background: linear-gradient(135deg, #1e3a8a, #0f172a) !important;
+  background: linear-gradient(135deg, #5b7db1, #142850) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
