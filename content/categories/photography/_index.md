@@ -1,7 +1,7 @@
 ---
 title: "Photography"
-description: "Various photos taken by me"
+description: "My photos taken in a variety of different settings"
 featured_image: "images/patsuisse.jpg"
 ---
 
-This is the place where you'll find a collection of my photos — from aviation shots to nature scenes and moments captured on the road. Just like with music, there’s always more to come.
+Here you will find my photography portfolio. For now, expect mostly aviation-themed shots (or sports-style photography in general), along with nature scenes and city shots. Over time, I hope to expand this collection even further, potentially exploring a wider range of photographic styles to capture an even broader spectrum of subjects and moods.
