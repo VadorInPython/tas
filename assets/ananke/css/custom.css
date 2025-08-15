@@ -133,10 +133,10 @@ body.section-aboutme header .flex-l {
 
 
 /* Kontener tekstu obok obrazka */
-body.section-aboutme img.about-photo {
+body.section-aboutme img.aboutme-photo {
   float: left;
-  width: 25%;       /* szerokość obrazka */
-  max-width: 250px; /* maksymalna szerokość */
+  width: 200px;       /* ustala szerokość obrazka */
+  height: auto;       /* zachowuje proporcje */
   margin-right: 20px;
   margin-bottom: 10px;
   border-radius: 8px;
