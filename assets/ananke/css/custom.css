@@ -145,7 +145,7 @@ body.section-aboutme header .flex-l {
 
 /* 3. Poprawka rozmiaru i wyśrodkowania obrazka na stronie "About Me" */
 body.section-aboutme .nested-img img {
-  width: auto; /* Używa naturalnej szerokości obrazka zamiast 100% */
+  width: 10%; /* Używa naturalnej szerokości obrazka zamiast 100% */
   max-width: 100%; /* Zapewnia responsywność na małych ekranach */
   display: block; /* Potrzebne do wyśrodkowania */
   margin-left: auto; /* Wyśrodkowuje obrazek w poziomie */
