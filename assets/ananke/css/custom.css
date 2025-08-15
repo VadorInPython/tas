@@ -126,6 +126,6 @@ body.section-aboutme header .flex-l {
   display: flex !important;
   justify-content: space-between !important; /* Rozsuwa logo i menu */
   align-items: center !important; /* Upewnij się, że elementy są wyśrodkowane pionowo */
-  width: 100% !important;
+  width: 50% !important;
   min-height: 50px !important; /* Ustaw minimalną wysokość nagłówka */
 }
