@@ -139,10 +139,12 @@ body.section-aboutme .nested-copy-line-height {
 
 /* Zdjęcie po lewej */
 body.section-aboutme img.aboutme-photo {
-  flex-shrink: 0;        /* Nie kurczy się */
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
+  flex-shrink: 0 !important;        /* Nie kurczy się */
+  width: 150px !important;
+  max-width: 150px !important;      /* Przesłania domyślne max-width: 100% */
+  height: auto !important;
+  border-radius: 8px !important;
+  display: block !important;        /* Przesłania inne display wartości */
 }
 
 /* Tekst po prawej */
