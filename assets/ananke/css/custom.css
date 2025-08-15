@@ -129,3 +129,26 @@ body.section-aboutme header .flex-l {
   width: 100% !important;
   min-height: 50px !important; /* Ustaw minimalną wysokość nagłówka */
 }
+
+/* ================================================== */
+/* === UKŁAD OBRAZEK PO LEWEJ, TEKST PO PRAWEJ === */
+/* ================================================== */
+
+body.section-aboutme .about-me {
+  display: flex;
+  flex-wrap: wrap;      /* Dzięki temu przy małych ekranach tekst spada pod obrazek */
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 2rem;     /* opcjonalnie, odstęp od góry strony */
+}
+
+body.section-aboutme .about-me img.about-photo {
+  width: 25%;           /* Obrazek zajmuje 25% szerokości kontenera */
+  max-width: 200px;     /* maksymalna szerokość obrazka */
+  border-radius: 8px;   /* zaokrąglone rogi */
+}
+
+body.section-aboutme .about-me .about-text {
+  flex: 1;              /* tekst zajmuje resztę szerokości */
+  min-width: 200px;     /* minimalna szerokość tekstu */
+}
