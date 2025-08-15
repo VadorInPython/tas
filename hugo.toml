@@ -7,33 +7,33 @@ theme = 'ananke'
 custom_css = ["custom.css"]
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
 
-   [[menu.main]]
-    name = "About Me"
-    url = "/categories/aboutme"
-    weight = 6
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 
-  [[menu.main]]
-   name = "Studies in Denmark"
-   url = "/categories/studies-in-denmark"
-   weight = 2
+[[menu.main]]
+name = "About Me"
+url = "/about/"
+weight = 6
 
-  [[menu.main]]
-   name = "Photography"
-   url = "/categories/Photography"
-   weight = 3
+[[menu.main]]
+name = "Studies in Denmark"
+url = "/categories/studies-in-denmark"
+weight = 2
 
-   [[menu.main]]
-   name = "Music"
-   url = "/categories/Music"
-   weight = 4
+[[menu.main]]
+name = "Photography"
+url = "/categories/Photography"
+weight = 3
 
-  [[menu.main]]
-   name = "On The Go"
-   url = "/categories/on-the-go"
-   weight = 5
+[[menu.main]]
+name = "Music"
+url = "/categories/Music"
+weight = 4
 
+[[menu.main]]
+name = "On The Go"
+url = "/categories/on-the-go"
+weight = 5

@@ -136,19 +136,19 @@ body.section-aboutme header .flex-l {
 
 body.section-aboutme .about-me {
   display: flex;
-  flex-wrap: wrap;      /* Dzięki temu przy małych ekranach tekst spada pod obrazek */
+  flex-wrap: wrap;
   gap: 20px;
   align-items: flex-start;
-  margin-top: 2rem;     /* opcjonalnie, odstęp od góry strony */
+  margin-top: 2rem;
 }
 
 body.section-aboutme .about-me img.about-photo {
-  width: 25%;           /* Obrazek zajmuje 25% szerokości kontenera */
-  max-width: 200px;     /* maksymalna szerokość obrazka */
-  border-radius: 8px;   /* zaokrąglone rogi */
+  width: 25%;
+  max-width: 200px;
+  border-radius: 8px;
 }
 
 body.section-aboutme .about-me .about-text {
-  flex: 1;              /* tekst zajmuje resztę szerokości */
-  min-width: 200px;     /* minimalna szerokość tekstu */
+  flex: 1;
+  min-width: 200px;
 }
