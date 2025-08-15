@@ -20,11 +20,13 @@ header .bg-black {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-header .bg-black.pb3-m, header .bg-black.pb6-l {
+header .bg-black.pb3-m,
+header .bg-black.pb6-l {
   padding-bottom: 0.5rem !important;
 }
 
-header .bg-black a, header .bg-black .site-title {
+header .bg-black a,
+header .bg-black .site-title {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -35,7 +37,8 @@ header .bg-black a:hover {
 }
 
 /* Style dla "przyklejonej" stopki */
-html, body {
+html,
+body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -51,11 +54,13 @@ body {
   overflow-y: auto !important;
 }
 
-main, .main-content {
+main,
+.main-content {
   flex: 1 !important;
 }
 
-footer, .bg-black.bottom-0 {
+footer,
+.bg-black.bottom-0 {
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -63,12 +68,20 @@ footer, .bg-black.bottom-0 {
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, .bg-black.bottom-0 p, .bg-black.bottom-0 span {
+footer a,
+footer .site-title,
+footer p,
+footer span,
+.bg-black.bottom-0 a,
+.bg-black.bottom-0 .site-title,
+.bg-black.bottom-0 p,
+.bg-black.bottom-0 span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-footer a:hover, .bg-black.bottom-0 a:hover {
+footer a:hover,
+.bg-black.bottom-0 a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
@@ -79,7 +92,8 @@ header .flex-l {
   min-height: 50px !important;
 }
 
-header .site-title, nav#site-nav {
+header .site-title,
+nav#site-nav {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   display: flex;
@@ -95,7 +109,7 @@ nav#site-nav {
   padding: 0 !important;
 }
 
-nav#site-nav ul, 
+nav#site-nav ul,
 nav#site-nav li {
   margin: 0 !important;
   padding: 0 !important;
@@ -126,6 +140,15 @@ body.section-aboutme header .flex-l {
   display: flex !important;
   justify-content: space-between !important; /* Rozsuwa logo i menu */
   align-items: center !important; /* Upewnij się, że elementy są wyśrodkowane pionowo */
-  width: 50% !important;
+  width: 100% !important;
   min-height: 50px !important; /* Ustaw minimalną wysokość nagłówka */
+}
+
+/* 3. Poprawka rozmiaru i wyśrodkowania obrazka na stronie "About Me" */
+body.section-aboutme .nested-img img {
+  width: auto; /* Używa naturalnej szerokości obrazka zamiast 100% */
+  max-width: 100%; /* Zapewnia responsywność na małych ekranach */
+  display: block; /* Potrzebne do wyśrodkowania */
+  margin-left: auto; /* Wyśrodkowuje obrazek w poziomie */
+  margin-right: auto; /* Wyśrodkowuje obrazek w poziomie */
 }
