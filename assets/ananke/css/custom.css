@@ -132,33 +132,17 @@ body.section-aboutme header .flex-l {
 
 
 
-/* ================================================== */
-/* === STYLE DLA OBRAZKA I TEKSTU NA STRONIE ABOUT ME === */
-/* ================================================== */
-
-/* Kontener dla obrazka i tekstu */
-body.section-aboutme .about-container {
-  display: flex !important;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-  gap: 20px !important;      /* odstęp między obrazkiem a tekstem */
-  flex-wrap: wrap !important; /* na wąskich ekranach tekst spada pod obrazek */
-  margin-top: 1rem !important; /* opcjonalny margines od góry */
+/* Kontener tekstu obok obrazka */
+body.section-aboutme img.about-photo {
+  float: left;
+  width: 25%;       /* szerokość obrazka */
+  max-width: 250px; /* maksymalna szerokość */
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
-/* Styl obrazka */
-body.section-aboutme .about-photo {
-  width: 25% !important;        /* szerokość obrazka w kontenerze */
-  max-width: 250px !important;  /* maksymalna szerokość */
-  min-width: 150px !important;  /* minimalna szerokość */
-  height: auto !important;      /* zachowanie proporcji */
-  border-radius: 8px !important; /* opcjonalnie zaokrąglone rogi */
+body.section-aboutme p {
+  overflow: hidden; /* tekst obejmuje obrazek */
+  line-height: 1.6;
 }
-
-/* Styl tekstu */
-body.section-aboutme .about-container p {
-  flex: 1 !important;           /* tekst wypełnia resztę kontenera */
-  margin: 0 !important;         /* usuwa domyślne marginesy */
-  line-height: 1.6 !important;  /* czytelna interlinia */
-}
-
