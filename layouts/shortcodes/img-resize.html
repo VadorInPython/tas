@@ -1,0 +1,14 @@
+{{/* Pobierz parametry przekazane do shortcode'u */}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $width := .Get "width" | default "50%" }}
+
+{{/* Znajdź obrazek w zasobach strony */}}
+{{ with .Page.Resources.GetMatch $src }}
+  {{/* Przeskaluj obrazek do podanej szerokości (np. "500x" oznacza 500px szerokości) */}}
+  {{ $resized := .Resize (printf "%s" $width) }}
+  <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}">
+{{ else }}
+  {{/* Komunikat błędu, jeśli obrazka nie znaleziono */}}
+  <p style="color: red;">Błąd: Nie znaleziono obrazka '{{ $src }}'</p>
+{{ end }}
