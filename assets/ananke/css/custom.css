@@ -129,27 +129,3 @@ body.section-aboutme header .flex-l {
   width: 100% !important;
   min-height: 50px !important; /* Ustaw minimalną wysokość nagłówka */
 }
-
-/* Kontener dla zdjęcia i tekstu */
-body.section-aboutme .nested-copy-line-height {
-  display: flex !important;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-/* Zdjęcie po lewej */
-body.section-aboutme img.aboutme-photo {
-  flex-shrink: 0;
-  width: unset !important;          /* Anuluje width: 100% */
-  max-width: 150px !important;      /* Ale ustala maksymalną szerokość */
-  display: unset !important;        /* Anuluje display: block */
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Tekst po prawej */
-body.section-aboutme p {
-  flex: 1;               /* Zajmuje resztę miejsca */
-  line-height: 1.6;
-  margin: 0;             /* Usuwa domyślne marginesy */
-}
