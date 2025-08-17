@@ -112,3 +112,36 @@ nav#site-nav a {
   line-height: normal !important;
 }
 
+/* ================================================== */
+/* === STYLE DLA ZDJĘCIA PROFILOWEGO === */
+/* ================================================== */
+
+/* Styl dla obrazka na stronie About Me */
+.nested-copy-line-height img,
+.nested-img img,
+article img,
+main img,
+.content img {
+    width: 250px !important;
+    max-width: 250px !important;
+    height: auto !important;
+    display: inline-block !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+}
+
+/* Dodatkowe selektory dla uporczywych obrazków */
+img[alt="Moje zdjęcie"],
+img[src="/images/about_photo.jpg"] {
+    width: 250px !important;
+    max-width: 250px !important;
+    height: auto !important;
+    display: inline-block !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+}
+
+/* Centrowanie kontenera z obrazkiem */
+div[style*="text-align: center"] {
+    text-align: center !important;
+}

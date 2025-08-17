@@ -10,16 +10,6 @@ draft: false
 
 </div>
 
-<style>
-div img {
-    width: 250px !important;
-    max-width: 250px !important;
-    height: auto !important;
-    display: inline-block !important;
-    border-radius: 8px !important;
-}
-</style>
-
 How I am trying to navigate life and get the most out of the opportunity, even after the hardest turbulences that happened straight at the start of my studies.
 
 Your content continues here...
