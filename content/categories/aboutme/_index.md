@@ -11,10 +11,7 @@ draft: false
 </div>
 
 <style>
-.nested-img img,
-.nested-copy-line-height img,
-article img,
-p img {
+img[src="/images/about_photo.jpg"] {
     width: 250px !important;
     max-width: 250px !important;
     display: inline-block !important;
