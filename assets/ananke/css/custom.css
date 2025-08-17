@@ -133,11 +133,11 @@ main img,
 /* Dodatkowe selektory dla uporczywych obrazków */
 img[alt="Moje zdjęcie"],
 img[src="/images/about_photo.jpg"] {
-    width: 500px !important;
-    max-width: 500px !important;
+    width: 400px !important;
+    max-width: 400px !important;
     height: auto !important;
     display: inline-block !important;
-    border-radius: 8px !important;
+    border-radius: 16px !important;
     margin: 0 auto !important;
 }
 
