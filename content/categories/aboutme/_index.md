@@ -4,8 +4,6 @@ date: 2025-08-15
 draft: false
 ---
 
-<div style="text-align: center; margin-bottom: 30px;">
-  <img src="https://via.placeholder.com/250x300" alt="Test" style="width: 250px; height: auto; border-radius: 8px;">
-</div>
+![Moje zdjęcie](/images/about_photo.jpg)
 
-Test content below the image.
+How I am trying to navigate life and get the most out of the opportunity, even after the hardest turbulences that happened straight at the start of my studies. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test.
