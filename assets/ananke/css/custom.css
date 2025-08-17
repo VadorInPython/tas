@@ -152,17 +152,17 @@ div[style*="text-align: center"] {
 
 /* Zmniejsza górny padding głównej zawartości */
 main, .main-content, article {
-    padding-top: 0.25rem !important; /* Jeszcze mniejszy padding */
+    padding-top: 0.12rem !important; /* Jeszcze mniejszy padding */
 }
 
 /* Pociąga obrazek jeszcze bardziej do góry */
 .centered-image-container {
-    margin-top: -6rem !important; /* Większy ujemny margines */
+    margin-top: -4rem !important; /* Większy ujemny margines */
     text-align: center !important;
     margin-bottom: 30px !important;
 }
 
 /* Zmniejsza padding w sekcji z zawartością */
 .nested-copy-line-height {
-    padding-top: 0.25rem !important;
+    padding-top: 0.12rem !important;
 }
