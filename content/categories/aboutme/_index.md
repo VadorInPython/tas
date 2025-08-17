@@ -11,10 +11,13 @@ draft: false
 </div>
 
 <style>
-div img {
+.nested-img img,
+.nested-copy-line-height img,
+article img,
+p img {
     width: 250px !important;
-    max-width: none !important;
-    display: inline !important;
+    max-width: 250px !important;
+    display: inline-block !important;
     height: auto !important;
     border-radius: 8px !important;
 }
