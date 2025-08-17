@@ -152,7 +152,7 @@ div[style*="text-align: center"] {
 
 /* Zmniejsza górny padding głównej zawartości */
 main, .main-content, article {
-    padding-top: 0.12rem !important; /* Jeszcze mniejszy padding */
+    padding-top: 0.05rem !important; /* Jeszcze mniejszy padding */
 }
 
 /* Pociąga obrazek jeszcze bardziej do góry */
@@ -164,5 +164,5 @@ main, .main-content, article {
 
 /* Zmniejsza padding w sekcji z zawartością */
 .nested-copy-line-height {
-    padding-top: 0.12rem !important;
+    padding-top: 0.05rem !important;
 }
