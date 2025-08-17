@@ -145,3 +145,29 @@ img[src="/images/about_photo.jpg"] {
 div[style*="text-align: center"] {
     text-align: center !important;
 }
+
+/* ================================================== */
+/* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
+/* ================================================== */
+
+/* Zmniejsza górny margines głównej zawartości */
+main, .main-content, article {
+    margin-top: 0 !important;
+    padding-top: 1rem !important; /* Zamiast domyślnych ~2rem */
+}
+
+/* Alternatywnie, bezpośrednio dla kontenera z obrazkiem */
+.centered-image-container {
+    margin-top: -1rem !important; /* "Pociąga" obrazek do góry */
+    text-align: center !important;
+    margin-bottom: 30px !important;
+}
+
+/* Jeśli powyższe nie działa, próbuj tego */
+.nested-copy-line-height {
+    padding-top: 1rem !important;
+}
+
+section.cf.ph3.ph5-l.pv3.pv4-l.f4.tc-l.center.measure-wide.lh-copy.mid-gray {
+    padding-top: 1rem !important;
+}
