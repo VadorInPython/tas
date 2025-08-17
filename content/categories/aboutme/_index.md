@@ -3,7 +3,7 @@ title: "About Me"
 date: 2025-08-17T19:00:00+02:00
 draft: false
 # Add an image for social media cards, optional
-image: ["about_photo.jpg"] 
+image: "about_photo.jpg" 
 ---
 
 This is where the text about you will go. You can write as much as you want here. 
