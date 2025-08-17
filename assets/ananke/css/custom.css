@@ -171,19 +171,32 @@ main, .main-content, article {
 
 @media (max-width: 768px) {
     .centered-image-container {
-        margin-top: 1rem !important; /* Normalny margines na telefonie */
+        margin-top: 1rem !important;
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
     }
     
-    /* Mniejszy obrazek na telefonie */
+    /* Mniejszy obrazek na telefonie - wycentrowany */
     img[alt="Moje zdjęcie"], 
     img[src="/images/about_photo.jpg"],
     .centered-image-container img {
         width: 200px !important;
         max-width: 200px !important;
-        border-radius: 32px !important; /* Proporcjonalnie mniejszy radius */
+        border-radius: 32px !important;
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
     }
     
     main, .main-content, article {
         padding-top: 1rem !important;
+    }
+    
+    /* Dodatkowe centrowanie dla uporczywych elementów */
+    div[style*="text-align: center"] {
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
     }
 }
