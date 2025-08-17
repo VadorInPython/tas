@@ -113,35 +113,29 @@ nav#site-nav a {
 }
 
 /* ================================================== */
-/* === STYLE DLA ZDJĘCIA PROFILOWEGO === */
+/* === OBRAZEK PO LEWEJ Z FLOAT === */
 /* ================================================== */
 
-/* Styl dla obrazka na stronie About Me */
-.nested-copy-line-height img,
-.nested-img img,
-article img,
-main img,
-.content img {
+/* Kontener dla obrazka z floatem */
+.left-image-container {
+    float: left !important;
+    margin: 0 30px 20px 0 !important;
+    width: 250px !important;
+    clear: left !important;
+}
+
+.left-image-container img {
     width: 250px !important;
     max-width: 250px !important;
     height: auto !important;
-    display: inline-block !important;
+    display: block !important;
     border-radius: 8px !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
 }
 
-/* Dodatkowe selektory dla uporczywych obrazków */
-img[alt="Moje zdjęcie"],
-img[src="/images/about_photo.jpg"] {
-    width: 500px !important;
-    max-width: 500px !important;
-    height: auto !important;
-    display: inline-block !important;
-    border-radius: 8px !important;
-    margin: 0 auto !important;
-}
-
-/* Centrowanie kontenera z obrazkiem */
-div[style*="text-align: center"] {
-    text-align: center !important;
+/* Clearfix dla zawartości po obrazku */
+.content-with-float::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
 }
