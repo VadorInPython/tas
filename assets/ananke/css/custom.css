@@ -157,7 +157,7 @@ main, .main-content, article {
 
 /* Pociąga obrazek jeszcze bardziej do góry */
 .centered-image-container {
-    margin-top: -4rem !important; /* Większy ujemny margines */
+    margin-top: -6rem !important; /* Większy ujemny margines */
     text-align: center !important;
     margin-bottom: 30px !important;
 }
