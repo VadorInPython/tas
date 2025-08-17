@@ -150,24 +150,19 @@ div[style*="text-align: center"] {
 /* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
 /* ================================================== */
 
-/* Zmniejsza górny margines głównej zawartości */
+/* Zmniejsza górny padding głównej zawartości */
 main, .main-content, article {
-    margin-top: 0 !important;
-    padding-top: 1rem !important; /* Zamiast domyślnych ~2rem */
+    padding-top: 0.5rem !important; /* Mniejszy padding */
 }
 
-/* Alternatywnie, bezpośrednio dla kontenera z obrazkiem */
+/* Bezpośrednio pociąga obrazek do góry */
 .centered-image-container {
-    margin-top: -1rem !important; /* "Pociąga" obrazek do góry */
+    margin-top: -2rem !important; /* Ujemny margines "pociąga" do góry */
     text-align: center !important;
     margin-bottom: 30px !important;
 }
 
-/* Jeśli powyższe nie działa, próbuj tego */
+/* Zmniejsza padding w sekcji z zawartością */
 .nested-copy-line-height {
-    padding-top: 1rem !important;
-}
-
-section.cf.ph3.ph5-l.pv3.pv4-l.f4.tc-l.center.measure-wide.lh-copy.mid-gray {
-    padding-top: 1rem !important;
+    padding-top: 0.5rem !important;
 }
