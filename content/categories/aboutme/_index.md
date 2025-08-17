@@ -13,9 +13,9 @@ draft: false
 <style>
 div img {
     width: 250px !important;
-    max-width: 250px !important;
+    max-width: none !important;
+    display: inline !important;
     height: auto !important;
-    display: inline-block !important;
     border-radius: 8px !important;
 }
 </style>
