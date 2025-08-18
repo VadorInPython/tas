@@ -12,6 +12,6 @@ draft: false
 
 Hey, I'm Szymon and I wanted to start something personal, such as this blog, as a sort of therapy. I find creating this space from scratch incredibly freeing, considering the turbulences I experienced at the very first starting point of my life-changing journey.
 
-But that's just an intro – generally, I’ll be putting my work into a few categories such as music and photography, while at the same time trying to help others by describing the studies I’m currently enrolled in, hopefully providing helpful cues for students, and also sharing some travel spots.
+But that's just an intro – generally, I’ll be putting my work into a few categories such as music and photography, while at the same time trying to help others by describing the studies I’m currently pursuing, hopefully providing helpful cues for students, and also sharing some travel spots.
 
 If anything here catches your eye, let yourself stay for longer… For now, just stay tuned.
