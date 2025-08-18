@@ -10,7 +10,7 @@ draft: false
 
 </div>
 
-Hey, I'm **Szymon** and I wanted to start something personal, such as this blog, as a sort of an experience booster. I find creating this space from scratch incredibly freeing, considering the turbulences I experienced at the very first starting point of my life-changing journey.
+Hey, I'm **Szymon** and I wanted to start something personal, such as this blog, as a sort of an experience booster and a diary at the same time. I find creating this space from scratch incredibly freeing, considering the turbulences I experienced at the very first starting point of my life-changing journey.
 
 But that's just an intro – generally, I’ll be putting my work into a few categories such as music and photography, while at the same time trying to help others by describing the studies I’m currently pursuing, hopefully providing helpful cues for students, and also sharing some travel spots.
 
