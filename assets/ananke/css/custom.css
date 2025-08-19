@@ -225,33 +225,33 @@ img.full-image {
 }
 
 
-	/* ================================================== */
-	/* === ABOUT ME PAGE IMAGE FIX === */
-	/* ================================================== */
-	
-	/* Force About Me image to be square and centered */
-	body.about-page .centered-image-container img,
-	body.about-page img[alt="Moje zdjęcie"],
-	body.about-page img[src*="about_photo"] {
-	  width: 400px !important;
-	  height: 400px !important;
-	  max-width: 400px !important;
-	  object-fit: cover !important;   /* crop nicely */
-	  border-radius: 64px !important;
-	  margin: 0 auto !important;
-	  display: block !important;
-	  background-color: #f0f0f0;
-	  aspect-ratio: 1/1 !important;
-	}
-	
-	/* Mobile version */
-	@media (max-width: 768px) {
-	  body.about-page .centered-image-container img,
-	  body.about-page img[alt="Moje zdjęcie"],
-	  body.about-page img[src*="about_photo"] {
-	    width: 200px !important;
-	    height: 200px !important;
-	    max-width: 200px !important;
-	    border-radius: 32px !important;
-	  }
-	}
+/* ================================================== */
+/* === ABOUT ME PAGE IMAGE FIX (REAL SELECTOR) === */
+/* ================================================== */
+
+/* Force About Me image to be square and centered */
+body.categories-aboutme .centered-image-container img,
+body.categories-aboutme img[alt="Moje zdjęcie"],
+body.categories-aboutme img[src*="about_photo"] {
+  width: 400px !important;
+  height: 400px !important;
+  max-width: 400px !important;
+  object-fit: cover !important;   /* crop nicely */
+  border-radius: 64px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  background-color: #f0f0f0;
+  aspect-ratio: 1/1 !important;
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+  body.categories-aboutme .centered-image-container img,
+  body.categories-aboutme img[alt="Moje zdjęcie"],
+  body.categories-aboutme img[src*="about_photo"] {
+    width: 200px !important;
+    height: 200px !important;
+    max-width: 200px !important;
+    border-radius: 32px !important;
+  }
+}
