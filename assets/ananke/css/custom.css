@@ -13,20 +13,18 @@ nav.pv3.ph3.ph4-ns {
   padding-bottom: 0 !important;
 }
 
-/* Ogólny styl dla nagłówków z tłem */
+/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
 header .bg-black {
   padding-bottom: 0.5rem !important;
   background: linear-gradient(135deg, #5b7db1, #142850) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-header .bg-black.pb3-m,
-header .bg-black.pb6-l {
+header .bg-black.pb3-m, header .bg-black.pb6-l {
   padding-bottom: 0.5rem !important;
 }
 
-header .bg-black a,
-header .bg-black .site-title {
+header .bg-black a, header .bg-black .site-title {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -37,8 +35,7 @@ header .bg-black a:hover {
 }
 
 /* Style dla "przyklejonej" stopki */
-html,
-body {
+html, body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -50,15 +47,15 @@ body {
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
 }
 
-main,
-.main-content {
+main, .main-content {
   flex: 1 !important;
 }
 
-footer,
-.bg-black.bottom-0 {
+footer, .bg-black.bottom-0 {
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -66,20 +63,12 @@ footer,
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a,
-footer .site-title,
-footer p,
-footer span,
-.bg-black.bottom-0 a,
-.bg-black.bottom-0 .site-title,
-.bg-black.bottom-0 p,
-.bg-black.bottom-0 span {
+footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, .bg-black.bottom-0 p, .bg-black.bottom-0 span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-footer a:hover,
-.bg-black.bottom-0 a:hover {
+footer a:hover, .bg-black.bottom-0 a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
@@ -90,8 +79,7 @@ header .flex-l {
   min-height: 50px !important;
 }
 
-header .site-title,
-nav#site-nav {
+header .site-title, nav#site-nav {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   display: flex;
@@ -107,7 +95,7 @@ nav#site-nav {
   padding: 0 !important;
 }
 
-nav#site-nav ul,
+nav#site-nav ul, 
 nav#site-nav li {
   margin: 0 !important;
   padding: 0 !important;
@@ -128,134 +116,314 @@ nav#site-nav a {
 /* === STYLE DLA ZDJĘCIA PROFILOWEGO NA ABOUT ME === */
 /* ================================================== */
 
-/* Kontener dla zdjęcia profilowego */
+/* Centrowanie kontenera z obrazkiem na About Me */
 .centered-image-container {
-  margin-top: -4rem !important;
-  text-align: center !important;
-  margin-bottom: 30px !important;
-  min-height: 464px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-top: -4rem !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    min-height: 464px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Kwadratowy obrazek TYLKO na stronie About Me */
-img[alt="Moje zdjęcie"],
-img[src="/images/about_photo.jpg"] {
-  width: 400px !important;
-  max-width: 400px !important;
-  height: 400px !important;
-  object-fit: cover !important;
-  display: inline-block !important;
-  border-radius: 64px !important;
-  margin: 0 auto !important;
-  loading: eager !important;
-  background-color: #f0f0f0;
-  fetchpriority: high;
-  aspect-ratio: 1/1;
+div[style*="text-align: center"]:not(.post-image) {
+    text-align: center !important;
+    min-height: 464px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* ================================================== */
-/* === SZERSZY LAYOUT I WIĘKSZA CZCIONKA DLA POSTÓW === */
-/* ================================================== */
-
-/* Stosujemy te style tylko do stron z klasą .single lub .post */
-body.single .nested-copy-line-height,
-body.post .nested-copy-line-height {
-  max-width: 1000px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding-left: 3rem !important;
-  padding-right: 3rem !important;
-}
-
-body.single p,
-body.post p {
-  line-height: 1.8 !important;
-  font-size: 1.1em !important;
-  margin-bottom: 1.5em !important;
-  text-align: justify !important;
+/* Kwadratowy obrazek TYLKO na stronie About Me (bez klasy full-image) */
+img[alt="Moje zdjęcie"]:not(.full-image),
+img[src="/images/about_photo.jpg"]:not(.full-image), 
+.centered-image-container img:not(.full-image) {
+    width: 400px !important;
+    max-width: 400px !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    display: inline-block !important;
+    border-radius: 64px !important;
+    margin: 0 auto !important;
+    loading: eager !important;
+    background-color: #f0f0f0;
+    fetchpriority: high;
+    aspect-ratio: 1/1;
 }
 
 /* ================================================== */
-/* === OBRAZKI W POSTACH (PEŁNA SZEROKOŚĆ) === */
+/* === STYLE DLA PEŁNEGO OBRAZKA NA POSTACH === */
 /* ================================================== */
 
-/* Wszystkie obrazki w postach, które NIE SĄ zdjęciem profilowym */
-body.single img:not([alt="Moje zdjęcie"]),
-body.post img:not([alt="Moje zdjęcie"]) {
-  width: 100% !important;
-  height: auto !important;
-  max-width: none !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  display: block !important;
-  margin: 2rem auto !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  background-color: transparent !important;
+/* Pełny obrazek z klasą .full-image */
+img.full-image,
+.post-image img {
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 600px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    border-radius: 16px !important;
+    margin: 20px auto !important;
+    loading: eager !important;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Kontener dla obrazków w postach */
+/* Kontener dla pełnych obrazków */
 .post-image {
-  padding: 0 !important;
-  margin-bottom: 30px !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    padding: 10px;
 }
 
 /* ================================================== */
 /* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
 /* ================================================== */
 
-main,
-.main-content,
-article {
-  padding-top: 0.05rem !important;
+main, .main-content, article {
+    padding-top: 0.05rem !important;
+}
+
+.nested-copy-line-height {
+    padding-top: 0.05rem !important;
 }
 
 /* ================================================== */
-/* === RESPONSYWNOŚĆ === */
+/* === RESPONSYWNOŚĆ DLA TELEFONÓW === */
 /* ================================================== */
 
 @media (max-width: 768px) {
-  /* ZDJĘCIE PROFILOWE NA TELEFONIE */
-  .centered-image-container {
-    margin-top: 1rem !important;
-    min-height: 264px;
-  }
+    .centered-image-container {
+        margin-top: 1rem !important;
+        text-align: center !important;
+        display: flex !important;
+        width: 100% !important;
+        min-height: 264px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    div[style*="text-align: center"]:not(.post-image) {
+        min-height: 264px;
+    }
+        
+    /* Mniejszy kwadratowy obrazek na telefonie - About Me */
+    img[alt="Moje zdjęcie"]:not(.full-image), 
+    img[src="/images/about_photo.jpg"]:not(.full-image),
+    .centered-image-container img:not(.full-image) {
+        width: 200px !important;
+        max-width: 200px !important;
+        height: 200px !important;
+        border-radius: 32px !important;
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        object-fit: cover !important;
+        loading: eager !important;
+    }
+    
+    /* Pełny obrazek na postach - telefon */
+    img.full-image,
+    .post-image img {
+        width: auto !important;
+        max-width: 95% !important;
+        max-height: 400px !important;
+        height: auto !important;
+        border-radius: 12px !important;
+        object-fit: contain !important;
+        margin: 15px auto !important;
+    }
+        
+    main, .main-content, article {
+        padding-top: 1rem !important;
+    }
+    
+    .post-image {
+        padding: 5px;
+        margin-bottom: 20px !important;
+    }
+}
 
-  img[alt="Moje zdjęcie"],
-  img[src="/images/about_photo.jpg"] {
-    width: 200px !important;
-    max-width: 200px !important;
-    height: 200px !important;
-    border-radius: 32px !important;
-  }
+/* ================================================== */
+/* === SZERSZY LAYOUT TYLKO DLA POSTÓW (NIE ABOUT ME) === */
+/* ================================================== */
 
-  /* LAYOUT POSTÓW NA TELEFONIE */
-  body.single .nested-copy-line-height,
-  body.post .nested-copy-line-height {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-
-  body.single p,
-  body.post p {
-    font-size: 1em !important;
-    line-height: 1.6 !important;
-    text-align: left !important;
-  }
-
-  /* OBRAZKI W POSTACH NA TELEFONIE */
-  body.single img:not([alt="Moje zdjęcie"]),
-  body.post img:not([alt="Moje zdjęcie"]) {
+/* Szerszy layout TYLKO dla postów - wykluczamy stronę About Me */
+.post .nested-copy-line-height:not(.centered-image-container),
+article:not(.about-page) .nested-copy-line-height,
+.single .nested-copy-line-height,
+.content .nested-copy-line-height {
+    max-width: 1000px !important;
     width: 100% !important;
-    margin: 15px auto !important;
-    border-radius: 8px !important;
-  }
+    margin: 0 auto !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
 
-  main,
-  .main-content,
-  article {
-    padding-top: 1rem !important;
-  }
+/* Alternatywnie - używamy selektora dla konkretnych kategorii postów */
+body.single .nested-copy-line-height,
+body.post .nested-copy-line-height {
+    max-width: 1000px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+/* Większa czcionka i wysokość linii TYLKO w postach */
+body.single .nested-copy-line-height p,
+body.post .nested-copy-line-height p,
+body.single .nested-copy-line-height div:not(.centered-image-container),
+body.post .nested-copy-line-height div:not(.centered-image-container) {
+    line-height: 1.8 !important;
+    font-size: 1.1em !important;
+    margin-bottom: 1.5em !important;
+    text-align: justify !important;
+}
+
+/* Większe odstępy między akapitami w postach */
+body.single .nested-copy-line-height > *:not(:last-child):not(.centered-image-container),
+body.post .nested-copy-line-height > *:not(:last-child):not(.centered-image-container) {
+    margin-bottom: 1.8em !important;
+}
+
+/* Zachowujemy oryginalne style dla About Me */
+.centered-image-container,
+.centered-image-container *,
+div[style*="text-align: center"]:not(.post-image),
+div[style*="text-align: center"]:not(.post-image) * {
+    max-width: initial !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+    font-size: initial !important;
+    line-height: initial !important;
+    text-align: center !important;
+}
+
+/* ================================================== */
+/* === RESPONSYWNOŚĆ TYLKO DLA POSTÓW === */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Na telefonach szerokość wraca do normalnej TYLKO w postach */
+    body.single .nested-copy-line-height,
+    body.post .nested-copy-line-height {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    body.single .nested-copy-line-height p,
+    body.post .nested-copy-line-height p,
+    body.single .nested-copy-line-height div:not(.centered-image-container),
+    body.post .nested-copy-line-height div:not(.centered-image-container) {
+        font-size: 1em !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+    }
+}
+
+/* ================================================== */
+/* === PEŁNE OBRAZKI W POSTACH (BEZ OGRANICZEŃ) === */
+/* ================================================== */
+
+/* Ensure full-size images in posts */
+body.single .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+.single img:not([alt="Moje zdjęcie"]):not(.centered-image-container img),
+.post img:not([alt="Moje zdjęcie"]):not(.centered-image-container img),
+.nested-copy-line-height img[src*="/images/"]:not([alt="Moje zdjęcie"]),
+.nested-copy-line-height img[src*="image"]:not([alt="Moje zdjęcie"]),
+main img:not([alt="Moje zdjęcie"]):not(.centered-image-container img),
+article img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
+    width: 100% !important; /* Make the image take up the full width of its container */
+    height: auto !important; /* Maintain the aspect ratio */
+    max-width: none !important; /* Remove any maximum width restrictions */
+    max-height: none !important; /* Remove any maximum height restrictions */
+    object-fit: unset !important; /* Ensure the image is not cropped */
+    display: block !important;
+    margin: 0 auto !important; /* Center the image */
+    border-radius: 0 !important; /* Remove rounded corners */
+    box-shadow: none !important; /* Remove shadow */
+}
+
+/* Ensure the container does not restrict the image */
+.post-image {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    padding: 0 !important; /* Remove padding that might restrict the image */
+    width: 100% !important; /* Ensure the container is full width */
+    max-width: none !important; /* Remove any maximum width restrictions */
+}
+
+/* Ensure the parent container does not restrict the image */
+.nested-copy-line-height {
+    max-width: 100% !important; /* Ensure the container is full width */
+    padding: 0 !important; /* Remove padding that might restrict the image */
+    margin: 0 auto !important; /* Center the container */
+}
+
+/* Małe obrazki TYLKO na About Me i innych stronach (nie w postach) */
+body:not(.single):not(.post) .nested-copy-line-height img:not([alt="Moje zdjęcie"]):not(.full-image) {
+    width: 250px !important;
+    max-width: 250px !important;
+    height: auto !important;
+    display: inline-block !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+}
+
+/* ================================================== */
+/* === RESPONSYWNOŚĆ DLA PEŁNYCH OBRAZKÓW === */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Pełne obrazki na telefonach - nadal pełne ale z marginesami */
+    body.single .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+    body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+    .nested-copy-line-height img[src*="/images/"]:not([alt="Moje zdjęcie"]),
+    main img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
+        width: auto !important;
+        max-width: 95% !important;
+        height: auto !important;
+        max-height: none !important;
+        margin: 15px auto !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* ================================================== */
+/* === REMOVE CONFLICTING RULES FOR IMAGES IN POSTS === */
+/* ================================================== */
+
+/* Override styles for images in posts */
+body.single img:not(.full-image),
+body.post img:not(.full-image) {
+    width: auto !important; /* Remove fixed width */
+    max-width: 100% !important; /* Allow image to scale properly */
+    height: auto !important; /* Maintain aspect ratio */
+    object-fit: unset !important; /* Prevent cropping */
+    border-radius: 0 !important; /* Remove rounded corners */
+    margin: 0 auto !important; /* Center the image */
+    display: block !important; /* Ensure proper block-level display */
+    box-shadow: none !important; /* Remove any shadow */
+    background-color: transparent !important; /* Remove background color */
+}
+
+/* Ensure About Me and other pages retain their styles */
+body:not(.single):not(.post) img:not(.full-image),
+body:not(.single):not(.post) .centered-image-container img:not(.full-image) {
+    width: 400px !important;
+    max-width: 400px !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    border-radius: 64px !important;
+    margin: 0 auto !important;
+    display: inline-block !important;
+    background-color: #f0f0f0 !important;
+    aspect-ratio: 1 / 1 !important;
 }
