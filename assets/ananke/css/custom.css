@@ -239,7 +239,3 @@ main, .main-content, article {
     }
 }
 
-/* Dla posta w kategorii "Studies in Denmark" – brak zaokrągleń */
-body.category-studies-in-denmark img {
-    border-radius: 0 !important;
-}
