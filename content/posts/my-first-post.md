@@ -4,7 +4,7 @@ draft = false
 title = 'My First Post'
 categories = ["Studies in Denmark"]
 tags = ["Denmark", "Studies"]
-image = "/images/image0.jpg"
+featured_image = "/images/image0.jpg"
 +++
 
 This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
