@@ -8,6 +8,6 @@ tags = ["Denmark", "Studies"]
 
 <div style="text-align: left; margin-bottom: 30px;">
 
-![Moje zdjęcie](/images/about_photo.jpg)
+![Moje zdjęcie](/images/image0.jpg)
 
 This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
