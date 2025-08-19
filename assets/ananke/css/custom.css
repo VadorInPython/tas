@@ -121,22 +121,47 @@ nav#site-nav a {
     margin-top: -4rem !important;
     text-align: center !important;
     margin-bottom: 30px !important;
+    /* Dodajemy wysokość kontenera, żeby zarezerwować miejsce */
+    min-height: 464px; /* 400px + margin + border-radius space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div[style*="text-align: center"] {
     text-align: center !important;
+    /* Rezerwujemy miejsce dla obrazka */
+    min-height: 464px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Główny styl dla obrazka */
-img[alt="Moje zdjęcie"], 
-img[src="/images/about_photo.jpg"],
+img[alt="Moje zdjęcie"],
+img[src="/images/about_photo.jpg"], 
 .centered-image-container img {
     width: 400px !important;
     max-width: 400px !important;
-    height: auto !important;
+    height: 400px !important; /* Ustalona wysokość */
+    object-fit: cover !important; /* Dopasowanie obrazka */
     display: inline-block !important;
     border-radius: 64px !important;
     margin: 0 auto !important;
+    /* Dodajemy loading priority */
+    loading: eager !important;
+    /* Placeholder podczas ładowania */
+    background-color: #f0f0f0;
+    /* Preload hint */
+    fetchpriority: high;
+}
+
+/* Alternatywnie - używaj aspect-ratio (nowsze przeglądarki) */
+img[alt="Moje zdjęcie"],
+img[src="/images/about_photo.jpg"], 
+.centered-image-container img {
+    aspect-ratio: 1/1; /* Kwadratowy obrazek */
 }
 
 /* Inne obrazki na stronie (mniejsze) */
@@ -173,30 +198,43 @@ main, .main-content, article {
     .centered-image-container {
         margin-top: 1rem !important;
         text-align: center !important;
-        display: block !important;
+        display: flex !important;
         width: 100% !important;
+        min-height: 264px; /* 200px + space */
+        align-items: center;
+        justify-content: center;
     }
     
+    div[style*="text-align: center"] {
+        min-height: 264px;
+    }
+        
     /* Mniejszy obrazek na telefonie - wycentrowany */
     img[alt="Moje zdjęcie"], 
     img[src="/images/about_photo.jpg"],
     .centered-image-container img {
         width: 200px !important;
         max-width: 200px !important;
+        height: 200px !important; /* Ustalona wysokość */
         border-radius: 32px !important;
         display: block !important;
         margin: 0 auto !important;
         text-align: center !important;
+        object-fit: cover !important;
+        loading: eager !important;
     }
-    
+        
     main, .main-content, article {
         padding-top: 1rem !important;
     }
-    
+        
     /* Dodatkowe centrowanie dla uporczywych elementów */
     div[style*="text-align: center"] {
         text-align: center !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100% !important;
     }
 }
