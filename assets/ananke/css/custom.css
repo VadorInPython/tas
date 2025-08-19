@@ -344,7 +344,7 @@ article img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
     height: auto !important; /* Maintain the aspect ratio */
     max-width: none !important; /* Remove any maximum width restrictions */
     max-height: none !important; /* Remove any maximum height restrictions */
-    object-fit: unset !important; /* Ensure the image is not cropped */
+    object-fit: contain !important; /* Ensure the image is not cropped */
     display: block !important;
     margin: 0 auto !important; /* Center the image */
     border-radius: 0 !important; /* Remove rounded corners */
