@@ -427,3 +427,72 @@ body:not(.single):not(.post) .centered-image-container img:not(.full-image) {
     background-color: #f0f0f0 !important;
     aspect-ratio: 1 / 1 !important;
 }
+
+/* ================================================== */
+/* === ABOUT ME PAGE (categories-aboutme) === */
+/* ================================================== */
+
+/* Force About Me profile image to be square + cropped */
+body.categories-aboutme .centered-image-container img,
+body.categories-aboutme img[alt="Moje zdjęcie"],
+body.categories-aboutme img[src*="about_photo"] {
+  width: 400px !important;
+  height: 400px !important;
+  max-width: 400px !important;
+  object-fit: cover !important;   /* crop nicely */
+  border-radius: 64px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  background-color: #f0f0f0;
+  aspect-ratio: 1/1 !important;
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+  body.categories-aboutme .centered-image-container img,
+  body.categories-aboutme img[alt="Moje zdjęcie"],
+  body.categories-aboutme img[src*="about_photo"] {
+    width: 200px !important;
+    height: 200px !important;
+    max-width: 200px !important;
+    border-radius: 32px !important;
+  }
+}
+
+/* Keep About Me text narrower */
+body.categories-aboutme .nested-copy-line-height {
+  max-width: 700px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  text-align: left !important;
+}
+
+/* ================================================== */
+/* === POSTS (single/post) === */
+/* ================================================== */
+
+/* Post text layout */
+body.single .nested-copy-line-height,
+body.post .nested-copy-line-height {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 0 3rem !important;
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  text-align: justify !important;
+}
+
+/* Post images: full, uncropped */
+body.single .nested-copy-line-height img,
+body.post .nested-copy-line-height img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important; /* show full image */
+  margin: 20px auto !important;
+  display: block !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
