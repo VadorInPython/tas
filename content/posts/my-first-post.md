@@ -6,8 +6,6 @@ categories = ["Studies in Denmark"]
 tags = ["Denmark", "Studies"]
 +++
 
-<div style="text-align: center; margin-bottom: 15px;">
-
 ![Moje zdjęcie](/images/image0.jpg)
 
 This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
