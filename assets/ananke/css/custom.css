@@ -261,3 +261,91 @@ main, .main-content, article {
         margin-bottom: 20px !important;
     }
 }
+
+/* ================================================== */
+/* === SZERSZY LAYOUT DLA TEKSTÓW W POSTACH === */
+/* ================================================== */
+
+/* Zwiększenie szerokości głównego kontenera dla postów */
+.nested-copy-line-height,
+.measure-wide,
+.measure,
+article,
+.content,
+.post-content {
+    max-width: 1000px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* Szerszy padding dla artykułów */
+.nested-copy-line-height {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+/* Większa wysokość linii i rozmiar czcionki dla lepszej czytelności */
+.nested-copy-line-height p,
+.nested-copy-line-height div,
+article p {
+    line-height: 1.8 !important;
+    font-size: 1.1em !important;
+    margin-bottom: 1.5em !important;
+    text-align: justify !important;
+}
+
+/* Większe odstępy między akapitami */
+.nested-copy-line-height > *:not(:last-child) {
+    margin-bottom: 1.8em !important;
+}
+
+/* Opcjonalnie: dwukolumnowy layout dla długich tekstów */
+.two-columns .nested-copy-line-height {
+    columns: 2 !important;
+    column-gap: 4rem !important;
+    column-rule: 1px solid #e2e8f0 !important;
+}
+
+/* Style dla nagłówków w szerszym layoutcie */
+.nested-copy-line-height h1,
+.nested-copy-line-height h2,
+.nested-copy-line-height h3,
+.nested-copy-line-height h4 {
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
+    break-inside: avoid !important;
+}
+
+/* ================================================== */
+/* === RESPONSYWNOŚĆ DLA SZERSZEGO LAYOUTU === */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Na telefonach z powrotem do normalnej szerokości */
+    .nested-copy-line-height,
+    .measure-wide,
+    .measure,
+    article,
+    .content,
+    .post-content {
+        max-width: 100% !important;
+    }
+    
+    .nested-copy-line-height {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .nested-copy-line-height p,
+    .nested-copy-line-height div,
+    article p {
+        font-size: 1em !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+    }
+    
+    /* Wyłącz kolumny na telefonach */
+    .two-columns .nested-copy-line-height {
+        columns: 1 !important;
+    }
+}
