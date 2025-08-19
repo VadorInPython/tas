@@ -113,13 +113,11 @@ nav#site-nav a {
 }
 
 /* ================================================== */
-/* === STYLE SPECJALNE DLA STRONY ABOUT ME === */
+/* === STYLE DLA ZDJĘCIA PROFILOWEGO (ABOUT ME) === */
 /* ================================================== */
 
-/* Sprawdzamy czy jesteśmy na stronie About Me */
-body[class*="about"] .centered-image-container,
-body.about .centered-image-container,
-.about .centered-image-container {
+/* Centrowanie kontenera z obrazkiem - zachowujemy oryginalny styl */
+.centered-image-container {
     margin-top: -4rem !important;
     text-align: center !important;
     margin-bottom: 30px !important;
@@ -129,9 +127,7 @@ body.about .centered-image-container,
     justify-content: center;
 }
 
-body[class*="about"] div[style*="text-align: center"],
-body.about div[style*="text-align: center"],
-.about div[style*="text-align: center"] {
+div[style*="text-align: center"] {
     text-align: center !important;
     min-height: 464px;
     display: flex;
@@ -140,16 +136,10 @@ body.about div[style*="text-align: center"],
     justify-content: center;
 }
 
-/* Style dla zdjęcia profilowego TYLKO na stronie About Me */
-body[class*="about"] img[alt="Moje zdjęcie"],
-body[class*="about"] img[src="/images/about_photo.jpg"], 
-body[class*="about"] .centered-image-container img,
-body.about img[alt="Moje zdjęcie"],
-body.about img[src="/images/about_photo.jpg"], 
-body.about .centered-image-container img,
-.about img[alt="Moje zdjęcie"],
-.about img[src="/images/about_photo.jpg"], 
-.about .centered-image-container img {
+/* Style dla głównego zdjęcia profilowego - PRIORYTET dla About Me */
+img[alt="Moje zdjęcie"],
+img[src="/images/about_photo.jpg"], 
+.centered-image-container img {
     width: 400px !important;
     max-width: 400px !important;
     height: 400px !important;
@@ -164,18 +154,22 @@ body.about .centered-image-container img,
 }
 
 /* ================================================== */
-/* === STYLE DLA ZDJĘĆ W POSTACH I INNYCH SEKCJACH === */
+/* === STYLE DLA ZDJĘĆ W POSTACH I ARTYKUŁACH === */
 /* ================================================== */
 
-/* Zdjęcia w postach - zachowują oryginalne wymiary i proporcje */
-body:not([class*="about"]):not(.about) img[alt="Moje zdjęcie"],
-body:not([class*="about"]):not(.about) img[src="/images/about_photo.jpg"],
-article:not(.about) img[alt="Moje zdjęcie"],
-article:not(.about) img[src="/images/about_photo.jpg"],
-.post img[alt="Moje zdjęcie"],
-.post img[src="/images/about_photo.jpg"] {
+/* Zdjęcia w treści postów/artykułów - różne od głównego zdjęcia profilowego */
+.nested-copy-line-height img[alt="Moje zdjęcie"]:not(.centered-image-container img),
+.nested-copy-line-height img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
+.nested-img img[alt="Moje zdjęcie"]:not(.centered-image-container img),
+.nested-img img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
+article .nested-copy-line-height img[alt="Moje zdjęcie"],
+article .nested-copy-line-height img[src="/images/about_photo.jpg"],
+.post-content img[alt="Moje zdjęcie"],
+.post-content img[src="/images/about_photo.jpg"],
+p img[alt="Moje zdjęcie"]:not(.centered-image-container img),
+p img[src="/images/about_photo.jpg"]:not(.centered-image-container img) {
     width: auto !important;
-    max-width: 100% !important;
+    max-width: 300px !important;
     height: auto !important;
     object-fit: contain !important;
     display: inline-block !important;
@@ -184,7 +178,7 @@ article:not(.about) img[src="/images/about_photo.jpg"],
     loading: lazy !important;
 }
 
-/* Inne obrazki na stronie (ogólne) */
+/* Inne obrazki na stronie (nie zdjęcie profilowe) */
 .nested-copy-line-height img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
 .nested-img img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
 article img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
@@ -215,10 +209,8 @@ main, .main-content, article {
 /* ================================================== */
 
 @media (max-width: 768px) {
-    /* Style dla About Me na telefonach */
-    body[class*="about"] .centered-image-container,
-    body.about .centered-image-container,
-    .about .centered-image-container {
+    /* Style dla kontenera About Me na telefonach */
+    .centered-image-container {
         margin-top: 1rem !important;
         text-align: center !important;
         display: flex !important;
@@ -228,9 +220,7 @@ main, .main-content, article {
         justify-content: center;
     }
     
-    body[class*="about"] div[style*="text-align: center"],
-    body.about div[style*="text-align: center"],
-    .about div[style*="text-align: center"] {
+    div[style*="text-align: center"] {
         min-height: 264px;
         text-align: center !important;
         display: flex !important;
@@ -240,16 +230,10 @@ main, .main-content, article {
         width: 100% !important;
     }
         
-    /* Mniejszy obrazek na telefonie dla About Me */
-    body[class*="about"] img[alt="Moje zdjęcie"], 
-    body[class*="about"] img[src="/images/about_photo.jpg"],
-    body[class*="about"] .centered-image-container img,
-    body.about img[alt="Moje zdjęcie"], 
-    body.about img[src="/images/about_photo.jpg"],
-    body.about .centered-image-container img,
-    .about img[alt="Moje zdjęcie"], 
-    .about img[src="/images/about_photo.jpg"],
-    .about .centered-image-container img {
+    /* Główne zdjęcie profilowe na telefonie */
+    img[alt="Moje zdjęcie"], 
+    img[src="/images/about_photo.jpg"],
+    .centered-image-container img {
         width: 200px !important;
         max-width: 200px !important;
         height: 200px !important;
@@ -261,15 +245,19 @@ main, .main-content, article {
         loading: eager !important;
     }
 
-    /* Style dla zdjęć w postach na telefonach - zachowują proporcje */
-    body:not([class*="about"]):not(.about) img[alt="Moje zdjęcie"],
-    body:not([class*="about"]):not(.about) img[src="/images/about_photo.jpg"],
-    article:not(.about) img[alt="Moje zdjęcie"],
-    article:not(.about) img[src="/images/about_photo.jpg"],
-    .post img[alt="Moje zdjęcie"],
-    .post img[src="/images/about_photo.jpg"] {
+    /* Zdjęcia w treści postów na telefonach */
+    .nested-copy-line-height img[alt="Moje zdjęcie"]:not(.centered-image-container img),
+    .nested-copy-line-height img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
+    .nested-img img[alt="Moje zdjęcie"]:not(.centered-image-container img),
+    .nested-img img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
+    article .nested-copy-line-height img[alt="Moje zdjęcie"],
+    article .nested-copy-line-height img[src="/images/about_photo.jpg"],
+    .post-content img[alt="Moje zdjęcie"],
+    .post-content img[src="/images/about_photo.jpg"],
+    p img[alt="Moje zdjęcie"]:not(.centered-image-container img),
+    p img[src="/images/about_photo.jpg"]:not(.centered-image-container img) {
         width: auto !important;
-        max-width: 90% !important;
+        max-width: 200px !important;
         height: auto !important;
         border-radius: 8px !important;
         display: block !important;
