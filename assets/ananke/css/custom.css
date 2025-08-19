@@ -341,3 +341,72 @@ div[style*="text-align: center"]:not(.post-image) * {
     }
 }
 
+/* ================================================== */
+/* === PEŁNE OBRAZKI W POSTACH (BEZ OGRANICZEŃ) === */
+/* ================================================== */
+
+/* Pełne obrazki TYLKO w postach - nadpisuje poprzednie ograniczenia */
+body.single .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+.single img:not([alt="Moje zdjęcie"]):not(.centered-image-container img),
+.post img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    min-width: unset !important;
+    min-height: unset !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 20px auto !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Specjalne nadpisanie dla wszystkich obrazków w treści postów */
+.nested-copy-line-height img[src*="/images/"]:not([alt="Moje zdjęcie"]),
+.nested-copy-line-height img[src*="image"]:not([alt="Moje zdjęcie"]) {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 25px auto !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Kontener dla obrazków w postach */
+body.single .nested-copy-line-height,
+body.post .nested-copy-line-height {
+    text-align: center !important;
+}
+
+/* Zachowujemy małe obrazki TYLKO na stronie About Me */
+body:not(.single):not(.post) .nested-copy-line-height img:not([alt="Moje zdjęcie"]):not(.full-image),
+.centered-image-container img {
+    width: 250px !important;
+    max-width: 250px !important;
+    height: auto !important;
+    display: inline-block !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+}
+
+/* ================================================== */
+/* === RESPONSYWNOŚĆ DLA PEŁNYCH OBRAZKÓW === */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Pełne obrazki na telefonach - nadal pełne ale z marginesami */
+    body.single .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+    body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]) {
+        width: auto !important;
+        max-width: 95% !important;
+        height: auto !important;
+        max-height: none !important;
+        margin: 15px auto !important;
+        border-radius: 8px !important;
+    }
+}
