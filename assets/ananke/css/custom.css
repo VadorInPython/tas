@@ -113,15 +113,16 @@ nav#site-nav a {
 /* === ABOUT ME PAGE ONLY === */
 /* ================================================== */
 
-/* Centered image container */
+/* Centered image container (restored flexbox centering) */
 body.about-page .centered-image-container {
   margin-top: -4rem !important;
-  text-align: center !important;
   margin-bottom: 30px !important;
   min-height: 464px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  flex-direction: column !important; /* ensures text below stacks nicely */
 }
 
 /* Profile image */
@@ -137,7 +138,13 @@ body.about-page .centered-image-container img {
   aspect-ratio: 1/1;
 }
 
+/* Mobile version */
 @media (max-width: 768px) {
+  body.about-page .centered-image-container {
+    margin-top: 1rem !important;
+    min-height: 264px;
+  }
+
   body.about-page .centered-image-container img {
     width: 200px !important;
     height: 200px !important;
