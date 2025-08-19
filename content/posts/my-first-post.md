@@ -6,6 +6,6 @@ categories = ["Studies in Denmark"]
 tags = ["Denmark", "Studies"]
 +++
 
-![Moje zdjęcie](/images/about_photo.jpg)
+![Moje zdjęcie](/images/patsuisse.jpg)
 
 This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
