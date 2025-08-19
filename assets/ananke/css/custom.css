@@ -135,7 +135,7 @@ img[src="/images/about_photo.jpg"],
     max-width: 400px !important;
     height: auto !important;
     display: inline-block !important;
-    border-radius: 64px !important;
+    border-radius: 0px !important;
     margin: 0 auto !important;
 }
 
@@ -149,7 +149,7 @@ main img:not([alt="Moje zdjęcie"]),
     max-width: 250px !important;
     height: auto !important;
     display: inline-block !important;
-    border-radius: 8px !important;
+    border-radius: 0px !important;
     margin: 0 auto !important;
 }
 
@@ -185,8 +185,8 @@ main, .main-content, article {
     .centered-image-container img {
         width: 200px !important;
         max-width: 200px !important;
-        border-radius: 32px !important; /* Proporcjonalnie mniejszy radius */
-        border-radius: 32px !important;
+        border-radius: 0px !important; /* Proporcjonalnie mniejszy radius */
+        border-radius: 0px !important;
         display: block !important;
         margin: 0 auto !important;
         text-align: center !important;
