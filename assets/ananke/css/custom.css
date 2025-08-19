@@ -113,120 +113,44 @@ nav#site-nav a {
 }
 
 /* ================================================== */
-/* === STYLE DLA ZDJĘCIA PROFILOWEGO (ABOUT ME) === */
+/* === STYLE DLA ZDJĘCIA PROFILOWEGO === */
 /* ================================================== */
 
-/* Centrowanie kontenera z obrazkiem na About Me */
+/* Centrowanie kontenera z obrazkiem */
 .centered-image-container {
     margin-top: -4rem !important;
     text-align: center !important;
     margin-bottom: 30px !important;
-    display: block !important;
-    width: 100% !important;
 }
 
-/* Wszystkie divy z text-align center (głównie About Me) */
 div[style*="text-align: center"] {
     text-align: center !important;
-    display: block !important;
-    width: 100% !important;
 }
 
-/* TYLKO obrazki na stronie About Me - najwyższa specyficzność */
-body img[alt="Moje zdjęcie"], 
-body img[src="/images/about_photo.jpg"],
-body .centered-image-container img,
-body div[style*="text-align: center"] img {
+/* Główny styl dla obrazka */
+img[alt="Moje zdjęcie"], 
+img[src="/images/about_photo.jpg"],
+.centered-image-container img {
     width: 400px !important;
     max-width: 400px !important;
     height: auto !important;
-    display: block !important;
+    display: inline-block !important;
     border-radius: 0px !important;
     margin: 0 auto !important;
-    text-align: center !important;
-    float: none !important;
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
 }
 
-/* Tekst na stronie About Me - zachowaj normalną szerokość */
-body:not(.post-page) .nested-copy-line-height {
-    max-width: 650px !important; /* Normalna szerokość dla About Me */
-    margin: 0 auto !important;
-    text-align: left !important;
-}
-
-/* ================================================== */
-/* === NOWE STYLE DLA POSTÓW === */
-/* ================================================== */
-
-/* Szerszy tekst w postach - kontener główny */
-article .nested-copy-line-height,
-main .nested-copy-line-height,
-.post-content .nested-copy-line-height {
-    max-width: 900px !important; /* Zwiększone z domyślnej wartości */
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-}
-
-/* Większe obrazki w postach (nie w About Me) - PEŁNA SZEROKOŚĆ */
-body article img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-body main img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-body .post-content img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-body .nested-copy-line-height img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]) {
-    width: calc(100vw - 2rem) !important; /* Pełna szerokość minus marginesy */
-    max-width: 900px !important; /* Maksymalna szerokość */
+/* Inne obrazki na stronie (mniejsze) */
+.nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+.nested-img img:not([alt="Moje zdjęcie"]),
+article img:not([alt="Moje zdjęcie"]),
+main img:not([alt="Moje zdjęcie"]),
+.content img:not([alt="Moje zdjęcie"]) {
+    width: 250px !important;
+    max-width: 250px !important;
     height: auto !important;
-    display: block !important;
-    margin: 2rem calc(-1 * (100vw - 100%) / 2) !important; /* Centrowanie i wyjście poza kontener */
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    object-fit: cover !important;
-}
-
-/* Alternatywne podejście dla obrazków w postach - breakout z kontenera */
-@supports (width: 100vw) {
-    body article img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-    body main img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-    body .post-content img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-    body .nested-copy-line-height img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]) {
-        width: 100vw !important;
-        max-width: none !important;
-        margin-left: 50% !important;
-        transform: translateX(-50%) !important;
-        margin-top: 2rem !important;
-        margin-bottom: 2rem !important;
-    }
-}
-
-/* Obrazki w postach pojawiają się nad tekstem */
-article p img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-.nested-copy-line-height p img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]) {
-    display: block !important;
-    float: none !important;
-    margin-bottom: 2rem !important;
-    margin-top: 1rem !important;
-}
-
-/* Lepsze formatowanie tekstu w postach */
-article p,
-.nested-copy-line-height p {
-    line-height: 1.7 !important; /* Lepszy odstęp między liniami */
-    margin-bottom: 1.5rem !important;
-    text-align: justify !important; /* Wyjustowany tekst dla lepszego wyglądu */
-    font-size: 1.1rem !important; /* Nieco większy tekst */
-}
-
-/* Nagłówki w postach */
-article h1, article h2, article h3, article h4, article h5, article h6,
-.nested-copy-line-height h1, .nested-copy-line-height h2, .nested-copy-line-height h3,
-.nested-copy-line-height h4, .nested-copy-line-height h5, .nested-copy-line-height h6 {
-    margin-top: 2.5rem !important;
-    margin-bottom: 1.5rem !important;
+    display: inline-block !important;
+    border-radius: 0px !important;
+    margin: 0 auto !important;
 }
 
 /* ================================================== */
@@ -254,47 +178,18 @@ main, .main-content, article {
         width: 100% !important;
     }
 
-    /* Mniejszy obrazek profilowy na telefonie (About Me) - WYŻSZA SPECYFICZNOŚĆ */
-    body img[alt="Moje zdjęcie"], 
-    body img[src="/images/about_photo.jpg"],
-    body .centered-image-container img {
+    /* Mniejszy obrazek na telefonie */
+    /* Mniejszy obrazek na telefonie - wycentrowany */
+    img[alt="Moje zdjęcie"], 
+    img[src="/images/about_photo.jpg"],
+    .centered-image-container img {
         width: 200px !important;
         max-width: 200px !important;
+        border-radius: 0px !important; /* Proporcjonalnie mniejszy radius */
         border-radius: 0px !important;
         display: block !important;
         margin: 0 auto !important;
         text-align: center !important;
-    }
-
-    /* Responsywność dla postów na telefonach */
-    article .nested-copy-line-height,
-    main .nested-copy-line-height,
-    .post-content .nested-copy-line-height {
-        max-width: 100% !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-
-    /* Obrazki w postach na telefonach - PEŁNA SZEROKOŚĆ */
-    body article img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-    body main img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-    body .post-content img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-    body .nested-copy-line-height img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]) {
-        width: 100vw !important;
-        max-width: none !important;
-        margin: 1.5rem calc(-1 * (100vw - 100%) / 2) !important;
-        border-radius: 4px !important;
-        margin-left: 50% !important;
-        transform: translateX(-50%) !important;
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-
-    /* Mniejszy tekst na telefonach dla lepszej czytelności */
-    article p,
-    .nested-copy-line-height p {
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
     }
 
     main, .main-content, article {
@@ -307,4 +202,4 @@ main, .main-content, article {
         display: block !important;
         width: 100% !important;
     }
-}
+  }
