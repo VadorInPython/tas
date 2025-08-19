@@ -346,7 +346,7 @@ div[style*="text-align: center"]:not(.post-image) * {
 /* === PEŁNE OBRAZKI W POSTACH (BEZ OGRANICZEŃ) === */
 /* ================================================== */
 
-/* Pełne obrazki TYLKO w postach - nadpisuje poprzednie ograniczenia */
+/* Ensure full-size images in posts */
 body.single .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
 body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
 .single img:not([alt="Moje zdjęcie"]):not(.centered-image-container img),
@@ -355,15 +355,31 @@ body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
 .nested-copy-line-height img[src*="image"]:not([alt="Moje zdjęcie"]),
 main img:not([alt="Moje zdjęcie"]):not(.centered-image-container img),
 article img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
-    width: 100% !important; /* Ensure the image takes up the full width of its container */
+    width: 100% !important; /* Make the image take up the full width of its container */
     height: auto !important; /* Maintain the aspect ratio */
     max-width: none !important; /* Remove any maximum width restrictions */
     max-height: none !important; /* Remove any maximum height restrictions */
     object-fit: unset !important; /* Ensure the image is not cropped */
     display: block !important;
-    margin: 25px auto !important;
+    margin: 0 auto !important; /* Center the image */
     border-radius: 0 !important; /* Remove rounded corners */
     box-shadow: none !important; /* Remove shadow */
+}
+
+/* Ensure the container does not restrict the image */
+.post-image {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    padding: 0 !important; /* Remove padding that might restrict the image */
+    width: 100% !important; /* Ensure the container is full width */
+    max-width: none !important; /* Remove any maximum width restrictions */
+}
+
+/* Ensure the parent container does not restrict the image */
+.nested-copy-line-height {
+    max-width: 100% !important; /* Ensure the container is full width */
+    padding: 0 !important; /* Remove padding that might restrict the image */
+    margin: 0 auto !important; /* Center the container */
 }
 
 /* Małe obrazki TYLKO na About Me i innych stronach (nie w postach) */
