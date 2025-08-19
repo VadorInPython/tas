@@ -426,12 +426,12 @@ body.post img:not(.full-image) {
     margin: 0 auto !important; /* Center the image */
     display: block !important; /* Ensure proper block-level display */
     box-shadow: none !important; /* Remove any shadow */
-    aspect-ratio: unset !important; /* Remove aspect ratio constraints */
     background-color: transparent !important; /* Remove background color */
 }
 
 /* Ensure About Me and other pages retain their styles */
-body:not(.single):not(.post) img:not(.full-image) {
+body:not(.single):not(.post) img:not(.full-image),
+body:not(.single):not(.post) .centered-image-container img:not(.full-image) {
     width: 400px !important;
     max-width: 400px !important;
     height: 400px !important;
