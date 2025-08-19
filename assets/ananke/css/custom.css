@@ -151,20 +151,33 @@ div[style*="text-align: center"]:not(.post-image) {
 }
 
 /* Kwadratowy obrazek TYLKO na stronie About Me (bez klasy full-image) */
-img[alt="Moje zdjęcie"]:not(.full-image),
-img[src="/images/about_photo.jpg"]:not(.full-image),
-.centered-image-container img:not(.full-image) {
-  width: 400px !important;
-  max-width: 400px !important;
-  height: 400px !important;
-  object-fit: cover !important;
-  display: inline-block !important;
-  border-radius: 64px !important;
-  margin: 0 auto !important;
-  loading: eager !important;
-  background-color: #f0f0f0;
-  fetchpriority: high;
-  aspect-ratio: 1 / 1;
+body:not(.single):not(.post) img:not(.full-image),
+body:not(.single):not(.post) .centered-image-container img:not(.full-image) {
+  width: auto !important; /* Allow the width to adjust automatically */
+  max-width: 100% !important; /* Ensure the image can scale to the container */
+  height: auto !important; /* Maintain the aspect ratio */
+  object-fit: cover !important; /* Ensure the image is not cropped */
+  border-radius: 64px !important; /* Keep rounded corners */
+  margin: 0 auto !important; /* Center the image */
+  display: inline-block !important; /* Ensure proper inline display */
+  background-color: #f0f0f0 !important; /* Keep background color */
+  aspect-ratio: 1 / 1 !important; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  img[alt="Moje zdjęcie"]:not(.full-image),
+  img[src="/images/about_photo.jpg"]:not(.full-image),
+  .centered-image-container img:not(.full-image) {
+    width: auto !important; /* Allow the width to adjust automatically */
+    max-width: 100% !important; /* Ensure the image can scale to the container */
+    height: auto !important; /* Maintain the aspect ratio */
+    border-radius: 32px !important; /* Keep rounded corners */
+    display: block !important; /* Ensure proper block-level display */
+    margin: 0 auto !important; /* Center the image */
+    text-align: center !important; /* Center text */
+    object-fit: cover !important; /* Ensure the image is not cropped */
+    loading: eager !important; /* Keep loading attribute */
+  }
 }
 
 /* ================================================== */
@@ -231,15 +244,15 @@ article {
   img[alt="Moje zdjęcie"]:not(.full-image),
   img[src="/images/about_photo.jpg"]:not(.full-image),
   .centered-image-container img:not(.full-image) {
-    width: 200px !important;
-    max-width: 200px !important;
-    height: 200px !important;
-    border-radius: 32px !important;
-    display: block !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-    object-fit: cover !important;
-    loading: eager !important;
+    width: auto !important; /* Allow the width to adjust automatically */
+    max-width: 100% !important; /* Ensure the image can scale to the container */
+    height: auto !important; /* Maintain the aspect ratio */
+    border-radius: 32px !important; /* Keep rounded corners */
+    display: block !important; /* Ensure proper block-level display */
+    margin: 0 auto !important; /* Center the image */
+    text-align: center !important; /* Center text */
+    object-fit: cover !important; /* Ensure the image is not cropped */
+    loading: eager !important; /* Keep loading attribute */
   }
 
   /* Pełny obrazek na postach - telefon */
@@ -435,15 +448,15 @@ body.post img:not(.full-image) {
 /* Ensure About Me and other pages retain their styles */
 body:not(.single):not(.post) img:not(.full-image),
 body:not(.single):not(.post) .centered-image-container img:not(.full-image) {
-  width: 400px !important;
-  max-width: 400px !important;
-  height: 400px !important;
-  object-fit: cover !important;
-  border-radius: 64px !important;
-  margin: 0 auto !important;
-  display: inline-block !important;
-  background-color: #f0f0f0 !important;
-  aspect-ratio: 1 / 1 !important;
+  width: auto !important; /* Allow the width to adjust automatically */
+  max-width: 100% !important; /* Ensure the image can scale to the container */
+  height: auto !important; /* Maintain the aspect ratio */
+  object-fit: cover !important; /* Ensure the image is not cropped */
+  border-radius: 64px !important; /* Keep rounded corners for About Me */
+  margin: 0 auto !important; /* Center the image */
+  display: inline-block !important; /* Ensure proper inline display */
+  background-color: #f0f0f0 !important; /* Keep background color */
+  aspect-ratio: 1 / 1 !important; /* Maintain aspect ratio */
 }
 
 /* ================================================== */
