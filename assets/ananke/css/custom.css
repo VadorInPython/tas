@@ -39,8 +39,8 @@ html, body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: hidden !important; /* Ukrywa poziomy suwak jeśli niepotrzebny */
-  overflow-y: auto !important; /* Zapewnia pionowy suwak gdy potrzebny */
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
 }
 
 body {
@@ -63,7 +63,9 @@ footer, .bg-black.bottom-0 {
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, .bg-black.bottom-0 p, .bg-black.bottom-0 span {
+footer a, footer .site-title, footer p, footer span, 
+.bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, 
+.bg-black.bottom-0 p, .bg-black.bottom-0 span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -113,81 +115,15 @@ nav#site-nav a {
 }
 
 /* ================================================== */
-/* === STYLE DLA ZDJĘCIA PROFILOWEGO === */
-/* ================================================== */
-
-/* Centrowanie kontenera z obrazkiem */
-.centered-image-container {
-    margin-top: -4rem !important;
-    text-align: center !important;
-    margin-bottom: 30px !important;
-    /* Dodajemy wysokość kontenera, żeby zarezerwować miejsce */
-    min-height: 464px; /* 400px + margin + border-radius space */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div[style*="text-align: center"] {
-    text-align: center !important;
-    /* Rezerwujemy miejsce dla obrazka */
-    min-height: 464px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Główny styl dla obrazka */
-img[alt="Moje zdjęcie"],
-img[src="/images/about_photo.jpg"], 
-.centered-image-container img {
-    width: 400px !important;
-    max-width: 400px !important;
-    height: 400px !important; /* Ustalona wysokość */
-    object-fit: cover !important; /* Dopasowanie obrazka */
-    display: inline-block !important;
-    border-radius: 64px !important;
-    margin: 0 auto !important;
-    /* Dodajemy loading priority */
-    loading: eager !important;
-    /* Placeholder podczas ładowania */
-    background-color: #f0f0f0;
-    /* Preload hint */
-    fetchpriority: high;
-}
-
-/* Alternatywnie - używaj aspect-ratio (nowsze przeglądarki) */
-img[alt="Moje zdjęcie"],
-img[src="/images/about_photo.jpg"], 
-.centered-image-container img {
-    aspect-ratio: 1/1; /* Kwadratowy obrazek */
-}
-
-/* Inne obrazki na stronie (mniejsze) */
-.nested-copy-line-height img:not([alt="Moje zdjęcie"]),
-.nested-img img:not([alt="Moje zdjęcie"]),
-article img:not([alt="Moje zdjęcie"]),
-main img:not([alt="Moje zdjęcie"]),
-.content img:not([alt="Moje zdjęcie"]) {
-    width: 250px !important;
-    max-width: 250px !important;
-    height: auto !important;
-    display: inline-block !important;
-    border-radius: 8px !important;
-    margin: 0 auto !important;
-}
-
-/* ================================================== */
 /* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
 /* ================================================== */
 
 main, .main-content, article {
-    padding-top: 0.05rem !important;
+  padding-top: 0.05rem !important;
 }
 
 .nested-copy-line-height {
-    padding-top: 0.05rem !important;
+  padding-top: 0.05rem !important;
 }
 
 /* ================================================== */
@@ -195,47 +131,33 @@ main, .main-content, article {
 /* ================================================== */
 
 @media (max-width: 768px) {
-    .centered-image-container {
-        margin-top: 1rem !important;
-        text-align: center !important;
-        display: flex !important;
-        width: 100% !important;
-        min-height: 264px; /* 200px + space */
-        align-items: center;
-        justify-content: center;
-    }
-    
-    div[style*="text-align: center"] {
-        min-height: 264px;
-    }
-        
-    /* Mniejszy obrazek na telefonie - wycentrowany */
-    img[alt="Moje zdjęcie"], 
-    img[src="/images/about_photo.jpg"],
-    .centered-image-container img {
-        width: 200px !important;
-        max-width: 200px !important;
-        height: 200px !important; /* Ustalona wysokość */
-        border-radius: 32px !important;
-        display: block !important;
-        margin: 0 auto !important;
-        text-align: center !important;
-        object-fit: cover !important;
-        loading: eager !important;
-    }
-        
-    main, .main-content, article {
-        padding-top: 1rem !important;
-    }
-        
-    /* Dodatkowe centrowanie dla uporczywych elementów */
-    div[style*="text-align: center"] {
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100% !important;
-    }
+  main, .main-content, article {
+    padding-top: 1rem !important;
+  }
 }
+
+/* ================================================== */
+/* === STYL DLA ZDJĘCIA W ABOUT ME vs RESZTA === */
+/* ================================================== */
+
+/* Strona About Me → zaokrąglone rogi */
+body.page-categories-aboutme img[alt="Moje zdjęcie"],
+body.page-categories-aboutme img[src="/images/about_photo.jpg"] {
+  width: 400px !important;
+  height: 400px !important;
+  object-fit: cover !important;
+  border-radius: 64px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* Wszystkie inne kategorie/posty → zdjęcie takie jak wrzucone */
+body:not(.page-categories-aboutme) img[alt="Moje zdjęcie"],
+body:not(.page-categories-aboutme) img[src="/images/about_photo.jpg"] {
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
 
