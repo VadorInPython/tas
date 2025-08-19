@@ -410,3 +410,35 @@ body:not(.single):not(.post) .nested-copy-line-height img:not([alt="Moje zdjęci
         border-radius: 8px !important;
     }
 }
+
+/* ================================================== */
+/* === REMOVE CONFLICTING RULES FOR IMAGES IN POSTS === */
+/* ================================================== */
+
+/* Override styles for images in posts */
+body.single img:not(.full-image),
+body.post img:not(.full-image) {
+    width: auto !important; /* Remove fixed width */
+    max-width: 100% !important; /* Allow image to scale properly */
+    height: auto !important; /* Maintain aspect ratio */
+    object-fit: unset !important; /* Prevent cropping */
+    border-radius: 0 !important; /* Remove rounded corners */
+    margin: 0 auto !important; /* Center the image */
+    display: block !important; /* Ensure proper block-level display */
+    box-shadow: none !important; /* Remove any shadow */
+    aspect-ratio: unset !important; /* Remove aspect ratio constraints */
+    background-color: transparent !important; /* Remove background color */
+}
+
+/* Ensure About Me and other pages retain their styles */
+body:not(.single):not(.post) img:not(.full-image) {
+    width: 400px !important;
+    max-width: 400px !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    border-radius: 64px !important;
+    margin: 0 auto !important;
+    display: inline-block !important;
+    background-color: #f0f0f0 !important;
+    aspect-ratio: 1 / 1 !important;
+}
