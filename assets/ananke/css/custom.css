@@ -262,3 +262,82 @@ main, .main-content, article {
     }
 }
 
+/* ================================================== */
+/* === SZERSZY LAYOUT TYLKO DLA POSTÓW (NIE ABOUT ME) === */
+/* ================================================== */
+
+/* Szerszy layout TYLKO dla postów - wykluczamy stronę About Me */
+.post .nested-copy-line-height:not(.centered-image-container),
+article:not(.about-page) .nested-copy-line-height,
+.single .nested-copy-line-height,
+.content .nested-copy-line-height {
+    max-width: 1000px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+/* Alternatywnie - używamy selektora dla konkretnych kategorii postów */
+body.single .nested-copy-line-height,
+body.post .nested-copy-line-height {
+    max-width: 1000px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+/* Większa czcionka i wysokość linii TYLKO w postach */
+body.single .nested-copy-line-height p,
+body.post .nested-copy-line-height p,
+body.single .nested-copy-line-height div:not(.centered-image-container),
+body.post .nested-copy-line-height div:not(.centered-image-container) {
+    line-height: 1.8 !important;
+    font-size: 1.1em !important;
+    margin-bottom: 1.5em !important;
+    text-align: justify !important;
+}
+
+/* Większe odstępy między akapitami w postach */
+body.single .nested-copy-line-height > *:not(:last-child):not(.centered-image-container),
+body.post .nested-copy-line-height > *:not(:last-child):not(.centered-image-container) {
+    margin-bottom: 1.8em !important;
+}
+
+/* Zachowujemy oryginalne style dla About Me */
+.centered-image-container,
+.centered-image-container *,
+div[style*="text-align: center"]:not(.post-image),
+div[style*="text-align: center"]:not(.post-image) * {
+    max-width: initial !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+    font-size: initial !important;
+    line-height: initial !important;
+    text-align: center !important;
+}
+
+/* ================================================== */
+/* === RESPONSYWNOŚĆ TYLKO DLA POSTÓW === */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Na telefonach szerokość wraca do normalnej TYLKO w postach */
+    body.single .nested-copy-line-height,
+    body.post .nested-copy-line-height {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    body.single .nested-copy-line-height p,
+    body.post .nested-copy-line-height p,
+    body.single .nested-copy-line-height div:not(.centered-image-container),
+    body.post .nested-copy-line-height div:not(.centered-image-container) {
+        font-size: 1em !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+    }
+}
+
