@@ -39,8 +39,8 @@ html, body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
+  overflow-x: hidden !important; /* Ukrywa poziomy suwak jeśli niepotrzebny */
+  overflow-y: auto !important; /* Zapewnia pionowy suwak gdy potrzebny */
 }
 
 body {
@@ -113,15 +113,16 @@ nav#site-nav a {
 }
 
 /* ================================================== */
-/* === STYLE DLA ZDJĘCIA PROFILOWEGO (ABOUT ME) === */
+/* === STYLE DLA ZDJĘCIA PROFILOWEGO === */
 /* ================================================== */
 
-/* Centrowanie kontenera z obrazkiem - zachowujemy oryginalny styl */
+/* Centrowanie kontenera z obrazkiem */
 .centered-image-container {
     margin-top: -4rem !important;
     text-align: center !important;
     margin-bottom: 30px !important;
-    min-height: 464px;
+    /* Dodajemy wysokość kontenera, żeby zarezerwować miejsce */
+    min-height: 464px; /* 400px + margin + border-radius space */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,6 +130,7 @@ nav#site-nav a {
 
 div[style*="text-align: center"] {
     text-align: center !important;
+    /* Rezerwujemy miejsce dla obrazka */
     min-height: 464px;
     display: flex;
     flex-direction: column;
@@ -136,54 +138,38 @@ div[style*="text-align: center"] {
     justify-content: center;
 }
 
-/* Style dla głównego zdjęcia profilowego - PRIORYTET dla About Me */
+/* Główny styl dla obrazka */
 img[alt="Moje zdjęcie"],
 img[src="/images/about_photo.jpg"], 
 .centered-image-container img {
     width: 400px !important;
     max-width: 400px !important;
-    height: 400px !important;
-    object-fit: cover !important;
+    height: 400px !important; /* Ustalona wysokość */
+    object-fit: cover !important; /* Dopasowanie obrazka */
     display: inline-block !important;
     border-radius: 64px !important;
     margin: 0 auto !important;
+    /* Dodajemy loading priority */
     loading: eager !important;
+    /* Placeholder podczas ładowania */
     background-color: #f0f0f0;
+    /* Preload hint */
     fetchpriority: high;
-    aspect-ratio: 1/1;
 }
 
-/* ================================================== */
-/* === STYLE DLA ZDJĘĆ W POSTACH I ARTYKUŁACH === */
-/* ================================================== */
-
-/* Zdjęcia w treści postów/artykułów - różne od głównego zdjęcia profilowego */
-.nested-copy-line-height img[alt="Moje zdjęcie"]:not(.centered-image-container img),
-.nested-copy-line-height img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
-.nested-img img[alt="Moje zdjęcie"]:not(.centered-image-container img),
-.nested-img img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
-article .nested-copy-line-height img[alt="Moje zdjęcie"],
-article .nested-copy-line-height img[src="/images/about_photo.jpg"],
-.post-content img[alt="Moje zdjęcie"],
-.post-content img[src="/images/about_photo.jpg"],
-p img[alt="Moje zdjęcie"]:not(.centered-image-container img),
-p img[src="/images/about_photo.jpg"]:not(.centered-image-container img) {
-    width: auto !important;
-    max-width: 300px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    display: inline-block !important;
-    border-radius: 8px !important;
-    margin: 0 auto !important;
-    loading: lazy !important;
+/* Alternatywnie - używaj aspect-ratio (nowsze przeglądarki) */
+img[alt="Moje zdjęcie"],
+img[src="/images/about_photo.jpg"], 
+.centered-image-container img {
+    aspect-ratio: 1/1; /* Kwadratowy obrazek */
 }
 
-/* Inne obrazki na stronie (nie zdjęcie profilowe) */
-.nested-copy-line-height img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-.nested-img img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-article img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-main img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]),
-.content img:not([alt="Moje zdjęcie"]):not([src="/images/about_photo.jpg"]) {
+/* Inne obrazki na stronie (mniejsze) */
+.nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+.nested-img img:not([alt="Moje zdjęcie"]),
+article img:not([alt="Moje zdjęcie"]),
+main img:not([alt="Moje zdjęcie"]),
+.content img:not([alt="Moje zdjęcie"]) {
     width: 250px !important;
     max-width: 250px !important;
     height: auto !important;
@@ -209,34 +195,27 @@ main, .main-content, article {
 /* ================================================== */
 
 @media (max-width: 768px) {
-    /* Style dla kontenera About Me na telefonach */
     .centered-image-container {
         margin-top: 1rem !important;
         text-align: center !important;
         display: flex !important;
         width: 100% !important;
-        min-height: 264px;
+        min-height: 264px; /* 200px + space */
         align-items: center;
         justify-content: center;
     }
     
     div[style*="text-align: center"] {
         min-height: 264px;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100% !important;
     }
         
-    /* Główne zdjęcie profilowe na telefonie */
+    /* Mniejszy obrazek na telefonie - wycentrowany */
     img[alt="Moje zdjęcie"], 
     img[src="/images/about_photo.jpg"],
     .centered-image-container img {
         width: 200px !important;
         max-width: 200px !important;
-        height: 200px !important;
+        height: 200px !important; /* Ustalona wysokość */
         border-radius: 32px !important;
         display: block !important;
         margin: 0 auto !important;
@@ -244,28 +223,19 @@ main, .main-content, article {
         object-fit: cover !important;
         loading: eager !important;
     }
-
-    /* Zdjęcia w treści postów na telefonach */
-    .nested-copy-line-height img[alt="Moje zdjęcie"]:not(.centered-image-container img),
-    .nested-copy-line-height img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
-    .nested-img img[alt="Moje zdjęcie"]:not(.centered-image-container img),
-    .nested-img img[src="/images/about_photo.jpg"]:not(.centered-image-container img),
-    article .nested-copy-line-height img[alt="Moje zdjęcie"],
-    article .nested-copy-line-height img[src="/images/about_photo.jpg"],
-    .post-content img[alt="Moje zdjęcie"],
-    .post-content img[src="/images/about_photo.jpg"],
-    p img[alt="Moje zdjęcie"]:not(.centered-image-container img),
-    p img[src="/images/about_photo.jpg"]:not(.centered-image-container img) {
-        width: auto !important;
-        max-width: 200px !important;
-        height: auto !important;
-        border-radius: 8px !important;
-        display: block !important;
-        margin: 1rem auto !important;
-        object-fit: contain !important;
-    }
         
     main, .main-content, article {
         padding-top: 1rem !important;
     }
+        
+    /* Dodatkowe centrowanie dla uporczywych elementów */
+    div[style*="text-align: center"] {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100% !important;
+    }
 }
+
