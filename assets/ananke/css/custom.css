@@ -20,11 +20,13 @@ header .bg-black {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-header .bg-black.pb3-m, header .bg-black.pb6-l {
+header .bg-black.pb3-m,
+header .bg-black.pb6-l {
   padding-bottom: 0.5rem !important;
 }
 
-header .bg-black a, header .bg-black .site-title {
+header .bg-black a,
+header .bg-black .site-title {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -35,7 +37,8 @@ header .bg-black a:hover {
 }
 
 /* Style dla "przyklejonej" stopki */
-html, body {
+html,
+body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -51,11 +54,13 @@ body {
   overflow-y: auto !important;
 }
 
-main, .main-content {
+main,
+.main-content {
   flex: 1 !important;
 }
 
-footer, .bg-black.bottom-0 {
+footer,
+.bg-black.bottom-0 {
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -63,12 +68,20 @@ footer, .bg-black.bottom-0 {
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, .bg-black.bottom-0 p, .bg-black.bottom-0 span {
+footer a,
+footer .site-title,
+footer p,
+footer span,
+.bg-black.bottom-0 a,
+.bg-black.bottom-0 .site-title,
+.bg-black.bottom-0 p,
+.bg-black.bottom-0 span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-footer a:hover, .bg-black.bottom-0 a:hover {
+footer a:hover,
+.bg-black.bottom-0 a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
@@ -79,7 +92,8 @@ header .flex-l {
   min-height: 50px !important;
 }
 
-header .site-title, nav#site-nav {
+header .site-title,
+nav#site-nav {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   display: flex;
@@ -95,7 +109,7 @@ nav#site-nav {
   padding: 0 !important;
 }
 
-nav#site-nav ul, 
+nav#site-nav ul,
 nav#site-nav li {
   margin: 0 !important;
   padding: 0 !important;
@@ -118,39 +132,52 @@ nav#site-nav a {
 
 /* Centrowanie kontenera z obrazkiem na About Me */
 .centered-image-container {
-    margin-top: -4rem !important;
-    text-align: center !important;
-    margin-bottom: 30px !important;
-    min-height: 464px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: -4rem !important;
+  text-align: center !important;
+  margin-bottom: 30px !important;
+  min-height: 464px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div[style*="text-align: center"]:not(.post-image) {
-    text-align: center !important;
-    min-height: 464px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  text-align: center !important;
+  min-height: 464px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Kwadratowy obrazek TYLKO na stronie About Me (bez klasy full-image) */
-img[alt="Moje zdjęcie"]:not(.full-image),
-img[src="/images/about_photo.jpg"]:not(.full-image), 
-.centered-image-container img:not(.full-image) {
-    width: 400px !important;
-    max-width: 400px !important;
-    height: 400px !important;
-    object-fit: cover !important;
-    display: inline-block !important;
-    border-radius: 64px !important;
-    margin: 0 auto !important;
-    loading: eager !important;
-    background-color: #f0f0f0;
-    fetchpriority: high;
-    aspect-ratio: 1/1;
+body:not(.single):not(.post) img:not(.full-image),
+body:not(.single):not(.post) .centered-image-container img:not(.full-image) {
+  width: auto !important; /* Allow the width to adjust automatically */
+  max-width: 100% !important; /* Ensure the image can scale to the container */
+  height: auto !important; /* Maintain the aspect ratio */
+  object-fit: contain !important; /* Ensure the image is not cropped */
+  border-radius: 0 !important; /* Remove rounded corners if needed */
+  margin: 0 auto !important; /* Center the image */
+  display: block !important; /* Ensure proper block-level display */
+  background-color: transparent !important; /* Remove background color */
+  loading: eager !important; /* Keep loading attribute */
+  fetchpriority: high; /* Keep fetch priority */
+}
+
+@media (max-width: 768px) {
+  img[alt="Moje zdjęcie"]:not(.full-image),
+  img[src="/images/about_photo.jpg"]:not(.full-image),
+  .centered-image-container img:not(.full-image) {
+    width: auto !important; /* Allow the width to adjust automatically */
+    max-width: 100% !important; /* Ensure the image can scale to the container */
+    height: auto !important; /* Maintain the aspect ratio */
+    border-radius: 0 !important; /* Remove rounded corners if needed */
+    display: block !important; /* Ensure proper block-level display */
+    margin: 0 auto !important; /* Center the image */
+    object-fit: contain !important; /* Ensure the image is not cropped */
+    loading: eager !important; /* Keep loading attribute */
+  }
 }
 
 /* ================================================== */
@@ -160,36 +187,37 @@ img[src="/images/about_photo.jpg"]:not(.full-image),
 /* Pełny obrazek z klasą .full-image */
 img.full-image,
 .post-image img {
-    width: auto !important;
-    max-width: 100% !important;
-    max-height: 600px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-    border-radius: 16px !important;
-    margin: 20px auto !important;
-    loading: eager !important;
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto !important; /* Allow the width to adjust automatically */
+  max-width: 100% !important; /* Ensure the image can scale to the container */
+  height: auto !important; /* Maintain the aspect ratio */
+  object-fit: contain !important; /* Ensure the image is not cropped */
+  display: block !important;
+  border-radius: 0 !important; /* Remove rounded corners */
+  margin: 20px auto !important; /* Center the image */
+  loading: eager !important; /* Keep loading attribute */
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Kontener dla pełnych obrazków */
 .post-image {
-    text-align: center !important;
-    margin-bottom: 30px !important;
-    padding: 10px;
+  text-align: center !important;
+  margin-bottom: 30px !important;
+  padding: 10px;
 }
 
 /* ================================================== */
 /* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
 /* ================================================== */
 
-main, .main-content, article {
-    padding-top: 0.05rem !important;
+main,
+.main-content,
+article {
+  padding-top: 0.05rem !important;
 }
 
 .nested-copy-line-height {
-    padding-top: 0.05rem !important;
+  padding-top: 0.05rem !important;
 }
 
 /* ================================================== */
@@ -197,55 +225,54 @@ main, .main-content, article {
 /* ================================================== */
 
 @media (max-width: 768px) {
-    .centered-image-container {
-        margin-top: 1rem !important;
-        text-align: center !important;
-        display: flex !important;
-        width: 100% !important;
-        min-height: 264px;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    div[style*="text-align: center"]:not(.post-image) {
-        min-height: 264px;
-    }
-        
-    /* Mniejszy kwadratowy obrazek na telefonie - About Me */
-    img[alt="Moje zdjęcie"]:not(.full-image), 
-    img[src="/images/about_photo.jpg"]:not(.full-image),
-    .centered-image-container img:not(.full-image) {
-        width: 200px !important;
-        max-width: 200px !important;
-        height: 200px !important;
-        border-radius: 32px !important;
-        display: block !important;
-        margin: 0 auto !important;
-        text-align: center !important;
-        object-fit: cover !important;
-        loading: eager !important;
-    }
-    
-    /* Pełny obrazek na postach - telefon */
-    img.full-image,
-    .post-image img {
-        width: auto !important;
-        max-width: 95% !important;
-        max-height: 400px !important;
-        height: auto !important;
-        border-radius: 12px !important;
-        object-fit: contain !important;
-        margin: 15px auto !important;
-    }
-        
-    main, .main-content, article {
-        padding-top: 1rem !important;
-    }
-    
-    .post-image {
-        padding: 5px;
-        margin-bottom: 20px !important;
-    }
+  .centered-image-container {
+    margin-top: 1rem !important;
+    text-align: center !important;
+    display: flex !important;
+    width: 100% !important;
+    min-height: 264px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div[style*="text-align: center"]:not(.post-image) {
+    min-height: 264px;
+  }
+
+  /* Mniejszy kwadratowy obrazek na telefonie - About Me */
+  img[alt="Moje zdjęcie"]:not(.full-image),
+  img[src="/images/about_photo.jpg"]:not(.full-image),
+  .centered-image-container img:not(.full-image) {
+    width: auto !important; /* Allow the width to adjust automatically */
+    max-width: 100% !important; /* Ensure the image can scale to the container */
+    height: auto !important; /* Maintain the aspect ratio */
+    border-radius: 0 !important; /* Remove rounded corners if needed */
+    display: block !important; /* Ensure proper block-level display */
+    margin: 0 auto !important; /* Center the image */
+    object-fit: contain !important; /* Ensure the image is not cropped */
+    loading: eager !important; /* Keep loading attribute */
+  }
+
+  /* Pełny obrazek na postach - telefon */
+  img.full-image,
+  .post-image img {
+    width: auto !important; /* Allow the width to adjust automatically */
+    max-width: 95% !important; /* Ensure the image can scale to the container */
+    height: auto !important; /* Maintain the aspect ratio */
+    border-radius: 0 !important; /* Remove rounded corners */
+    object-fit: contain !important; /* Ensure the image is not cropped */
+    margin: 15px auto !important; /* Center the image */
+  }
+
+  main,
+  .main-content,
+  article {
+    padding-top: 1rem !important;
+  }
+
+  .post-image {
+    padding: 5px;
+    margin-bottom: 20px !important;
 }
 
 /* ================================================== */
@@ -257,21 +284,21 @@ main, .main-content, article {
 article:not(.about-page) .nested-copy-line-height,
 .single .nested-copy-line-height,
 .content .nested-copy-line-height {
-    max-width: 1000px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+  max-width: 1000px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
 /* Alternatywnie - używamy selektora dla konkretnych kategorii postów */
 body.single .nested-copy-line-height,
 body.post .nested-copy-line-height {
-    max-width: 1000px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+  max-width: 1000px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
 /* Większa czcionka i wysokość linii TYLKO w postach */
@@ -279,16 +306,16 @@ body.single .nested-copy-line-height p,
 body.post .nested-copy-line-height p,
 body.single .nested-copy-line-height div:not(.centered-image-container),
 body.post .nested-copy-line-height div:not(.centered-image-container) {
-    line-height: 1.8 !important;
-    font-size: 1.1em !important;
-    margin-bottom: 1.5em !important;
-    text-align: justify !important;
+  line-height: 1.8 !important;
+  font-size: 1.1em !important;
+  margin-bottom: 1.5em !important;
+  text-align: justify !important;
 }
 
 /* Większe odstępy między akapitami w postach */
 body.single .nested-copy-line-height > *:not(:last-child):not(.centered-image-container),
 body.post .nested-copy-line-height > *:not(:last-child):not(.centered-image-container) {
-    margin-bottom: 1.8em !important;
+  margin-bottom: 1.8em !important;
 }
 
 /* Zachowujemy oryginalne style dla About Me */
@@ -296,12 +323,12 @@ body.post .nested-copy-line-height > *:not(:last-child):not(.centered-image-cont
 .centered-image-container *,
 div[style*="text-align: center"]:not(.post-image),
 div[style*="text-align: center"]:not(.post-image) * {
-    max-width: initial !important;
-    padding-left: initial !important;
-    padding-right: initial !important;
-    font-size: initial !important;
-    line-height: initial !important;
-    text-align: center !important;
+  max-width: initial !important;
+  padding-left: initial !important;
+  padding-right: initial !important;
+  font-size: initial !important;
+  line-height: initial !important;
+  text-align: center !important;
 }
 
 /* ================================================== */
@@ -309,22 +336,22 @@ div[style*="text-align: center"]:not(.post-image) * {
 /* ================================================== */
 
 @media (max-width: 768px) {
-    /* Na telefonach szerokość wraca do normalnej TYLKO w postach */
-    body.single .nested-copy-line-height,
-    body.post .nested-copy-line-height {
-        max-width: 100% !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-    
-    body.single .nested-copy-line-height p,
-    body.post .nested-copy-line-height p,
-    body.single .nested-copy-line-height div:not(.centered-image-container),
-    body.post .nested-copy-line-height div:not(.centered-image-container) {
-        font-size: 1em !important;
-        line-height: 1.6 !important;
-        text-align: left !important;
-    }
+  /* Na telefonach szerokość wraca do normalnej TYLKO w postach */
+  body.single .nested-copy-line-height,
+  body.post .nested-copy-line-height {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  body.single .nested-copy-line-height p,
+  body.post .nested-copy-line-height p,
+  body.single .nested-copy-line-height div:not(.centered-image-container),
+  body.post .nested-copy-line-height div:not(.centered-image-container) {
+    font-size: 1em !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+  }
 }
 
 /* ================================================== */
@@ -340,41 +367,41 @@ body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
 .nested-copy-line-height img[src*="image"]:not([alt="Moje zdjęcie"]),
 main img:not([alt="Moje zdjęcie"]):not(.centered-image-container img),
 article img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
-    width: 100% !important; /* Make the image take up the full width of its container */
-    height: auto !important; /* Maintain the aspect ratio */
-    max-width: none !important; /* Remove any maximum width restrictions */
-    max-height: none !important; /* Remove any maximum height restrictions */
-    object-fit: contain !important; /* Ensure the image is not cropped */
-    display: block !important;
-    margin: 0 auto !important; /* Center the image */
-    border-radius: 0 !important; /* Remove rounded corners */
-    box-shadow: none !important; /* Remove shadow */
+  width: 100% !important; /* Make the image take up the full width of its container */
+  height: auto !important; /* Maintain the aspect ratio */
+  max-width: none !important; /* Remove any maximum width restrictions */
+  max-height: none !important; /* Remove any maximum height restrictions */
+  object-fit: contain !important; /* Ensure the image is not cropped */
+  display: block !important;
+  margin: 0 auto !important; /* Center the image */
+  border-radius: 0 !important; /* Remove rounded corners */
+  box-shadow: none !important; /* Remove shadow */
 }
 
 /* Ensure the container does not restrict the image */
 .post-image {
-    text-align: center !important;
-    margin-bottom: 30px !important;
-    padding: 0 !important; /* Remove padding that might restrict the image */
-    width: 100% !important; /* Ensure the container is full width */
-    max-width: none !important; /* Remove any maximum width restrictions */
+  text-align: center !important;
+  margin-bottom: 30px !important;
+  padding: 0 !important; /* Remove padding that might restrict the image */
+  width: 100% !important; /* Ensure the container is full width */
+  max-width: none !important; /* Remove any maximum width restrictions */
 }
 
 /* Ensure the parent container does not restrict the image */
 .nested-copy-line-height {
-    max-width: 100% !important; /* Ensure the container is full width */
-    padding: 0 !important; /* Remove padding that might restrict the image */
-    margin: 0 auto !important; /* Center the container */
+  max-width: 100% !important; /* Ensure the container is full width */
+  padding: 0 !important; /* Remove padding that might restrict the image */
+  margin: 0 auto !important; /* Center the container */
 }
 
 /* Małe obrazki TYLKO na About Me i innych stronach (nie w postach) */
 body:not(.single):not(.post) .nested-copy-line-height img:not([alt="Moje zdjęcie"]):not(.full-image) {
-    width: 250px !important;
-    max-width: 250px !important;
-    height: auto !important;
-    display: inline-block !important;
-    border-radius: 8px !important;
-    margin: 0 auto !important;
+  width: 250px !important;
+  max-width: 250px !important;
+  height: auto !important;
+  display: inline-block !important;
+  border-radius: 8px !important;
+  margin: 0 auto !important;
 }
 
 /* ================================================== */
@@ -382,18 +409,18 @@ body:not(.single):not(.post) .nested-copy-line-height img:not([alt="Moje zdjęci
 /* ================================================== */
 
 @media (max-width: 768px) {
-    /* Pełne obrazki na telefonach - nadal pełne ale z marginesami */
-    body.single .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
-    body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
-    .nested-copy-line-height img[src*="/images/"]:not([alt="Moje zdjęcie"]),
-    main img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
-        width: auto !important;
-        max-width: 95% !important;
-        height: auto !important;
-        max-height: none !important;
-        margin: 15px auto !important;
-        border-radius: 8px !important;
-    }
+  /* Pełne obrazki na telefonach - nadal pełne ale z marginesami */
+  body.single .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+  body.post .nested-copy-line-height img:not([alt="Moje zdjęcie"]),
+  .nested-copy-line-height img[src*="/images/"]:not([alt="Moje zdjęcie"]),
+  main img:not([alt="Moje zdjęcie"]):not(.centered-image-container img) {
+    width: auto !important;
+    max-width: 95% !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 15px auto !important;
+    border-radius: 8px !important;
+  }
 }
 
 /* ================================================== */
@@ -403,29 +430,29 @@ body:not(.single):not(.post) .nested-copy-line-height img:not([alt="Moje zdjęci
 /* Override styles for images in posts */
 body.single img:not(.full-image),
 body.post img:not(.full-image) {
-    width: auto !important; /* Remove fixed width */
-    max-width: 100% !important; /* Allow image to scale properly */
-    height: auto !important; /* Maintain aspect ratio */
-    object-fit: unset !important; /* Prevent cropping */
-    border-radius: 0 !important; /* Remove rounded corners */
-    margin: 0 auto !important; /* Center the image */
-    display: block !important; /* Ensure proper block-level display */
-    box-shadow: none !important; /* Remove any shadow */
-    background-color: transparent !important; /* Remove background color */
+  width: auto !important; /* Remove fixed width */
+  max-width: 100% !important; /* Allow image to scale properly */
+  height: auto !important; /* Maintain aspect ratio */
+  object-fit: contain !important; /* Prevent cropping */
+  border-radius: 0 !important; /* Remove rounded corners */
+  margin: 0 auto !important; /* Center the image */
+  display: block !important; /* Ensure proper block-level display */
+  box-shadow: none !important; /* Remove any shadow */
+  background-color: transparent !important; /* Remove background color */
 }
 
 /* Ensure About Me and other pages retain their styles */
 body:not(.single):not(.post) img:not(.full-image),
 body:not(.single):not(.post) .centered-image-container img:not(.full-image) {
-    width: 400px !important;
-    max-width: 400px !important;
-    height: 400px !important;
-    object-fit: cover !important;
-    border-radius: 64px !important;
-    margin: 0 auto !important;
-    display: inline-block !important;
-    background-color: #f0f0f0 !important;
-    aspect-ratio: 1 / 1 !important;
+  width: auto !important; /* Allow the width to adjust automatically */
+  max-width: 100% !important; /* Ensure the image can scale to the container */
+  height: auto !important; /* Maintain the aspect ratio */
+  object-fit: contain !important; /* Ensure the image is not cropped */
+  border-radius: 64px !important; /* Keep rounded corners for About Me */
+  margin: 0 auto !important; /* Center the image */
+  display: inline-block !important; /* Ensure proper inline display */
+  background-color: #f0f0f0 !important; /* Keep background color */
+  aspect-ratio: 1 / 1 !important; /* Maintain aspect ratio */
 }
 
 /* ================================================== */
@@ -439,12 +466,12 @@ body.categories-aboutme img[src*="about_photo"] {
   width: 400px !important;
   height: 400px !important;
   max-width: 400px !important;
-  object-fit: cover !important;   /* crop nicely */
+  object-fit: cover !important; /* crop nicely */
   border-radius: 64px !important;
   margin: 0 auto !important;
   display: block !important;
   background-color: #f0f0f0;
-  aspect-ratio: 1/1 !important;
+  aspect-ratio: 1 / 1 !important;
 }
 
 /* Mobile version */
