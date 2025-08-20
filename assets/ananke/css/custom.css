@@ -145,8 +145,8 @@ img[src="/images/about_photo.jpg"],
 article img:not([alt="Moje zdjęcie"]),
 main img:not([alt="Moje zdjęcie"]),
 .content img:not([alt="Moje zdjęcie"]) {
-    width: 500px !important;
-    max-width: 500px !important;
+    width: 1000px !important;
+    max-width: 1000px !important;
     height: auto !important;
     display: inline-block !important;
     border-radius: 0px !important;
