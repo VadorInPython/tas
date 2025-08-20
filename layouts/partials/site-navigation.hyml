@@ -1,35 +1,17 @@
 <!-- Font Awesome Kit -->
 <script src="https://kit.fontawesome.com/c954e5bea9.js" crossorigin="anonymous"></script>
 
-<nav id="site-nav" class="pv3 ph3 ph4-ns" role="navigation">
+<nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
-    
-    <!-- Logo / nazwa strony -->
-    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline site-title">
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
         <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
       {{ else }}
         {{ .Site.Title }}
       {{ end }}
     </a>
-
-    <!-- Ikony sociali po prawej od nazwy strony -->
-    <div class="ananke-socials ml3 flex items-center">
-      <a href="https://twitter.com/TwojProfil" class="social-icon mr2" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://facebook.com/TwojProfil" class="social-icon mr2" target="_blank" rel="noopener">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://instagram.com/TwojProfil" class="social-icon" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-
-    <!-- Menu główne -->
-    <div class="flex-l items-center ml-auto">
+    <div class="flex-l items-center">
       {{ partials.Include "i18nlist.html" . }}
-
       {{ if .Site.Menus.main }}
         <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
           {{ range .Site.Menus.main }}
@@ -41,6 +23,19 @@
           {{ end }}
         </ul>
       {{ end }}
+
+      <!-- Ikony społecznościowe z FA -->
+      <div class="flex items-center ml3">
+        <a href="https://twitter.com/TwojProfil" class="white-90 hover-white mr2" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com/TwojProfil" class="white-90 hover-white mr2" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/TwojProfil" class="white-90 hover-white mr2" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
 
       {{ partials.IncludeCached "social/follow.html" . }}
     </div>
