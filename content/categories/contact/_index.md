@@ -1,10 +1,12 @@
 ---
 title: "Contact"
-date: 2024-01-01T00:00:00+01:00 # Pozostaw swoją oryginalną datę
+date: 2024-01-01T00:00:00+01:00 # Twoja oryginalna data
 draft: false
+_build:
+  list: false
 ---
 
-<!-- Poniższy kod formularza zastępuje poprzednią treść strony -->
+<!-- Poniżej jest formularz, który zostaje bez zmian -->
 
 <form
   action="https://formspree.io/f/movlokoq"
