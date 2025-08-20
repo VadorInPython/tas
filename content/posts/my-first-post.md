@@ -21,6 +21,6 @@ tags = ["Denmark", "Studies"]
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"          
         allowfullscreen> 
 </iframe>  
+-->
 
 This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
--->
