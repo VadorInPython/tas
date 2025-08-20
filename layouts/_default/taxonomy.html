@@ -8,33 +8,87 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     {{ if .Content }}
       <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wider lh-copy mid-gray">
-        <div class="nested-copy-line-height nested-links nested-img mid-gray f4">
-          {{ .Content }}
+        <!-- Enhanced category header with icon -->
+        <div class="mb4">
+          <h1 class="f2 f1-l fw2 black-90 mb3 tc">
+            <i class="fas fa-graduation-cap mr2 blue"></i>
+            {{ .Title }}
+          </h1>
+          <div class="nested-copy-line-height nested-links nested-img mid-gray f4">
+            {{ .Content }}
+          </div>
         </div>
       </section>
     {{ end }}
-     
-    <!-- Posts listing - matching home page style -->
+
+    <!-- Category navigation with icons (optional) -->
+    <section class="tc mb4">
+      <div class="dib pa2">
+        <a href="/categories/studies-in-denmark/" class="link dim blue f6 f5-l">
+          <i class="fas fa-university mr1"></i>Studies in Denmark
+        </a>
+      </div>
+      <div class="dib pa2">
+        <a href="/categories/travel/" class="link dim blue f6 f5-l">
+          <i class="fas fa-plane mr1"></i>Travel
+        </a>
+      </div>
+      <div class="dib pa2">
+        <a href="/categories/technology/" class="link dim blue f6 f5-l">
+          <i class="fas fa-laptop-code mr1"></i>Technology
+        </a>
+      </div>
+      <!-- Dodaj więcej kategorii według potrzeb -->
+    </section>
+        
+    <!-- Enhanced posts listing with icons -->
     <section class="w-100 mw8 ph4-l ph3 center">
       {{ range .Pages }}
-        <div class="relative w-100 mb4 bg-white br3 shadow-4 pa3">
+        <div class="relative w-100 mb4 bg-white br3 shadow-4 pa3 hover-shadow-5 transition-all">
           {{ if .Params.featured_image }}
             {{ $featured_image := .Params.featured_image }}
             <div class="relative w-100 mb3">
               <img src="{{ $featured_image | relURL }}" class="w-100 db br2" alt="{{ .Title }}" />
             </div>
           {{ end }}
-                             
+                               
           <article class="pb2">
             <div class="flex flex-column flex-row-ns">
               <div class="w-100">
                 <h1 class="f3 fw1 athelas mt0 mb1">
+                  <i class="fas fa-bookmark mr2 light-blue"></i>
                   <a href="{{ .Permalink }}" class="color-inherit dim link">{{ .Title }}</a>
                 </h1>
+                
+                <!-- Post meta with icons -->
+                <div class="f6 gray mb2">
+                  <span class="mr3">
+                    <i class="fas fa-calendar-alt mr1"></i>
+                    {{ .Date.Format "Jan 2, 2006" }}
+                  </span>
+                  {{ if .Params.categories }}
+                    <span class="mr3">
+                      <i class="fas fa-tags mr1"></i>
+                      {{ range $index, $category := .Params.categories }}
+                        {{ if $index }}, {{ end }}
+                        <a href="/categories/{{ $category | urlize }}/" class="link dim blue">{{ $category }}</a>
+                      {{ end }}
+                    </span>
+                  {{ end }}
+                  <span>
+                    <i class="fas fa-clock mr1"></i>
+                    {{ .ReadingTime }} min read
+                  </span>
+                </div>
+                
                 <p class="f5 f4-l lh-copy measure mt0-ns">
                   {{ .Summary }}
                 </p>
-                <a href="{{ .Permalink }}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+                
+                <a href="{{ .Permalink }}" class="ba b--blue bg-light-blue br2 blue dib f7 hover-bg-blue hover-white link mt2 ph3 pv2 transition-all">
+                  <i class="fas fa-arrow-right mr1"></i>
+                  read more
+                </a>
               </div>
             </div>
           </article>
@@ -42,4 +96,13 @@
       {{ end }}
     </section>
   </article>
+
+  <style>
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    .hover-shadow-5:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,.2);
+    }
+  </style>
 {{ end }}
