@@ -149,7 +149,7 @@ img[src="/images/about_photo.jpg"],
   max-width: 400px !important;
   height: auto !important;
   display: inline-block !important;
-  border-radius: 0px !important;
+  border-radius: 64px !important;
   margin: 0 auto !important;
 }
 
