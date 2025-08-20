@@ -13,15 +13,15 @@ tags = ["Denmark", "Studies"]
   <source src="/audio/mashup1.wav" type="audio/wav">   
   Your browser does not support the audio element. 
 </audio>  
--->
+
 
 <iframe width="560" height="315"          
-        src="https://www.youtube-nocookie.com/embed/C0DPdy98e4c"          
+        src="upload_link_to_the_video"          
         title="YouTube video player"          
         frameborder="0"          
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"          
         allowfullscreen> 
 </iframe>  
-
+-->
 
 This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
