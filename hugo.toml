@@ -6,6 +6,20 @@ theme = 'ananke'
 [params]
 custom_css = ["custom.css"]
 
+[params.ananke_socials]
+    [params.ananke_socials.medium]
+      name = "medium"
+      url = "https://medium.com/@gunardilin"
+      color = "#008cff"
+    [params.ananke_socials.github]
+      name = "github"
+      url = "https://github.com/gunardilin"
+      color = "#008cff"
+    [params.ananke_socials.linkedin]
+      name = "linkedin"
+      url = "http://www.linkedin.com/in/gunardi-ali"
+      color = "#008cff"
+
 [menu]
   [[menu.main]]
     name = "Home"
