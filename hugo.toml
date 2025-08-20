@@ -6,44 +6,50 @@ theme = 'ananke'
 [params]
 custom_css = ["custom.css"]
 
+# Social media icons
+[[params.social]]
+  name = "instagram"
+  url = "https://www.instagram.com/szym0n_24/"
+
+[[params.social]]
+  name = "facebook"
+  url = "https://www.facebook.com/szymon.derlecki.3/"
 
 [menu]
   [[menu.main]]
     name = "Home"
     url = "/"
     weight = 1
-
+   
   [[menu.main]]
     name = "About Me"
     url = "/categories/aboutme"
     weight = 6
-
+   
   [[menu.main]]
     name = "Studies in Denmark"
     url = "/categories/studies-in-denmark"
     weight = 2
-
+   
   [[menu.main]]
     name = "Photography"
     url = "/categories/Photography"
     weight = 3
-
+   
   [[menu.main]]
     name = "Music"
     url = "/categories/Music"
     weight = 4
-
+   
   [[menu.main]]
     name = "On The Go"
     url = "/categories/on-the-go"
     weight = 5
-  
+     
   [[menu.main]]
     name = "Contact me"
-    url = "/contact/" 
+    url = "/contact/"
     weight = 6
-
-
 
 [markup]
   [markup.goldmark]
