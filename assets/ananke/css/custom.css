@@ -157,7 +157,6 @@ img[src="/images/about_photo.jpg"],
 /* === ZDJĘCIA W POSTACH === */
 /* ================================================== */
 
-/* Domyślnie wszystkie zdjęcia w treści postów są większe */
 article img:not([alt="Moje zdjęcie"]),
 main img:not([alt="Moje zdjęcie"]),
 .content img:not([alt="Moje zdjęcie"]) {
@@ -169,7 +168,6 @@ main img:not([alt="Moje zdjęcie"]),
   border-radius: 0px !important;
 }
 
-/* Opcjonalne klasy do kontroli */
 .post-large {
   max-width: 1024px !important;
   width: 100% !important;
@@ -302,69 +300,80 @@ article {
     font-size: 16px !important;
     font-weight: 500 !important;
     min-height: 48px !important;
-    padding: 8px 12px !important;
+    padding: 12px 16px !important;
+    margin: 4px !important;
+  }
+  
+  audio {
+    min-height: 48px !important;
+    width: 100% !important;
+  }
+  
+  .social-links a,
+  footer a {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 12px !important;
+    margin: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+  }
+  
+  input, textarea, select {
+    min-height: 48px !important;
+    font-size: 16px !important;
   }
 }
 
 /* ================================================== */
-/* === KOMPAKTOWY NAGŁÓWEK NA TELEFONACH (<768px) === */
+/* === NOWY MOBILNY NAGŁÓWEK 3x2 KATEGORIE === */
 /* ================================================== */
-@media (max-width: 768px) {
 
-  /* Kontener nagłówka - kolumnowy układ */
+@media (max-width: 768px) {
+  /* Kontener nagłówka */
   header .flex-l {
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    padding: 1rem 0 !important;
-    min-height: auto !important;
   }
 
-  /* Nazwa strony */
+  /* Nazwa strony u góry */
   header .site-title {
-    font-size: 1.75rem !important;
     margin-bottom: 0.5rem !important;
-    display: block !important;
+    font-size: 1.8rem !important;
+    text-align: center !important;
   }
 
-  /* Ikony sociali pod nazwą */
+  /* Sociali pod nazwą strony */
   .ananke-socials {
-    display: flex !important;
     justify-content: center !important;
-    gap: 1rem !important;
     margin-bottom: 0.5rem !important;
-    flex-wrap: wrap !important;
-    min-width: auto !important;
-    min-height: auto !important;
+    gap: 1rem !important;
   }
 
-  .ananke-socials .social-icon {
-    font-size: 1.5rem !important;
-    min-width: auto !important;
-    min-height: auto !important;
-  }
-
-  /* Kategorie w dwóch kolumnach pod socialami */
-  .header-categories {
+  /* Kategorie w tabeli 3x2 */
+  nav#site-nav ul {
     display: grid !important;
-    grid-template-columns: repeat(2, auto) !important;
+    grid-template-columns: repeat(3, auto) !important;
+    grid-auto-rows: auto !important;
     gap: 0.5rem 1rem !important;
     justify-content: center !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    width: auto !important;
   }
 
-  .header-categories a {
-    font-size: 0.875rem !important;
-    padding: 0.25rem 0.5rem !important;
+  nav#site-nav li {
     display: inline-block !important;
     text-align: center !important;
   }
 
-  /* Ukrycie menu desktopowego */
-  nav#site-nav {
-    display: none !important;
+  nav#site-nav a {
+    display: inline-block !important;
+    padding: 8px 12px !important;
+    font-size: 16px !important;
   }
 }
-
-
