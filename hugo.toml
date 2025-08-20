@@ -38,9 +38,9 @@ custom_css = ["custom.css"]
     weight = 5
   
   [[menu.main]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 50
+    name = "Kontakt"
+    url = "/contact/" 
+    weight = 6
 
 
 
