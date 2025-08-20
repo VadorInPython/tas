@@ -292,6 +292,7 @@ article {
     line-height: 1.2 !important;
     text-align: center !important;
     box-sizing: border-box !important;
+    font-size: 16px !important; /* Bigger font for touch targets */
   }
   
   /* Navigation links */
@@ -302,6 +303,17 @@ article {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    font-size: 18px !important; /* Even bigger for navigation */
+    font-weight: 500 !important;
+  }
+  
+  /* Categories, tags, and taxonomy links */
+  .category, .tag, .taxonomy a {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    min-height: 48px !important;
+    padding: 12px 16px !important;
+    margin: 4px !important;
   }
   
   /* Audio controls */
@@ -320,6 +332,7 @@ article {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    font-size: 16px !important;
   }
   
   /* Form elements */
@@ -327,6 +340,7 @@ article {
     min-height: 48px !important;
     padding: 12px !important;
     margin: 4px 0 !important;
+    font-size: 16px !important;
   }
 }
 
