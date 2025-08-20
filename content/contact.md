@@ -1,6 +1,6 @@
 ---
 title: "Contact Me"
-date: 2024-01-01T00:00:00+01:00 # Zachowaj swoją oryginalną datę
+#date: 2024-01-01T00:00:00+01:00 # Zachowaj swoją oryginalną datę
 draft: false
 _build:               # <-- Dodaj te linie
   render: true        # <-- Ta linia mówi, żeby strona była zbudowana
