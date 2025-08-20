@@ -25,9 +25,16 @@
             <a class="hover-white white-90 no-underline" href="/categories/aboutme" title="About Me">About Me</a>
           </li>
         </ul>
-        <div class="ananke-socials"></div>
+        <div class="ananke-socials">
+          {{ if .Site.Params.social }}
+            {{ range .Site.Params.social }}
+              <a href="{{ .url }}" target="_blank" rel="noopener" class="social-icon" aria-label="{{ .name }}">
+                <i class="fab fa-{{ .name }}"></i>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
       </div>
     </div>
   </nav>
 </header>
-

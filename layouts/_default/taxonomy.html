@@ -1,3 +1,9 @@
+<!-- Include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Include your custom header -->
+{{ partial "header-blue.html" . }}
+
 {{ define "main" }}
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     {{ if .Content }}
@@ -7,7 +13,7 @@
         </div>
       </section>
     {{ end }}
-
+     
     <!-- Posts listing - matching home page style -->
     <section class="w-100 mw8 ph4-l ph3 center">
       {{ range .Pages }}
@@ -18,7 +24,7 @@
               <img src="{{ $featured_image | relURL }}" class="w-100 db br2" alt="{{ .Title }}" />
             </div>
           {{ end }}
-                  
+                             
           <article class="pb2">
             <div class="flex flex-column flex-row-ns">
               <div class="w-100">
