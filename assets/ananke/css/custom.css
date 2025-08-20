@@ -13,18 +13,20 @@ nav.pv3.ph3.ph4-ns {
   padding-bottom: 0 !important;
 }
 
-/* Ogólny styl dla nagłówków */
+/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
 header .bg-black {
   padding-bottom: 0.5rem !important;
   background: linear-gradient(135deg, #5b7db1, #142850) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-header .bg-black.pb3-m, header .bg-black.pb6-l {
+header .bg-black.pb3-m,
+header .bg-black.pb6-l {
   padding-bottom: 0.5rem !important;
 }
 
-header .bg-black a, header .bg-black .site-title {
+header .bg-black a,
+header .bg-black .site-title {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -34,13 +36,14 @@ header .bg-black a:hover {
   transition: color 0.3s ease !important;
 }
 
-/* Stopka */
-html, body {
+/* Style dla "przyklejonej" stopki */
+html,
+body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
+  overflow-x: hidden !important; /* Ukrywa poziomy suwak jeśli niepotrzebny */
+  overflow-y: auto !important; /* Zapewnia pionowy suwak gdy potrzebny */
 }
 
 body {
@@ -51,11 +54,13 @@ body {
   overflow-y: auto !important;
 }
 
-main, .main-content {
+main,
+.main-content {
   flex: 1 !important;
 }
 
-footer, .bg-black.bottom-0 {
+footer,
+.bg-black.bottom-0 {
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -63,87 +68,182 @@ footer, .bg-black.bottom-0 {
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a, footer .site-title, footer p, footer span {
+footer a,
+footer .site-title,
+footer p,
+footer span,
+.bg-black.bottom-0 a,
+.bg-black.bottom-0 .site-title,
+.bg-black.bottom-0 p,
+.bg-black.bottom-0 span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-footer a:hover {
+footer a:hover,
+.bg-black.bottom-0 a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
 
+/* Ogólne wyrównanie w nagłówku */
+header .flex-l {
+  align-items: center !important;
+  min-height: 50px !important;
+}
+
+header .site-title,
+nav#site-nav {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Poprawki dla menu nawigacji */
+nav#site-nav {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav#site-nav ul,
+nav#site-nav li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav#site-nav a {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  display: flex !important;
+  align-items: center !important;
+  height: auto !important;
+  line-height: normal !important;
+}
+
 /* ================================================== */
-/* === ABOUT ME (profilowe) === */
+/* === STYLE DLA ZDJĘCIA PROFILOWEGO (ABOUT ME) === */
 /* ================================================== */
 
+/* Centrowanie kontenera z obrazkiem */
 .centered-image-container {
   margin-top: -4rem !important;
   text-align: center !important;
   margin-bottom: 30px !important;
 }
 
-img[alt="Moje zdjęcie"], 
+div[style*="text-align: center"] {
+  text-align: center !important;
+}
+
+/* Główny styl dla obrazka profilowego */
+img[alt="Moje zdjęcie"],
 img[src="/images/about_photo.jpg"],
 .centered-image-container img {
   width: 400px !important;
   max-width: 400px !important;
   height: auto !important;
   display: inline-block !important;
+  border-radius: 0px !important;
   margin: 0 auto !important;
 }
 
-/* Responsywność dla telefonów */
+/* ================================================== */
+/* === ZDJĘCIA W POSTACH === */
+/* ================================================== */
+
+/* Domyślnie wszystkie zdjęcia w treści postów są większe */
+article img:not([alt="Moje zdjęcie"]),
+main img:not([alt="Moje zdjęcie"]),
+.content img:not([alt="Moje zdjęcie"]) {
+  max-width: 768px !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 1rem auto !important;
+  border-radius: 0px !important;
+}
+
+/* Opcjonalne klasy do kontroli */
+.post-large {
+  max-width: 1024px !important;
+  width: 100% !important;
+  display: block !important;
+  margin: 1rem auto !important;
+}
+
+.post-medium {
+  max-width: 600px !important;
+  width: 100% !important;
+  display: block !important;
+  margin: 1rem auto !important;
+}
+
+.post-small {
+  max-width: 300px !important;
+  width: 100% !important;
+  display: block !important;
+  margin: 1rem auto !important;
+}
+
+/* ================================================== */
+/* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
+/* ================================================== */
+
+main,
+.main-content,
+article {
+  padding-top: 0.05rem !important;
+}
+
+.nested-copy-line-height {
+  padding-top: 0.05rem !important;
+}
+
+/* ================================================== */
+/* === RESPONSYWNOŚĆ DLA TELEFONÓW === */
+/* ================================================== */
+
 @media (max-width: 768px) {
   .centered-image-container {
-    margin-top: 1rem !important;
+    margin-top: 1rem !important; /* Normalny margines na telefonie */
     text-align: center !important;
+    display: block !important;
     width: 100% !important;
   }
 
-  img[alt="Moje zdjęcie"], 
+  /* Profilowe na telefonie */
+  img[alt="Moje zdjęcie"],
   img[src="/images/about_photo.jpg"],
   .centered-image-container img {
     width: 200px !important;
     max-width: 200px !important;
+    display: block !important;
+    margin: 0 auto !important;
   }
-}
 
-/* ================================================== */
-/* === POSTY (teksty + obrazki) === */
-/* ================================================== */
+  /* Zdjęcia w postach – pełna szerokość */
+  article img:not([alt="Moje zdjęcie"]),
+  main img:not([alt="Moje zdjęcie"]),
+  .content img:not([alt="Moje zdjęcie"]) {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
 
-/* Kontener posta – szerszy */
-article.ma0.avenir.nested-copy-line-height {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 0 1rem !important;
-}
+  main,
+  .main-content,
+  article {
+    padding-top: 1rem !important;
+  }
 
-/* Akapity */
-article.ma0.avenir.nested-copy-line-height p {
-  text-align: left !important;
-  font-size: 1.1rem !important;
-  line-height: 1.7 !important;
-}
-
-/* Obrazki w postach – normalnie dopasowane do treści */
-article.ma0.avenir.nested-copy-line-height img {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  margin: 20px auto !important;
-  border-radius: 6px !important;
-}
-
-/* Obrazki z klasą "full" – pełna szerokość ekranu */
-article.ma0.avenir.nested-copy-line-height img.full {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  height: auto !important;
-  display: block !important;
-  margin: 20px 0 !important;
-  border-radius: 0 !important;
-  margin-left: calc(-50vw + 50%) !important;
+  div[style*="text-align: center"] {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+  }
 }
