@@ -1,10 +1,14 @@
 <header class="bg-gradient-blue">
   <nav class="pv3 ph3 ph4-ns" role="navigation">
     <div class="flex-l center items-center justify-between">
+      <!-- Tytuł strony -->
       <a href="/" class="f3 fw2 hover-white white-90 dib no-underline site-title">
         The Autonomous Creator
       </a>
+
+      <!-- Menu + ikony social -->
       <div class="flex-l items-center">
+        <!-- Menu -->
         <ul class="pl0 mr3 flex-l">
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white white-90 no-underline" href="/" title="Home page">Home</a>
@@ -25,7 +29,20 @@
             <a class="hover-white white-90 no-underline" href="/categories/aboutme" title="About Me">About Me</a>
           </li>
         </ul>
-        <div class="ananke-socials"></div>
+
+        <!-- Ikony social -->
+        <div class="ananke-socials">
+          {{ with .Site.Params.facebook }}
+            <a href="{{ . }}" target="_blank" class="link hover-white white-90 dib mr3">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+          {{ end }}
+          {{ with .Site.Params.instagram }}
+            <a href="{{ . }}" target="_blank" class="link hover-white white-90 dib">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          {{ end }}
+        </div>
       </div>
     </div>
   </nav>
