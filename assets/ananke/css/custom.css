@@ -259,39 +259,21 @@ article {
   body,
   .f4,
   .f5,
-  .f6,
-  p,
-  div,
-  span,
-  article {
-    font-size: 1.25rem !important;
+  .f6 {
+    font-size: 1.125rem !important;
     line-height: 1.6 !important;
   }
   
-  /* Jeszcze większy font dla głównej treści postów */
-  .nested-copy-line-height,
-  .measure,
-  .measure-wide,
-  main p,
-  article p {
-    font-size: 1.35rem !important;
-    line-height: 1.7 !important;
-  }
-  
   h1, .f1 {
-    font-size: 3.5rem !important;
+    font-size: 3rem !important;
   }
   
   h2, .f2 {
-    font-size: 2.75rem !important;
+    font-size: 2.25rem !important;
   }
   
   h3, .f3 {
-    font-size: 2rem !important;
-  }
-  
-  h4, .f4 {
-    font-size: 1.5rem !important;
+    font-size: 1.75rem !important;
   }
 }
 
