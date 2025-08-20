@@ -63,19 +63,9 @@
         </ul>
         <!-- Ikony mediów społecznościowych -->
         <div class="ananke-socials">
-          {{ with .Site.Params.social.facebook }}
-          <a href="{{ . }}" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook fa-lg white-90 hover-white"></i>
-          </a>
-          {{ end }}
-          {{ with .Site.Params.social.twitter }}
-          <a href="{{ . }}" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter fa-lg white-90 hover-white"></i>
-          </a>
-          {{ end }}
-          {{ with .Site.Params.social.instagram }}
-          <a href="{{ . }}" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram fa-lg white-90 hover-white"></i>
+          {{ range .Site.Params.social }}
+          <a href="{{ .url }}" target="_blank" aria-label="{{ .name }}">
+            <i class="fab fa-{{ .name }} fa-lg white-90 hover-white"></i>
           </a>
           {{ end }}
         </div>
