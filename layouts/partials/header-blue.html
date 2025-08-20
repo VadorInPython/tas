@@ -6,24 +6,34 @@
       </a>
       <div class="flex-l items-center">
         <ul class="pl0 mr3 flex-l">
-          <!-- twoje menu jak było -->
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white white-90 no-underline" href="/" title="Home page">Home</a>
           </li>
-          <!-- reszta menu... -->
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/categories/studies-in-denmark" title="Studies in Denmark">Studies in Denmark</a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/categories/photography" title="Photography">Photography</a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/categories/music" title="Music">Music</a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/categories/on-the-go" title="On The Go">On The Go</a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/categories/aboutme" title="About Me">About Me</a>
+          </li>
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white white-90 no-underline" href="/contact/" title="Contact me">Contact me</a>
           </li>
+          <li class="list f5 f4-ns fw4 dib pr2">
+            <a href="https://www.facebook.com/szymon.derlecki.3/" target="_blank" class="hover-white white-90 no-underline" title="Facebook">FB</a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib">
+            <a href="https://www.instagram.com/szym0n_24/" target="_blank" class="hover-white white-90 no-underline" title="Instagram">IG</a>
+          </li>
         </ul>
-        <!-- Social media z Hugo konfiguracji -->
-        <div class="flex items-center">
-          {{ range .Site.Params.social }}
-            <a href="{{ .url }}" target="_blank" class="link white-90 hover-white dib f4 mr2" title="{{ .name | title }}">
-              {{ if eq .name "facebook" }}FB{{ end }}
-              {{ if eq .name "instagram" }}IG{{ end }}
-            </a>
-          {{ end }}
-        </div>
       </div>
     </div>
   </nav>
