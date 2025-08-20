@@ -143,55 +143,50 @@ img[src="/images/about_photo.jpg"],
 /* === SZERSZE TEKSTY I ZDJĘCIA W POSTACH === */
 /* ================================================== */
 
-/* Rozciągnij tylko wpisy (nie About Me) */
-article.single, .post-content, .content {
-  max-width: 1100px !important;
-  width: 100% !important;
+/* Tekst + cała treść wpisu */
+.single .nested-copy-line-height {
+  max-width: 1200px !important; /* szerzej niż domyślnie */
   margin: 0 auto !important;
   padding: 0 1rem !important;
 }
 
-/* Tekst akapitów w postach */
-article.single p, .post-content p {
+/* Akapity w postach */
+.single .nested-copy-line-height p {
   text-align: left !important;
+  font-size: 1.1rem; /* trochę większa czcionka */
+  line-height: 1.7;
 }
 
-/* Zdjęcia we wpisach */
-article.single img:not([alt="Moje zdjęcie"]),
-.post-content img:not([alt="Moje zdjęcie"]),
-.content img:not([alt="Moje zdjęcie"]) {
+/* Zdjęcia w postach */
+.single .nested-copy-line-height img {
   width: 100% !important;
-  max-width: 750px !important;
-  margin: 20px auto !important;
+  max-width: 1100px !important;
+  height: auto !important;
   display: block !important;
+  margin: 20px auto !important;
 }
 
 /* Laptop / Desktop */
 @media (min-width: 1024px) {
-  article.single img:not([alt="Moje zdjęcie"]),
-  .post-content img:not([alt="Moje zdjęcie"]),
-  .content img:not([alt="Moje zdjęcie"]) {
-    max-width: 1100px !important;
+  .single .nested-copy-line-height {
+    max-width: 1300px !important;
   }
 
-  article.single, .post-content, .content {
+  .single .nested-copy-line-height img {
     max-width: 1200px !important;
   }
 }
 
 /* Bardzo duże ekrany */
 @media (min-width: 1440px) {
-  article.single img:not([alt="Moje zdjęcie"]),
-  .post-content img:not([alt="Moje zdjęcie"]),
-  .content img:not([alt="Moje zdjęcie"]) {
-    max-width: 1300px !important;
+  .single .nested-copy-line-height {
+    max-width: 1500px !important;
   }
 
-  article.single, .post-content, .content {
+  .single .nested-copy-line-height img {
     max-width: 1400px !important;
   }
 }
-
 
 /* ================================================== */
 /* === RESPONSYWNOŚĆ (MOBILE) === */
