@@ -7,8 +7,8 @@
         </div>
       </section>
     {{ end }}
-        
-    <!-- Posts listing - clean version -->
+
+    <!-- Posts listing - matching home page style -->
     <section class="w-100 mw8 ph4-l ph3 center">
       {{ range .Pages }}
         <div class="relative w-100 mb4 bg-white br3 shadow-4 pa3">
@@ -18,7 +18,7 @@
               <img src="{{ $featured_image | relURL }}" class="w-100 db br2" alt="{{ .Title }}" />
             </div>
           {{ end }}
-                               
+                  
           <article class="pb2">
             <div class="flex flex-column flex-row-ns">
               <div class="w-100">

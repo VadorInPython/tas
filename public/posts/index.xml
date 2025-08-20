@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on The Autonomous Creator</title>
-    <link>https://theautonomouscreator.netlify.app/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on The Autonomous Creator</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Apr 2025 21:29:26 +0200</lastBuildDate>
-    <atom:link href="https://theautonomouscreator.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>https://theautonomouscreator.netlify.app/posts/my-first-post/</link>
+      <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Sun, 27 Apr 2025 21:29:26 +0200</pubDate>
-      <guid>https://theautonomouscreator.netlify.app/posts/my-first-post/</guid>
-      <description>&lt;p&gt;This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/patsuisse.jpg&#34; alt=&#34;Patsuisse&#34;&gt;&lt;/p&gt;&#xA;&lt;!-- &#xA;&lt;audio controls&gt;   &#xA;  &lt;source src=&#34;http://localhost:1313/audio/mashup1.wav&#34; type=&#34;audio/wav&#34;&gt;   &#xA;  Your browser does not support the audio element. &#xA;&lt;/audio&gt;  &#xA;&#xA;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34;          &#xA;        src=&#34;upload_link_to_the_video&#34;          &#xA;        title=&#34;YouTube video player&#34;          &#xA;        frameborder=&#34;0&#34;          &#xA;        allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34;          &#xA;        allowfullscreen&gt; &#xA;&lt;/iframe&gt;  &#xA;--&gt;&#xA;&lt;p&gt;This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on The Autonomous Creator</title>
-    <link>https://theautonomouscreator.netlify.app/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on The Autonomous Creator</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Apr 2025 21:29:26 +0200</lastBuildDate>
-    <atom:link href="https://theautonomouscreator.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Studies in Denmark</title>
-      <link>https://theautonomouscreator.netlify.app/categories/studies-in-denmark/</link>
-      <pubDate>Sun, 27 Apr 2025 21:29:26 +0200</pubDate>
-      <guid>https://theautonomouscreator.netlify.app/categories/studies-in-denmark/</guid>
-      <description>&lt;p&gt;Discover everything you need to know about studying in Denmark - from university applications to student life and cultural adaptation. Get insider tips on Danish universities, student housing, cultural differences, and making the most of your educational journey in one of Europe&amp;rsquo;s most progressive countries.&lt;/p&gt;</description>
+      <title>About Me</title>
+      <link>http://localhost:1313/categories/aboutme/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/aboutme/</guid>
+      <description>&lt;p style=&#34;text-align: center; margin-bottom: 30px;&#34;&gt;&#xD;&#xA;  &lt;img src=&#34;http://localhost:1313/images/about_photo.jpg&#34; alt=&#34;Moje zdjęcie&#34; class=&#34;about-photo&#34;&gt;&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Hi, I&amp;rsquo;m &lt;strong&gt;Szymon&lt;/strong&gt; and I wanted to start something personal, such as this blog, as a mix of an experience booster and a diary at the same time. I find creating this space from scratch incredibly freeing, considering the turbulences I experienced at the very first starting point of my life-changing journey.&lt;/p&gt;&#xA;&lt;p&gt;But that&amp;rsquo;s just an intro – generally, I’ll be putting my work into a few categories such as music and photography, while at the same time trying to help others by describing the studies I’m currently pursuing, hopefully providing helpful cues for students, and also sharing some travel spots.&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>https://theautonomouscreator.netlify.app/categories/aboutme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://theautonomouscreator.netlify.app/categories/aboutme/</guid>
-      <description>&lt;p&gt;How I am trying to navigate life and get the most out of the opportunity, even after the hardest turbulences that happened straight at the start of my studies.&lt;/p&gt;</description>
+      <title>Studies in Denmark</title>
+      <link>http://localhost:1313/categories/studies-in-denmark/</link>
+      <pubDate>Sun, 27 Apr 2025 21:29:26 +0200</pubDate>
+      <guid>http://localhost:1313/categories/studies-in-denmark/</guid>
+      <description>&lt;p&gt;Discover everything you need to know about the entire process of studying in Denmark - from submitting your university application and handling all the necessary documents, to reading in-depth reviews of the courses I have taken. You can also expect practical tips on finding accommodation, as well as recommendations for places and opportunities where students can explore their passions, develop new skills, and challenge themselves in different fields - all while staying within the vibrant framework of student life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Music</title>
-      <link>https://theautonomouscreator.netlify.app/categories/music/</link>
+      <link>http://localhost:1313/categories/music/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://theautonomouscreator.netlify.app/categories/music/</guid>
-      <description>&lt;p&gt;Dive into my musical world where passion meets creativity. Here you&amp;rsquo;ll find my personal remakes of favorite tracks, exclusive recordings from the festivals that moved me most, and deep dives into the sounds that shape our experiences. From underground gems to festival anthems, join me on a sonic journey through the beats that define our generation.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/categories/music/</guid>
+      <description>&lt;p&gt;Step into the world of remakes and mashups, arranged and produced by me using carefully selected/extracted instrumentals and acapellas.&#xA;Over time, I plan to share full track remakes - or at least their fragments - along with compilations of my favorite tracks. I might even include highlights from the sets of some of my favorite artists.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On The Go</title>
-      <link>https://theautonomouscreator.netlify.app/categories/on-the-go/</link>
+      <link>http://localhost:1313/categories/on-the-go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://theautonomouscreator.netlify.app/categories/on-the-go/</guid>
-      <description></description>
+      <guid>http://localhost:1313/categories/on-the-go/</guid>
+      <description>&lt;p&gt;All about the trips I take to reset my head. From random unaprecciated spots that most people overlook, to the popular places that just hit different when you see them on spot. Plus, maybe a few notes on how I actually plan it all, so you can steal what works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Photography</title>
-      <link>https://theautonomouscreator.netlify.app/categories/photography/</link>
+      <link>http://localhost:1313/categories/photography/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://theautonomouscreator.netlify.app/categories/photography/</guid>
-      <description>&lt;p&gt;This is the place where you&amp;rsquo;ll find a collection of my photos — from aviation shots to nature scenes and moments captured on the road. Just like with music, there’s always more to come.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/categories/photography/</guid>
+      <description>&lt;p&gt;Here you will find my photography portfolio. For now, expect mostly aviation-themed shots (or sports-style photography in general), along with nature scenes and city shots. In the long run, I’d like to grow this collection even more - maybe branching out into new photography styles and experimenting with different kinds of subjects.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
