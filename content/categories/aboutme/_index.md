@@ -4,11 +4,9 @@ date: 2025-08-15
 draft: false
 ---
 
-<div style="text-align: center; margin-bottom: 30px;">
-
-<img src="/images/about_photo.jpg" alt="Moje zdjęcie" class="about-photo">
-
-</div>
+<p style="text-align: center; margin-bottom: 30px;">
+  <img src="/images/about_photo.jpg" alt="Moje zdjęcie" class="about-photo">
+</p>
 
 Hey, I'm **Szymon** and I wanted to start something personal, such as this blog, as a mix of an experience booster and a diary at the same time. I find creating this space from scratch incredibly freeing, considering the turbulences I experienced at the very first starting point of my life-changing journey.
 
