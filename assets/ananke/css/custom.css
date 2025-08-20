@@ -435,4 +435,20 @@ iframe[src*="youtube-nocookie"] {
   }
 }
 
+.ananke-socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ananke-socials .social-icon {
+  color: white !important;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.ananke-socials .social-icon:hover {
+  color: #93c5fd !important;
+}
+
 
