@@ -8,4 +8,9 @@ tags = ["Denmark", "Studies"]
 
 ![Patsuisse](/images/patsuisse.jpg)
 
+<audio controls>
+  <source src="/audio/mashup1.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
 This is just the draft, but hopefully will get helpful for the others considering similar options in their lives.
