@@ -435,4 +435,23 @@ iframe[src*="youtube-nocookie"] {
   }
 }
 
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icons a {
+  color: inherit;
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons svg {
+  fill: currentColor;
+}
+
 
