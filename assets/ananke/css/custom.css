@@ -461,4 +461,38 @@ iframe[src*="youtube-nocookie"] {
   min-height: 24px;  /* wysokość jednej linii ikon */
 }
 
+/* Kontener ikon społecznościowych */
+.ananke-socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  /* Stałe miejsce w nawigacji – zapobiega przeskokom */
+  min-width: 120px;  /* dostosuj do liczby ikon */
+  min-height: 24px;  /* wysokość jednej linii ikon */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* płynne pojawienie się */
+}
+
+/* Styl pojedynczej ikony */
+.ananke-socials .social-icon {
+  color: white !important;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.ananke-socials .social-icon:hover {
+  color: #93c5fd !important;
+}
+
+/* Opcjonalnie: zawsze rezerwujemy miejsce nawet, jeśli ikon chwilowo nie ma */
+.ananke-socials::after {
+  content: "";
+  flex: 0 0 auto;
+}
+
+
 
