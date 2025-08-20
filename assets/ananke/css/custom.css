@@ -131,8 +131,8 @@ div[style*="text-align: center"] {
 img[alt="Moje zdjęcie"], 
 img[src="/images/about_photo.jpg"],
 .centered-image-container img {
-    width: 400px !important;
-    max-width: 400px !important;
+    width: 1000px !important;
+    max-width: 1000px !important;
     height: auto !important;
     display: inline-block !important;
     border-radius: 0px !important;
