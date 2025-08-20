@@ -36,11 +36,12 @@ custom_css = ["custom.css"]
     name = "On The Go"
     url = "/categories/on-the-go"
     weight = 5
-
+  
   [[menu.main]]
-    name = "Contact"
-    url = "/categories/contact"
-    weight = 6
+  name = "Contact"
+  url = "/contact/"
+  weight = 50
+
 
 
 [markup]
