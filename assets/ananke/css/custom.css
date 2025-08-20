@@ -264,16 +264,19 @@ article {
     line-height: 1.6 !important;
   }
   
+  /* WIĘKSZE główne nagłówki */
   h1, .f1 {
-    font-size: 3rem !important;
+    font-size: 4rem !important;    /* było 3rem */
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
   }
   
   h2, .f2 {
-    font-size: 2.25rem !important;
+    font-size: 2.75rem !important;  /* było 2.25rem */
   }
   
   h3, .f3 {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;     /* było 1.75rem */
   }
 }
 
