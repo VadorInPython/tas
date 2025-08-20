@@ -278,6 +278,45 @@ article {
 }
 
 /* ================================================== */
+/* === RESPONSIVE YOUTUBE VIDEOS === */
+/* ================================================== */
+
+/* Responsive container for YouTube videos */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Direct iframe styling for cases where container isn't used */
+iframe[src*="youtube"],
+iframe[src*="youtube-nocookie"] {
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 1rem auto !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  iframe[src*="youtube"],
+  iframe[src*="youtube-nocookie"] {
+    width: 100% !important;
+    height: 200px !important; /* Fixed height for mobile */
+  }
+}
+
+/* ================================================== */
 /* === RESPONSYWNOŚĆ DLA TELEFONÓW === */
 /* ================================================== */
 
