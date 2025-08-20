@@ -1,10 +1,10 @@
 ---
 title: "Contact"
-date: 2025-08-20T15:00:00+02:00
+date: 2024-01-01T00:00:00+01:00 # Pozostaw swoją oryginalną datę
 draft: false
 ---
 
-Do you have a question or suggestion? Use the form below to get in touch with me. I’ll reply as soon as possible!
+<!-- Poniższy kod formularza zastępuje poprzednią treść strony -->
 
 <form
   action="https://formspree.io/f/movlokoq"
@@ -14,7 +14,7 @@ Do you have a question or suggestion? Use the form below to get in touch with me
   <fieldset class="ba b--transparent ph0 mh0">
     <div class="mt3">
       <label class="db fw6 lh-copy f6" for="email-address">
-        Your email:
+        Your email address:
       </label>
       <input
         class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
@@ -24,7 +24,7 @@ Do you have a question or suggestion? Use the form below to get in touch with me
       />
     </div>
     <div class="mv3">
-      <label class="db fw6 lh-copy f6" for="message">Place your message here:</label>
+      <label class="db fw6 lh-copy f6" for="message">Your message:</label>
       <textarea
         class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
         name="message"
