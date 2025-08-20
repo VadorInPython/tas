@@ -1,6 +1,9 @@
+<!-- Font Awesome CSS for instant icon rendering -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+
 <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center">
-    <!-- Logo and site title -->
+    <!-- Logo / Site Title -->
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
         <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
@@ -9,7 +12,7 @@
       {{ end }}
     </a>
 
-    <!-- Menu items -->
+    <!-- Menu Items -->
     <div class="flex-l items-center ml3">
       {{ partials.Include "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
@@ -25,7 +28,7 @@
       {{ end }}
     </div>
 
-    <!-- Social icons pinned right -->
+    <!-- Social Icons pinned to the right -->
     <div class="flex items-center ml-auto header-icons">
       <a href="https://twitter.com/TwojProfil" class="white-90 hover-white mr2" target="_blank">
         <i class="fab fa-twitter"></i>
@@ -37,5 +40,17 @@
         <i class="fab fa-instagram"></i>
       </a>
     </div>
+
+    <!-- Optional additional social partial -->
+    {{ partials.IncludeCached "social/follow.html" . }}
   </div>
 </nav>
+
+<!-- Optional CSS to reserve space and prevent layout shift -->
+<style>
+  .header-icons i {
+    display: inline-block;
+    width: 1.25em; /* ensures consistent width */
+    text-align: center;
+  }
+</style>
