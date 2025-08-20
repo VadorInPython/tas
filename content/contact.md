@@ -1,9 +1,11 @@
 ---
-title: "Contact Us"
+title: "Contact Me"
 description: "Get in touch with us through this form."
 date: 2025-08-20T15:42:03+02:00
 draft: false
 menu: "main"
+_build:
+  list: 'never'
 ---
 
 Have a question or want to work together? Fill out the form below, and I'll get back to you as soon as possible.
