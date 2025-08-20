@@ -6,7 +6,7 @@ draft: false
 
 <div style="text-align: center; margin-bottom: 30px;">
 
-![Moje zdjęcie](/images/about_photo.jpg)
+![Moje zdjęcie](/images/about_photo.jpg){.about-photo}
 
 </div>
 
