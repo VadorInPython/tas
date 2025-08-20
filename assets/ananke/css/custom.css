@@ -451,4 +451,14 @@ iframe[src*="youtube-nocookie"] {
   color: #93c5fd !important;
 }
 
+.ananke-socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  /* Zapobiegamy przeskokom */
+  min-width: 120px;  /* dostosuj do liczby ikon */
+  min-height: 24px;  /* wysokość jednej linii ikon */
+}
+
 
