@@ -6,6 +6,11 @@ theme = 'ananke'
 [params]
 custom_css = ["custom.css"]
 
+[social]
+  facebook = "https://facebook.com"
+  twitter = "https://twitter.com"
+  instagram = "https://instagram.com"
+
 [menu]
   [[menu.main]]
     name = "Home"
