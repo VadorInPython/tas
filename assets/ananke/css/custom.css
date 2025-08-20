@@ -240,7 +240,7 @@ article {
   article img:not([alt="Moje zdjęcie"]),
   main img:not([alt="Moje zdjęcie"]),
   .content img:not([alt="Moje zdjęcie"]) {
-    max-width: 1000px !important;
+    max-width: 1400px !important;
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: auto !important;
