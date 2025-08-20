@@ -13,7 +13,7 @@ nav.pv3.ph3.ph4-ns {
   padding-bottom: 0 !important;
 }
 
-/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
+/* Ogólny styl dla nagłówków */
 header .bg-black {
   padding-bottom: 0.5rem !important;
   background: linear-gradient(135deg, #5b7db1, #142850) !important;
@@ -34,7 +34,7 @@ header .bg-black a:hover {
   transition: color 0.3s ease !important;
 }
 
-/* Style dla "przyklejonej" stopki */
+/* Stopka */
 html, body {
   height: 100% !important;
   margin: 0 !important;
@@ -47,6 +47,8 @@ body {
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
 }
 
 main, .main-content {
@@ -61,73 +63,26 @@ footer, .bg-black.bottom-0 {
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a, footer .site-title, footer p, footer span,
-.bg-black.bottom-0 a, .bg-black.bottom-0 .site-title,
-.bg-black.bottom-0 p, .bg-black.bottom-0 span {
+footer a, footer .site-title, footer p, footer span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-footer a:hover, .bg-black.bottom-0 a:hover {
+footer a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
 
-/* Ogólne wyrównanie w nagłówku */
-header .flex-l {
-  align-items: center !important;
-  min-height: 50px !important;
-}
-
-header .site-title, nav#site-nav {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  display: flex;
-  align-items: center;
-}
-
-/* Poprawki dla menu nawigacji */
-nav#site-nav {
-  display: flex !important;
-  align-items: center !important;
-  height: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-nav#site-nav ul, 
-nav#site-nav li {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-nav#site-nav a {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  display: flex !important;
-  align-items: center !important;
-  height: auto !important;
-  line-height: normal !important;
-}
-
 /* ================================================== */
-/* === STYLE DLA ZDJĘCIA PROFILOWEGO (ABOUT ME) === */
+/* === ABOUT ME (profilowe) === */
 /* ================================================== */
 
-/* Centrowanie kontenera z obrazkiem */
 .centered-image-container {
   margin-top: -4rem !important;
   text-align: center !important;
   margin-bottom: 30px !important;
 }
 
-div[style*="text-align: center"] {
-  text-align: center !important;
-}
-
-/* Główny styl dla obrazka About Me */
 img[alt="Moje zdjęcie"], 
 img[src="/images/about_photo.jpg"],
 .centered-image-container img {
@@ -136,66 +91,13 @@ img[src="/images/about_photo.jpg"],
   height: auto !important;
   display: inline-block !important;
   margin: 0 auto !important;
-  border-radius: 0px !important;
 }
 
-/* ================================================== */
-/* === SZERSZE TEKSTY I ZDJĘCIA W POSTACH === */
-/* ================================================== */
-
-/* Tekst + cała treść wpisu */
-.single .nested-copy-line-height {
-  max-width: 1200px !important; /* szerzej niż domyślnie */
-  margin: 0 auto !important;
-  padding: 0 1rem !important;
-}
-
-/* Akapity w postach */
-.single .nested-copy-line-height p {
-  text-align: left !important;
-  font-size: 1.1rem; /* trochę większa czcionka */
-  line-height: 1.7;
-}
-
-/* Zdjęcia w postach */
-.single .nested-copy-line-height img {
-  width: 100% !important;
-  max-width: 1100px !important;
-  height: auto !important;
-  display: block !important;
-  margin: 20px auto !important;
-}
-
-/* Laptop / Desktop */
-@media (min-width: 1024px) {
-  .single .nested-copy-line-height {
-    max-width: 1300px !important;
-  }
-
-  .single .nested-copy-line-height img {
-    max-width: 1200px !important;
-  }
-}
-
-/* Bardzo duże ekrany */
-@media (min-width: 1440px) {
-  .single .nested-copy-line-height {
-    max-width: 1500px !important;
-  }
-
-  .single .nested-copy-line-height img {
-    max-width: 1400px !important;
-  }
-}
-
-/* ================================================== */
-/* === RESPONSYWNOŚĆ (MOBILE) === */
-/* ================================================== */
+/* Responsywność dla telefonów */
 @media (max-width: 768px) {
   .centered-image-container {
     margin-top: 1rem !important;
     text-align: center !important;
-    display: block !important;
     width: 100% !important;
   }
 
@@ -204,19 +106,44 @@ img[src="/images/about_photo.jpg"],
   .centered-image-container img {
     width: 200px !important;
     max-width: 200px !important;
-    display: block !important;
-    margin: 0 auto !important;
   }
+}
 
-  article, .page {
-    max-width: 100% !important;
-    padding: 0 1rem !important;
-  }
+/* ================================================== */
+/* === POSTY (teksty + obrazki) === */
+/* ================================================== */
 
-  article img:not([alt="Moje zdjęcie"]),
-  main img:not([alt="Moje zdjęcie"]),
-  .content img:not([alt="Moje zdjęcie"]) {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
+/* Kontener posta – szerszy */
+article.ma0.avenir.nested-copy-line-height {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+}
+
+/* Akapity */
+article.ma0.avenir.nested-copy-line-height p {
+  text-align: left !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Obrazki w postach – normalnie dopasowane do treści */
+article.ma0.avenir.nested-copy-line-height img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 20px auto !important;
+  border-radius: 6px !important;
+}
+
+/* Obrazki z klasą "full" – pełna szerokość ekranu */
+article.ma0.avenir.nested-copy-line-height img.full {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: auto !important;
+  display: block !important;
+  margin: 20px 0 !important;
+  border-radius: 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
 }
