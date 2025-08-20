@@ -1,14 +1,15 @@
 ---
 title: "Contact"
-date: 2024-01-01T00:00:00+01:00 # Możesz tu zostawić swoją oryginalną datę
+date: 2024-01-01T00:00:00+01:00 # Zachowaj swoją oryginalną datę
 draft: false
+# Te dwie linie są kluczowe:
+headless: true
 _build:
   render: true
-  list: false
+  # NIE dodajemy tu 'list: false', bo to strona _index i sama nie jest listowana
 ---
 
-<!-- Poniżej jest formularz, który zostaje bez zmian -->
-
+<!-- Poniżej jest Twój formularz Formspree -->
 <form
   action="https://formspree.io/f/movlokoq"
   method="POST"
