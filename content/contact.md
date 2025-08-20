@@ -1,37 +1,44 @@
 ---
-title: "Contact Us"
-description: "Get in touch with us through this form."
-date: 2025-08-20T15:42:03+02:00
+title: "Contact"
+date: 2025-08-20T15:00:00+02:00
 draft: false
-menu: "main"
-_build:
-  list: 'never'
 ---
 
-Have a question or want to work together? Fill out the form below, and I'll get back to you as soon as possible.
+Do you have a question or suggestion? Use the form below to get in touch with me. I’ll reply as soon as possible!
 
-<form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="contact" />
-  
-  <p hidden>
-    <label>
-      Don’t fill this out if you’re human: <input name="bot-field" />
-    </label>
-  </p>
-
-  <p class="mb3">
-    <label class="db" for="name">Your Name:</label>
-    <input class="w-100 pa2 ba" type="text" name="name" id="name" required />
-  </p>
-  <p class="mb3">
-    <label class="db" for="email">Your Email:</label>
-    <input class="w-100 pa2 ba" type="email" name="email" id="email" required />
-  </p>
-  <p class="mb3">
-    <label class="db" for="message">Message:</label>
-    <textarea class="w-100 pa2 ba" name="message" id="message" rows="5" required></textarea>
-  </p>
-  <p>
-    <button class="pa2 bn bg-dark-gray white" type="submit">Send</button>
-  </p>
+<form
+  action="https://formspree.io/f/movlokoq"
+  method="POST"
+  class="measure center"
+>
+  <fieldset class="ba b--transparent ph0 mh0">
+    <div class="mt3">
+      <label class="db fw6 lh-copy f6" for="email-address">
+        Your email:
+      </label>
+      <input
+        class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+        type="email"
+        name="email"
+        id="email-address"
+      />
+    </div>
+    <div class="mv3">
+      <label class="db fw6 lh-copy f6" for="message">Place your message here:</label>
+      <textarea
+        class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+        name="message"
+        id="message"
+        rows="5"
+      ></textarea>
+    </div>
+  </fieldset>
+  <div>
+    <button
+      class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+      type="submit"
+    >
+      Send
+    </button>
+  </div>
 </form>
