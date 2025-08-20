@@ -13,18 +13,20 @@ nav.pv3.ph3.ph4-ns {
   padding-bottom: 0 !important;
 }
 
-/* Ogólny styl dla nagłówków z tłem (np. na About Me) */
+/* Ogólny styl dla nagłówków z tłem */
 header .bg-black {
   padding-bottom: 0.5rem !important;
   background: linear-gradient(135deg, #5b7db1, #142850) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-header .bg-black.pb3-m, header .bg-black.pb6-l {
+header .bg-black.pb3-m,
+header .bg-black.pb6-l {
   padding-bottom: 0.5rem !important;
 }
 
-header .bg-black a, header .bg-black .site-title {
+header .bg-black a,
+header .bg-black .site-title {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -35,27 +37,28 @@ header .bg-black a:hover {
 }
 
 /* Style dla "przyklejonej" stopki */
-html, body {
+html,
+body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: hidden !important; /* Ukrywa poziomy suwak jeśli niepotrzebny */
-  overflow-y: auto !important; /* Zapewnia pionowy suwak gdy potrzebny */
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
 }
 
 body {
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh !important;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
 }
 
-main, .main-content {
+main,
+.main-content {
   flex: 1 !important;
 }
 
-footer, .bg-black.bottom-0 {
+footer,
+.bg-black.bottom-0 {
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -63,12 +66,20 @@ footer, .bg-black.bottom-0 {
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-footer a, footer .site-title, footer p, footer span, .bg-black.bottom-0 a, .bg-black.bottom-0 .site-title, .bg-black.bottom-0 p, .bg-black.bottom-0 span {
+footer a,
+footer .site-title,
+footer p,
+footer span,
+.bg-black.bottom-0 a,
+.bg-black.bottom-0 .site-title,
+.bg-black.bottom-0 p,
+.bg-black.bottom-0 span {
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-footer a:hover, .bg-black.bottom-0 a:hover {
+footer a:hover,
+.bg-black.bottom-0 a:hover {
   color: #93c5fd !important;
   transition: color 0.3s ease !important;
 }
@@ -79,7 +90,8 @@ header .flex-l {
   min-height: 50px !important;
 }
 
-header .site-title, nav#site-nav {
+header .site-title,
+nav#site-nav {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   display: flex;
@@ -95,7 +107,7 @@ nav#site-nav {
   padding: 0 !important;
 }
 
-nav#site-nav ul, 
+nav#site-nav ul,
 nav#site-nav li {
   margin: 0 !important;
   padding: 0 !important;
@@ -113,56 +125,60 @@ nav#site-nav a {
 }
 
 /* ================================================== */
-/* === STYLE DLA ZDJĘCIA PROFILOWEGO === */
+/* === STYLE DLA ZDJĘCIA PROFILOWEGO (ABOUT ME) === */
 /* ================================================== */
 
-/* Centrowanie kontenera z obrazkiem */
 .centered-image-container {
-    margin-top: -4rem !important;
-    text-align: center !important;
-    margin-bottom: 30px !important;
+  margin-top: -4rem !important;
+  text-align: center !important;
+  margin-bottom: 30px !important;
 }
 
-div[style*="text-align: center"] {
-    text-align: center !important;
+.about-photo {
+  width: 400px !important;
+  height: 400px !important;
+  object-fit: cover !important; /* przytnie do kwadratu */
+  display: block !important;
+  margin: 0 auto !important;
 }
 
-/* Główny styl dla obrazka */
-img[alt="Moje zdjęcie"], 
-img[src="/images/about_photo.jpg"],
-.centered-image-container img {
-    width: 750px !important;
-    max-width: 750px !important;
-    height: auto !important;
-    display: inline-block !important;
-    border-radius: 0px !important;
-    margin: 0 auto !important;
+/* ================================================== */
+/* === STYLE DLA POZOSTAŁYCH ZDJĘĆ === */
+/* ================================================== */
+
+/* Duże obrazki np. w postach */
+article img,
+main img,
+.content img {
+  width: 750px !important;
+  max-width: 750px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
-/* Inne obrazki na stronie (mniejsze) */
-.nested-copy-line-height img:not([alt="Moje zdjęcie"]),
-.nested-img img:not([alt="Moje zdjęcie"]),
-article img:not([alt="Moje zdjęcie"]),
-main img:not([alt="Moje zdjęcie"]),
-.content img:not([alt="Moje zdjęcie"]) {
-    width: 250px !important;
-    max-width: 250px !important;
-    height: auto !important;
-    display: inline-block !important;
-    border-radius: 0px !important;
-    margin: 0 auto !important;
+/* Małe obrazki np. w treści */
+.nested-copy-line-height img,
+.nested-img img {
+  width: 250px !important;
+  max-width: 250px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 /* ================================================== */
 /* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
 /* ================================================== */
 
-main, .main-content, article {
-    padding-top: 0.05rem !important;
+main,
+.main-content,
+article {
+  padding-top: 0.05rem !important;
 }
 
 .nested-copy-line-height {
-    padding-top: 0.05rem !important;
+  padding-top: 0.05rem !important;
 }
 
 /* ================================================== */
@@ -170,36 +186,22 @@ main, .main-content, article {
 /* ================================================== */
 
 @media (max-width: 768px) {
-    .centered-image-container {
-        margin-top: 1rem !important; /* Normalny margines na telefonie */
-        margin-top: 1rem !important;
-        text-align: center !important;
-        display: block !important;
-        width: 100% !important;
-    }
-
-    /* Mniejszy obrazek na telefonie */
-    /* Mniejszy obrazek na telefonie - wycentrowany */
-    img[alt="Moje zdjęcie"], 
-    img[src="/images/about_photo.jpg"],
-    .centered-image-container img {
-        width: 200px !important;
-        max-width: 200px !important;
-        border-radius: 0px !important; /* Proporcjonalnie mniejszy radius */
-        border-radius: 0px !important;
-        display: block !important;
-        margin: 0 auto !important;
-        text-align: center !important;
-    }
-
-    main, .main-content, article {
-        padding-top: 1rem !important;
-    }
-    
-    /* Dodatkowe centrowanie dla uporczywych elementów */
-    div[style*="text-align: center"] {
-        text-align: center !important;
-        display: block !important;
-        width: 100% !important;
-    }
+  .centered-image-container {
+    margin-top: 1rem !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
   }
+
+  /* About Me na telefonie */
+  .about-photo {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  main,
+  .main-content,
+  article {
+    padding-top: 1rem !important;
+  }
+}
