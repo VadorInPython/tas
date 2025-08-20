@@ -1,8 +1,9 @@
 ---
 title: "Contact"
-date: 2024-01-01T00:00:00+01:00 # Twoja oryginalna data
+date: 2024-01-01T00:00:00+01:00 # Możesz tu zostawić swoją oryginalną datę
 draft: false
 _build:
+  render: true
   list: false
 ---
 
