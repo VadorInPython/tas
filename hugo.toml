@@ -7,8 +7,8 @@ theme = 'ananke'
 custom_css = ["custom.css"]
 
 [params.ananke_socials]
-facebook = "https://facebook.com/yourusername"
-instagram = "https://instagram.com/yourusername"
+facebook = "https://www.facebook.com/szymon.derlecki.3/"
+instagram = "https://www.instagram.com/szym0n_24/"
 
 [menu]
   [[menu.main]]
