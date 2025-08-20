@@ -278,6 +278,59 @@ article {
 }
 
 /* ================================================== */
+/* === ACCESSIBILITY - TOUCH TARGETS === */
+/* ================================================== */
+
+/* Ensure all interactive elements are at least 48x48px on mobile */
+@media (max-width: 768px) {
+  /* Links and buttons minimum touch target */
+  a, button, input[type="submit"], input[type="button"] {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 12px 16px !important;
+    display: inline-block !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Navigation links */
+  nav a, nav button {
+    min-height: 48px !important;
+    padding: 12px 16px !important;
+    margin: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Audio controls */
+  audio {
+    min-height: 48px !important;
+    width: 100% !important;
+  }
+  
+  /* Social media links, if any */
+  .social-links a,
+  footer a {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 12px !important;
+    margin: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Form elements */
+  input, textarea, select {
+    min-height: 48px !important;
+    padding: 12px !important;
+    margin: 4px 0 !important;
+  }
+}
+
+/* ================================================== */
 /* === RESPONSIVE YOUTUBE VIDEOS === */
 /* ================================================== */
 
