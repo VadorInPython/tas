@@ -435,23 +435,4 @@ iframe[src*="youtube-nocookie"] {
   }
 }
 
-.ananke-socials {
-  display: flex;
-  gap: 15px; /* Odstępy między ikonami */
-  align-items: center;
-}
-
-.ananke-socials a {
-  color: rgba(255, 255, 255, 0.9); /* Kolor ikon (biały z przezroczystością) */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.ananke-socials a:hover {
-  color: #ffffff; /* Pełny biały kolor po najechaniu */
-}
-
-.ananke-socials i {
-  font-size: 1.5rem; /* Rozmiar ikon */
-}
 
