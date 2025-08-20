@@ -1,4 +1,13 @@
 {{ define "main" }}
+  <!-- Social Media Icons Section -->
+  <div class="social-icons pa3 pa4-ns w-100 mw8 center">
+    {{ range .Site.Params.social }}
+      <a href="{{ .url }}" target="_blank" aria-label="{{ .name }}">
+        <i class="fab fa-{{ .name }} fa-lg dim link"></i>
+      </a>
+    {{ end }}
+  </div>
+
   <!-- Posts listing with white cards -->
   <div class="pa3 pa4-ns w-100 mw8 center">
     {{ range first 10 .Site.RegularPages }}
