@@ -206,6 +206,76 @@ article {
 }
 
 /* ================================================== */
+/* === NOWE STYLE DLA LAPTOPÓW - SZERSZY LAYOUT === */
+/* ================================================== */
+
+@media (min-width: 1024px) {
+  /* Szerszy kontener główny na laptopach */
+  main,
+  .main-content,
+  article {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Szerszy tekst w artykułach */
+  .nested-copy-line-height,
+  .measure,
+  .measure-wide {
+    max-width: none !important;
+    width: 100% !important;
+  }
+  
+  /* Większe zdjęcie profilowe na laptopach */
+  img[alt="Moje zdjęcie"],
+  img[src="/images/about_photo.jpg"],
+  .centered-image-container img {
+    width: 500px !important;
+    max-width: 500px !important;
+  }
+  
+  /* Większe zdjęcia w postach na laptopach */
+  article img:not([alt="Moje zdjęcie"]),
+  main img:not([alt="Moje zdjęcie"]),
+  .content img:not([alt="Moje zdjęcie"]) {
+    max-width: 1000px !important;
+    width: 100% !important;
+  }
+  
+  /* Szersze kontenery tekstowe */
+  .ph3,
+  .ph4-ns,
+  .pv3,
+  .pv4-ns {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Większy font na laptopach dla lepszej czytelności */
+  body,
+  .f4,
+  .f5,
+  .f6 {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  h1, .f1 {
+    font-size: 3rem !important;
+  }
+  
+  h2, .f2 {
+    font-size: 2.25rem !important;
+  }
+  
+  h3, .f3 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* ================================================== */
 /* === RESPONSYWNOŚĆ DLA TELEFONÓW === */
 /* ================================================== */
 
