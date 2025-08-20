@@ -13,8 +13,6 @@ tags = ["Denmark", "Studies"]
   Your browser does not support the audio element.
 </audio>
 
-![Your Image](/images/your-image.jpg)
-
 <iframe width="560" height="315" 
         src="https://www.youtube-nocookie.com/embed/C0DPdy98e4c" 
         title="YouTube video player" 
