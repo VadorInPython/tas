@@ -143,27 +143,22 @@ img[src="/images/about_photo.jpg"],
 /* === SZERSZE TEKSTY I ZDJĘCIA W POSTACH === */
 /* ================================================== */
 
-/* Usuń ograniczenia szerokości */
-body {
-  max-width: none !important;
-}
-
-/* Rozciągnij artykuł */
-article, .page {
+/* Rozciągnij tylko wpisy (nie About Me) */
+article.single, .post-content, .content {
   max-width: 1100px !important;
   width: 100% !important;
   margin: 0 auto !important;
   padding: 0 1rem !important;
 }
 
-/* Tekst akapitów */
-article p {
+/* Tekst akapitów w postach */
+article.single p, .post-content p {
   text-align: left !important;
 }
 
 /* Zdjęcia we wpisach */
-article img:not([alt="Moje zdjęcie"]),
-main img:not([alt="Moje zdjęcie"]),
+article.single img:not([alt="Moje zdjęcie"]),
+.post-content img:not([alt="Moje zdjęcie"]),
 .content img:not([alt="Moje zdjęcie"]) {
   width: 100% !important;
   max-width: 750px !important;
@@ -171,31 +166,32 @@ main img:not([alt="Moje zdjęcie"]),
   display: block !important;
 }
 
-/* Na laptopach/desktopach */
+/* Laptop / Desktop */
 @media (min-width: 1024px) {
-  article img:not([alt="Moje zdjęcie"]),
-  main img:not([alt="Moje zdjęcie"]),
+  article.single img:not([alt="Moje zdjęcie"]),
+  .post-content img:not([alt="Moje zdjęcie"]),
   .content img:not([alt="Moje zdjęcie"]) {
     max-width: 1100px !important;
   }
 
-  article, .page {
+  article.single, .post-content, .content {
     max-width: 1200px !important;
   }
 }
 
-/* Na bardzo dużych ekranach */
+/* Bardzo duże ekrany */
 @media (min-width: 1440px) {
-  article img:not([alt="Moje zdjęcie"]),
-  main img:not([alt="Moje zdjęcie"]),
+  article.single img:not([alt="Moje zdjęcie"]),
+  .post-content img:not([alt="Moje zdjęcie"]),
   .content img:not([alt="Moje zdjęcie"]) {
     max-width: 1300px !important;
   }
 
-  article, .page {
+  article.single, .post-content, .content {
     max-width: 1400px !important;
   }
 }
+
 
 /* ================================================== */
 /* === RESPONSYWNOŚĆ (MOBILE) === */
