@@ -131,8 +131,8 @@ div[style*="text-align: center"] {
 img[alt="Moje zdjęcie"], 
 img[src="/images/about_photo.jpg"],
 .centered-image-container img {
-    width: 1000px !important;
-    max-width: 1000px !important;
+    width: 750px !important;
+    max-width: 750px !important;
     height: auto !important;
     display: inline-block !important;
     border-radius: 0px !important;
@@ -145,8 +145,8 @@ img[src="/images/about_photo.jpg"],
 article img:not([alt="Moje zdjęcie"]),
 main img:not([alt="Moje zdjęcie"]),
 .content img:not([alt="Moje zdjęcie"]) {
-    width: 1000px !important;
-    max-width: 1000px !important;
+    width: 250px !important;
+    max-width: 250px !important;
     height: auto !important;
     display: inline-block !important;
     border-radius: 0px !important;
