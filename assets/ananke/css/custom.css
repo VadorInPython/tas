@@ -236,12 +236,14 @@ article {
     max-width: 500px !important;
   }
   
-  /* Większe zdjęcia w postach na laptopach */
+  /* Większe zdjęcia w postach na laptopach - wyrównane do lewej */
   article img:not([alt="Moje zdjęcie"]),
   main img:not([alt="Moje zdjęcie"]),
   .content img:not([alt="Moje zdjęcie"]) {
     max-width: 1000px !important;
     width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
   }
   
   /* Szersze kontenery tekstowe */
