@@ -377,3 +377,50 @@ article {
     font-size: 16px !important;
   }
 }
+
+/* ================================================== */
+/* === MOBILE PROFILE IMAGE FIX === */
+/* ================================================== */
+
+@media (max-width: 768px) {
+  /* Profile image responsive sizing for mobile */
+  img[alt="Moje zdjęcie"],
+  img[src="/images/about_photo.jpg"],
+  .centered-image-container img {
+    width: 80vw !important;
+    max-width: 280px !important;
+    min-width: 200px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    border-radius: 32px !important;
+  }
+  
+  /* Ensure the container doesn't overflow */
+  .centered-image-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  
+  /* Additional safety for any centered divs containing the image */
+  div[style*="text-align: center"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1023px) {
+  img[alt="Moje zdjęcie"],
+  img[src="/images/about_photo.jpg"],
+  .centered-image-container img {
+    width: 320px !important;
+    max-width: 320px !important;
+  }
+}
