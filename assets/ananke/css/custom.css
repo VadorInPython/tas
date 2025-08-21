@@ -426,71 +426,46 @@ article {
 }
 
 /* ================================================== */
-/* === DIAGNOSTYKA I NAPRAWA GRADIENTU === */
+/* === NAPRAWA FLEXBOX vs GRADIENT PROBLEM === */
 /* ================================================== */
 
-/* Najpierw spróbujmy z pseudo-elementami które są najczęstszą przyczyną */
+/* Usuń problematyczne flex na mobile dla nagłówków */
 @media (max-width: 768px) {
-  /* Wszystkie pseudo-elementy ::before w obszarze nagłówka */
-  header *::before,
-  .hero *::before,
-  .featured-image *::before {
-    background: rgba(0, 0, 0, 0.5) !important;
-    background-image: none !important;
-  }
-  
-  /* Wszystkie pseudo-elementy ::after w obszarze nagłówka */  
-  header *::after,
-  .hero *::after,
-  .featured-image *::after {
-    background: rgba(0, 0, 0, 0.5) !important;
-    background-image: none !important;
-  }
-  
-  /* Specificzne klasy Tachyons które mogą być problemem */
-  .bg-black-10::before,
-  .bg-black-20::before,
-  .bg-black-30::before,
-  .bg-black-40::before,
-  .bg-black-50::before,
-  .bg-black-60::before,
-  .bg-black-70::before,
-  .bg-black-80::before,
-  .bg-black-90::before {
-    background: rgba(0, 0, 0, 0.5) !important;
-    background-image: none !important;
-  }
-  
-  /* Próba z gradientami inline */
-  div[style*="linear-gradient"],
-  div[style*="gradient"] {
-    background-image: none !important;
-    background: rgba(0, 0, 0, 0.5) !important;
-  }
-  
-  /* Dodatkowa nakładka jako backup */
+  /* Wyłącz flex dla elementów nagłówkowych które powodują problem z gradientem */
+  header .flex-l,
   header .cover,
   .hero {
-    position: relative !important;
+    display: block !important;
+    /* lub display: grid !important; jeśli potrzebujesz lepszą kontrolę */
   }
-  
-  header .cover::after,
-  .hero::after {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: rgba(0, 0, 0, 0.4) !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
+
+  /* Zachowaj flex tylko dla nawigacji */
+  nav#site-nav,
+  nav#site-nav ul,
+  .ananke-socials {
+    display: flex !important;
   }
-  
-  /* Tekst nad nakładką */
-  header .cover > *,
-  .hero > * {
-    position: relative !important;
-    z-index: 2 !important;
+
+  /* Napraw centrowanie bez flexboxa */
+  header .flex-l {
+    text-align: center !important;
+    display: block !important;
+  }
+
+  header .site-title {
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Upewnij się że nav jest nadal elastyczny */
+  nav#site-nav ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, auto) !important;
+    grid-auto-rows: auto !important;
+    gap: 0.5rem 1rem !important;
+    justify-content: center !important;
   }
 }
+
+/* Usuń niepotrzebny kod diagnostyki gradientu - już nie jest potrzebny */
