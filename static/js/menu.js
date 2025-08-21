@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Toggle the 'is-active' class on the menu
       mobileMenu.classList.toggle("is-active");
 
-      // === FIX: Toggle the 'menu-open' class on the body to prevent scrolling ===
+      // Toggle the 'menu-open' class on the body to prevent scrolling
       body.classList.toggle("menu-open");
 
       // Change the icon from bars to times (X) and back
@@ -27,5 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
         burgerButton.setAttribute("aria-label", "Open Menu");
       }
     });
+  }
+});
+
+// === NEW: fade in social icons after full page load ===
+window.addEventListener("load", function () {
+  const socialIcons = document.querySelector(".header-icons");
+  if (socialIcons) {
+    socialIcons.style.opacity = "1"; // CSS transition zrobi resztę
   }
 });

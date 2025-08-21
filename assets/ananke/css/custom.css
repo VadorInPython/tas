@@ -609,9 +609,12 @@ article {
 }
 
 .header-icons i {
-  display: inline-block; /* już masz */
-  width: 1.5em;          /* trochę większa szerokość, aby uniknąć „skakania” */
+  display: inline-block;
+  width: 1.5em;       /* szerokość, żeby menu się nie „skakało” */
   text-align: center;
-  opacity: 1;            /* upewnia się, że ikony nie są niewidoczne przed załadowaniem */
-  transition: none;      /* wyłącz animacje ładowania */
+}
+
+.header-icons {
+  opacity: 0;                      /* ukrywa ikony przed załadowaniem */
+  transition: opacity 0.2s ease-in-out; /* delikatne pojawianie się */
 }
