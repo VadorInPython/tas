@@ -5,7 +5,7 @@
   <div class="flex-l center items-center justify-between">
     
     <!-- Logo / Site Title stays on the left -->
-    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline site-title">
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
         <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
       {{ else }}
@@ -13,19 +13,14 @@
       {{ end }}
     </a>
 
-    <!-- Burger button (mobile only) -->
-    <button id="burger-btn" class="dn-l f3 white-90 bg-transparent ba b--white pa2" aria-label="Toggle menu">
-      <i class="fas fa-bars"></i>
-    </button>
-
     <!-- Right side: Menu + Social Icons -->
-    <div id="mobile-menu" class="flex-l items-center ml-auto">
+    <div class="flex items-center ml-auto">
       
       <!-- Menu Items -->
       <div class="flex-l items-center">
         {{ partials.Include "i18nlist.html" . }}
         {{ if .Site.Menus.main }}
-          <ul class="menu-list {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+          <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
             {{ range .Site.Menus.main }}
             <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
               <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
@@ -38,7 +33,7 @@
       </div>
 
       <!-- Social Icons -->
-      <div class="flex items-center ml3 header-icons ananke-socials">
+      <div class="flex items-center ml3 header-icons">
         <a href="https://x.com/GoHugoIO" class="white-90 hover-white mr2" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
@@ -52,15 +47,16 @@
 
       <!-- Optional additional social partial -->
       {{ partials.IncludeCached "social/follow.html" . }}
+
     </div>
   </div>
 </nav>
 
-<script>
-  const burgerBtn = document.getElementById('burger-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  burgerBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('dn');
-  });
-</script>
+<!-- Optional CSS to reserve space and prevent layout shift -->
+<style>
+  .header-icons i {
+    display: inline-block;
+    width: 1.25em; /* ensures consistent width */
+    text-align: center;
+  }
+</style>
