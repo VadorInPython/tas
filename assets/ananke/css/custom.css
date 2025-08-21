@@ -126,6 +126,160 @@ nav#site-nav a {
 }
 
 /* ================================================== */
+/* === HAMBURGER MENU STYLES === */
+/* ================================================== */
+
+/* Hamburger button - hidden by default, shown on mobile */
+.hamburger-menu {
+  display: none !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 8px !important;
+  margin: 0 auto !important;
+  z-index: 1000 !important;
+  position: relative !important;
+}
+
+.hamburger-menu span {
+  display: block !important;
+  width: 30px !important;
+  height: 3px !important;
+  background-color: white !important;
+  margin: 3px 0 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 2px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Hamburger animation when active */
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-6px, 6px) !important;
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0 !important;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-6px, -6px) !important;
+}
+
+/* Mobile menu container */
+.mobile-menu-container {
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 999 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Mobile navigation menu */
+.mobile-nav {
+  position: fixed !important;
+  top: 0 !important;
+  right: -100% !important;
+  width: 280px !important;
+  max-width: 80vw !important;
+  height: 100vh !important;
+  background: linear-gradient(135deg, #5b7db1, #142850) !important;
+  z-index: 1000 !important;
+  transition: right 0.3s ease !important;
+  overflow-y: auto !important;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.mobile-nav.active {
+  right: 0 !important;
+}
+
+/* Mobile menu header */
+.mobile-menu-header {
+  padding: 1rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.mobile-menu-title {
+  color: white !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Close button */
+.mobile-menu-close {
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+  font-size: 2rem !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.mobile-menu-close:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Mobile navigation list */
+.mobile-nav ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.mobile-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.mobile-nav a {
+  display: block !important;
+  padding: 1rem !important;
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 1.1rem !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.mobile-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #93c5fd !important;
+}
+
+/* ================================================== */
 /* === STYLE DLA ZDJĘCIA PROFILOWEGO (ABOUT ME) === */
 /* ================================================== */
 
@@ -327,53 +481,75 @@ article {
 }
 
 /* ================================================== */
-/* === NOWY MOBILNY NAGŁÓWEK 3x2 KATEGORIE === */
+/* === MOBILE HEADER WITH HAMBURGER MENU === */
 /* ================================================== */
 
 @media (max-width: 768px) {
-  /* Kontener nagłówka */
+  /* Show hamburger menu on mobile */
+  .hamburger-menu {
+    display: flex !important;
+  }
+
+  /* Hide original navigation on mobile */
+  nav#site-nav ul {
+    display: none !important;
+  }
+
+  /* Header layout for mobile */
   header .flex-l {
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
   }
 
-  /* Nazwa strony u góry */
+  /* Site title */
   header .site-title {
     margin-bottom: 0.5rem !important;
     font-size: 1.8rem !important;
     text-align: center !important;
   }
 
-  /* Sociali pod nazwą strony */
+  /* Social links under site title */
   .ananke-socials {
     justify-content: center !important;
     margin-bottom: 0.5rem !important;
     gap: 1rem !important;
   }
 
-  /* Kategorie w tabeli 3x2 */
-  nav#site-nav ul {
-    display: grid !important;
-    grid-template-columns: repeat(3, auto) !important;
-    grid-auto-rows: auto !important;
-    gap: 0.5rem 1rem !important;
+  /* Navigation container with hamburger */
+  nav#site-nav {
+    width: 100% !important;
     justify-content: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-    width: auto !important;
+  }
+}
+
+/* ================================================== */
+/* === TABLET AND DESKTOP NAVIGATION === */
+/* ================================================== */
+
+@media (min-width: 769px) {
+  /* Hide hamburger menu on larger screens */
+  .hamburger-menu,
+  .mobile-nav,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+
+  /* Show normal navigation */
+  nav#site-nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
   }
 
   nav#site-nav li {
     display: inline-block !important;
-    text-align: center !important;
   }
 
   nav#site-nav a {
-    display: inline-block !important;
-    padding: 8px 12px !important;
-    font-size: 16px !important;
+    padding: 0.5rem 1rem !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -428,24 +604,23 @@ article {
 /* === NAPRAWA FLEXBOX vs GRADIENT PROBLEM === */
 /* ================================================== */
 
-/* Usuń problematyczne flex na mobile dla nagłówków */
+/* Fix flexbox vs gradient issues on mobile */
 @media (max-width: 768px) {
-  /* Wyłącz flex dla elementów nagłówkowych które powodują problem z gradientem */
+  /* Keep flex for navigation elements that need it */
+  nav#site-nav,
+  .ananke-socials,
+  .hamburger-menu {
+    display: flex !important;
+  }
+
+  /* Block display for header containers to fix gradient issues */
   header .flex-l,
   header .cover,
   .hero {
     display: block !important;
-    /* lub display: grid !important; jeśli potrzebujesz lepszą kontrolę */
   }
 
-  /* Zachowaj flex tylko dla nawigacji */
-  nav#site-nav,
-  nav#site-nav ul,
-  .ananke-socials {
-    display: flex !important;
-  }
-
-  /* Napraw centrowanie bez flexboxa */
+  /* Center alignment without flexbox */
   header .flex-l {
     text-align: center !important;
     display: block !important;
@@ -456,15 +631,4 @@ article {
     text-align: center !important;
     margin-bottom: 0.5rem !important;
   }
-
-  /* Upewnij się że nav jest nadal elastyczny */
-  nav#site-nav ul {
-    display: grid !important;
-    grid-template-columns: repeat(3, auto) !important;
-    grid-auto-rows: auto !important;
-    gap: 0.5rem 1rem !important;
-    justify-content: center !important;
-  }
 }
-
-/* Usuń niepotrzebny kod diagnostyki gradientu - już nie jest potrzebny */
