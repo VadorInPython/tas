@@ -477,11 +477,15 @@ article {
     position: relative !important;
   }
 
-  /* === FIX: Prevent body scrolling when menu is open === */
+  /* === FIX: Prevent body scrolling when menu is open - Enhanced === */
   body.menu-open {
     overflow: hidden !important;
-    position: fixed !important; /* Helps on some iOS devices */
-    width: 100%;
+    position: fixed !important; /* Blokuje body i resetuje przewijanie */
+    top: 0; /* Ważne, aby zablokować na samej górze widocznej części strony */
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    -webkit-overflow-scrolling: auto !important; /* Resetuje iOS specific scrolling na body */
   }
 
   /* Style the burger button */
@@ -509,18 +513,18 @@ article {
   #mobile-menu.is-active {
     display: flex !important;
     flex-direction: column !important;
-    position: fixed !important;
+    position: fixed !important; /* Upewniamy się, że menu jest unieruchomione */
     top: 0;
     left: 0;
     width: 100vw !important;
-    height: 100vh !important;
+    height: 100vh !important; /* Daj całą wysokość widoku */
     background: linear-gradient(135deg, #5b7db1, #142850) !important;
     z-index: 1000;
-    padding: 80px 1rem 2rem 1rem !important;
+    padding: 80px 1rem 2rem 1rem !important; /* Daj padding z góry, aby było miejsce na ikony */
     align-items: center !important;
-    justify-content: flex-start !important;
-    overflow-y: auto !important; /* === FIX: Enable scrolling INSIDE the menu === */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    justify-content: flex-start !important; /* Content na górze */
+    overflow-y: auto !important; /* Konieczne do przewijania wewnątrz */
+    -webkit-overflow-scrolling: touch !important; /* Lepsze przewijanie na iOS */
     box-sizing: border-box;
   }
 
@@ -544,6 +548,9 @@ article {
     padding: 0 !important;
     margin: 0 !important;
     list-style: none;
+    /* Dodaj poniższe, jeśli nadal masz problemy, aby wymusić przewijanie listy */
+    /* max-height: calc(100vh - 150px); */ /* Dostosuj 150px - to wysokość górnego paska i dolnego paddingu */
+    /* overflow-y: auto; */
   }
 
   #mobile-menu li {
