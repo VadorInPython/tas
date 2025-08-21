@@ -467,4 +467,97 @@ article {
   }
 }
 
-/* Usuń niepotrzebny kod diagnostyki gradientu - już nie jest potrzebny */
+/* ================================================== */
+/* === BURGER MENU (MOBILE) === */
+/* ================================================== */
+
+@media (max-width: 768px) {
+  /* Style the burger button */
+  #burger-menu-button {
+    display: block !important; /* Show the button on mobile */
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    padding: 0.5rem !important;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1001; /* Ensure it's above other elements */
+  }
+
+  /* Hide the menu container by default on mobile */
+  #mobile-menu {
+    display: none !important;
+  }
+
+  /* Styles for the menu when it's active/open */
+  #mobile-menu.is-active {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: linear-gradient(135deg, #5b7db1, #142850) !important;
+    z-index: 1000;
+    padding-top: 60px !important; /* Space for the close button */
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Center the site title and remove old flex rules */
+  header .flex-l {
+    flex-direction: row !important; /* Revert from column */
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  
+  header .site-title {
+    text-align: left !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Style the navigation list inside the open menu */
+  #mobile-menu ul {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  #mobile-menu li {
+    padding: 1rem 0 !important;
+  }
+
+  #mobile-menu a {
+    font-size: 1.5rem !important;
+  }
+
+  /* Style the social icons inside the open menu */
+  #mobile-menu .header-icons {
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+  }
+
+  #mobile-menu .header-icons a {
+    font-size: 2rem !important;
+    margin: 0 1rem !important;
+  }
+}
+
+/* On larger screens, hide the burger button and show the menu normally */
+@media (min-width: 769px) {
+  #burger-menu-button {
+    display: none !important;
+  }
+
+  #mobile-menu {
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important; /* This was the original behavior */
+  }
+}
