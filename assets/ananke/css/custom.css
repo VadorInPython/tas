@@ -426,77 +426,71 @@ article {
 }
 
 /* ================================================== */
-/* === NAPRAWA OVERLAY NA ZDJĘCIACH NAGŁÓWKOWYCH === */
+/* === DIAGNOSTYKA I NAPRAWA GRADIENTU === */
 /* ================================================== */
 
-/* Usuwa problematyczny gradient z nagłówków na wszystkich urządzeniach */
-.cover::before,
-.bg-center::before, 
-.bg-top::before,
-.bg-bottom::before,
-.bg-black-60::before,
-.bg-black-70::before,
-.bg-black-80::before,
-.bg-black-90::before {
-  background: rgba(0, 0, 0, 0.6) !important;
-  background-image: none !important;
-}
-
-/* Specjalne nadpisania dla elementów które mogą mieć inne nazwy klas */
-.featured-image::before,
-.hero::before,
-.hero-image::before,
-[class*="bg-black"]::before {
-  background: rgba(0, 0, 0, 0.6) !important;
-  background-image: none !important;
-}
-
-/* Jeśli element nie ma ::before, tworzymy go */
-.cover:not([class*="bg-black"]),
-.bg-center:not([class*="bg-black"]),
-.bg-top:not([class*="bg-black"]),
-.bg-bottom:not([class*="bg-black"]) {
-  position: relative !important;
-}
-
-.cover:not([class*="bg-black"])::before,
-.bg-center:not([class*="bg-black"])::before,
-.bg-top:not([class*="bg-black"])::before,
-.bg-bottom:not([class*="bg-black"])::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  background: rgba(0, 0, 0, 0.6) !important;
-  background-image: none !important;
-  z-index: 1 !important;
-}
-
-/* Zapewnia, że zawartość jest nad nakładką */
-.cover > *,
-.bg-center > *,
-.bg-top > *,
-.bg-bottom > *,
-[class*="bg-black"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Dodatkowe bezpieczeństwo dla mobilnych */
+/* Najpierw spróbujmy z pseudo-elementami które są najczęstszą przyczyną */
 @media (max-width: 768px) {
-  /* Wszystkie możliwe kombinacje selektorów dla nagłówków */
-  header::before,
-  .hero::before,
-  .featured-image::before,
-  div[style*="background-image"]::before,
-  .cover::before,
-  .bg-center::before,
-  .bg-top::before,
-  .bg-bottom::before,
-  [class*="bg-black"]::before {
-    background: rgba(0, 0, 0, 0.6) !important;
+  /* Wszystkie pseudo-elementy ::before w obszarze nagłówka */
+  header *::before,
+  .hero *::before,
+  .featured-image *::before {
+    background: rgba(0, 0, 0, 0.5) !important;
     background-image: none !important;
+  }
+  
+  /* Wszystkie pseudo-elementy ::after w obszarze nagłówka */  
+  header *::after,
+  .hero *::after,
+  .featured-image *::after {
+    background: rgba(0, 0, 0, 0.5) !important;
+    background-image: none !important;
+  }
+  
+  /* Specificzne klasy Tachyons które mogą być problemem */
+  .bg-black-10::before,
+  .bg-black-20::before,
+  .bg-black-30::before,
+  .bg-black-40::before,
+  .bg-black-50::before,
+  .bg-black-60::before,
+  .bg-black-70::before,
+  .bg-black-80::before,
+  .bg-black-90::before {
+    background: rgba(0, 0, 0, 0.5) !important;
+    background-image: none !important;
+  }
+  
+  /* Próba z gradientami inline */
+  div[style*="linear-gradient"],
+  div[style*="gradient"] {
+    background-image: none !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  /* Dodatkowa nakładka jako backup */
+  header .cover,
+  .hero {
+    position: relative !important;
+  }
+  
+  header .cover::after,
+  .hero::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Tekst nad nakładką */
+  header .cover > *,
+  .hero > * {
+    position: relative !important;
+    z-index: 2 !important;
   }
 }
