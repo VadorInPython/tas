@@ -607,9 +607,3 @@ article {
     margin-left: auto !important;
   }
 }
-
-.header-icons i {
-  display: inline-block;
-  width: 1.5em; /* stabilna szerokość, żeby menu się nie „skakało” */
-  text-align: center;
-}

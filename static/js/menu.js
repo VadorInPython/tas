@@ -30,10 +30,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// === NEW: fade in social icons after full page load ===
-window.addEventListener("load", function () {
-  const socialIcons = document.querySelector(".header-icons");
-  if (socialIcons) {
-    socialIcons.style.opacity = "1"; // CSS transition zrobi resztę
-  }
-});
