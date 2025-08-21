@@ -477,15 +477,17 @@ article {
     position: relative !important;
   }
 
-  /* === FIX: Prevent body scrolling when menu is open - Enhanced === */
+  /* === FIX: Prevent body scrolling when menu is open - Enhanced & Robust === */
   body.menu-open {
     overflow: hidden !important;
-    position: fixed !important; /* Blokuje body i resetuje przewijanie */
-    top: 0; /* Ważne, aby zablokować na samej górze widocznej części strony */
-    left: 0;
-    width: 100vw !important;
-    height: 100vh !important;
-    -webkit-overflow-scrolling: auto !important; /* Resetuje iOS specific scrolling na body */
+    height: 100% !important; /* Blokuje wysokość body */
+    position: fixed !important; /* Unieruchamia body */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important; /* Pełna szerokość widoku */
+    /* Dodatkowe dla iOS, aby zapobiec przewijaniu strony w tle: */
+    -webkit-overflow-scrolling: auto !important;
+    touch-action: none !important; /* Zapobiega gestom dotykowym na body */
   }
 
   /* Style the burger button */
@@ -513,17 +515,18 @@ article {
   #mobile-menu.is-active {
     display: flex !important;
     flex-direction: column !important;
-    position: fixed !important; /* Upewniamy się, że menu jest unieruchomione */
-    top: 0;
-    left: 0;
+    position: fixed !important; /* Unieruchamia menu na widoku */
+    top: 0 !important;
+    left: 0 !important;
     width: 100vw !important;
-    height: 100vh !important; /* Daj całą wysokość widoku */
+    height: 100vh !important; /* Daje całą wysokość widoku */
     background: linear-gradient(135deg, #5b7db1, #142850) !important;
     z-index: 1000;
-    padding: 80px 1rem 2rem 1rem !important; /* Daj padding z góry, aby było miejsce na ikony */
+    padding-top: 60px !important; /* Mniejszy padding, aby uzyskać więcej miejsca */
+    padding-bottom: 1rem !important; /* Mniejszy padding na dole */
     align-items: center !important;
     justify-content: flex-start !important; /* Content na górze */
-    overflow-y: auto !important; /* Konieczne do przewijania wewnątrz */
+    overflow-y: auto !important; /* Włącz przewijanie wewnątrz menu */
     -webkit-overflow-scrolling: touch !important; /* Lepsze przewijanie na iOS */
     box-sizing: border-box;
   }
@@ -540,6 +543,21 @@ article {
     margin-bottom: 0 !important;
   }
 
+  /* Style the social icons inside the open menu */
+  #mobile-menu .header-icons {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important; /* Zmniejszony odstęp */
+    margin-left: 0 !important;
+  }
+
+  #mobile-menu .header-icons a {
+    font-size: 1.6rem !important; /* Zmniejszone ikony */
+    margin: 0 0.75rem !important; /* Zmniejszone odstępy między ikonami */
+    color: white !important;
+  }
+
   /* Style the navigation list inside the open menu */
   #mobile-menu ul {
     display: flex !important;
@@ -548,33 +566,32 @@ article {
     padding: 0 !important;
     margin: 0 !important;
     list-style: none;
-    /* Dodaj poniższe, jeśli nadal masz problemy, aby wymusić przewijanie listy */
-    /* max-height: calc(100vh - 150px); */ /* Dostosuj 150px - to wysokość górnego paska i dolnego paddingu */
-    /* overflow-y: auto; */
+    /* === FIX: Upewnij się, że lista ma ograniczoną wysokość do przewijania === */
+    /* Obliczanie dynamicznej wysokości: cała wysokość viewportu minus górny padding,
+       minus marginesy ikon społecznościowych, minus dolny padding menu */
+    max-height: calc(100vh - 60px - 1rem - 1rem - 40px) !important; /* 60px (padding-top), 1rem (margin-bottom icons), 1rem (padding-bottom menu), 40px (dodatkowy bufor/górna krawędź) */
+    overflow-y: auto !important; /* Aktywuj przewijanie na samej liście */
+    -webkit-overflow-scrolling: touch !important; /* Płynne przewijanie na iOS */
+    width: 100% !important; /* Upewnij się, że zajmuje szerokość */
+    padding-top: 1rem !important; /* Dodatkowy padding na górze listy dla estetyki */
   }
 
   #mobile-menu li {
-    padding: 1rem 0 !important;
+    padding: 0.6rem 0 !important; /* Zmniejszone odstępy między kategoriami */
   }
 
   #mobile-menu a {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important; /* Zmniejszona czcionka kategorii */
     color: white !important;
   }
 
-  /* Style the social icons inside the open menu */
-  #mobile-menu .header-icons {
-    display: flex !important;
-    justify-content: center !important;
+  /* Ensure other flex elements are spaced correctly within the menu */
+  #mobile-menu .flex-l.items-center {
     width: 100% !important;
-    margin-bottom: 2rem !important;
-    margin-left: 0 !important;
   }
 
-  #mobile-menu .header-icons a {
-    font-size: 2rem !important;
-    margin: 0 1rem !important;
-    color: white !important;
+  #mobile-menu .ananke-socials {
+    margin-top: 1rem !important; /* Zmniejszony odstęp */
   }
 }
 
