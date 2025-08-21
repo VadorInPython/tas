@@ -610,11 +610,6 @@ article {
 
 .header-icons i {
   display: inline-block;
-  width: 1.5em;       /* szerokość, żeby menu się nie „skakało” */
+  width: 1.5em; /* stabilna szerokość, żeby menu się nie „skakało” */
   text-align: center;
-}
-
-.header-icons {
-  opacity: 0;                      /* ukrywa ikony przed załadowaniem */
-  transition: opacity 0.2s ease-in-out; /* delikatne pojawianie się */
 }
