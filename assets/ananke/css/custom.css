@@ -472,19 +472,32 @@ article {
 /* ================================================== */
 
 @media (max-width: 768px) {
+  /* === FIX: Anchor the burger button inside the nav bar === */
+  nav[role="navigation"] {
+    position: relative !important;
+  }
+
+  /* === FIX: Prevent body scrolling when menu is open === */
+  body.menu-open {
+    overflow: hidden !important;
+    position: fixed !important; /* Helps on some iOS devices */
+    width: 100%;
+  }
+
   /* Style the burger button */
   #burger-menu-button {
-    display: block !important; /* Show the button on mobile */
+    display: block !important;
     background: none !important;
     border: none !important;
     color: white !important;
-    font-size: 1.0rem !important;
+    font-size: 1.5rem !important;
     cursor: pointer !important;
     padding: 0.5rem !important;
-    position: fixed;
-    top: 10px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Precise vertical centering */
     right: 15px;
-    z-index: 1001; /* Ensure it's above other elements */
+    z-index: 1001;
   }
 
   /* Hide the menu container by default on mobile */
@@ -503,11 +516,11 @@ article {
     height: 100vh !important;
     background: linear-gradient(135deg, #5b7db1, #142850) !important;
     z-index: 1000;
-    padding-top: 80px !important; /* More space for close button and icons */
-    padding-bottom: 2rem !important; /* Space at the bottom */
+    padding: 80px 1rem 2rem 1rem !important;
     align-items: center !important;
-    justify-content: flex-start !important; /* Align to top for scrolling */
-    overflow-y: auto !important; /* === THIS IS THE FIX FOR SCROLLING === */
+    justify-content: flex-start !important;
+    overflow-y: auto !important; /* === FIX: Enable scrolling INSIDE the menu === */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     box-sizing: border-box;
   }
 
@@ -539,7 +552,7 @@ article {
 
   #mobile-menu a {
     font-size: 1.5rem !important;
-    color: white !important; /* Ensure all links are white */
+    color: white !important;
   }
 
   /* Style the social icons inside the open menu */
@@ -547,14 +560,14 @@ article {
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
-    margin-bottom: 2rem !important; /* Space between icons and nav links */
+    margin-bottom: 2rem !important;
     margin-left: 0 !important;
   }
 
   #mobile-menu .header-icons a {
     font-size: 2rem !important;
     margin: 0 1rem !important;
-    color: white !important; /* Ensure icons are white */
+    color: white !important;
   }
 }
 
