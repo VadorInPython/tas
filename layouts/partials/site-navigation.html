@@ -1,9 +1,11 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+<!-- Font Awesome CSS for instant icon rendering -->
+<script src="https://kit.fontawesome.com/c954e5bea9.js" crossorigin="anonymous"></script>
 
 <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
     
-    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline site-title">
+    <!-- Logo / Site Title stays on the left -->
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
         <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
       {{ else }}
@@ -11,12 +13,10 @@
       {{ end }}
     </a>
 
-    <button id="burger-menu-button" class="dn-l" aria-label="Open Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <div id="mobile-menu" class="flex-l items-center">
+    <!-- Right side: Menu + Social Icons -->
+    <div class="flex items-center ml-auto">
       
+      <!-- Menu Items -->
       <div class="flex-l items-center">
         {{ partials.Include "i18nlist.html" . }}
         {{ if .Site.Menus.main }}
@@ -32,24 +32,27 @@
         {{ end }}
       </div>
 
+      <!-- Social Icons -->
       <div class="flex items-center ml3 header-icons">
-        <a href="https://x.com/GoHugoIO" class="white-90 hover-white mr2" target="_blank" aria-label="Twitter">
+        <a href="https://x.com/GoHugoIO" class="white-90 hover-white mr2" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://www.facebook.com/szymon.derlecki.3/" class="white-90 hover-white mr2" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com/szymon.derlecki.3/" class="white-90 hover-white mr2" target="_blank">
           <i class="fab fa-facebook"></i>
         </a>
-        <a href="https://www.instagram.com/theautonomouscreator/" class="white-90 hover-white" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/theautonomouscreator/" class="white-90 hover-white mr2" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
 
+      <!-- Optional additional social partial -->
       {{ partials.IncludeCached "social/follow.html" . }}
 
     </div>
   </div>
 </nav>
 
+<!-- Optional CSS to reserve space and prevent layout shift -->
 <style>
   .header-icons i {
     display: inline-block;
@@ -57,5 +60,3 @@
     text-align: center;
   }
 </style>
-
-<script src="{{ "/js/menu.js" | relURL }}"></script>
