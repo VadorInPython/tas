@@ -478,10 +478,10 @@ article {
     background: none !important;
     border: none !important;
     color: white !important;
-    font-size: 1.2rem !important;
+    font-size: 1.5rem !important;
     cursor: pointer !important;
     padding: 0.5rem !important;
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 15px;
     z-index: 1001; /* Ensure it's above other elements */
@@ -503,18 +503,21 @@ article {
     height: 100vh !important;
     background: linear-gradient(135deg, #5b7db1, #142850) !important;
     z-index: 1000;
-    padding-top: 60px !important; /* Space for the close button */
+    padding-top: 80px !important; /* More space for close button and icons */
+    padding-bottom: 2rem !important; /* Space at the bottom */
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important; /* Align to top for scrolling */
+    overflow-y: auto !important; /* === THIS IS THE FIX FOR SCROLLING === */
+    box-sizing: border-box;
   }
-  
-  /* Center the site title and remove old flex rules */
+
+  /* Center the site title and revert old flex rules */
   header .flex-l {
-    flex-direction: row !important; /* Revert from column */
+    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
   }
-  
+
   header .site-title {
     text-align: left !important;
     margin-bottom: 0 !important;
@@ -526,7 +529,8 @@ article {
     flex-direction: column !important;
     text-align: center !important;
     padding: 0 !important;
-    margin-bottom: 2rem !important;
+    margin: 0 !important;
+    list-style: none;
   }
 
   #mobile-menu li {
@@ -535,17 +539,22 @@ article {
 
   #mobile-menu a {
     font-size: 1.5rem !important;
+    color: white !important; /* Ensure all links are white */
   }
 
   /* Style the social icons inside the open menu */
   #mobile-menu .header-icons {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 2rem !important; /* Space between icons and nav links */
     margin-left: 0 !important;
-    margin-top: 1rem !important;
   }
 
   #mobile-menu .header-icons a {
     font-size: 2rem !important;
     margin: 0 1rem !important;
+    color: white !important; /* Ensure icons are white */
   }
 }
 
@@ -558,6 +567,6 @@ article {
   #mobile-menu {
     display: flex !important;
     align-items: center !important;
-    margin-left: auto !important; /* This was the original behavior */
+    margin-left: auto !important;
   }
 }
