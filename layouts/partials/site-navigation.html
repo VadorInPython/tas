@@ -11,12 +11,28 @@
       {{ end }}
     </a>
 
+    <!-- Burger -->
     <button id="burger-menu-button" class="dn-l" aria-label="Open Menu">
       <i class="fas fa-bars"></i>
     </button>
 
+    <!-- MOBILE MENU -->
     <div id="mobile-menu" class="flex-l items-center">
       
+      <!-- NOWE: social media nad kategoriami, widoczne tylko w mobile -->
+      <div class="mobile-socials dn-l">
+        <a href="https://x.com/GoHugoIO" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/szymon.derlecki.3/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/theautonomouscreator/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- KATEGORIE -->
       <div class="flex-l items-center">
         {{ partials.Include "i18nlist.html" . }}
         {{ if .Site.Menus.main }}
@@ -32,6 +48,7 @@
         {{ end }}
       </div>
 
+      <!-- Social icons w desktop headerze -->
       <div class="flex items-center ml3 header-icons">
         <a href="https://x.com/GoHugoIO" class="white-90 hover-white mr2" target="_blank" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
@@ -53,7 +70,7 @@
 <style>
   .header-icons i {
     display: inline-block;
-    width: 1.25em; /* ensures consistent width */
+    width: 1.25em;
     text-align: center;
   }
 </style>
