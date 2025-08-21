@@ -607,3 +607,11 @@ article {
     margin-left: auto !important;
   }
 }
+
+.header-icons i {
+  display: inline-block; /* już masz */
+  width: 1.5em;          /* trochę większa szerokość, aby uniknąć „skakania” */
+  text-align: center;
+  opacity: 1;            /* upewnia się, że ikony nie są niewidoczne przed załadowaniem */
+  transition: none;      /* wyłącz animacje ładowania */
+}
