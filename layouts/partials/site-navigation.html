@@ -28,7 +28,6 @@
 
     <div id="mobile-menu" class="flex-l items-center">
       <!-- === MOVED SOCIAL ICONS HERE === -->
-      <!-- This block is now at the top of the mobile menu -->
       <div class="flex items-center justify-center header-icons">
         <a
           href="https://www.youtube.com/@TheAutonomousCreator"
@@ -57,16 +56,14 @@
       </div>
       <!-- === END OF SOCIAL ICONS === -->
 
-      <!-- === SEARCH BAR === -->
-      <div id="search-container" class="mh3">
-        <i id="search-icon" class="fas fa-search white-90 hover-white"></i>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Szukaj na blogu..."
-        />
+      <!-- === Przycisk otwierający wyszukiwarkę === -->
+      <div class="mh3">
+        <i
+          id="search-icon"
+          class="fas fa-search white-90 hover-white"
+          style="cursor: pointer; font-size: 1.2rem"
+        ></i>
       </div>
-      <!-- === END OF SEARCH BAR === -->
 
       <div class="flex-l items-center">
         {{ partials.Include "i18nlist.html" . }}
@@ -94,10 +91,21 @@
       {{ partials.IncludeCached "social/follow.html" . }}
     </div>
   </div>
-
-  <!-- === SEARCH RESULTS CONTAINER === -->
-  <div id="search-results"></div>
 </nav>
+
+<!-- === EKRAN WYSZUKIWANIA (OVERLAY) === -->
+<div id="search-overlay">
+  <div class="search-overlay-content">
+    <button id="close-search" aria-label="Zamknij wyszukiwarkę">&times;</button>
+    <h2>Szukaj na blogu</h2>
+    <input
+      type="text"
+      id="overlay-search-input"
+      placeholder="Wpisz tytuł, słowo kluczowe..."
+    />
+    <div id="overlay-search-results"></div>
+  </div>
+</div>
 
 <style>
   .header-icons i {

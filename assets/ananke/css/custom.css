@@ -215,21 +215,21 @@ article {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-
+  
   .nested-copy-line-height,
   .measure,
   .measure-wide {
     max-width: none !important;
     width: 100% !important;
   }
-
+  
   img[alt="Moje zdjęcie"],
   img[src="/images/about_photo.jpg"],
   .centered-image-container img {
     width: 350px !important;
     max-width: 350px !important;
   }
-
+  
   article img:not([alt="Moje zdjęcie"]),
   main img:not([alt="Moje zdjęcie"]),
   .content img:not([alt="Moje zdjęcie"]) {
@@ -238,7 +238,7 @@ article {
     margin-left: 0 !important;
     margin-right: auto !important;
   }
-
+  
   .ph3,
   .ph4-ns,
   .pv3,
@@ -246,7 +246,7 @@ article {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-
+  
   body,
   .f4,
   .f5,
@@ -254,19 +254,16 @@ article {
     font-size: 1.125rem !important;
     line-height: 1.6 !important;
   }
-
-  h1,
-  .f1 {
+  
+  h1, .f1 {
     font-size: 3rem !important;
   }
-
-  h2,
-  .f2 {
+  
+  h2, .f2 {
     font-size: 2.25rem !important;
   }
-
-  h3,
-  .f3 {
+  
+  h3, .f3 {
     font-size: 1.75rem !important;
   }
 }
@@ -276,10 +273,7 @@ article {
 /* ================================================== */
 
 @media (max-width: 768px) {
-  a,
-  button,
-  input[type="submit"],
-  input[type="button"] {
+  a, button, input[type="submit"], input[type="button"] {
     min-height: 48px !important;
     min-width: 48px !important;
     padding: 12px 16px !important;
@@ -289,9 +283,8 @@ article {
     box-sizing: border-box !important;
     font-size: 16px !important;
   }
-
-  nav a,
-  nav button {
+  
+  nav a, nav button {
     min-height: 48px !important;
     padding: 12px 16px !important;
     margin: 4px !important;
@@ -301,22 +294,20 @@ article {
     font-size: 18px !important;
     font-weight: 500 !important;
   }
-
-  .category,
-  .tag,
-  .taxonomy a {
+  
+  .category, .tag, .taxonomy a {
     font-size: 16px !important;
     font-weight: 500 !important;
     min-height: 48px !important;
     padding: 12px 16px !important;
     margin: 4px !important;
   }
-
+  
   audio {
     min-height: 48px !important;
     width: 100% !important;
   }
-
+  
   .social-links a,
   footer a {
     min-height: 48px !important;
@@ -328,10 +319,8 @@ article {
     justify-content: center !important;
     font-size: 16px !important;
   }
-
-  input,
-  textarea,
-  select {
+  
+  input, textarea, select {
     min-height: 48px !important;
     font-size: 16px !important;
   }
@@ -405,7 +394,7 @@ article {
     display: block !important;
     border-radius: 32px !important;
   }
-
+  
   /* Ensure the container doesn't overflow */
   .centered-image-container {
     width: 100% !important;
@@ -414,7 +403,7 @@ article {
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
-
+  
   /* Additional safety for any centered divs containing the image */
   div[style*="text-align: center"] {
     width: 100% !important;
@@ -580,9 +569,7 @@ article {
     /* === FIX: Upewnij się, że lista ma ograniczoną wysokość do przewijania === */
     /* Obliczanie dynamicznej wysokości: cała wysokość viewportu minus górny padding,
        minus marginesy ikon społecznościowych, minus dolny padding menu */
-    max-height: calc(
-      100vh - 60px - 1rem - 1rem - 40px
-    ) !important; /* 60px (padding-top), 1rem (margin-bottom icons), 1rem (padding-bottom menu), 40px (dodatkowy bufor/górna krawędź) */
+    max-height: calc(100vh - 60px - 1rem - 1rem - 40px) !important; /* 60px (padding-top), 1rem (margin-bottom icons), 1rem (padding-bottom menu), 40px (dodatkowy bufor/górna krawędź) */
     overflow-y: auto !important; /* Aktywuj przewijanie na samej liście */
     -webkit-overflow-scrolling: touch !important; /* Płynne przewijanie na iOS */
     width: 100% !important; /* Upewnij się, że zajmuje szerokość */
@@ -622,64 +609,75 @@ article {
 }
 
 /* ================================================== */
-/* === WYSZUKIWARKA === */
+/* === EKRAN WYSZUKIWANIA (OVERLAY) === */
 /* ================================================== */
 
-#search-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-#search-icon {
-  cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-#search-input {
-  width: 0;
-  padding: 0.5rem 0;
-  border: none;
-  border-bottom: 2px solid white;
-  background: transparent;
-  color: white;
-  outline: none;
-  transition: width 0.4s ease-in-out, padding 0.4s ease-in-out;
-  font-size: 1rem;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#search-container.is-active #search-input {
-  width: 200px; /* Szerokość po rozwinięciu */
-  padding: 0.5rem;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Kontener na wyniki */
-#search-results {
+#search-overlay {
   display: none; /* Domyślnie ukryty */
-  position: absolute;
-  top: 100%; /* Pod nawigacją */
-  right: 1rem;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  max-height: 400px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 40, 80, 0.9); /* Półprzezroczyste tło */
+  z-index: 2000;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
   overflow-y: auto;
-  z-index: 1100; /* Musi być nad wszystkim innym */
 }
 
-#search-results a {
+#search-overlay.is-visible {
+  display: flex; /* Pokazuje overlay */
+}
+
+.search-overlay-content {
+  position: relative;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-overlay-content h2 {
+  margin-top: 0;
+  color: #142850;
+}
+
+#close-search {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #aaa;
+  cursor: pointer;
+}
+
+#close-search:hover {
+  color: #333;
+}
+
+#overlay-search-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+#overlay-search-results {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+#overlay-search-results a {
   display: block;
   padding: 12px 15px;
   color: #142850;
@@ -687,41 +685,13 @@ article {
   border-bottom: 1px solid #eee;
 }
 
-#search-results a:hover {
+#overlay-search-results a:hover {
   background-color: #f5f5f5;
 }
 
-#search-results .no-results {
+#overlay-search-results .no-results {
   padding: 12px 15px;
   color: #777;
 }
 
-/* Poprawki dla mobilki */
-@media (max-width: 768px) {
-  #search-container.is-active #search-input {
-    width: 150px;
-  }
-  #search-results {
-    width: calc(100% - 2rem);
-    left: 1rem;
-    right: 1rem;
-  }
-}
 
-/* ================================================== */
-/* === POPRAWKI DLA WYSZUKIWARKI NA DESKTOPIE === */
-/* ================================================== */
-
-/* Ustawia nawigację jako punkt odniesienia dla wyników wyszukiwania */
-/* Ta reguła musi być poza media query, aby działać na wszystkich rozmiarach */
-nav[role="navigation"] {
-  position: relative !important; /* Ważne dla pozycjonowania wyników */
-  z-index: 1000;
-}
-
-/* Zapobiega "wypychaniu" layoutu i tworzeniu podwójnego paska przewijania na desktopie */
-@media (min-width: 769px) {
-  nav .flex-l.center {
-    flex-wrap: nowrap !important;
-  }
-}

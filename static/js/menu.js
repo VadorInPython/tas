@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- ISTNIEJĄCY KOD DLA MENU HAMBURGEROWEGO ---
+  // --- ISTNIEJĄCY KOD DLA MENU HAMBURGEROWEGO (BEZ ZMIAN) ---
   const burgerButton = document.getElementById("burger-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const burgerIcon = burgerButton ? burgerButton.querySelector("i") : null;
@@ -22,11 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- NOWY KOD DLA WYSZUKIWARKI ---
+  // --- NOWA LOGIKA DLA EKRANU WYSZUKIWANIA (OVERLAY) ---
   const searchIcon = document.getElementById("search-icon");
-  const searchContainer = document.getElementById("search-container");
-  const searchInput = document.getElementById("search-input");
-  const searchResults = document.getElementById("search-results");
+  const searchOverlay = document.getElementById("search-overlay");
+  const closeSearchButton = document.getElementById("close-search");
+  const searchInput = document.getElementById("overlay-search-input");
+  const searchResults = document.getElementById("overlay-search-results");
+  const searchContent = document.querySelector(".search-overlay-content");
 
   let searchData = null; // Zmienna do przechowywania danych z JSON
 
@@ -37,8 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const response = await fetch("/index.json");
         searchData = await response.json();
       } catch (error) {
-        console.error("Nie udało się załadować danych do wyszukiwarki:", error);
-        searchData = []; // Zapobiegaj ponownym próbom w razie błędu
+        console.error(
+          "Nie udało się załadować danych do wyszukiwarki:",
+          error
+        );
+        searchData = [];
       }
     }
   }
@@ -46,14 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Funkcja do wykonywania wyszukiwania
   function executeSearch(query) {
     if (!query || query.length < 2 || !searchData) {
-      searchResults.style.display = "none";
+      searchResults.innerHTML = ""; // Wyczyść wyniki, jeśli zapytanie jest za krótkie
       return;
     }
 
     const lowerCaseQuery = query.toLowerCase();
     const results = searchData.filter((item) => {
       const titleMatch = item.title.toLowerCase().includes(lowerCaseQuery);
-      const contentMatch = item.content.toLowerCase().includes(lowerCaseQuery);
+      const contentMatch = item.content
+        .toLowerCase()
+        .includes(lowerCaseQuery);
       return titleMatch || contentMatch;
     });
 
@@ -68,48 +75,57 @@ document.addEventListener("DOMContentLoaded", function () {
       searchResults.innerHTML =
         '<div class="no-results">Brak wyników</div>';
     } else {
-      results.slice(0, 10).forEach((item) => {
-        // Pokaż max 10 wyników
+      results.slice(0, 15).forEach((item) => {
+        // Pokaż max 15 wyników
         const a = document.createElement("a");
         a.href = item.permalink;
         a.textContent = item.title;
         searchResults.appendChild(a);
       });
     }
-    searchResults.style.display = "block";
   }
 
-  if (searchIcon && searchContainer && searchInput && searchResults) {
-    // Kliknięcie ikony rozwija/zwija pole wyszukiwania
-    searchIcon.addEventListener("click", function (e) {
-      e.stopPropagation();
-      searchContainer.classList.toggle("is-active");
-      if (searchContainer.classList.contains("is-active")) {
-        searchInput.focus();
-        loadSearchData(); // Zacznij ładować dane, gdy użytkownik aktywuje wyszukiwarkę
-      } else {
-        searchInput.value = "";
-        searchResults.style.display = "none";
+  // Funkcje otwierania i zamykania overlay'a
+  function openSearch() {
+    if (searchOverlay) {
+      searchOverlay.classList.add("is-visible");
+      body.style.overflow = "hidden"; // Zablokuj przewijanie tła
+      searchInput.focus(); // Ustaw fokus na polu do wpisywania
+      loadSearchData(); // Zacznij ładować dane
+    }
+  }
+
+  function closeSearch() {
+    if (searchOverlay) {
+      searchOverlay.classList.remove("is-visible");
+      body.style.overflow = ""; // Odblokuj przewijanie tła
+    }
+  }
+
+  if (searchIcon && searchOverlay && closeSearchButton && searchInput) {
+    // Otwórz wyszukiwarkę po kliknięciu ikony
+    searchIcon.addEventListener("click", openSearch);
+
+    // Zamknij wyszukiwarkę po kliknięciu przycisku 'X'
+    closeSearchButton.addEventListener("click", closeSearch);
+
+    // Zamknij wyszukiwarkę po kliknięciu w tło (ale nie w okno)
+    searchOverlay.addEventListener("click", function (e) {
+      if (e.target === searchOverlay) {
+        closeSearch();
+      }
+    });
+
+    // Zamknij wyszukiwarkę klawiszem 'Escape'
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && searchOverlay.classList.contains("is-visible")) {
+        closeSearch();
       }
     });
 
     // Wyszukuj podczas pisania
     searchInput.addEventListener("input", function () {
       executeSearch(this.value);
-    });
-
-    // Zapobiegaj zamykaniu wyników po kliknięciu w pole input
-    searchInput.addEventListener("click", function (e) {
-      e.stopPropagation();
-    });
-
-    // Zamykanie wyników po kliknięciu gdziekolwiek indziej
-    document.addEventListener("click", function () {
-      if (searchContainer.classList.contains("is-active")) {
-        searchContainer.classList.remove("is-active");
-        searchInput.value = "";
-        searchResults.style.display = "none";
-      }
     });
   }
 });
