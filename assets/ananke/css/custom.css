@@ -215,21 +215,21 @@ article {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-  
+
   .nested-copy-line-height,
   .measure,
   .measure-wide {
     max-width: none !important;
     width: 100% !important;
   }
-  
+
   img[alt="Moje zdjęcie"],
   img[src="/images/about_photo.jpg"],
   .centered-image-container img {
     width: 350px !important;
     max-width: 350px !important;
   }
-  
+
   article img:not([alt="Moje zdjęcie"]),
   main img:not([alt="Moje zdjęcie"]),
   .content img:not([alt="Moje zdjęcie"]) {
@@ -238,7 +238,7 @@ article {
     margin-left: 0 !important;
     margin-right: auto !important;
   }
-  
+
   .ph3,
   .ph4-ns,
   .pv3,
@@ -246,7 +246,7 @@ article {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-  
+
   body,
   .f4,
   .f5,
@@ -254,16 +254,19 @@ article {
     font-size: 1.125rem !important;
     line-height: 1.6 !important;
   }
-  
-  h1, .f1 {
+
+  h1,
+  .f1 {
     font-size: 3rem !important;
   }
-  
-  h2, .f2 {
+
+  h2,
+  .f2 {
     font-size: 2.25rem !important;
   }
-  
-  h3, .f3 {
+
+  h3,
+  .f3 {
     font-size: 1.75rem !important;
   }
 }
@@ -273,7 +276,10 @@ article {
 /* ================================================== */
 
 @media (max-width: 768px) {
-  a, button, input[type="submit"], input[type="button"] {
+  a,
+  button,
+  input[type="submit"],
+  input[type="button"] {
     min-height: 48px !important;
     min-width: 48px !important;
     padding: 12px 16px !important;
@@ -283,8 +289,9 @@ article {
     box-sizing: border-box !important;
     font-size: 16px !important;
   }
-  
-  nav a, nav button {
+
+  nav a,
+  nav button {
     min-height: 48px !important;
     padding: 12px 16px !important;
     margin: 4px !important;
@@ -294,20 +301,22 @@ article {
     font-size: 18px !important;
     font-weight: 500 !important;
   }
-  
-  .category, .tag, .taxonomy a {
+
+  .category,
+  .tag,
+  .taxonomy a {
     font-size: 16px !important;
     font-weight: 500 !important;
     min-height: 48px !important;
     padding: 12px 16px !important;
     margin: 4px !important;
   }
-  
+
   audio {
     min-height: 48px !important;
     width: 100% !important;
   }
-  
+
   .social-links a,
   footer a {
     min-height: 48px !important;
@@ -319,8 +328,10 @@ article {
     justify-content: center !important;
     font-size: 16px !important;
   }
-  
-  input, textarea, select {
+
+  input,
+  textarea,
+  select {
     min-height: 48px !important;
     font-size: 16px !important;
   }
@@ -394,7 +405,7 @@ article {
     display: block !important;
     border-radius: 32px !important;
   }
-  
+
   /* Ensure the container doesn't overflow */
   .centered-image-container {
     width: 100% !important;
@@ -403,7 +414,7 @@ article {
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
-  
+
   /* Additional safety for any centered divs containing the image */
   div[style*="text-align: center"] {
     width: 100% !important;
@@ -569,7 +580,9 @@ article {
     /* === FIX: Upewnij się, że lista ma ograniczoną wysokość do przewijania === */
     /* Obliczanie dynamicznej wysokości: cała wysokość viewportu minus górny padding,
        minus marginesy ikon społecznościowych, minus dolny padding menu */
-    max-height: calc(100vh - 60px - 1rem - 1rem - 40px) !important; /* 60px (padding-top), 1rem (margin-bottom icons), 1rem (padding-bottom menu), 40px (dodatkowy bufor/górna krawędź) */
+    max-height: calc(
+      100vh - 60px - 1rem - 1rem - 40px
+    ) !important; /* 60px (padding-top), 1rem (margin-bottom icons), 1rem (padding-bottom menu), 40px (dodatkowy bufor/górna krawędź) */
     overflow-y: auto !important; /* Aktywuj przewijanie na samej liście */
     -webkit-overflow-scrolling: touch !important; /* Płynne przewijanie na iOS */
     width: 100% !important; /* Upewnij się, że zajmuje szerokość */
@@ -695,3 +708,20 @@ article {
   }
 }
 
+/* ================================================== */
+/* === POPRAWKI DLA WYSZUKIWARKI NA DESKTOPIE === */
+/* ================================================== */
+
+/* Ustawia nawigację jako punkt odniesienia dla wyników wyszukiwania */
+/* Ta reguła musi być poza media query, aby działać na wszystkich rozmiarach */
+nav[role="navigation"] {
+  position: relative !important; /* Ważne dla pozycjonowania wyników */
+  z-index: 1000;
+}
+
+/* Zapobiega "wypychaniu" layoutu i tworzeniu podwójnego paska przewijania na desktopie */
+@media (min-width: 769px) {
+  nav .flex-l.center {
+    flex-wrap: nowrap !important;
+  }
+}
