@@ -5,9 +5,6 @@
   crossorigin="anonymous"
 ></script>
 
-<!-- Overlay dla wyszukiwarki -->
-<div class="search-overlay" id="searchOverlay"></div>
-
 <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
     <a
@@ -30,7 +27,8 @@
     </button>
 
     <div id="mobile-menu" class="flex-l items-center">
-      <!-- === SOCIAL ICONS Z WYSZUKIWARKĄ === -->
+      <!-- === MOVED SOCIAL ICONS HERE === -->
+      <!-- This block is now at the top of the mobile menu -->
       <div class="flex items-center justify-center header-icons">
         <a
           href="https://www.youtube.com/@TheAutonomousCreator"
@@ -56,40 +54,19 @@
         >
           <i class="fab fa-instagram"></i>
         </a>
-
-        <!-- NOWA IKONA WYSZUKIWARKI - DESKTOP TYLKO -->
-        <div class="desktop-search" style="position: relative;">
-          <button class="search-toggle white-90 hover-white mh3" id="searchToggle" title="Wyszukaj">
-            <i class="fas fa-search"></i>
-          </button>
-
-          <!-- Rozwijana wyszukiwarka -->
-          <div class="search-container" id="searchContainer">
-            <form class="search-form" onsubmit="handleSearch(event)">
-              <div class="search-input-wrapper">
-                <input 
-                  type="text" 
-                  class="search-input" 
-                  placeholder="Szukaj w blogu..." 
-                  id="searchInput"
-                  autocomplete="off"
-                >
-                <button type="submit" class="search-submit">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </form>
-            
-            <div class="search-suggestions">
-              <div class="suggestions-title">Popularne tematy</div>
-              <a href="#" class="suggestion-item" onclick="searchSuggestion('programowanie')">Programowanie</a>
-              <a href="#" class="suggestion-item" onclick="searchSuggestion('technologia')">Technologia</a>
-              <a href="#" class="suggestion-item" onclick="searchSuggestion('tutorial')">Tutoriale</a>
-              <a href="#" class="suggestion-item" onclick="searchSuggestion('tips')">Porady</a>
-            </div>
-          </div>
-        </div>
       </div>
+      <!-- === END OF SOCIAL ICONS === -->
+
+      <!-- === SEARCH BAR === -->
+      <div id="search-container" class="mh3">
+        <i id="search-icon" class="fas fa-search white-90 hover-white"></i>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Szukaj na blogu..."
+        />
+      </div>
+      <!-- === END OF SEARCH BAR === -->
 
       <div class="flex-l items-center">
         {{ partials.Include "i18nlist.html" . }}
@@ -110,13 +87,6 @@
                 </a>
               </li>
             {{ end }}
-            
-            <!-- WYSZUKIWARKA W BURGER MENU - MOBILE TYLKO -->
-            <li class="mobile-search list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-              <button class="mobile-search-toggle hover-white white-90" onclick="openMobileSearch()" title="Wyszukaj">
-                <i class="fas fa-search"></i> Wyszukaj
-              </button>
-            </li>
           </ul>
         {{ end }}
       </div>
@@ -124,48 +94,17 @@
       {{ partials.IncludeCached "social/follow.html" . }}
     </div>
   </div>
-</nav>
 
-<!-- Modal wyszukiwania dla mobile -->
-<div id="mobileSearchModal" class="mobile-search-modal">
-  <div class="mobile-search-content">
-    <div class="mobile-search-header">
-      <h3>Wyszukaj w blogu</h3>
-      <button onclick="closeMobileSearch()" class="mobile-close-btn">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <form onsubmit="handleMobileSearch(event)" class="mobile-search-form">
-      <div class="mobile-input-wrapper">
-        <input 
-          type="text" 
-          id="mobileSearchInput"
-          placeholder="Wpisz szukane słowo..."
-          class="mobile-search-input"
-          autocomplete="off"
-        >
-        <button type="submit" class="mobile-search-btn">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-    </form>
-    <div class="mobile-suggestions">
-      <div class="mobile-suggestions-title">Popularne tematy</div>
-      <a href="#" onclick="searchSuggestion('programowanie')">Programowanie</a>
-      <a href="#" onclick="searchSuggestion('technologia')">Technologia</a>
-      <a href="#" onclick="searchSuggestion('tutorial')">Tutoriale</a>
-      <a href="#" onclick="searchSuggestion('tips')">Porady</a>
-    </div>
-  </div>
-</div>
+  <!-- === SEARCH RESULTS CONTAINER === -->
+  <div id="search-results"></div>
+</nav>
 
 <style>
   .header-icons i {
     display: inline-block;
-    width: 1.25em;
+    width: 1.25em; /* ensures consistent width */
     text-align: center;
   }
 </style>
 
 <script src="{{ "/js/menu.js" | relURL }}"></script>
-<script src="{{ "/js/search.js" | relURL }}"></script>
