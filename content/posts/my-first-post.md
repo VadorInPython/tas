@@ -1,5 +1,5 @@
 +++
-date = '2025-04-27T21:29:26+02:00'
+date = '2027-04-27T21:29:26+02:00'
 draft = false
 title = 'My First Post'
 categories = ["Studies in Denmark"]

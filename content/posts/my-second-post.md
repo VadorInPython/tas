@@ -1,5 +1,5 @@
 +++
-date = '2025-09-19T00:00:00Z'
+date = '2025-09-18T00:00:00+00:00'
 draft = false
 title = 'Martin Garrix, R3HAB & Skytech - Voodoo vs Empire of The Sun - Walking on a Dream (Mashup Remake)'
 categories = ["Music"]
