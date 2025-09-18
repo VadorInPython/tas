@@ -5,6 +5,7 @@ theme = 'ananke'
 
 [params]
 custom_css = ["custom.css"]
+favicon = "/Logo.png" 
 
 # Social media icons
 [[params.social]]
