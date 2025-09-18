@@ -6,8 +6,6 @@ categories = ["Music"]
 tags = ["SoundCloud", "Mashup", "Production", "Ableton"]
 +++
 
-# 🎶 New Mashup
-
 I’d like to share my latest mashup remake - you can listen to it below ⬇️  
 
 <iframe 
