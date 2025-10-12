@@ -1,7 +1,7 @@
 ---
-title: "Photography"
-description: "My photos taken in a variety of different settings"
+title: "Tech & Projects"
+description: "A mix of fancy tech, smaller projects, and sometimes my take on tech events I’ve checked out."
 featured_image: "images/patsuisse.jpg"
 ---
 
-Here you will find my photography portfolio. For now, expect mostly aviation-themed shots (or sports-style photography in general), along with nature scenes and city shots. In the long run, I’d like to grow this collection even more - maybe branching out into new photography styles and experimenting with different kinds of subjects.
+A place where I share all my projects, explore new and innovative technologies that inspire me, and occasionally post my take on events I’ve had the chance to attend
