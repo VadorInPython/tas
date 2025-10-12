@@ -1,7 +1,7 @@
 ---
 title: "On The Go"
-description: "Everything else that I found worth reviewing"
+description: "A little personal corner - how I don’t turn into a full-time desk nerd."
 featured_image: "images/travel.jpeg"
 ---
 
-All about the trips I take to reset my head. From random unaprecciated spots that most people overlook, to the popular places that just hit different when you see them on spot. Plus, maybe a few notes on how I actually plan it all, so you can steal what works. 
+A bit about what I admire and what helps me not drown in my room binge-watching Netflix, gaming, or procrastinating in other ways. Mostly just quick summaries of my city breaks, but if I come across something personal-development-related that’s worth sharing, you might see a candid review pop up here too.
