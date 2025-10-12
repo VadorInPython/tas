@@ -33,24 +33,19 @@ favicon = "/Logo_wo_bg.png"
     weight = 2
    
   [[menu.main]]
-    name = "Photography"
-    url = "/categories/Photography"
+    name = "Tech & Projects"
+    url = "/categories/techandprojects"
     weight = 3
-   
-  [[menu.main]]
-    name = "Music"
-    url = "/categories/Music"
-    weight = 4
    
   [[menu.main]]
     name = "On The Go"
     url = "/categories/on-the-go"
-    weight = 5
+    weight = 4
      
   [[menu.main]]
     name = "Contact me"
     url = "/contact/"
-    weight = 6
+    weight = 5
 
 [markup]
   [markup.goldmark]
