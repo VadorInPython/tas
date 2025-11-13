@@ -23,17 +23,17 @@ favicon = "/Logo_wo_bg.png"
     weight = 1
    
   [[menu.main]]
-    name = "About Me"
+    name = "O mnie"
     url = "/categories/aboutme"
     weight = 6
    
   [[menu.main]]
-    name = "Studies in Denmark"
+    name = "Studia w Danii"
     url = "/categories/studies-in-denmark"
     weight = 2
    
   [[menu.main]]
-    name = "Tech & Projects"
+    name = "Technologie i Projekty"
     url = "/categories/techandprojects"
     weight = 3
    
@@ -43,7 +43,7 @@ favicon = "/Logo_wo_bg.png"
     weight = 4
      
   [[menu.main]]
-    name = "Contact me"
+    name = "Kontakt"
     url = "/contact/"
     weight = 5
 
