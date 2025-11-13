@@ -18,7 +18,7 @@ favicon = "/Logo_wo_bg.png"
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    name = "Strona Główna"
     url = "/"
     weight = 1
    
