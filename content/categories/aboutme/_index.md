@@ -8,8 +8,11 @@ draft: false
   <img src="/images/about_photo.jpg" alt="Moje zdjęcie" class="about-photo">
 </p>
 
-Hi, I'm **Szymon** and I wanted to start something personal, such as this blog, as a mix of an experience booster and a diary at the same time. I find creating this space from scratch incredibly freeing, considering the turbulences I experienced at the very first starting point of my life-changing journey.
+Hejka, 
+jestem Szymon i postanowiłem rozpocząć coś osobistego, a konkretniej mowa o tym blogu, który będzie połączeniem pamiętnika, poradnika i przestrzeni do rozwoju.
+Tworzenie tego miejsca od zera daje mi niesamowite poczucie wolności, zwłaszcza po wszystkich zawirowaniach, jakie spotkały mnie na samym początku mojej życiowej zmiany.
 
-But that's just an intro – generally, I’ll be putting my work into a few categories such as music and photography, while at the same time trying to help others by describing the studies I’m currently pursuing, hopefully providing helpful cues for students, and also sharing some travel spots.
+To jednak tylko wstęp - generalnie będę dzielić tu swoje działania w kilku kategoriach związanych z moją przygodą w Danii. Poczynając na wszelkich wskazówkach, które mogą być w jakiś sposób pomocne dla osób wybierających podobny kierunek, po środku pojawią się jakię showcase'y projektów, które najbardziej mnie jarały, a z czasem pojawią się tu też wpisy o podróżach i ciekawych miejscach, które warto odwiedzić (za równo w okolicy, jak i za granicą) - ostatecznie, nie samymi studiami człowiek żyje.
 
-If anything here catches your eye, let yourself stay for longer… For now, just stay tuned.
+Jeśli coś Cię tu zainteresuje – zostań na dłużej.
+Na razie… po prostu bądź czujny.
