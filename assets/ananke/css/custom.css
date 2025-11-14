@@ -697,3 +697,27 @@ article {
   color: #777;
 }
 
+/* ================================================== */
+/* === FONT AWESOME FLICKERING FIX === */
+/* ================================================== */
+
+/* Rezerwuj przestrzeń dla ikon żeby nie "bopowały" */
+i[class*="fa-"],
+.fa, .fas, .far, .fab, .fal, .fad {
+  display: inline-block;
+  min-width: 1.25em;
+  min-height: 1em;
+  text-align: center;
+}
+
+/* Opcjonalnie: dodaj płynne pojawienie się */
+.fontawesome-i2svg-active i[class*="fa-"],
+.fontawesome-i2svg-active .fa,
+.fontawesome-i2svg-active .fas,
+.fontawesome-i2svg-active .far,
+.fontawesome-i2svg-active .fab,
+.fontawesome-i2svg-active .fal,
+.fontawesome-i2svg-active .fad {
+  opacity: 1;
+  transition: opacity -0.15s ease-in;
+}
