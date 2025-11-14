@@ -1,14 +1,14 @@
 +++
 date = '2025-10-05T21:29:26+02:00'
 draft = false
-title = ''
+title = 'Pierwszy wpis na bloga 🇩🇰'
 categories = ["Studia w Danii"]
 tags = ["Denmark", "Studia"]
 +++
 
 ![Test Photo](/images/image1.jpg)
 
-# Pierwszy wpis na bloga 🇩🇰
+
 
 ## Przywitanie i wprowadzenie do koncepcji
 
