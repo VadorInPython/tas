@@ -23,6 +23,6 @@ _build:
   </p>
 
   <p>
-    <button type="submit" style="padding:10px 20px; cursor:pointer;">Send</button>
+    <button type="submit" style="padding:10px 20px; cursor:pointer;">Wyślij</button>
   </p>
 </form>
