@@ -1,46 +1,49 @@
 ---
-title: "Contact Me"
-#date: 2024-01-01T00:00:00+01:00 # Zachowaj swoją oryginalną datę
+title: "Skontaktuj się ze mną!"
 draft: false
-_build:               # <-- Dodaj te linie
-  render: true        # <-- Ta linia mówi, żeby strona była zbudowana
-  list: false         # <-- Ta linia mówi, żeby NIE była umieszczana na listach
+_build:
+  render: true
+  list: false
 ---
 
-<!-- Poniżej jest Twój formularz Formspree (bez zmian) -->
-<form
-  action="https://formspree.io/f/movlokoq"
-  method="POST"
-  class="measure center"
->
+<!-- Formularz Netlify w języku polskim -->
+<form name="kontakt" method="POST" data-netlify="true" class="measure center">
+  <input type="hidden" name="form-name" value="kontakt" />
+
   <fieldset class="ba b--transparent ph0 mh0">
     <div class="mt3">
       <label class="db fw6 lh-copy f6" for="email-address">
-        Your email address:
+        Twój email:
       </label>
       <input
         class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
         type="email"
         name="email"
         id="email-address"
+        required
       />
     </div>
+
     <div class="mv3">
-      <label class="db fw6 lh-copy f6" for="message">Your message:</label>
+      <label class="db fw6 lh-copy f6" for="message">
+        Twoja wiadomość:
+      </label>
       <textarea
         class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
         name="message"
         id="message"
         rows="5"
+        required
       ></textarea>
     </div>
   </fieldset>
+
   <div>
     <button
       class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
       type="submit"
     >
-      Send
+      Wyślij
     </button>
   </div>
 </form>
