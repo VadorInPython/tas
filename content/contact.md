@@ -1,49 +1,22 @@
 ---
-title: "Skontaktuj się ze mną!"
+title: "Zapraszam do kontaktu!"
 draft: false
 _build:
   render: true
   list: false
 ---
 
-<!-- Formularz Netlify w języku polskim -->
-<form name="kontakt" method="POST" data-netlify="true" class="measure center">
-  <input type="hidden" name="form-name" value="kontakt" />
+<form name="contact" method="POST" data-netlify="true">
+  <!-- hidden field required by Netlify -->
+  <input type="hidden" name="form-name" value="contact" />
 
-  <fieldset class="ba b--transparent ph0 mh0">
-    <div class="mt3">
-      <label class="db fw6 lh-copy f6" for="email-address">
-        Twój email:
-      </label>
-      <input
-        class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-        type="email"
-        name="email"
-        id="email-address"
-        required
-      />
-    </div>
-
-    <div class="mv3">
-      <label class="db fw6 lh-copy f6" for="message">
-        Twoja wiadomość:
-      </label>
-      <textarea
-        class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-        name="message"
-        id="message"
-        rows="5"
-        required
-      ></textarea>
-    </div>
-  </fieldset>
-
-  <div>
-    <button
-      class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
-      type="submit"
-    >
-      Wyślij
-    </button>
-  </div>
+  <p>
+    <label>Twój Email: <input type="email" name="email" required /></label>
+  </p>
+  <p>
+    <label>Twoja wiadomość: <textarea name="message" required></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Wyślij</button>
+  </p>
 </form>
