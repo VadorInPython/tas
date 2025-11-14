@@ -719,5 +719,4 @@ i[class*="fa-"],
 .fontawesome-i2svg-active .fal,
 .fontawesome-i2svg-active .fad {
   opacity: 1;
-  transition: opacity -0.15s ease-in;
 }
