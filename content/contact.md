@@ -6,17 +6,23 @@ _build:
   list: false
 ---
 
-<form name="contact" method="POST" data-netlify="true">
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
   <!-- hidden field required by Netlify -->
   <input type="hidden" name="form-name" value="contact" />
 
   <p>
-    <label>Twój Email: <input type="email" name="email" required /></label>
+    <label>Twój Email: <input type="email" name="email" required style="width:100%; padding:8px;"/></label>
   </p>
+
+
+
   <p>
-    <label>Twoja wiadomość: <textarea name="message" required></textarea></label>
+    <label>Wiadomość:
+      <textarea name="message" required style="width:100%; padding:8px; height:120px;"></textarea>
+    </label>
   </p>
+
   <p>
-    <button type="submit">Wyślij</button>
+    <button type="submit" style="padding:10px 20px; cursor:pointer;">Send</button>
   </p>
 </form>
