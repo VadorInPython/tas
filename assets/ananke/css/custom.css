@@ -720,3 +720,21 @@ i[class*="fa-"],
 .fontawesome-i2svg-active .fad {
   opacity: 1;
 }
+
+/* Dla zdjęć w postach (proporcje 16:9) */
+article img:not([alt="Moje zdjęcie"]),
+main img:not([alt="Moje zdjęcie"]),
+.content img:not([alt="Moje zdjęcie"]) {
+  aspect-ratio: 16 / 9; /* lub inna proporcja jaką używasz */
+  object-fit: cover;
+  background-color: #f0f0f0; /* placeholder kolor */
+}
+
+/* Dla zdjęcia profilowego (kwadrat) */
+img[alt="Moje zdjęcie"],
+img[src="/images/about_photo.jpg"],
+.centered-image-container img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
