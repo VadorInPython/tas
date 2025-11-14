@@ -195,11 +195,11 @@ main img:not([alt="Moje zdjęcie"]),
 main,
 .main-content,
 article {
-  padding-top: 0.05rem !important;
+  padding-top: 1rem !important;
 }
 
 .nested-copy-line-height {
-  padding-top: 0.05rem !important;
+  padding-top: 1rem !important;
 }
 
 /* ================================================== */
