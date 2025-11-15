@@ -1,5 +1,5 @@
 +++
-date = '2026-10-05T21:29:26+02:00'
+date = '2025-11-15T18:21:00+02:00'
 draft = false
 title = 'Pierwszy wpis na bloga 🇩🇰'
 categories = ["Studia w Danii"]
@@ -8,37 +8,64 @@ tags = ["Denmark", "Studia"]
 
 ![Test Photo](/images/image1.jpg)
 
-
-
-## Przywitanie i wprowadzenie do koncepcji
+## Przywitanie i delikatne intro
 
 Hejka!
+Dzisiaj spróbuję streścić nieco swoją historię (bez zbędnych szczegółów), opowiedzieć Wam, skąd w ogóle wziął się pomysł na tego bloga i czego można będzie się tutaj spodziewać. Jeśli rzuciliście okiem na zakładki - to już mieliście mały sneak peek.
 
-Postaram się dzisiaj streścić nieco swojej historii (bez wchodzenia w niepotrzebne detale), czyli mniej więcej zobrazować, czemu w mojej głowie zmaterializował się pomysł na bloga. Wprowadzę Was też do tematyki, która będzie się tu pojawiać (**zajawkę** tego, co tu znajdziecie, macie już w zakładkach).
+## Skąd taki koncept?
 
----
+Szczerze? Gdyby ktoś mnie zapytał o to wprost, pewnie odpowiedziałbym: „Nie wiem”. A dopiero po chwili przyszłoby mi coś mądrzejszego do głowy 😅.  
+I tak naprawdę… tutaj nie jest inaczej.
 
-### Czemu blog?
+Ale jeśli mam być całkowicie szczery:  
+chciałbym stworzyć tu przestrzeń - takie moje cztery ściany - w których pokażę, jak wygląda życie i studia na jednej z topowych europejskich politechnik, w kraju generalnie najczęściej postrzeganym jako ten o „najlepszej jakości życia”.
 
-Generalnie to może nie jest najbardziej kreatywna odpowiedź, ale gdybyście spytali mnie o to bezpośrednio, prawdopodobnie odpowiedziałbym, że „Nie wiem”. Dopiero po chwili zastanowienia przyszłoby mi coś konkretnego do głowy. Tak naprawdę, w tym wypadku jest podobnie, ale będąc z Wami całkowicie szczerym: chciałbym zbudować tutaj pewnego rodzaju **„cztery ściany”**.
+Poza tym świat pędzi jak szalony, a osoby, które będą chciały iść podobną ścieżką - szczególnie studenci z Polski, których jest tu zaskakująco wielu - mogłyby mieć kolejne, niec bardziej aktualne, realne i praktyczne źródło informacji.  
+W skrócie: chcę, żeby to miejsce było pomocne, szczere i osadzone w rzeczywistości - zwłaszcza dla studenckich ekspatów, potencjalnie kierujących się na duńskie uczelnie.
 
-* **Po pierwsze:** Mają one Wam po prostu przybliżyć **realia życia i studiów na jednej z topowych europejskich politechnik**, w kraju z rzekomo najlepszą jakością życia.
-* **Po drugie:** Trzeba pamiętać, że całe nasze środowisko postępuje niesamowicie szybko, więc ktoś, kto będzie chciał iść moimi (**a tak naprawdę naszymi** – bo studentów z Polski jest wbrew pozorom całkiem sporo) śladami, będzie miał pewnego rodzaju **fundament**.
+## O czym będzie ten blog?
 
-Krótko mówiąc, chcę stworzyć tu miejsce, które w jakiś sposób będzie pomocne dla osób rozważających podjęcie studiów za granicą, chociaż w tym wypadku najbardziej skupię się na **Danii**.
+Jako pasjonat wszystkiego, co wiąże się z porządkiem i dyscypliną – chociaż głównie w sferze, nazwijmy to, technicznej - nie mogłem sobie odpuścić opcji uporządkowania wszystkich artykułów w odpowiednie kategorie...
 
----
+No dobra – pół żartem, pół serio – bo jak ktoś to zobaczy bez kontekstu, to jeszcze pomyśli, że jestem jakimś żandarmem. A ja wcale nie chcę, żeby to tak wyglądało! Chociaż... elastyczność to moja mocna strona, więc gdy czasem zajdzie potrzeba, by kogoś uprzejmie i z uśmiechem naprowadzić na właściwe tory - wtedy przez grzeczność nie odmówię😉.
 
-### Tematyka
+Wracając do sedna:
 
-Będąc pasjonatem militariów, nie mogłem się nie skusić, żeby uporządkować tematy w konkretnych kategoriach… No dobra, ale to tak pół-żartem, pół-serio, bo jeszcze jak ktoś to zobaczy, to mnie będzie postrzegać za żandarma, a tu zdecydowanie nie o to chodzi. No chyba, że się tak zdarzy, że będzie to wymagane – przez grzeczność wtedy nie odmówię 😎. No, ale dobra, teraz to chyba jednak pora wrócić do głównego tematu!
+### 🎓 Studia w Danii
 
-Więc w naszej przestrzeni będą się głównie pojawiać:
+Będę tu wrzucać:
 
-#### 1. Wskazówki dotyczące studiowania w Danii 🎓
+- praktyczne wskazówki dotyczące rekrutacji,
+- ogarniania formalności,
+- tego, jak działa lokalna biurokracja (spoiler: dla obywatela UE - zaskakująco dobrze),
+- oraz jak wygląda codzienne życie studenta z perspektywy kogoś, kto tu dłużej pomieszka.
 
-Poczynając od formalności dotyczących aplikowania na studia, przechodząc przez biurokrację, która, całkiem szczerze, jest **bardzo w porządku** i działa sprawnie (a przynajmniej jako obywatel kraju UE tak to odczuwam).
+### 💻 Tech & Projects
 
-#### 2. Tech and Projects 💡
+Coś w rodzaju mojego portfolio - projekty, które sprawiły mi najwięcej frajdy, rzeczy które buduję po godzinach i nieco więcej info o technologiach, które faktycznie wchodzą w obszar moich zainteresowaniach.
+(Brzmi jak opis nerda… no ale dobra, kogo ja próbuję oszukać?🤓)
 
-Gdzie po prostu chcę stworzyć **własne portfolio**. Znajdą się w nim najbardziej wyróżniające się projekty i te, które dają mi **najwięcej frajdy i są ściśle powiązane z moim kierunkiem studiów**. (Przez chwilę zabrzmiało to, jakbym opisywał jakiegoś nerda – no dobra, kogo ja próbuję oszukać!? 💀). Dodat
+Od czasu do czasu będą też relacje i zdjęcia z eventów technologicznych związanych z moim kierunkiem.
+
+### ✈️ On The Go
+
+Prawda jest taka, że każdy inżynier musi mieć jakiegoś getaway'a (conajmniej raz na jakiś czas). Więc, finalnie będzie tu dostęp do mixu tego co robię po godzinach, żeby jednak nie skończyć za 10 lat z bólem kręgosłupa. Generalnie można spodziewać się:
+
+- krótkich relacji z city-breaków,
+- miejscówek do polecenia w Kopenhadze,
+- drobnych i większych różnic kulturowych,
+- oraz wszystkiego, co pomaga zwyczajnie odetchnąć po zajęciach.
+
+## Na koniec
+
+Nie spodziewałem się, że pierwszy wpis wyjdzie aż tak długi🙃  
+Mam nadzieję, że nikt przy nim nie zasnął.
+
+W następnym poście pojawią się konkretne tipy dotyczące tego:  
+ - jak aplikować na studia
+ - jak ogarnąć pobyt 
+ - i co faktycznie wyróżnia duński system edukacji.
+
+Do zobaczenia w kolejną niedzielę!  
+A tymczasem - idealna lektura na ciemne, zimowe wieczory. ❄️📘
