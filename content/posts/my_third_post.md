@@ -1,9 +1,9 @@
 +++
-date = '2025-11-15T18:21:00+02:00'
+date = '2025-11-16T20:00:00+02:00'
 draft = false
 title = 'Pierwszy wpis na bloga 🇩🇰'
 categories = ["Studia w Danii"]
-tags = ["Denmark", "Studia"]
+tags = ["Dania", "Studia", "Intro"]
 +++
 
 ![Test Photo](/images/image1.jpg)
