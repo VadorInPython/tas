@@ -6,7 +6,7 @@ categories = ["Studia w Danii"]
 tags = ["Dania", "Studia", "Intro"]
 +++
 
-![Test Photo](/images/logo.jpg)
+![Test Photo](/images/logo_01.jpg)
 
 ## Przywitanie i krótkie intro
 
