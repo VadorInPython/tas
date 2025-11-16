@@ -8,7 +8,7 @@ tags = ["Dania", "Studia", "Intro"]
 
 ![Test Photo](/images/logo.jpg)
 
-## Przywitanie i delikatne intro
+## Przywitanie i krótkie intro
 
 Hejka!
 Dzisiaj spróbuję streścić nieco swoją historię (bez zbędnych szczegółów), opowiedzieć Wam, skąd w ogóle wziął się pomysł na tego bloga i czego można będzie się tutaj spodziewać. Jeśli rzuciliście okiem na zakładki - to już mieliście mały sneak peek.
