@@ -26,9 +26,9 @@ W skrócie: chcę, żeby to miejsce było pomocne, szczere i osadzone w rzeczywi
 
 ## O czym będzie ten blog?
 
-Jako pasjonat wszystkiego, co wiąże się z porządkiem i dyscypliną – chociaż głównie w sferze, nazwijmy to, technicznej - nie mogłem sobie odpuścić opcji uporządkowania wszystkich artykułów w odpowiednie kategorie...
+Jako pasjonat wszystkiego, co wiąże się z porządkiem i dyscypliną - chociaż głównie w sferze, nazwijmy to, technicznej - nie mogłem sobie odpuścić opcji uporządkowania wszystkich artykułów w odpowiednie kategorie...
 
-No dobra – pół żartem, pół serio – bo jak ktoś to zobaczy bez kontekstu, to jeszcze pomyśli, że jestem jakimś żandarmem. A ja wcale nie chcę, żeby to tak wyglądało! Chociaż... elastyczność to moja mocna strona, więc gdy czasem zajdzie potrzeba, by kogoś uprzejmie i z uśmiechem naprowadzić na właściwe tory - wtedy przez grzeczność nie odmówię😉.
+No dobra - pół żartem, pół serio – bo jak ktoś to zobaczy bez kontekstu, to jeszcze pomyśli, że jestem jakimś żandarmem. A ja wcale nie chcę, żeby to tak wyglądało! Chociaż... elastyczność to moja mocna strona, więc gdy czasem zajdzie potrzeba, by kogoś uprzejmie i z uśmiechem naprowadzić na właściwe tory - wtedy nie odmówię😉.
 
 Wracając do sedna:
 
@@ -62,10 +62,12 @@ Prawda jest taka, że każdy inżynier musi mieć jakiegoś getaway'a (conajmnie
 Nie spodziewałem się, że pierwszy wpis wyjdzie aż tak długi🙃  
 Mam nadzieję, że nikt przy nim nie zasnął.
 
-W następnym poście pojawią się konkretne tipy dotyczące tego:  
- - jak aplikować na studia
- - jak ogarnąć pobyt 
- - i co faktycznie wyróżnia duński system edukacji.
+W nastęnych postach pojawią się konkretne tipy dotyczące tego:  
+ - jak wygląda proces aplikacji na studia
+ - jak ogarnąć pobyt (za równo pod względem wymaganych dokumentów, jak i swojego kąta)
+ - i co faktycznie wyróżnia duński system edukacji
+ - a później jeszcze oczywiście wielu innych aspektów powiązanych ze wspomnianą tematyką
 
-Do zobaczenia w kolejną niedzielę!  
+
+Do zobaczenia niebawem!  
 A tymczasem - idealna lektura na ciemne, zimowe wieczory. ❄️📘
