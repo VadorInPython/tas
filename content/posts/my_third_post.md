@@ -21,7 +21,7 @@ I tak naprawdę… tutaj nie jest inaczej.
 Ale jeśli mam być całkowicie szczery:  
 chciałbym stworzyć tu przestrzeń - takie moje cztery ściany - w których pokażę, jak wygląda życie i studia na jednej z topowych europejskich politechnik, w kraju generalnie najczęściej postrzeganym jako ten o „najlepszej jakości życia”.
 
-Poza tym świat pędzi jak szalony, a osoby, które będą chciały iść podobną ścieżką - szczególnie studenci z Polski, których jest tu zaskakująco wielu - mogłyby mieć kolejne, niec bardziej aktualne, realne i praktyczne źródło informacji.  
+Poza tym świat pędzi jak szalony, a osoby, które będą chciały iść podobną ścieżką - szczególnie studenci z Polski, których jest tu zaskakująco wielu - mogłyby mieć kolejne, nieco bardziej aktualne, realne i praktyczne źródło informacji.  
 W skrócie: chcę, żeby to miejsce było pomocne, szczere i osadzone w rzeczywistości - zwłaszcza dla studenckich ekspatów, potencjalnie kierujących się na duńskie uczelnie.
 
 ## O czym będzie ten blog?
