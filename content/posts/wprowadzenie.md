@@ -50,7 +50,7 @@ Od czasu do czasu będą też relacje i zdjęcia z eventów technologicznych zwi
 
 ### ✈️ On The Go
 
-Prawda jest taka, że każdy inżynier musi mieć jakiegoś getaway'a (conajmniej raz na jakiś czas). Więc, finalnie będzie tu dostęp do mixu tego co robię po godzinach, żeby jednak nie skończyć za 10 lat z bólem kręgosłupa. Generalnie można spodziewać się:
+Prawda jest taka, że każdy inżynier musi mieć jakiegoś getaway'a (co najmniej raz na jakiś czas). Więc, finalnie będzie tu dostęp do mixu tego co robię po godzinach, żeby jednak nie skończyć za 10 lat z bólem kręgosłupa. Generalnie można spodziewać się:
 
 - krótkich relacji z city-breaków,
 - miejscówek do polecenia w Kopenhadze,
@@ -64,7 +64,7 @@ Mam nadzieję, że nikt przy nim nie zasnął.
 
 W nastęnych postach pojawią się konkretne tipy dotyczące tego:  
  - jak wygląda proces aplikacji na studia
- - jak ogarnąć pobyt (za równo pod względem wymaganych dokumentów, jak i swojego kąta)
+ - jak ogarnąć pobyt (zarówno pod względem wymaganych dokumentów, jak i swojego kąta)
  - i co faktycznie wyróżnia duński system edukacji
  - a później jeszcze oczywiście wielu innych aspektów powiązanych ze wspomnianą tematyką
 
