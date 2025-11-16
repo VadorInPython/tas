@@ -26,7 +26,7 @@ W skrócie: chcę, żeby to miejsce było pomocne, szczere i osadzone w rzeczywi
 
 ## O czym będzie ten blog?
 
-Jako pasjonat wszystkiego, co wiąże się z porządkiem i dyscypliną - chociaż głównie w sferze, nazwijmy to, technicznej - nie mogłem sobie odpuścić opcji uporządkowania wszystkich artykułów w odpowiednie kategorie...
+Jako pasjonat wszystkiego, co wiąże się z militariami - nie mogłem sobie odpuścić opcji uporządkowania wszystkich artykułów w odpowiednie kategorie...
 
 No dobra - pół żartem, pół serio – bo jak ktoś to zobaczy bez kontekstu, to jeszcze pomyśli, że jestem jakimś żandarmem. A ja wcale nie chcę, żeby to tak wyglądało! Chociaż... elastyczność to moja mocna strona, więc gdy czasem zajdzie potrzeba, by kogoś uprzejmie i z uśmiechem naprowadzić na właściwe tory - wtedy nie odmówię😉.
 
@@ -55,7 +55,7 @@ Prawda jest taka, że każdy inżynier musi mieć jakiegoś getaway'a (conajmnie
 - krótkich relacji z city-breaków,
 - miejscówek do polecenia w Kopenhadze,
 - drobnych i większych różnic kulturowych,
-- oraz wszystkiego, co pomaga zwyczajnie odetchnąć po zajęciach.
+- oraz wszystkiego, co zwyczajnie pomaga odetchnąć po zajęciach.
 
 ## Na koniec
 
