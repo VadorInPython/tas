@@ -13,7 +13,7 @@ tags = ["Dania", "Studia", "Intro"]
 Hejka!
 Dzisiaj spróbuję streścić nieco swoją historię (bez zbędnych szczegółów), opowiedzieć Wam, skąd w ogóle wziął się pomysł na tego bloga i czego można będzie się tutaj spodziewać. Jeśli rzuciliście okiem na zakładki - to już mieliście mały sneak peek.
 
-## Skąd taki koncept?
+## Skąd pomysł na bloga?
 
 Szczerze? Gdyby ktoś mnie zapytał o to wprost, pewnie odpowiedziałbym: „Nie wiem”. A dopiero po chwili przyszłoby mi coś mądrzejszego do głowy 😅.  
 I tak naprawdę… tutaj nie jest inaczej.
