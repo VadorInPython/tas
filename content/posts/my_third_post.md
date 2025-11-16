@@ -1,5 +1,5 @@
 +++
-date = '2025-11-16T20:00:00+02:00'
+date = '2025-11-16T18:00:00+02:00'
 draft = false
 title = 'Pierwszy wpis na bloga 🇩🇰'
 categories = ["Studia w Danii"]
