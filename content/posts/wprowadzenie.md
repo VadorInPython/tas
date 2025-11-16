@@ -43,7 +43,7 @@ Będę tu wrzucać:
 
 ### 💻 Technologie & Projekty
 
-Coś w rodzaju mojego portfolio - projekty, które sprawiły mi najwięcej frajdy, rzeczy które buduję po godzinach i nieco więcej info o technologiach, które faktycznie wchodzą w obszar moich zainteresowaniach.
+Coś w rodzaju mojego portfolio - projekty, które sprawiły mi najwięcej frajdy, rzeczy które buduję po godzinach i nieco więcej info o technologiach, które faktycznie wchodzą w obszar moich zainteresowań.
 (Brzmi jak opis nerda… no ale dobra, kogo ja próbuję oszukać?🤓)
 
 Od czasu do czasu będą też relacje i zdjęcia z eventów technologicznych związanych z moim kierunkiem.
