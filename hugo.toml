@@ -1,8 +1,9 @@
-baseURL = 'https://theautonomouscreator.netlify.app/'
-languageCode = 'en-us'
-title = 'The Autonomous Creator'
-theme = 'ananke'
+baseURL = "https://theautonomouscreator.netlify.app/"
+languageCode = "en-us"
+title = "The Autonomous Creator"
+theme = "ananke"
 
+# Ustawienia wielojęzyczne
 defaultContentLanguage = "pl"
 defaultContentLanguageInSubdir = true
 
@@ -20,10 +21,9 @@ defaultContentLanguageInSubdir = true
   title = "The Autonomous Creator"
   menu = "main"
 
-
 [params]
 custom_css = ["custom.css"]
-favicon = "/Logo_wo_bg.png" 
+favicon = "/Logo_wo_bg.png"
 
 # Social media icons
 [[params.social]]
@@ -34,35 +34,67 @@ favicon = "/Logo_wo_bg.png"
   name = "facebook"
   url = "https://www.facebook.com/szymon.derlecki.3/"
 
-[menu]
-  [[menu.main]]
+# MENU osobno dla języków
+[menu.pl]
+  [[menu.pl.main]]
     name = "Strona Główna"
-    url = "/"
+    url = "/pl/"
     weight = 1
-   
-  [[menu.main]]
+
+  [[menu.pl.main]]
     name = "O mnie"
-    url = "/categories/bio"
+    url = "/pl/categories/bio"
     weight = 6
-   
-  [[menu.main]]
+
+  [[menu.pl.main]]
     name = "Studia w Danii"
-    url = "/categories/studia-w-danii"
+    url = "/pl/categories/studia-w-danii"
     weight = 2
-   
-  [[menu.main]]
+
+  [[menu.pl.main]]
     name = "Technologie i Projekty"
-    url = "/categories/technologie_projekty"
+    url = "/pl/categories/technologie_projekty"
     weight = 3
-   
-  [[menu.main]]
+
+  [[menu.pl.main]]
     name = "On The Go"
-    url = "/categories/on-the-go"
+    url = "/pl/categories/on-the-go"
     weight = 4
-     
-  [[menu.main]]
+
+  [[menu.pl.main]]
     name = "Kontakt"
-    url = "/kontakt/"
+    url = "/pl/kontakt/"
+    weight = 5
+
+[menu.en]
+  [[menu.en.main]]
+    name = "Home"
+    url = "/en/"
+    weight = 1
+
+  [[menu.en.main]]
+    name = "About Me"
+    url = "/en/categories/bio"
+    weight = 6
+
+  [[menu.en.main]]
+    name = "Studies in Denmark"
+    url = "/en/categories/studies-in-denmark"
+    weight = 2
+
+  [[menu.en.main]]
+    name = "Tech & Projects"
+    url = "/en/categories/tech-projects"
+    weight = 3
+
+  [[menu.en.main]]
+    name = "On The Go"
+    url = "/en/categories/on-the-go"
+    weight = 4
+
+  [[menu.en.main]]
+    name = "Contact"
+    url = "/en/contact/"
     weight = 5
 
 [markup]
