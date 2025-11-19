@@ -8,6 +8,7 @@ custom_css = ["custom.css"]
 favicon = "/Logo_wo_bg.png" 
 
 defaultContentLanguage = "pl"
+defaultContentLanguageInSubdir = true  # to może być problemem!
 
 [languages]
   [languages.pl]
