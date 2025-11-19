@@ -11,16 +11,13 @@ defaultContentLanguage = "pl"
 defaultContentLanguageInSubdir = true
 
 [languages]
+  [languages.pl]
+    languageName = "Polski"
+    weight = 1
 
-[languages.pl]
-  title = "The Autonomous Creator"
-  languageName = "Polski"
-  weight = 1
-
-[languages.en]
-  title = "The Autonomous Creator"
-  languageName = "English"
-  weight = 2
+  [languages.en]
+    languageName = "English"
+    weight = 2
 
 # Social media icons
 [[params.social]]
