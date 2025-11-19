@@ -3,6 +3,24 @@ languageCode = 'en-us'
 title = 'The Autonomous Creator'
 theme = 'ananke'
 
+defaultContentLanguage = "pl"
+defaultContentLanguageInSubdir = true
+
+[languages]
+
+[languages.pl]
+  languageName = "Polski"
+  weight = 1
+  title = "The Autonomous Creator"
+  menu = "main"
+
+[languages.en]
+  languageName = "English"
+  weight = 2
+  title = "The Autonomous Creator"
+  menu = "main"
+
+
 [params]
 custom_css = ["custom.css"]
 favicon = "/Logo_wo_bg.png" 
