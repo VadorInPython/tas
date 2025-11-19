@@ -7,6 +7,21 @@ theme = 'ananke'
 custom_css = ["custom.css"]
 favicon = "/Logo_wo_bg.png" 
 
+defaultContentLanguage = "pl"
+defaultContentLanguageInSubdir = true
+
+[languages]
+
+[languages.pl]
+  title = "The Autonomous Creator"
+  languageName = "Polski"
+  weight = 1
+
+[languages.en]
+  title = "The Autonomous Creator"
+  languageName = "English"
+  weight = 2
+
 # Social media icons
 [[params.social]]
   name = "instagram"
