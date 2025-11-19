@@ -7,7 +7,7 @@ theme = 'ananke'
 custom_css = ["custom.css"]
 favicon = "/Logo_wo_bg.png" 
 
-defaultContentLanguage = "pl"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true  # to może być problemem!
 
 [languages]
