@@ -1,51 +1,101 @@
 baseURL = 'https://theautonomouscreator.netlify.app/'
-languageCode = 'en-us'
+defaultContentLanguage = 'pl'
 title = 'The Autonomous Creator'
 theme = 'ananke'
 
 [params]
-custom_css = ["custom.css"]
-favicon = "/Logo_wo_bg.png" 
+  custom_css = ["custom.css"]
+  favicon = "/Logo_wo_bg.png"
 
-# Social media icons
-[[params.social]]
-  name = "instagram"
-  url = "https://www.instagram.com/szym0n_24/"
-
-[[params.social]]
-  name = "facebook"
-  url = "https://www.facebook.com/szymon.derlecki.3/"
-
-[menu]
-  [[menu.main]]
-    name = "Strona Główna"
-    url = "/"
+# Konfiguracja języków
+[languages]
+  [languages.pl]
+    languageCode = 'pl-PL'
+    languageName = 'Polski'
     weight = 1
-   
-  [[menu.main]]
-    name = "O mnie"
-    url = "/categories/bio"
-    weight = 6
-   
-  [[menu.main]]
-    name = "Studia w Danii"
-    url = "/categories/studia-w-danii"
+    title = 'The Autonomous Creator'
+    
+    [[languages.pl.params.social]]
+      name = "instagram"
+      url = "https://www.instagram.com/szym0n_24/"
+    
+    [[languages.pl.params.social]]
+      name = "facebook"
+      url = "https://www.facebook.com/szymon.derlecki.3/"
+    
+    [[languages.pl.menu.main]]
+      name = "Strona Główna"
+      url = "/"
+      weight = 1
+    
+    [[languages.pl.menu.main]]
+      name = "O mnie"
+      url = "/categories/bio"
+      weight = 6
+    
+    [[languages.pl.menu.main]]
+      name = "Studia w Danii"
+      url = "/categories/studia-w-danii"
+      weight = 2
+    
+    [[languages.pl.menu.main]]
+      name = "Technologie i Projekty"
+      url = "/categories/technologie_projekty"
+      weight = 3
+    
+    [[languages.pl.menu.main]]
+      name = "On The Go"
+      url = "/categories/on-the-go"
+      weight = 4
+    
+    [[languages.pl.menu.main]]
+      name = "Kontakt"
+      url = "/kontakt/"
+      weight = 5
+
+  [languages.en]
+    languageCode = 'en-US'
+    languageName = 'English'
     weight = 2
-   
-  [[menu.main]]
-    name = "Technologie i Projekty"
-    url = "/categories/technologie_projekty"
-    weight = 3
-   
-  [[menu.main]]
-    name = "On The Go"
-    url = "/categories/on-the-go"
-    weight = 4
-     
-  [[menu.main]]
-    name = "Kontakt"
-    url = "/kontakt/"
-    weight = 5
+    title = 'The Autonomous Creator'
+    
+    [[languages.en.params.social]]
+      name = "instagram"
+      url = "https://www.instagram.com/szym0n_24/"
+    
+    [[languages.en.params.social]]
+      name = "facebook"
+      url = "https://www.facebook.com/szymon.derlecki.3/"
+    
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/en/"
+      weight = 1
+    
+    [[languages.en.menu.main]]
+      name = "About Me"
+      url = "/en/categories/bio"
+      weight = 6
+    
+    [[languages.en.menu.main]]
+      name = "Studying in Denmark"
+      url = "/en/categories/studying-in-denmark"
+      weight = 2
+    
+    [[languages.en.menu.main]]
+      name = "Tech & Projects"
+      url = "/en/categories/tech-projects"
+      weight = 3
+    
+    [[languages.en.menu.main]]
+      name = "On The Go"
+      url = "/en/categories/on-the-go"
+      weight = 4
+    
+    [[languages.en.menu.main]]
+      name = "Contact"
+      url = "/en/contact/"
+      weight = 5
 
 [markup]
   [markup.goldmark]
