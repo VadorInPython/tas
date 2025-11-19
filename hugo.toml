@@ -13,10 +13,10 @@ defaultContentLanguageInSubdir = true  # to może być problemem!
 [languages]
   [languages.pl]
     languageName = "Polski"
-    weight = 1
+    weight = 2
   [languages.en]
     languageName = "English"
-    weight = 2
+    weight = 1
 
 # Social media icons
 [[params.social]]
