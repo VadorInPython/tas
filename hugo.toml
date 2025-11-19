@@ -7,17 +7,6 @@ theme = 'ananke'
 custom_css = ["custom.css"]
 favicon = "/Logo_wo_bg.png" 
 
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false  # to może być problemem!
-
-[languages]
-  [languages.pl]
-    languageName = "Polski"
-    weight = 2
-  [languages.en]
-    languageName = "English"
-    weight = 1
-
 # Social media icons
 [[params.social]]
   name = "instagram"
@@ -26,7 +15,6 @@ defaultContentLanguageInSubdir = false  # to może być problemem!
 [[params.social]]
   name = "facebook"
   url = "https://www.facebook.com/szymon.derlecki.3/"
-
 
 [menu]
   [[menu.main]]
