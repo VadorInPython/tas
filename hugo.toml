@@ -94,5 +94,5 @@ defaultContentLanguage = 'pl'
         weight = 5
       [[languages.en.menu.main]]
         name = "Contact"
-        url = "/kontakt/" 
+        url = "/contakt.en/" 
         weight = 6
