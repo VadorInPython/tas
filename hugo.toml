@@ -60,7 +60,7 @@ favicon = "/Logo_wo_bg.png"
      
   [[languages.pl.menu.main]]
     name = "Kontakt"
-    url = "/kontakt"
+    url = "kontakt"
     weight = 5
 
 # English menu
@@ -92,7 +92,7 @@ favicon = "/Logo_wo_bg.png"
      
   [[languages.en.menu.main]]
     name = "Contact"
-    url = "/contact"
+    url = "contact"
     weight = 5
 
 [markup]
