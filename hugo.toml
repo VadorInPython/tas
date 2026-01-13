@@ -1,6 +1,5 @@
 baseURL = 'https://theautonomouscreator.netlify.app/'
-defaultContentLanguage = "pl"
-defaultContentLanguageInSubdir = false
+languageCode = 'en-us'
 title = 'The Autonomous Creator'
 theme = 'ananke'
 
@@ -17,82 +16,35 @@ favicon = "/Logo_wo_bg.png"
   name = "facebook"
   url = "https://www.facebook.com/szymon.derlecki.3/"
 
-# Language configuration
-[languages]
-  [languages.pl]
-    languageName = "Polski"
-    weight = 1
-    title = "The Autonomous Creator"
-    contentDir = "content/pl"
-    
-  [languages.en]
-    languageName = "English"
-    weight = 2
-    title = "The Autonomous Creator"
-    contentDir = "content/en"
-
-# Polish menu
-[languages.pl.menu]
-  [[languages.pl.menu.main]]
+[menu]
+  [[menu.main]]
     name = "Strona Główna"
     url = "/"
     weight = 1
    
-  [[languages.pl.menu.main]]
+  [[menu.main]]
     name = "O mnie"
     url = "/categories/bio"
     weight = 6
    
-  [[languages.pl.menu.main]]
+  [[menu.main]]
     name = "Studia w Danii"
-    url = "/categories/studia-w-danii"
+    url = "pl/categories/studia-w-danii"
     weight = 2
    
-  [[languages.pl.menu.main]]
+  [[menu.main]]
     name = "Technologie i Projekty"
-    url = "/categories/technologie_projekty"
+    url = "pl/categories/technologie_projekty"
     weight = 3
    
-  [[languages.pl.menu.main]]
+  [[menu.main]]
     name = "On The Go"
-    url = "/categories/on-the-go"
+    url = "pl/categories/on-the-go"
     weight = 4
      
-  [[languages.pl.menu.main]]
+  [[menu.main]]
     name = "Kontakt"
-    url = "/kontakt"
-    weight = 5
-
-# English menu
-[languages.en.menu]
-  [[languages.en.menu.main]]
-    name = "Home"
-    url = "/en/"
-    weight = 1
-   
-  [[languages.en.menu.main]]
-    name = "About"
-    url = "/en/categories/bio"
-    weight = 6
-   
-  [[languages.en.menu.main]]
-    name = "Studies in Denmark"
-    url = "/en/categories/studies-in-denmark"
-    weight = 2
-   
-  [[languages.en.menu.main]]
-    name = "Tech & Projects"
-    url = "/en/categories/technologies_and_projects"
-    weight = 3
-   
-  [[languages.en.menu.main]]
-    name = "On The Go"
-    url = "/en/categories/on-the-go"
-    weight = 4
-     
-  [[languages.en.menu.main]]
-    name = "Contact"
-    url = "/en/contact"
+    url = "/kontakt/"
     weight = 5
 
 [markup]
