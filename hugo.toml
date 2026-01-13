@@ -44,7 +44,7 @@ favicon = "/Logo_wo_bg.png"
      
   [[menu.main]]
     name = "Kontakt"
-    url = "pl/kontakt/"
+    url = "/kontakt/"
     weight = 5
 
 [markup]
