@@ -1,6 +1,7 @@
 ---
 title: "Zapraszam do kontaktu!"
 draft: false
+translationKey: "contact-page"
 _build:
   list: never
   render: always

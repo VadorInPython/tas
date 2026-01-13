@@ -1,6 +1,7 @@
 ---
 title: "Feel free to reach out!"
 draft: false
+translationKey: "contact-page"
 _build:
   list: never
   render: always
