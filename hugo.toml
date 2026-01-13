@@ -8,7 +8,6 @@ defaultContentLanguage = 'pl'
 [params]
   custom_css = ["custom.css"]
   favicon = "/Logo_wo_bg.png"
-  # To zapewnia, że na głównej są tylko wpisy z folderu 'posts'
   mainSections = ["posts"] 
 
 # Social media
@@ -49,11 +48,11 @@ defaultContentLanguage = 'pl'
         weight = 2
       [[languages.pl.menu.main]]
         name = "Studia w Danii"
-        url = "/categories/studia-w-danii"
+        url = "/categories/studia-w-danii" # Polski folder
         weight = 3
       [[languages.pl.menu.main]]
         name = "Technologie i Projekty"
-        url = "/categories/tech-projects"
+        url = "/categories/technologie-i-projekty" # Polski folder
         weight = 4
       [[languages.pl.menu.main]]
         name = "On The Go"
@@ -71,28 +70,29 @@ defaultContentLanguage = 'pl'
     contentDir = 'content'
     
     # Menu dla wersji Angielskiej
+    # TUTAJ DODAŁEM "/en/" PRZED KAŻDYM LINKIEM
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Home"
-        url = "/"
+        url = "/en/"  
         weight = 1
       [[languages.en.menu.main]]
         name = "About me"
-        url = "/categories/bio" 
+        url = "/en/categories/bio" 
         weight = 2
       [[languages.en.menu.main]]
         name = "Studies in Denmark"
-        url = "/categories/studia-w-danii" 
+        url = "/en/categories/studies-in-denmark" # Linkuje do angielskiego folderu
         weight = 3
       [[languages.en.menu.main]]
         name = "Tech & Projects"
-        url = "/categories/tech-projects" 
+        url = "/en/categories/tech-projects" # Linkuje do angielskiego folderu
         weight = 4
       [[languages.en.menu.main]]
         name = "On The Go"
-        url = "/categories/on-the-go"
+        url = "/en/categories/on-the-go"
         weight = 5
       [[languages.en.menu.main]]
         name = "Contact"
-        url = "/contact.en/" 
+        url = "/en/kontakt/" # Hugo sam zamieni kontakt.en.md na taki adres
         weight = 6
