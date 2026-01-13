@@ -52,7 +52,7 @@ defaultContentLanguage = 'pl'
         weight = 3
       [[languages.pl.menu.main]]
         name = "Technologie i Projekty"
-        url = "/categories/technologie-i-projekty" # Polski folder
+        url = "/categories/tech-projects" # Polski folder
         weight = 4
       [[languages.pl.menu.main]]
         name = "On The Go"
@@ -94,5 +94,5 @@ defaultContentLanguage = 'pl'
         weight = 5
       [[languages.en.menu.main]]
         name = "Contact"
-        url = "/en/kontakt/" # Hugo sam zamieni kontakt.en.md na taki adres
+        url = "/en/contact/" # Hugo sam zamieni kontakt.en.md na taki adres
         weight = 6
