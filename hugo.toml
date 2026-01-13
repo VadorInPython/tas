@@ -24,7 +24,7 @@ favicon = "/Logo_wo_bg.png"
    
   [[menu.main]]
     name = "O mnie"
-    url = "/categories/bio"
+    url = "pl/categories/bio"
     weight = 6
    
   [[menu.main]]
