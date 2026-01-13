@@ -1,11 +1,11 @@
-+++
-date = '2025-11-16T18:00:00+02:00'
-draft = false
-title = 'Pierwszy wpis na bloga 🇩🇰'
-categories = ["Studia w Danii"]
-tags = ["Dania", "Studia", "Intro"]
-translationKey = "first-post-intro" 
-+++
+---
+date: '2025-11-16T18:00:00+02:00'
+draft: false
+title: 'Pierwszy wpis na bloga 🇩🇰'
+categories: ["Studia w Danii"]
+tags: ["Dania", "Studia", "Intro"]
+translationKey: "first-post-intro" 
+---
 
 ![Test Photo](/images/logo.jpg)
 
