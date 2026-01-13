@@ -1,9 +1,6 @@
 ---
 title: "Feel free to reach out!"
 draft: false
-_build:
-  render: true
-  list: false
 ---
 
 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
