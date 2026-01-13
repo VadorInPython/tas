@@ -1,51 +1,20 @@
 baseURL = 'https://theautonomouscreator.netlify.app/'
-languageCode = 'en-us'
-title = 'The Autonomous Creator'
 theme = 'ananke'
 
+# Default language settings
+defaultContentLanguage = 'pl'
+defaultContentLanguageInSubdir = false # Polish stays at root (e.g., /), English goes to /en/
+
 [params]
-custom_css = ["custom.css"]
-favicon = "/Logo_wo_bg.png" 
+  custom_css = ["custom.css"]
+  favicon = "/Logo_wo_bg.png"
 
-# Social media icons
-[[params.social]]
-  name = "instagram"
-  url = "https://www.instagram.com/szym0n_24/"
-
-[[params.social]]
-  name = "facebook"
-  url = "https://www.facebook.com/szymon.derlecki.3/"
-
-[menu]
-  [[menu.main]]
-    name = "Strona Główna"
-    url = "/"
-    weight = 1
-   
-  [[menu.main]]
-    name = "O mnie"
-    url = "/pl/categories/bio"
-    weight = 6
-   
-  [[menu.main]]
-    name = "Studia w Danii"
-    url = "/pl/categories/studia-w-danii"
-    weight = 2
-   
-  [[menu.main]]
-    name = "Technologie i Projekty"
-    url = "/pl/categories/technologie_projekty"
-    weight = 3
-   
-  [[menu.main]]
-    name = "On The Go"
-    url = "/pl/categories/on-the-go"
-    weight = 4
-     
-  [[menu.main]]
-    name = "Kontakt"
-    url = "/pl/kontakt/"
-    weight = 5
+  [[params.social]]
+    name = "instagram"
+    url = "https://www.instagram.com/szym0n_24/"
+  [[params.social]]
+    name = "facebook"
+    url = "https://www.facebook.com/szymon.derlecki.3/"
 
 [markup]
   [markup.goldmark]
@@ -54,3 +23,78 @@ favicon = "/Logo_wo_bg.png"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+# ------------------------------------------------------------------
+# LANGUAGES & MENUS
+# ------------------------------------------------------------------
+
+[languages]
+
+  # --- POLISH ---
+  [languages.pl]
+    languageName = "🇵🇱 Polski"
+    languageCode = "pl"
+    weight = 1
+    # No contentDir needed here - it just looks for .md files
+
+    [languages.pl.menu]
+      [[languages.pl.menu.main]]
+        name = "Strona Główna"
+        url = "/"
+        weight = 1
+      [[languages.pl.menu.main]]
+        name = "Studia w Danii"
+        url = "/categories/studia-w-danii"
+        weight = 2
+      [[languages.pl.menu.main]]
+        name = "Technologie i Projekty"
+        url = "/categories/technologie_projekty"
+        weight = 3
+      [[languages.pl.menu.main]]
+        name = "On The Go"
+        url = "/categories/on-the-go"
+        weight = 4
+      [[languages.pl.menu.main]]
+        name = "Kontakt"
+        url = "/kontakt/"
+        weight = 5
+      [[languages.pl.menu.main]]
+        name = "O mnie"
+        url = "/categories/bio"
+        weight = 6
+
+  # --- ENGLISH ---
+  [languages.en]
+    languageName = "🇬🇧 English"
+    languageCode = "en-gb"
+    weight = 2
+    # No contentDir needed here - it looks for *.en.md files
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Studies in Denmark"
+        # Since the file is _index.en.md inside "studia-w-danii", 
+        # Hugo will usually keep the Polish URL structure but add /en/ prefix
+        # UNLESS you added 'slug' in the frontmatter.
+        url = "/categories/studia-w-danii" 
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Tech & Projects"
+        url = "/categories/technologie_projekty"
+        weight = 3
+      [[languages.en.menu.main]]
+        name = "On The Go"
+        url = "/categories/on-the-go"
+        weight = 4
+      [[languages.en.menu.main]]
+        name = "Contact"
+        url = "/kontakt/"
+        weight = 5
+      [[languages.en.menu.main]]
+        name = "About Me"
+        url = "/categories/bio"
+        weight = 6
