@@ -29,22 +29,22 @@ favicon = "/Logo_wo_bg.png"
    
   [[menu.main]]
     name = "Studia w Danii"
-    url = "/categories/studia-w-danii"
+    url = "pl/categories/studia-w-danii"
     weight = 2
    
   [[menu.main]]
     name = "Technologie i Projekty"
-    url = "/categories/technologie_projekty"
+    url = "pl/categories/technologie_projekty"
     weight = 3
    
   [[menu.main]]
     name = "On The Go"
-    url = "/categories/on-the-go"
+    url = "pl/categories/on-the-go"
     weight = 4
      
   [[menu.main]]
     name = "Kontakt"
-    url = "/kontakt/"
+    url = "pl/kontakt/"
     weight = 5
 
 [markup]
