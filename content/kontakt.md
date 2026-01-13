@@ -1,6 +1,9 @@
 ---
 title: "Zapraszam do kontaktu!"
 draft: false
+_build:
+  list: never
+  render: always
 ---
 
 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
