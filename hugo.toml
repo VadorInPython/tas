@@ -92,7 +92,7 @@ favicon = "/Logo_wo_bg.png"
      
   [[languages.en.menu.main]]
     name = "Contact"
-    url = "/en/contact"
+    url = "/contact"
     weight = 5
 
 [markup]
