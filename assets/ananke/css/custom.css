@@ -478,9 +478,8 @@ article {
 }
 
 /* ================================================== */
-/* === BURGER MENU (MOBILE) - WERSJA ATOMOWA === */
+/* === BURGER MENU (MOBILE) - WERSJA ATOMOWA & UJEDNOLICONA === */
 /* ================================================== */
-/* To jest kluczowa sekcja naprawiająca przewijanie */
 
 @media (max-width: 768px) {
   nav[role="navigation"] {
@@ -513,39 +512,31 @@ article {
     display: none !important;
   }
 
-  /* === TUTAJ JEST ZMIANA TAKTYKI === */
+  /* === GŁÓWNY KONTENER MENU === */
   #mobile-menu.is-active {
-    /* Zamiast Flexboxa, używamy zwykłego bloku, żeby telefon nie głupiał */
     display: block !important; 
-    
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    
     width: 100vw !important;
     height: 100vh !important;
-    
     background: linear-gradient(135deg, #5b7db1, #142850) !important;
     z-index: 1000;
     
-    /* Wymuszamy przewijanie */
+    /* Przewijanie */
     overflow-y: scroll !important; 
     -webkit-overflow-scrolling: touch !important;
     
     /* Marginesy */
     padding-top: 80px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    
-    /* OGROMNY ODSTĘP NA DOLE, ŻEBY NIC NIE UCIĘŁO */
     padding-bottom: 150px !important; 
     
     text-align: center !important;
   }
 
-  /* Ikony na górze */
+  /* Ikony Social Media */
   #mobile-menu .header-icons {
     display: flex !important;
     justify-content: center !important;
@@ -555,20 +546,19 @@ article {
   }
 
   #mobile-menu .header-icons a {
-    font-size: 1.8rem !important;
+    font-size: 1.8rem !important; /* Ikony zostawiamy nieco większe */
     margin: 0 15px !important;
     color: white !important;
   }
 
-  /* Lista linków - reset gridu, wymuszenie listy pionowej */
+  /* Lista linków */
   #mobile-menu ul {
-    display: block !important; /* Zwykły blok */
+    display: block !important;
     padding: 0 !important;
     margin: 0 !important;
     list-style: none;
     width: 100% !important;
     height: auto !important;
-    max-height: none !important;
   }
 
   #mobile-menu li {
@@ -577,23 +567,25 @@ article {
     width: 100% !important;
   }
 
+  /* === JEDNAKOWA CZCIONKA DLA WSZYSTKICH LINKÓW === */
   #mobile-menu a {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem !important; /* Wszystko ma 1.5rem */
     color: white !important;
     display: block !important;
     padding: 5px 0 !important;
     text-decoration: none !important;
+    font-weight: 500 !important;
   }
   
-  /* Flaga wyróżniona */
+  /* Specjalne traktowanie flagi (tylko odstęp, rozmiar ten sam) */
   #mobile-menu a[href="/en/"],
   #mobile-menu a[href="/"] {
-      font-size: 2.5rem !important;
+      font-size: 1.5rem !important; 
       margin-top: 20px !important;
       display: inline-block !important;
   }
   
-  /* Ukrywamy zbędne kontenery wewnątrz menu */
+  /* Ukrywamy zbędne kontenery */
   #mobile-menu .flex-l {
     display: block !important;
     width: 100% !important;
