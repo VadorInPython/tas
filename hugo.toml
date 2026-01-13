@@ -34,7 +34,7 @@ favicon = "/Logo_wo_bg.png"
    
   [[menu.main]]
     name = "Technologie i Projekty"
-    url = "pl/categories/technologie_projekty"
+    url = "pl/categories/technologie-i-projekty"
     weight = 3
    
   [[menu.main]]
