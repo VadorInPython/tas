@@ -32,7 +32,7 @@ defaultContentLanguage = 'pl'
 [languages]
   # === JĘZYK POLSKI ===
   [languages.pl]
-    languageName = 'Polski'
+    languageName = '🇵🇱'
     weight = 1
     contentDir = 'content' 
     
@@ -65,7 +65,7 @@ defaultContentLanguage = 'pl'
 
   # === JĘZYK ANGIELSKI ===
   [languages.en]
-    languageName = 'English'
+    languageName = '🇬🇧'
     weight = 2
     contentDir = 'content'
     
