@@ -24,27 +24,27 @@ favicon = "/Logo_wo_bg.png"
    
   [[menu.main]]
     name = "O mnie"
-    url = "pl/categories/bio"
+    url = "/pl/categories/bio"
     weight = 6
    
   [[menu.main]]
     name = "Studia w Danii"
-    url = "pl/categories/studia-w-danii"
+    url = "/pl/categories/studia-w-danii"
     weight = 2
    
   [[menu.main]]
     name = "Technologie i Projekty"
-    url = "pl/categories/technologie_projekty"
+    url = "/pl/categories/technologie_projekty"
     weight = 3
    
   [[menu.main]]
     name = "On The Go"
-    url = "pl/categories/on-the-go"
+    url = "/pl/categories/on-the-go"
     weight = 4
      
   [[menu.main]]
     name = "Kontakt"
-    url = "pl/kontakt/"
+    url = "/pl/kontakt/"
     weight = 5
 
 [markup]
