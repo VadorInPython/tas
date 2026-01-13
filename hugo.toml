@@ -24,22 +24,22 @@ favicon = "/Logo_wo_bg.png"
    
   [[menu.main]]
     name = "O mnie"
-    url = "/pl/categories/bio"
+    url = "/categories/bio"
     weight = 6
    
   [[menu.main]]
     name = "Studia w Danii"
-    url = "/pl/categories/studia-w-danii"
+    url = "/categories/studia-w-danii"
     weight = 2
    
   [[menu.main]]
     name = "Technologie i Projekty"
-    url = "/pl/categories/technologie-i-projekty"
+    url = "/categories/technologie-i-projekty"
     weight = 3
    
   [[menu.main]]
     name = "On The Go"
-    url = "/pl/categories/on-the-go"
+    url = "/categories/on-the-go"
     weight = 4
      
   [[menu.main]]
