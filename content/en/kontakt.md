@@ -1,5 +1,5 @@
 ---
-title: "Zapraszam do kontaktu!"
+title: "Feel free to reach out!"
 draft: false
 _build:
   render: true
@@ -11,18 +11,18 @@ _build:
   <input type="hidden" name="form-name" value="contact" />
 
   <p>
-    <label>Twój Email: <input type="email" name="email" required style="width:100%; padding:8px;"/></label>
+    <label>Your email: <input type="email" name="email" required style="width:100%; padding:8px;"/></label>
   </p>
 
 
 
   <p>
-    <label>Wiadomość:
+    <label>Message:
       <textarea name="message" required style="width:100%; padding:8px; height:120px;"></textarea>
     </label>
   </p>
 
   <p>
-    <button type="submit" style="padding:10px 20px; cursor:pointer;">Wyślij</button>
+    <button type="submit" style="padding:10px 20px; cursor:pointer;">Send</button>
   </p>
 </form>
