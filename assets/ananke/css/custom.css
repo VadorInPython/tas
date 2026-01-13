@@ -738,3 +738,9 @@ img[src="/images/about_photo.jpg"],
   object-fit: cover;
   background-color: #f0f0f0;
 }
+
+/* Ukryj kategorię/sekcję na górze strony kontaktowej */
+article header .f6.ttu,
+article header .sans-serif.ttu {
+  display: none !important;
+}
