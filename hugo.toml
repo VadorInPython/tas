@@ -1,38 +1,9 @@
-baseURL = 'https://theautonomouscreator.netlify.app/'
-title = 'The Autonomous Creator'
-theme = 'ananke'
-
-# Ustawiamy, że domyślnym językiem jest Polski
-defaultContentLanguage = 'pl'
-
-[params]
-  custom_css = ["custom.css"]
-  favicon = "/Logo_wo_bg.png"
-  mainSections = ["posts"] 
-
-# Social media
-[[params.social]]
-  name = "instagram"
-  url = "https://www.instagram.com/szym0n_24/"
-
-[[params.social]]
-  name = "facebook"
-  url = "https://www.facebook.com/szymon.derlecki.3/"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
 # --- KONFIGURACJA JĘZYKÓW ---
 
 [languages]
   # === JĘZYK POLSKI ===
   [languages.pl]
-    languageName = '🇵🇱'
+    languageName = 'Polski'
     weight = 1
     contentDir = 'content' 
     
@@ -48,11 +19,11 @@ defaultContentLanguage = 'pl'
         weight = 2
       [[languages.pl.menu.main]]
         name = "Studia w Danii"
-        url = "/categories/studia-w-danii" # Polski folder
+        url = "/categories/studia-w-danii"
         weight = 3
       [[languages.pl.menu.main]]
         name = "Technologie i Projekty"
-        url = "/categories/tech-projects" # Polski folder
+        url = "/categories/technologie-i-projekty"
         weight = 4
       [[languages.pl.menu.main]]
         name = "On The Go"
@@ -62,15 +33,19 @@ defaultContentLanguage = 'pl'
         name = "Kontakt"
         url = "/kontakt/"
         weight = 6
+      # --- TUTAJ JEST DODANA FLAGA ---
+      [[languages.pl.menu.main]]
+        name = "🇬🇧"       # Wyświetli flagę UK
+        url = "/en/"      # Przeniesie do wersji angielskiej
+        weight = 100      # Dałem 100, żeby zawsze była ostatnia z prawej
 
   # === JĘZYK ANGIELSKI ===
   [languages.en]
-    languageName = '🇬🇧'
+    languageName = 'English'
     weight = 2
     contentDir = 'content'
     
     # Menu dla wersji Angielskiej
-    # TUTAJ DODAŁEM "/en/" PRZED KAŻDYM LINKIEM
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Home"
@@ -82,11 +57,11 @@ defaultContentLanguage = 'pl'
         weight = 2
       [[languages.en.menu.main]]
         name = "Studies in Denmark"
-        url = "/en/categories/studia-w-danii" # Linkuje do angielskiego folderu
+        url = "/en/categories/studies-in-denmark"
         weight = 3
       [[languages.en.menu.main]]
         name = "Tech & Projects"
-        url = "/en/categories/tech-projects" # Linkuje do angielskiego folderu
+        url = "/en/categories/tech-projects"
         weight = 4
       [[languages.en.menu.main]]
         name = "On The Go"
@@ -94,5 +69,10 @@ defaultContentLanguage = 'pl'
         weight = 5
       [[languages.en.menu.main]]
         name = "Contact"
-        url = "/en/contact/" # Hugo sam zamieni kontakt.en.md na taki adres
+        url = "/en/kontakt/" 
         weight = 6
+      # --- TUTAJ JEST DODANA FLAGA ---
+      [[languages.en.menu.main]]
+        name = "🇵🇱"       # Wyświetli flagę PL
+        url = "/"         # Przeniesie do wersji polskiej
+        weight = 100      # Zawsze ostatnia
