@@ -8,8 +8,10 @@ defaultContentLanguage = 'pl'
 [params]
   custom_css = ["custom.css"]
   favicon = "/Logo_wo_bg.png"
+  # To zapewnia, że na głównej są tylko wpisy z folderu 'posts'
+  mainSections = ["posts"] 
 
-# Social media są wspólne (chyba że chcesz oddzielne, to daj znać)
+# Social media
 [[params.social]]
   name = "instagram"
   url = "https://www.instagram.com/szym0n_24/"
@@ -35,7 +37,7 @@ defaultContentLanguage = 'pl'
     weight = 1
     contentDir = 'content' 
     
-    # Menu dla wersji Polskiej (Twoje stare linki)
+    # Menu dla wersji Polskiej
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Strona Główna"
@@ -47,11 +49,11 @@ defaultContentLanguage = 'pl'
         weight = 6
       [[languages.pl.menu.main]]
         name = "Studia w Danii"
-        url = "/categories/studia-w-danii"
+        url = "/categories/studia-w-danii" # Linkuje do folderu 'studia-w-danii'
         weight = 2
       [[languages.pl.menu.main]]
         name = "Technologie i Projekty"
-        url = "/categories/technologie-i-projekty"
+        url = "/categories/technologie-i-projekty" # Linkuje do folderu 'technologie-i-projekty'
         weight = 3
       [[languages.pl.menu.main]]
         name = "On The Go"
@@ -68,7 +70,7 @@ defaultContentLanguage = 'pl'
     weight = 2
     contentDir = 'content'
     
-    # Menu dla wersji Angielskiej (Przetłumaczone + poprawione linki kategorii)
+    # Menu dla wersji Angielskiej
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Home"
@@ -80,19 +82,9 @@ defaultContentLanguage = 'pl'
         weight = 6
       [[languages.en.menu.main]]
         name = "Studies in Denmark"
-        # WAŻNE: To musi pasować do kategorii wpisanej w angielskim poście (Studies in Denmark -> studies-in-denmark)
+        # WAŻNE: Musisz mieć folder content/categories/studies-in-denmark
         url = "/categories/studies-in-denmark" 
         weight = 2
       [[languages.en.menu.main]]
         name = "Tech & Projects"
-        # Pamiętaj, żeby w angielskich postach używać kategorii "Tech & Projects"
-        url = "/categories/tech-projects" 
-        weight = 3
-      [[languages.en.menu.main]]
-        name = "On The Go"
-        url = "/categories/on-the-go"
-        weight = 4
-      [[languages.en.menu.main]]
-        name = "Contact"
-        url = "/kontakt/" 
-        weight = 5
+        # WAŻNE: Musisz mieć folder content/categories/
