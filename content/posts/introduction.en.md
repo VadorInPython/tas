@@ -1,11 +1,11 @@
-+++
+---
 date = '2025-11-16T18:00:00+02:00'
 draft = false
 title = 'First Blog Post 🇩🇰'
 categories = ["Studia w Danii"]
 tags = ["Denmark", "Studies", "Intro"]
 translationKey: "first-post-intro"  <-- DODAJ TO
-+++
+---
 
 ![Test Photo](/images/logo.jpg)
 
