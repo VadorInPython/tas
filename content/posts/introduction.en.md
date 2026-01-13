@@ -2,7 +2,7 @@
 date = '2025-11-16T18:00:00+02:00'
 draft = false
 title = 'First Blog Post 🇩🇰'
-categories = ["Studies in Denmark"]
+categories = ["Studia w Danii"]
 tags = ["Denmark", "Studies", "Intro"]
 +++
 
