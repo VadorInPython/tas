@@ -92,7 +92,7 @@ defaultContentLanguageInSubdir = true
 
       [[languages.en.menu.main]]
         name = "Contact"
-        url = "/en/contact/"
+        url = "/contact/"
         weight = 5
 
       [[languages.en.menu.main]]
