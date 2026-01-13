@@ -1,9 +1,38 @@
+baseURL = 'https://theautonomouscreator.netlify.app/'
+title = 'The Autonomous Creator'
+theme = 'ananke'
+
+# Ustawiamy, że domyślnym językiem jest Polski
+defaultContentLanguage = 'pl'
+
+[params]
+  custom_css = ["custom.css"]
+  favicon = "/Logo_wo_bg.png"
+  mainSections = ["posts"] 
+
+# Social media
+[[params.social]]
+  name = "instagram"
+  url = "https://www.instagram.com/szym0n_24/"
+
+[[params.social]]
+  name = "facebook"
+  url = "https://www.facebook.com/szymon.derlecki.3/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 # --- KONFIGURACJA JĘZYKÓW ---
 
 [languages]
   # === JĘZYK POLSKI ===
   [languages.pl]
-    languageName = 'Polski'
+    languageName = '🇵🇱'  # <-- Tutaj bezpiecznie ustawiłem flagę
     weight = 1
     contentDir = 'content' 
     
@@ -33,15 +62,10 @@
         name = "Kontakt"
         url = "/kontakt/"
         weight = 6
-      # --- TUTAJ JEST DODANA FLAGA ---
-      [[languages.pl.menu.main]]
-        name = "🇬🇧"       # Wyświetli flagę UK
-        url = "/en/"      # Przeniesie do wersji angielskiej
-        weight = 100      # Dałem 100, żeby zawsze była ostatnia z prawej
 
   # === JĘZYK ANGIELSKI ===
   [languages.en]
-    languageName = 'English'
+    languageName = '🇬🇧'  # <-- Tutaj bezpiecznie ustawiłem flagę
     weight = 2
     contentDir = 'content'
     
@@ -71,8 +95,3 @@
         name = "Contact"
         url = "/en/kontakt/" 
         weight = 6
-      # --- TUTAJ JEST DODANA FLAGA ---
-      [[languages.en.menu.main]]
-        name = "🇵🇱"       # Wyświetli flagę PL
-        url = "/"         # Przeniesie do wersji polskiej
-        weight = 100      # Zawsze ostatnia
