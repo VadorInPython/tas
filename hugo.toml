@@ -1,51 +1,21 @@
 baseURL = 'https://theautonomouscreator.netlify.app/'
-languageCode = 'en-us'
-title = 'The Autonomous Creator'
+# This ensures that your existing .md files are treated as Polish by default
+defaultContentLanguage = 'pl'
 theme = 'ananke'
 
+# Keep your global parameters
 [params]
-custom_css = ["custom.css"]
-favicon = "/Logo_wo_bg.png" 
+  custom_css = ["custom.css"]
+  favicon = "/Logo_wo_bg.png"
 
-# Social media icons
-[[params.social]]
-  name = "instagram"
-  url = "https://www.instagram.com/szym0n_24/"
+  # Social media (Global - applies to both languages)
+  [[params.social]]
+    name = "instagram"
+    url = "https://www.instagram.com/szym0n_24/"
 
-[[params.social]]
-  name = "facebook"
-  url = "https://www.facebook.com/szymon.derlecki.3/"
-
-[menu]
-  [[menu.main]]
-    name = "Strona Główna"
-    url = "/"
-    weight = 1
-   
-  [[menu.main]]
-    name = "O mnie"
-    url = "/categories/bio"
-    weight = 6
-   
-  [[menu.main]]
-    name = "Studia w Danii"
-    url = "/categories/studia-w-danii"
-    weight = 2
-   
-  [[menu.main]]
-    name = "Technologie i Projekty"
-    url = "/categories/technologie_projekty"
-    weight = 3
-   
-  [[menu.main]]
-    name = "On The Go"
-    url = "/categories/on-the-go"
-    weight = 4
-     
-  [[menu.main]]
-    name = "Kontakt"
-    url = "/kontakt/"
-    weight = 5
+  [[params.social]]
+    name = "facebook"
+    url = "https://www.facebook.com/szymon.derlecki.3/"
 
 [markup]
   [markup.goldmark]
@@ -54,3 +24,65 @@ favicon = "/Logo_wo_bg.png"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+# ------------------------------------------------------------------
+# LANGUAGE CONFIGURATION
+# ------------------------------------------------------------------
+
+[languages]
+
+  # --- POLISH (Default) ---
+  [languages.pl]
+    languageName = "🇵🇱 Polski"
+    languageCode = "pl"
+    title = "The Autonomous Creator" # Title in Polish
+    weight = 1
+
+    # Menu for Polish version (Moved from your original config)
+    [languages.pl.menu]
+      [[languages.pl.menu.main]]
+        name = "Strona Główna"
+        url = "/"
+        weight = 1
+      [[languages.pl.menu.main]]
+        name = "Studia w Danii"
+        url = "/categories/studia-w-danii"
+        weight = 2
+      [[languages.pl.menu.main]]
+        name = "Technologie i Projekty"
+        url = "/categories/technologie_projekty"
+        weight = 3
+      [[languages.pl.menu.main]]
+        name = "On The Go"
+        url = "/categories/on-the-go"
+        weight = 4
+      [[languages.pl.menu.main]]
+        name = "Kontakt"
+        url = "/kontakt/"
+        weight = 5
+      [[languages.pl.menu.main]]
+        name = "O mnie"
+        url = "/categories/bio"
+        weight = 6
+
+  # --- BRITISH ENGLISH ---
+  [languages.en]
+    languageName = "🇬🇧 English"
+    languageCode = "en-gb"
+    title = "The Autonomous Creator" # Title in English
+    weight = 2
+
+    # Menu for English version (Translated)
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Studies in Denmark"
+        url = "/categories/studia-w-danii" # Keep URL same, or change if you translate category folders
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Tech & Projects"
+        url = "/categories/technologie_projekty"
+        weight = 3
