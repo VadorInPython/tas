@@ -82,7 +82,7 @@ defaultContentLanguage = 'pl'
         weight = 2
       [[languages.en.menu.main]]
         name = "Studies in Denmark"
-        url = "/categories/studies-in-denmark" 
+        url = "/categories/studia-w-danii" 
         weight = 3
       [[languages.en.menu.main]]
         name = "Tech & Projects"
