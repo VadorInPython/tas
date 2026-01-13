@@ -1,35 +1,3 @@
-baseURL = 'https://theautonomouscreator.netlify.app/'
-title = 'The Autonomous Creator'
-theme = 'ananke'
-
-# Ustawiamy, że domyślnym językiem jest Polski
-defaultContentLanguage = 'pl'
-
-[params]
-  custom_css = ["custom.css"]
-  favicon = "/Logo_wo_bg.png"
-  # To zapewnia, że na głównej są tylko wpisy z folderu 'posts'
-  mainSections = ["posts"] 
-
-# Social media
-[[params.social]]
-  name = "instagram"
-  url = "https://www.instagram.com/szym0n_24/"
-
-[[params.social]]
-  name = "facebook"
-  url = "https://www.facebook.com/szymon.derlecki.3/"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-# --- KONFIGURACJA JĘZYKÓW ---
-
 [languages]
   # === JĘZYK POLSKI ===
   [languages.pl]
@@ -37,32 +5,31 @@ defaultContentLanguage = 'pl'
     weight = 1
     contentDir = 'content' 
     
-    # Menu dla wersji Polskiej
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Strona Główna"
         url = "/"
-        weight = 1
+        weight = 10
       [[languages.pl.menu.main]]
         name = "O mnie"
         url = "/categories/bio"
-        weight = 6
+        weight = 20
       [[languages.pl.menu.main]]
         name = "Studia w Danii"
-        url = "/categories/studia-w-danii" # Linkuje do folderu 'studia-w-danii'
-        weight = 2
+        url = "/categories/studia-w-danii"
+        weight = 30
       [[languages.pl.menu.main]]
         name = "Technologie i Projekty"
-        url = "/categories/technologie-i-projekty" # Linkuje do folderu 'technologie-i-projekty'
-        weight = 3
+        url = "/categories/technologie-i-projekty"
+        weight = 40
       [[languages.pl.menu.main]]
         name = "On The Go"
         url = "/categories/on-the-go"
-        weight = 4
+        weight = 50
       [[languages.pl.menu.main]]
         name = "Kontakt"
         url = "/kontakt/"
-        weight = 5
+        weight = 60
 
   # === JĘZYK ANGIELSKI ===
   [languages.en]
@@ -70,21 +37,28 @@ defaultContentLanguage = 'pl'
     weight = 2
     contentDir = 'content'
     
-    # Menu dla wersji Angielskiej
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Home"
         url = "/"
-        weight = 1
+        weight = 10
       [[languages.en.menu.main]]
         name = "About me"
         url = "/categories/bio" 
-        weight = 6
+        weight = 20
       [[languages.en.menu.main]]
         name = "Studies in Denmark"
-        # WAŻNE: Musisz mieć folder content/categories/studies-in-denmark
         url = "/categories/studies-in-denmark" 
-        weight = 2
+        weight = 30
       [[languages.en.menu.main]]
         name = "Tech & Projects"
-        # WAŻNE: Musisz mieć folder content/categories/
+        url = "/categories/tech-projects" 
+        weight = 40
+      [[languages.en.menu.main]]
+        name = "On The Go"
+        url = "/categories/on-the-go"
+        weight = 50
+      [[languages.en.menu.main]]
+        name = "Contact"
+        url = "/kontakt/" 
+        weight = 60
