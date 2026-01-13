@@ -4,7 +4,7 @@ draft = false
 title = 'Pierwszy wpis na bloga 🇩🇰'
 categories = ["Studia w Danii"]
 tags = ["Dania", "Studia", "Intro"]
-translationKey: "first-post-intro" 
+translationKey = "first-post-intro" 
 +++
 
 ![Test Photo](/images/logo.jpg)
