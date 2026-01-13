@@ -82,7 +82,7 @@ favicon = "/Logo_wo_bg.png"
    
   [[languages.en.menu.main]]
     name = "Tech & Projects"
-    url = "/en/categories/tech-projects"
+    url = "/en/categories/technologies_and_projects"
     weight = 3
    
   [[languages.en.menu.main]]
