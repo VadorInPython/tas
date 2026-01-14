@@ -22,6 +22,65 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // --- OBSŁUGA KLIKNIĘĆ LINKÓW JĘZYKOWYCH (REPLACE STATE) ---
+  // Cel: gdy użytkownik kliknie link zmiany języka będąc na stronie posta,
+  // zastąpimy bieżący wpis historii rootem aktualnego języka tak, aby
+  // kliknięcie "Wstecz" prowadziło do strony głównej/kategorii w nowym języku
+  function handleLangLinks() {
+    // Szukaj linków, które najczęściej są generowane jako: /, /en/, /pl/ lub z atrybutem data-lang
+    const langLinks = Array.from(document.querySelectorAll('a[href*="/en/"]'))
+      .concat(Array.from(document.querySelectorAll('a[href$="/en"]')))
+      .concat(Array.from(document.querySelectorAll('a[href^="/en"]')))
+      .concat(Array.from(document.querySelectorAll('a[data-lang]')));
+
+    // Deduplicate
+    const unique = Array.from(new Set(langLinks));
+
+    unique.forEach(link => {
+      link.addEventListener('click', function(e) {
+        try {
+          // Znajdź docelowy URL języka — jeśli link ma data-lang, zbuduj root
+          let target = link.getAttribute('href') || '';
+          const dataLang = link.getAttribute('data-lang');
+
+          if (dataLang) {
+            // Zakładamy format '/en/' lub '/pl/'
+            target = '/' + dataLang + '/';
+          } else {
+            // Uproszczona normalizacja: weź tylko path root (np. '/en/some/post' -> '/en/')
+            try {
+              const u = new URL(target, window.location.origin);
+              const parts = u.pathname.split('/').filter(Boolean);
+              if (parts.length > 0 && parts[0].length === 2) {
+                target = '/' + parts[0] + '/';
+              } else {
+                // jeżeli nie wykryto kodu języka, ustaw na '/' (domyślny)
+                target = '/';
+              }
+            } catch (err) {
+              target = '/';
+            }
+          }
+
+          // Zastąp bieżący wpis historią rootem wybranego języka
+          if (window.history && window.history.replaceState) {
+            window.history.replaceState({}, '', target);
+          }
+        } catch (err) {
+          console.warn('Language link handler error:', err);
+        }
+        // Pozwól normalnemu przeładowaniu/nawigacji kontynuować
+      }, { passive: true });
+    });
+  }
+
+  // Uruchom po załadowaniu DOM
+  try {
+    handleLangLinks();
+  } catch (err) {
+    console.warn('Nie udało się zainicjalizować obsługi linków językowych:', err);
+  }
+
   // --- NOWA LOGIKA DLA EKRANU WYSZUKIWANIA (OVERLAY) ---
   const searchIcon = document.getElementById("search-icon");
   const searchOverlay = document.getElementById("search-overlay");
