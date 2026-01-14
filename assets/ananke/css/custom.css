@@ -712,23 +712,23 @@ i[class*="fa-"],
 .nested-links h2 a,
 article h1 a,
 article h2 a {
-    color: #142850 !important; /* Twój ciemny niebieski */
+    color: #142850 !important; 
     text-decoration: none !important;
 }
 
-/* 2. Mobile - powiększenie tytułu */
+/* 2. Mobile - OGROMNE POWIĘKSZENIE TYTUŁU */
 @media (max-width: 768px) {
     /* Celujemy w tytuły postów na liście oraz wewnątrz posta */
     .nested-links h1, 
     .nested-links h2,
     .nested-copy-line-height h1,
     article h1 {
-        font-size: 1.8rem !important; /* Pasuje do rozmiaru "The Autonomous Creator" */
-        line-height: 1.2 !important;
+        font-size: 2.5rem !important; /* Zwiększone z 1.8rem na 2.5rem */
+        line-height: 1.1 !important;
         color: #142850 !important;
-        margin-top: 1.5rem !important;
+        margin-top: 1rem !important;
         margin-bottom: 1rem !important;
-        font-weight: 700 !important;
+        font-weight: 900 !important; /* Ekstra gruby font */
         text-align: left !important;
     }
 
@@ -747,6 +747,6 @@ article h2 a {
 /* 3. Desktop - delikatna korekta */
 @media (min-width: 1024px) {
     h1.f1, .f1 {
-        font-size: 2.5rem !important; 
+        font-size: 3.5rem !important; 
     }
 }
