@@ -168,9 +168,6 @@ main img:not([alt="Moje zdjęcie"]):not([alt="My photo"]):not(.about-photo),
   display: block !important;
   margin: 1rem auto !important;
   border-radius: 0px !important;
-  aspect-ratio: 16 / 9; /* Proporcje 16:9 dla postów */
-  object-fit: cover;
-  background-color: #f0f0f0;
 }
 
 .post-large {
@@ -192,17 +189,6 @@ main img:not([alt="Moje zdjęcie"]):not([alt="My photo"]):not(.about-photo),
   width: 100% !important;
   display: block !important;
   margin: 1rem auto !important;
-}
-
-/* Dla zdjęcia profilowego (kwadrat) - PL i EN */
-img[alt="Moje zdjęcie"],
-img[alt="My photo"],
-.about-photo,
-img[src="/images/about_photo.jpg"],
-.centered-image-container img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  background-color: #f0f0f0;
 }
 
 /* ================================================== */
@@ -353,24 +339,28 @@ article {
 /* Ten blok działa tylko gdy burger NIE jest aktywny (na stronie głównej) */
 
 @media (max-width: 768px) {
+  /* Kontener nagłówka */
   header .flex-l {
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
   }
 
+  /* Nazwa strony u góry */
   header .site-title {
     margin-bottom: 0.5rem !important;
     font-size: 1.8rem !important;
     text-align: center !important;
   }
 
+  /* Sociali pod nazwą strony */
   .ananke-socials {
     justify-content: center !important;
     margin-bottom: 0.5rem !important;
     gap: 1rem !important;
   }
 
+  /* Kategorie w tabeli 3x2 - tylko gdy nie jesteśmy w burgerze */
   nav#site-nav ul {
     display: grid !important;
     grid-template-columns: repeat(3, auto) !important;
@@ -400,6 +390,7 @@ article {
 /* ================================================== */
 
 @media (max-width: 768px) {
+  /* Profile image responsive sizing for mobile (PL i EN) */
   img[alt="Moje zdjęcie"],
   img[alt="My photo"],
   .about-photo,
@@ -414,6 +405,7 @@ article {
     border-radius: 32px !important;
   }
   
+  /* Ensure the container doesn't overflow */
   .centered-image-container {
     width: 100% !important;
     max-width: 100% !important;
@@ -422,6 +414,7 @@ article {
     overflow: hidden !important;
   }
   
+  /* Additional safety for any centered divs containing the image */
   div[style*="text-align: center"] {
     width: 100% !important;
     max-width: 100% !important;
@@ -448,18 +441,21 @@ article {
 /* ================================================== */
 
 @media (max-width: 768px) {
+  /* Wyłącz flex dla elementów nagłówkowych które powodują problem z gradientem */
   header .flex-l,
   header .cover,
   .hero {
     display: block !important;
   }
 
+  /* Zachowaj flex tylko dla nawigacji */
   nav#site-nav,
   nav#site-nav ul,
   .ananke-socials {
     display: flex !important;
   }
 
+  /* Napraw centrowanie bez flexboxa */
   header .flex-l {
     text-align: center !important;
     display: block !important;
@@ -471,6 +467,7 @@ article {
     margin-bottom: 0.5rem !important;
   }
 
+  /* Upewnij się że nav jest nadal elastyczny */
   nav#site-nav ul {
     display: grid !important;
     grid-template-columns: repeat(3, auto) !important;
@@ -481,7 +478,7 @@ article {
 }
 
 /* ================================================== */
-/* === BURGER MENU (MOBILE) === */
+/* === BURGER MENU (MOBILE) - WERSJA ATOMOWA & UJEDNOLICONA === */
 /* ================================================== */
 
 @media (max-width: 768px) {
@@ -495,6 +492,7 @@ article {
     width: 100% !important;
   }
 
+  /* Przycisk Burgera */
   #burger-menu-button {
     display: block !important;
     background: none !important;
@@ -514,6 +512,7 @@ article {
     display: none !important;
   }
 
+  /* === GŁÓWNY KONTENER MENU === */
   #mobile-menu.is-active {
     display: block !important; 
     position: fixed !important;
@@ -525,13 +524,19 @@ article {
     height: 100vh !important;
     background: linear-gradient(135deg, #5b7db1, #142850) !important;
     z-index: 1000;
+    
+    /* Przewijanie */
     overflow-y: scroll !important; 
     -webkit-overflow-scrolling: touch !important;
+    
+    /* Marginesy */
     padding-top: 80px !important;
     padding-bottom: 150px !important; 
+    
     text-align: center !important;
   }
 
+  /* Ikony Social Media */
   #mobile-menu .header-icons {
     display: flex !important;
     justify-content: center !important;
@@ -541,11 +546,12 @@ article {
   }
 
   #mobile-menu .header-icons a {
-    font-size: 1.8rem !important;
+    font-size: 1.8rem !important; /* Ikony zostawiamy nieco większe */
     margin: 0 15px !important;
     color: white !important;
   }
 
+  /* Lista linków */
   #mobile-menu ul {
     display: block !important;
     padding: 0 !important;
@@ -561,8 +567,9 @@ article {
     width: 100% !important;
   }
 
+  /* === JEDNAKOWA CZCIONKA DLA WSZYSTKICH LINKÓW === */
   #mobile-menu a {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem !important; /* Wszystko ma 1.5rem */
     color: white !important;
     display: block !important;
     padding: 5px 0 !important;
@@ -570,6 +577,7 @@ article {
     font-weight: 500 !important;
   }
   
+  /* Specjalne traktowanie flagi (tylko odstęp, rozmiar ten sam) */
   #mobile-menu a[href="/en/"],
   #mobile-menu a[href="/"] {
       font-size: 1.5rem !important; 
@@ -577,12 +585,14 @@ article {
       display: inline-block !important;
   }
   
+  /* Ukrywamy zbędne kontenery */
   #mobile-menu .flex-l {
     display: block !important;
     width: 100% !important;
   }
 }
 
+/* Desktop */
 @media (min-width: 769px) {
   #burger-menu-button {
     display: none !important;
@@ -599,13 +609,13 @@ article {
 /* ================================================== */
 
 #search-overlay {
-  display: none;
+  display: none; /* Domyślnie ukryty */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(20, 40, 80, 0.9);
+  background-color: rgba(20, 40, 80, 0.9); /* Półprzezroczyste tło */
   z-index: 2000;
   align-items: flex-start;
   justify-content: center;
@@ -614,7 +624,7 @@ article {
 }
 
 #search-overlay.is-visible {
-  display: flex;
+  display: flex; /* Pokazuje overlay */
 }
 
 .search-overlay-content {
@@ -663,14 +673,16 @@ article {
   overflow-y: auto;
 }
 
+/* --- ZMIANY SĄ TUTAJ --- */
 #overlay-search-results a,
 #overlay-search-results a:visited {
   display: block;
   padding: 12px 15px;
-  color: black;
-  text-decoration: underline;
+  color: black; /* Kolor tekstu zmieniony na czarny */
+  text-decoration: underline; /* Dodane podkreślenie */
   border-bottom: 1px solid #eee;
 }
+/* --- KONIEC ZMIAN --- */
 
 #overlay-search-results a:hover {
   background-color: #f5f5f5;
@@ -685,6 +697,7 @@ article {
 /* === FONT AWESOME FLICKERING FIX === */
 /* ================================================== */
 
+/* Rezerwuj przestrzeń dla ikon żeby nie "bopowały" */
 i[class*="fa-"],
 .fa, .fas, .far, .fab, .fal, .fad {
   display: inline-block;
@@ -693,6 +706,7 @@ i[class*="fa-"],
   text-align: center;
 }
 
+/* Opcjonalnie: dodaj płynne pojawienie się */
 .fontawesome-i2svg-active i[class*="fa-"],
 .fontawesome-i2svg-active .fa,
 .fontawesome-i2svg-active .fas,
@@ -703,50 +717,23 @@ i[class*="fa-"],
   opacity: 1;
 }
 
-/* ================================================== */
-/* === NAPRAWA TYTUŁÓW POSTÓW (MOBILE & DESKTOP) === */
-/* ================================================== */
-
-/* 1. Linki w tytułach (na liście wpisów) - ciemny niebieski, brak podkreślenia */
-.nested-links h1 a, 
-.nested-links h2 a,
-article h1 a,
-article h2 a {
-    color: #142850 !important; 
-    text-decoration: none !important;
+/* Dla zdjęć w postach (proporcje 16:9) */
+/* Dodane wykluczenie dla angielskiego zdjęcia profilowego */
+article img:not([alt="Moje zdjęcie"]):not([alt="My photo"]):not(.about-photo),
+main img:not([alt="Moje zdjęcie"]):not([alt="My photo"]):not(.about-photo),
+.content img:not([alt="Moje zdjęcie"]):not([alt="My photo"]):not(.about-photo) {
+  aspect-ratio: 16 / 9; /* lub inna proporcja jaką używasz */
+  object-fit: cover;
+  background-color: #f0f0f0; /* placeholder kolor */
 }
 
-/* 2. Mobile - OGROMNE POWIĘKSZENIE TYTUŁU */
-@media (max-width: 768px) {
-    /* Celujemy w tytuły postów na liście oraz wewnątrz posta */
-    .nested-links h1, 
-    .nested-links h2,
-    .nested-copy-line-height h1,
-    article h1 {
-        font-size: 2.5rem !important; /* Zwiększone z 1.8rem na 2.5rem */
-        line-height: 1.1 !important;
-        color: #142850 !important;
-        margin-top: 1rem !important;
-        margin-bottom: 1rem !important;
-        font-weight: 900 !important; /* Ekstra gruby font */
-        text-align: left !important;
-    }
-
-    /* Jeśli jesteś wewnątrz posta na białym tle */
-    .bg-white .nested-links h1,
-    .bg-white article h1 {
-        color: #142850 !important;
-    }
-    
-    /* Odsunięcie zdjęcia, żeby nie "wchodziło" na tekst */
-    article img {
-        margin-top: 0.5rem !important;
-    }
-}
-
-/* 3. Desktop - delikatna korekta */
-@media (min-width: 1024px) {
-    h1.f1, .f1 {
-        font-size: 3.5rem !important; 
-    }
+/* Dla zdjęcia profilowego (kwadrat) - PL i EN */
+img[alt="Moje zdjęcie"],
+img[alt="My photo"],
+.about-photo,
+img[src="/images/about_photo.jpg"],
+.centered-image-container img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: #f0f0f0;
 }
