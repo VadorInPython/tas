@@ -743,6 +743,6 @@ img[src="/images/about_photo.jpg"],
     font-size: inherit !important;
     font-weight: 700 !important;
     display: block !important;
-    margin-left: -1rem !important;
+    margin-left: -0.25rem !important;
   }
 }
