@@ -741,5 +741,8 @@ img[src="/images/about_photo.jpg"],
 @media (max-width: 768px) {
   h1 a.link {
     font-size: inherit !important;
+    font-weight: 700 !important;
+    display: block !important;
+    margin-left: -1rem !important;
   }
 }
