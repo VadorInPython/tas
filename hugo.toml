@@ -70,7 +70,7 @@ defaultContentLanguage = 'pl'
     
     [languages.en.menu]
       [[languages.en.menu.main]]
-        name = "Home"
+        name = "Homepage"
         pageRef = "/"
         weight = 1
       [[languages.en.menu.main]]
