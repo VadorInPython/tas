@@ -739,13 +739,17 @@ img[src="/images/about_photo.jpg"],
 }
 
 @media (max-width: 768px) {
-  h1.f3 {
+
+  /* tytuł posta na liście (biała karta) */
+  article h1 {
+    text-align: left !important;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-left: 0 !important;
   }
 
-  h1.f3 a.link {
-    margin-left: 0 !important;
+  article h1 a.link {
     display: block;
   }
+
 }
