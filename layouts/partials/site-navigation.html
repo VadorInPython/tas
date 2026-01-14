@@ -125,6 +125,28 @@
   }
 </style>
 
+<!-- Annotate language links so JS can reliably detect them -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      Array.from(document.querySelectorAll('a')).forEach(function(a) {
+        var href = a.getAttribute('href');
+        if (!href) return;
+        try {
+          var u = new URL(href, window.location.origin);
+          var parts = u.pathname.split('/').filter(Boolean);
+          if (parts.length > 0 && (parts[0] === 'en' || parts[0] === 'pl')) {
+            a.setAttribute('data-lang', parts[0]);
+          }
+        } catch (e) {
+          // ignore
+        }
+      });
+    } catch (err) {
+      console.warn('Lang annotation failed:', err);
+    }
+  });
+</script>
 <script src="{{ "/js/menu.js" | relURL }}"></script>
 
 <script>

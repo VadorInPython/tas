@@ -81,6 +81,42 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn('Nie udało się zainicjalizować obsługi linków językowych:', err);
   }
 
+  // Delegowany listener — złapie kliknięcia także na dynamicznie dodawane linki
+  (function delegatedLangHandler() {
+    const supported = new Set(['en', 'pl']);
+
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest && e.target.closest('a');
+      if (!a) return;
+
+      // Ignoruj linki otwierane w nowej karcie lub pliki do pobrania
+      if (a.target === '_blank' || a.hasAttribute('download')) return;
+
+      const href = a.getAttribute('href');
+      if (!href) return;
+
+      let url;
+      try {
+        url = new URL(href, window.location.origin);
+      } catch (err) {
+        return; // Nieprawidłowy URL
+      }
+
+      const parts = url.pathname.split('/').filter(Boolean);
+      if (parts.length === 0) return; // root
+
+      const first = parts[0].toLowerCase();
+      if (supported.has(first)) {
+        // Zastąp bieżący wpis historii rootem wybranego języka
+        const targetRoot = '/' + first + '/';
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState({}, '', targetRoot);
+        }
+        // Pozwól normalnej nawigacji kontynuować
+      }
+    }, { passive: true });
+  })();
+
   // --- NOWA LOGIKA DLA EKRANU WYSZUKIWANIA (OVERLAY) ---
   const searchIcon = document.getElementById("search-icon");
   const searchOverlay = document.getElementById("search-overlay");
