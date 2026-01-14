@@ -738,19 +738,8 @@ img[src="/images/about_photo.jpg"],
   background-color: #f0f0f0;
 }
 
-/* ================================================== */
-/* === FORCE HOMEPAGE POST TITLES SIZE (MOBILE) === */
-/* ================================================== */
-
 @media (max-width: 768px) {
-  /* Dokładnie h1 w summary posta */
-  article header h1.f3 {
-    font-size: 2rem !important;
-    line-height: 1.25 !important;
-    font-weight: 700 !important;
-  }
-
-  article header h1.f3 a {
+  h1 a.link {
     font-size: inherit !important;
   }
 }
