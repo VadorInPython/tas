@@ -739,15 +739,9 @@ img[src="/images/about_photo.jpg"],
 }
 
 @media (max-width: 768px) {
-
-  article h1 {
-    text-align: left !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  h1 a.link {
+    font-size: inherit !important;
+    font-weight: 700 !important;
+    display: block !important;
   }
-
-  article h1 a.link {
-    display: block;
-  }
-
 }
