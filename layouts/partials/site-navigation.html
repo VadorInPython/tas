@@ -125,7 +125,6 @@
   }
 </style>
 
-<!-- Annotate language links so JS can reliably detect them -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     try {
@@ -150,36 +149,51 @@
 <script src="{{ "/js/menu.js" | relURL }}"></script>
 
 <script>
-  // 1. ZAMYKANIE MENU PRZY POWROCIE PRZYCISKIEM "WSTECZ"
-  // Jeśli wracamy na stronę z historii przeglądarki (cache), upewnij się, że menu jest zamknięte
-  window.addEventListener('pageshow', function(event) {
-    if (event.persisted) { // Wykrywa czy strona jest z cache'u "wstecz"
-      const menu = document.getElementById('mobile-menu');
-      const body = document.body;
-      
-      if (menu && menu.classList.contains('is-active')) {
-        menu.classList.remove('is-active');
-        body.classList.remove('menu-open');
-      }
-    }
-  });
-
-  // 2. NATYCHMIASTOWE ZAMYKANIE MENU PO KLIKNIĘCIU
-  // Dzięki temu w historii zapisuje się stan strony z ZAMKNIĘTYM menu.
-  // Jak klikniesz Wstecz -> wrócisz do widoku strony, a nie do otwartego menu.
-  document.addEventListener("DOMContentLoaded", function() {
-    const menuLinks = document.querySelectorAll('#mobile-menu a');
+  // Funkcja resetująca ikonę i menu do stanu początkowego (zamkniętego)
+  function forceMenuClose() {
     const menu = document.getElementById('mobile-menu');
     const body = document.body;
+    
+    // Szukamy ikony wewnątrz przycisku. Font Awesome może zamienić <i> na <svg>, 
+    // więc szukamy obu wariantów lub klasy wewnątrz buttona.
+    const burgerBtn = document.getElementById('burger-menu-button');
+    let icon = burgerBtn ? burgerBtn.querySelector('i, svg') : null;
+
+    // 1. Zamknij kontener menu
+    if (menu) menu.classList.remove('is-active');
+    if (body) body.classList.remove('menu-open');
+
+    // 2. NAPRAWA IKONY: Na siłę zamień "X" (fa-times) z powrotem na "Paski" (fa-bars)
+    // Font Awesome 5/6 manipuluje klasami na elemencie wewnątrz buttona
+    if (icon) {
+      // Usuwamy wszystkie możliwe klasy "zamknięcia"
+      icon.classList.remove('fa-times'); 
+      icon.classList.remove('fa-xmark'); // Dla nowszych FA
+      
+      // Dodajemy klasę "pasków"
+      icon.classList.add('fa-bars');     
+    }
+  }
+
+  // 1. ZAMYKANIE PRZY POWROCIE PRZYCISKIEM "WSTECZ" (bfcache fix)
+  window.addEventListener('pageshow', function(event) {
+    // Niezależnie czy z cache czy nie - zawsze resetuj ikonę
+    forceMenuClose();
+  });
+
+  // 2. NATYCHMIASTOWE ZAMYKANIE PO KLIKNIĘCIU W LINK
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
+    
+    // Na start też upewnij się, że jest czysto
+    forceMenuClose();
 
     menuLinks.forEach(link => {
       link.addEventListener('click', function() {
-        // Usuwamy klasy otwartego menu w momencie kliknięcia
-        if (menu) menu.classList.remove('is-active');
-        if (body) body.classList.remove('menu-open');
-        
-        // Strona i tak się przeładuje za chwilę, ale w historii 
-        // zostanie zapisany ten moment "czystości".
+        // Jak użytkownik w coś kliknie, od razu zresetuj ikonę i menu,
+        // zanim strona zacznie się przeładowywać. Dzięki temu w historii
+        // zapisze się stan z PASKAMI, a nie z IKSEM.
+        forceMenuClose();
       });
     });
   });
