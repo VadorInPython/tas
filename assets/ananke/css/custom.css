@@ -746,9 +746,8 @@ img[src="/images/about_photo.jpg"],
     padding-right: 1rem;
   }
 
-  article h1.f3 {
-    font-size: 1.5rem;
+  article h1 a.link {
+    display: block;
   }
 
 }
-
