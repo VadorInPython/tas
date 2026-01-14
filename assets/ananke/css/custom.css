@@ -740,9 +740,11 @@ img[src="/images/about_photo.jpg"],
 
 @media (max-width: 768px) {
   h1 a.link {
-    font-size: inherit !important;
-    font-weight: 700 !important;
-    display: block !important;
-    margin-left: -0.25rem !important;
+    display: block;
+    font-weight: 700;
+    padding-left: 1rem;   /* TO SAMO co treść posta */
+    padding-right: 1rem;
+    margin-left: 0 !important;
   }
 }
+
