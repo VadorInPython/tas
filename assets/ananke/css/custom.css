@@ -739,22 +739,18 @@ img[src="/images/about_photo.jpg"],
 }
 
 /* ================================================== */
-/* === MOBILE: TITLE POSTS ON HOMEPAGE === */
+/* === FORCE HOMEPAGE POST TITLES SIZE (MOBILE) === */
 /* ================================================== */
 
 @media (max-width: 768px) {
-  /* Tytuł posta na liście (homepage) */
-  .list article h1,
-  .list article h2,
-  .list article .f3 {
-    font-size: 2rem !important;   /* dopasowane do h2 w poście */
+  /* Dokładnie h1 w summary posta */
+  article header h1.f3 {
+    font-size: 2rem !important;
     line-height: 1.25 !important;
     font-weight: 700 !important;
   }
 
-  /* Link w tytule */
-  .list article h1 a,
-  .list article h2 a {
+  article header h1.f3 a {
     font-size: inherit !important;
   }
 }
