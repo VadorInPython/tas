@@ -37,35 +37,38 @@ header .bg-black a:hover {
 }
 
 /* ================================================== */
-/* === STYLE DLA "PRZYKLEJONEJ" STOPKI (POPRAWIONE) === */
+/* === STYLE DLA "PRZYKLEJONEJ" STOPKI & SCROLL FIX === */
 /* ================================================== */
 
+/* Zmiana 1: Rozdzielenie html i body, usunięcie overflow-y z html (fix dla telefonu) */
 html {
   height: 100% !important;
+  overflow-x: hidden !important;
 }
 
+/* Zmiana 2: Dodanie display: flex i usunięcie podwójnego scrolla */
 body {
-  /* Kluczowa poprawka: dodanie display: flex */
-  display: flex !important;
+  display: flex !important; /* TO JEST KLUCZ DO STOPKI */
   flex-direction: column !important;
   min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden !important;
-  overflow-y: auto !important;
+  /* overflow-y: auto !important; <- USUNIĘTE, bo kłóci się z HTML na telefonach */
+  -webkit-overflow-scrolling: touch; /* Płynne przewijanie na iPhone */
 }
 
-/* To sprawia, że środek strony "puchnie", spychając stopkę na dół */
+/* Zmiana 3: Main wypycha stopkę (flex: 1 0 auto) */
 main,
 .main-content,
 article {
   flex: 1 0 auto !important;
+  padding-top: 1rem !important;
 }
 
 footer,
 .bg-black.bottom-0 {
-  /* To gwarantuje, że stopka nie zostanie przykryta i zawsze będzie na dole */
-  flex-shrink: 0 !important;
+  flex-shrink: 0 !important; /* Zmiana 4: Stopka się nie kurczy */
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -73,7 +76,6 @@ footer,
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Reszta Twoich stylów kolorystycznych dla stopki pozostaje bez zmian */
 footer a,
 footer .site-title,
 footer p,
@@ -159,6 +161,10 @@ img[src="/images/about_photo.jpg"],
   display: inline-block !important;
   border-radius: 64px !important;
   margin: 0 auto !important;
+  /* Dodane dla pewności */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: #f0f0f0;
 }
 
 /* ================================================== */
@@ -175,6 +181,10 @@ main img:not([alt="Moje zdjęcie"]):not([alt="My photo"]):not(.about-photo),
   display: block !important;
   margin: 1rem auto !important;
   border-radius: 0px !important;
+  /* Dodane dla pewności */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background-color: #f0f0f0;
 }
 
 .post-large {
@@ -202,12 +212,7 @@ main img:not([alt="Moje zdjęcie"]):not([alt="My photo"]):not(.about-photo),
 /* === ZMNIEJSZENIE ODSTĘPU OD NAGŁÓWKA === */
 /* ================================================== */
 
-main,
-.main-content,
-article {
-  padding-top: 1rem !important;
-}
-
+/* Ta sekcja została zintegrowana wyżej z "main", ale zostawiam dla .nested */
 .nested-copy-line-height {
   padding-top: 1rem !important;
 }
