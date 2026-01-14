@@ -7,7 +7,7 @@ tags: ["Denmark", "Studies", "Intro"]
 translationKey: "first-post-intro" 
 ---
 
-![Test Photo](/images/logo.jpg)
+![Test Photo](/images/logo_studia_dtu.jpeg)
 
 ## Welcome & Short Intro
 

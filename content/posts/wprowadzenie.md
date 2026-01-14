@@ -7,7 +7,7 @@ tags: ["Dania", "Studia", "Intro"]
 translationKey: "first-post-intro" 
 ---
 
-![Test Photo](/images/logo.jpg)
+![Test Photo](/images/logo_studia_dtu.jpeg)
 
 ## Przywitanie i krótkie intro
 
