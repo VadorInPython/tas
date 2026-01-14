@@ -36,30 +36,36 @@ header .bg-black a:hover {
   transition: color 0.3s ease !important;
 }
 
-/* Style dla "przyklejonej" stopki */
-html,
-body {
+/* ================================================== */
+/* === STYLE DLA "PRZYKLEJONEJ" STOPKI (POPRAWIONE) === */
+/* ================================================== */
+
+html {
   height: 100% !important;
+}
+
+body {
+  /* Kluczowa poprawka: dodanie display: flex */
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden !important;
   overflow-y: auto !important;
 }
 
-body {
-  flex-direction: column !important;
-  min-height: 100vh !important;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
-}
-
+/* To sprawia, że środek strony "puchnie", spychając stopkę na dół */
 main,
-.main-content {
-  flex: 1 !important;
+.main-content,
+article {
+  flex: 1 0 auto !important;
 }
 
 footer,
 .bg-black.bottom-0 {
+  /* To gwarantuje, że stopka nie zostanie przykryta i zawsze będzie na dole */
+  flex-shrink: 0 !important;
   margin-top: auto !important;
   position: relative !important;
   padding: 0.5rem 1rem !important;
@@ -67,6 +73,7 @@ footer,
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Reszta Twoich stylów kolorystycznych dla stopki pozostaje bez zmian */
 footer a,
 footer .site-title,
 footer p,
