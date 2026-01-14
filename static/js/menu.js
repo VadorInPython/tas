@@ -131,7 +131,23 @@ document.addEventListener("DOMContentLoaded", function () {
   async function loadSearchData() {
     if (!searchData) {
       try {
-        const response = await fetch("/index.json");
+        // Spróbuj pobrać index.json odpowiedni dla bieżącego języka (np. /en/index.json).
+        // Jeśli nie znajdziemy, wykona się fallback do rootowego /index.json.
+        let indexPath = '/index.json';
+        try {
+          const parts = window.location.pathname.split('/').filter(Boolean);
+          if (parts.length > 0 && /^[a-z]{2}$/i.test(parts[0])) {
+            indexPath = '/' + parts[0] + '/index.json';
+          }
+        } catch (e) {
+          indexPath = '/index.json';
+        }
+
+        let response = await fetch(indexPath);
+        if (!response.ok && indexPath !== '/index.json') {
+          // fallback do rootowego
+          response = await fetch('/index.json');
+        }
         searchData = await response.json();
       } catch (error) {
         console.error(
