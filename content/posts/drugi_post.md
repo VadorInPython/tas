@@ -1,5 +1,5 @@
 ---
-date: '2026-01-28T18:00:00+02:00'
+date: '2027-01-28T18:00:00+02:00'
 draft: false
 title: 'Dlaczego warto rozważyć DTU? Rankingi, innowacje oraz sprawy rekrutacyjne...'
 categories: ["Studia w Danii"]
