@@ -7,7 +7,7 @@ tags: ["DTU", "Rekrutacja", "Rankingi", "Opinia"]
 translationKey: "why-dtu-recruitment" 
 ---
 
-![DTU Building 324](static\images\324.JPG)
+![DTU Building 324](/images/324.JPG)
 
 Zgodnie z obietnicą z poprzedniego wpisu, dzisiaj przechodzimy do konkretów. Skoro już wiecie jaki jest mniej więcej mój koncept na ten projekt, to teraz warto odpowiedzieć na pytanie: dlaczego właściwie wybrałem to miejsce i jak (nie) dać się zaskoczyć podczas rekrutacji.
 
