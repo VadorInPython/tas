@@ -15,11 +15,34 @@ Zgodnie z obietnicą z poprzedniego wpisu, dzisiaj przechodzimy do konkretów. S
 
 Nie ma co ukrywać - DTU (Technical University of Denmark) to bardzo mocna marka w świecie inżynierii. Potwierdzają to rankingi aktualizowane każdego roku. Poniżej wrzucam małe zestawienie – rzućcie okiem, jak uczelnia wypada w skali światowej i europejskiej:
 
-| Ranking | Pozycja (Świat) | Pozycja (Europa) | Kategoria |
-|:---|:---:|:---:|:---|
-| **QS World University Rankings** | Top 100-150 | Top 50 | Engineering & Tech |
-| **Shanghai Ranking** | #3 | #1 | Biotechnology |
-| **EngiRank** | #1 | #1 | Engineering in EU |
+<div style="overflow-x: auto;">
+  <table style="width: 100%; font-size: 0.9em;">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Świat / Europa</th>
+        <th>Dziedzina</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>QS World</strong></td>
+        <td>Top 100 / Top 50</td>
+        <td>Eng & Tech</td>
+      </tr>
+      <tr>
+        <td><strong>Shanghai</strong></td>
+        <td>#3 / #1</td>
+        <td>Biotech</td>
+      </tr>
+      <tr>
+        <td><strong>EngiRank</strong></td>
+        <td>— / #1</td>
+        <td>Eng (EU)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 *(Powyższe dane są orientacyjne i zmieniają się co rok, ale trend jest stały – jest wysoko!)*
 
