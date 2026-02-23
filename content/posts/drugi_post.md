@@ -82,11 +82,11 @@ Przez reformę edukacji wyższej w Danii, zasady gry ewoluowały. Z tego co widz
 6. Wymagany poziom angielskiego to wciąż **C1**, ale uczelnia bywa bezlitosna dla studentów międzynarodowych: uznawane są **[tylko i wyłącznie certyfikaty CAE, CPE, IELTS lub TOEFL](https://www.dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/language-test-requirements#english-language-tests)** . W porządku będzie także międzynarodowa lub europejska matura. 
 7. Wszystkie dokumenty z zagranicznych krajów  muszą być bezwzględnie przetłumaczone przez profesjonalnego tłumacza (najlepiej na język angielski lub duński).
 
-Dlatego, zamiast pisać Wam tutaj instrukcję "krok po kroku", która za miesiąc może być nieaktualna, robię najbezpieczniejszą rzecz, jaką można w tym momencie zrobić, czyli odsyłam Was bezpośrednio do oficjalnej dokumentacji
+Dlatego, zamiast pisać Wam tutaj instrukcję "krok po kroku", która za miesiąc może być nieaktualna, robię najbezpieczniejszą rzecz, jaką można w tym momencie zrobić, czyli odsyłam Was bezpośrednio do oficjalnej dokumentacji:
 
 👉 **Szczegóły sprawdzajcie ZAWSZE bezpośrednio u źródła:** 
-1. [Oficjalna strona rekrutacji DTU](https://www.dtu.dk/english/education/graduate/admission-and-deadlines) 
-2. [Wymagane dokumenty](https://www.dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/required-documents)
+1. [Oficjalna strona rekrutacji DTU](https://www.dtu.dk/english/education/graduate/admission-and-deadlines).
+2. [Wymagane dokumenty](https://www.dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/required-documents).
 
 ---
 
