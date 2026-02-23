@@ -1,5 +1,5 @@
 ---
-date: '2027-01-28T18:00:00+02:00'
+date: '2026-02-23T20:00:00+02:00'
 draft: false
 title: 'Dlaczego warto rozważyć DTU? Rankingi, innowacje oraz sprawy rekrutacyjne...'
 categories: ["Studia w Danii"]
@@ -52,7 +52,7 @@ DTU oferuje także szeroki wybór innych kierunków inżynierskich (STEM). Nikog
 
 ## Innowacje... i małe "ale"
 
-Jest jednak dodatkowy aspekt, o którym trzeba wspomnieć – gigantyczny nacisk na **innowacyjność i ekologię**. To nie są tylko hasła w broszurze reklamowej, to widać w "core" programu studiów.
+Jest jednak dodatkowy aspekt, o którym trzeba wspomnieć – gigantyczny nacisk na **innowacyjność i ekologię**. To nie są tylko hasła w broszurze reklamowej, tak naprawdę można to dostrzec w rdzeniu programu studiów.
 
 Dla większości kierunków jedyne przedmioty obowiązkowe (tzw. General Competence) to właśnie te związane z innowacjami w inżynierii oraz zrównoważonym rozwojem. I tutaj mała uwaga ode mnie:
 
@@ -60,7 +60,7 @@ Dla większości kierunków jedyne przedmioty obowiązkowe (tzw. General Compete
 
 To specyficzne doświadczenie, na które warto być gotowym. Czasem trzeba schować inżynierskie ego do kieszeni i po prostu "zagrać w tę grę".
 
-## Jak wygląda rekrutacja? (Stan na 2025)
+## Jak wygląda rekrutacja? (Stan na 2026)
 
 Tutaj muszę postawić **duży wykrzyknik**: sytuacja jest bardzo dynamiczna. W ciągu ostatnich 2 lat sporo się zmieniło.
 
@@ -74,10 +74,12 @@ Kiedy ja rekrutowałem się na swój kierunek (nazwijmy to wersją 1.0), system 
 
 Przez reformę edukacji wyższej w Danii, zasady gry ewoluowały. Z tego co widzę:
 1. **Zdjęto terminy uzupełniające rekrutacji** – to super ważna zmiana! Nie przegapcie głównego okna, bo drugiej szansy w tym samym roku już nie ma.
-2. Doszła opcja uzupełnienia portfolio o wynik testu **GRE**, co może uratować skórę, jeśli Wasze GPA jest na granicy.
-3. Zmienił się sposób opisywania doświadczenia zawodowego.
-4. Brane pod uwage są osiągnięcia na poziomie związanym z R&D
-5. Listy rekomendacyjne są wymagane tylko przy aplikacji na 5 kierunków.
+2. Doszła opcja uzupełnienia portfolio o wynik testu **GRE**, co może uratować skórę, jeśli Wasze GPA jest na granicy. Pamiętajcie jednak, że pierwszym filtrem pozostaje średnia na poziomie ok. 75% i odpowiednia liczba ECTS z wymaganych przedmiotów.
+3. Brane pod uwagę są osiągnięcia na poziomie związanym z R&D, a także praktyki i staże. Zmienił się sposób opisywania doświadczenia zawodowego.
+4. Listy rekomendacyjne są wymagane tylko przy aplikacji na 5 kierunków.
+5. List motywacyjny nadal jest kluczowy, by się wyróżnić – i ważna uwaga: **piszcie go samodzielnie, używanie AI bardzo łatwo może Was zdyskwalifikować.**
+6. Poziom angielskiego to wciąż **C1**, ale uczelnia bywa bezlitosna dla studentów międzynarodowych: uznawane są wyłącznie **tylko** CAE, IELTS lub TOEFL. Żadne inne dokumenty nie wchodzą w grę.
+7. Wszystkie polskie dokumenty bezwzględnie muszą być przetłumaczone przez profesjonalnego tłumacza (najlepiej na język angielski lub duński).
 
 Dlatego, zamiast pisać Wam tutaj instrukcję "krok po kroku", która za miesiąc może być nieaktualna, robię najbezpieczniejszą rzecz, jaką można w tym momencie zrobić, czyli odsyłam do dokumentacji technicznej.
 
@@ -89,4 +91,4 @@ To tyle na dziś! W następnym wpisie wjeżdżamy z tematem wagi ciężkiej, czy
 
 Będzie o kosztach życia, o tym, czy stypendium SU faktycznie wystarcza na przeżycie, oraz o wyzwaniu, jakim jest znalezienie czterech kątów w Kopenhadze. Przyjrzę się też wszelkim benefitom, jakie daje bycie studentem w Danii. Zrobię dla Was szczery rachunek sumienia (i portfela) - wypunktuję zarówno wady, jak i zalety tutejszego życia. 
 
-W kontakcie! 
+W kontakcie!
