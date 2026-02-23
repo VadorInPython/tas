@@ -2,7 +2,7 @@
 date: '2026-02-23T20:00:00+02:00'
 draft: false
 title: 'Why consider DTU? Rankings, innovations, and admission matters...'
-categories: ["Studia w Danii"]
+categories: ["Studies in Denmark"]
 tags: ["DTU", "Admissions", "Rankings", "Opinion"]
 translationKey: "why-dtu-recruitment" 
 ---
